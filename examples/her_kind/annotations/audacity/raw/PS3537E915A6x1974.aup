@@ -1,0 +1,95 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="PS3537E915A6x1974_data" version="1.3.0" audacityversion="2.3.0" sel0="40.5406343907" sel1="40.5406343907" vpos="0" h="23.7027426663" zoom="11.1801407850" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags>
+		<tag name="ALBUM" value="Poetry reading - Anne Sexton (PS3537E915A6x1974)"/>
+		<tag name="Software" value="LAME 64bits version 3.99.3 (http://lame.sf.net)"/>
+		<tag name="COMMENTS" value="PS3537E915A6x1974"/>
+		<tag name="TITLE" value="Her Kind"/>
+		<tag name="ARTIST" value="Anne Sexton"/>
+		<tag name="Length" value="107093"/>
+		<tag name="TRACKNUMBER" value="4"/>
+	</tags>
+	<wavetrack name="Her_Kind_59" channel="2" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="4725504">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808feb.au" len="262144" min="-0.211734" max="0.278707" rms="0.024273"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e08080c5.au" len="262144" min="-0.180832" max="0.177755" rms="0.013948"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e0808e80.au" len="262144" min="-0.085174" max="0.109122" rms="0.007627"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e0808fb0.au" len="262144" min="-0.208077" max="0.254972" rms="0.027805"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="e0808342.au" len="262144" min="-0.313783" max="0.390478" rms="0.04323"/>
+				</waveblock>
+				<waveblock start="1310720">
+					<simpleblockfile filename="e080884f.au" len="262144" min="-0.275729" max="0.330749" rms="0.023114"/>
+				</waveblock>
+				<waveblock start="1572864">
+					<simpleblockfile filename="e0808254.au" len="262144" min="-0.198679" max="0.258476" rms="0.014167"/>
+				</waveblock>
+				<waveblock start="1835008">
+					<simpleblockfile filename="e0808762.au" len="262144" min="-0.229706" max="0.265488" rms="0.013569"/>
+				</waveblock>
+				<waveblock start="2097152">
+					<simpleblockfile filename="e0808b09.au" len="262144" min="-0.280727" max="0.327607" rms="0.026945"/>
+				</waveblock>
+				<waveblock start="2359296">
+					<simpleblockfile filename="e0808b32.au" len="262144" min="-0.203718" max="0.257961" rms="0.023747"/>
+				</waveblock>
+				<waveblock start="2621440">
+					<simpleblockfile filename="e08086ae.au" len="262144" min="-0.183853" max="0.195791" rms="0.024343"/>
+				</waveblock>
+				<waveblock start="2883584">
+					<simpleblockfile filename="e0808052.au" len="262144" min="-0.24525" max="0.250594" rms="0.021965"/>
+				</waveblock>
+				<waveblock start="3145728">
+					<simpleblockfile filename="e0808729.au" len="262144" min="-0.138973" max="0.152983" rms="0.008833"/>
+				</waveblock>
+				<waveblock start="3407872">
+					<simpleblockfile filename="e0808749.au" len="262144" min="-0.194972" max="0.19938" rms="0.026211"/>
+				</waveblock>
+				<waveblock start="3670016">
+					<simpleblockfile filename="e0808130.au" len="262144" min="-0.302108" max="0.347942" rms="0.035782"/>
+				</waveblock>
+				<waveblock start="3932160">
+					<simpleblockfile filename="e0808400.au" len="262144" min="-0.207865" max="0.203883" rms="0.025113"/>
+				</waveblock>
+				<waveblock start="4194304">
+					<simpleblockfile filename="e08083e6.au" len="262144" min="-0.15519" max="0.19946" rms="0.01212"/>
+				</waveblock>
+				<waveblock start="4456448">
+					<simpleblockfile filename="e0808581.au" len="262144" min="-0.20767" max="0.224759" rms="0.00442"/>
+				</waveblock>
+				<waveblock start="4718592">
+					<simpleblockfile filename="e08085e4.au" len="6912" min="-0.003035" max="0.003273" rms="0.0011"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<labeltrack name="paratext" numlabels="4" height="73" minimized="0" isSelected="0">
+		<label t="27.6606534701" t1="27.6606534701" title="breath"/>
+		<label t="34.4696017171" t1="34.4696017171" title="breath"/>
+		<label t="37.7007774863" t1="37.7007774863" title="breath (?)"/>
+		<label t="102.9504030527" t1="102.9504030527" title="page turn"/>
+	</labeltrack>
+	<labeltrack name="repetition" numlabels="3" height="73" minimized="0" isSelected="0">
+		<label t="46.7346529931" t1="47.8750679704" title="&quot;her kind&quot;"/>
+		<label t="72.1591986644" t1="72.9641974720" title="&quot;her kind&quot;"/>
+		<label t="99.9987407584" t1="101.0273503458" title="&quot;her kind&quot;"/>
+	</labeltrack>
+	<labeltrack name="stanzas" numlabels="5" height="73" minimized="0" isSelected="0">
+		<label t="0.2500000000" t1="15.5409492010" title="Introduction"/>
+		<label t="19.2000000000" t1="20.0500000000" title="title"/>
+		<label t="21.3200000000" t1="47.8750679704" title="stanza 1"/>
+		<label t="48.5700000000" t1="72.9641974720" title="stanza 2"/>
+		<label t="76.2600000000" t1="101.0273503458" title="stanza 3"/>
+	</labeltrack>
+</project>
