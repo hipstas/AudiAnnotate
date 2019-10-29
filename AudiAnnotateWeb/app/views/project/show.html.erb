@@ -1,0 +1,11 @@
+
+breadcrumb goes here<br/>
+
+<%= link_to @repo.name, @repo.url %>
+<p>
+  <%= @repo.description %>
+</p>
+
+<pre>
+<%= JSON.pretty_generate(JSON.parse(@repo.to_json)) %>
+</pre>

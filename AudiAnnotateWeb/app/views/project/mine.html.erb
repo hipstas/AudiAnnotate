@@ -1,14 +1,11 @@
 <h1>AudiAnnotate</h1>
 <p>Splash text about AA</p>
-<p>Big Sign up link goes here</p>
-<h2>Public Projects</h2>
-<p>List of public projects</p>
-
+<h2>My Projects</h2>
 <div>
   <% @repos.each do |repo| %>
     <div>
       <!-- Name, owner, link to jekyll home. -->
-      <%= repo.name %>
-      <%= repo.owner.login %>
+      <%= link_to(repo.name, project_path(repo.owner.login, repo.name)) %>
   <% end %>
 </div>  
+<p>Big Create link goes here</p>
