@@ -12,13 +12,18 @@
   </head>
 
   <body>
-    <div class="bg text-light">
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">AudiAnnotate</a>
       <%= link_to 'Sign in', 'auth/github' %>
+    </nav>
+    <div class="bg text-light">
       <%= yield %>
       </div>
   </body>
 
-  <footer>
-    <a href="https://hipstas.org/audiannotate/">About AudiAnnotate</a>
-  </footer>
+  <footer class="footer fixed-bottom py-1">
+  <div class="container">
+    <span class="text-white"><a href="https://hipstas.org/audiannotate/">About AudiAnnotate</a></span>
+  </div>
+</footer>
 </html>

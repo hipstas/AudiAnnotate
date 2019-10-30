@@ -1,14 +1,16 @@
-<h1>AudiAnnotate</h1>
-<p>Splash text about AA</p>
+<p>AudiAnnotate is a project to publish and share annotations on audio files.</p>
 <p>Big Sign up link goes here</p>
-<h2>Public Projects</h2>
-<p>List of public projects</p>
+<h2>Projects</h2>
+<p>The following projects have been created on AudiAnnotate</p>
 
-<div>
+<div class="card-deck">
   <% @repos.each do |repo| %>
-    <div>
-      <!-- Name, owner, link to jekyll home. -->
-      <%= repo.name %>
-      <%= repo.owner.login %>
+	  <div class="card text-white bg-secondary mb-3" style="width: 18rem;">
+		  <div class="card-body text-dark">
+	    	<h5 class="card-title"><%= repo.name %></h5>
+	    	<p class="card-text">Created by <%= repo.owner.login %></p>
+	    	<a href="#" class="btn btn-primary">Go somewhere</a>
+	  	  </div>
+	  </div>
   <% end %>
 </div>  
