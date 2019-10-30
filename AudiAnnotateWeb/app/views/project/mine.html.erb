@@ -8,4 +8,6 @@
       <%= link_to(repo.name, project_path(repo.owner.login, repo.name)) %>
   <% end %>
 </div>  
-<p>Big Create link goes here</p>
+
+<%= link_to 'New Project', new_project_path %>
+
