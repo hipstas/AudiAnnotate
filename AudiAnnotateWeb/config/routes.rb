@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root to: 'project#all'
 
-  get 'project/all'
-  get 'project/mine'
+  get 'project/all', as: 'all_projects'
+  get 'project/mine', as: 'my_projects'
   get 'project/:user_name/:repo_name', to: 'project#show', as: 'project'
   get 'project/new', to: 'project#new', as: 'new_project'
   post 'project', to: 'project#create', as: 'create_project'

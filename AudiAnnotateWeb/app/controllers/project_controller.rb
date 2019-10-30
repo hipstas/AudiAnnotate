@@ -1,16 +1,14 @@
 class ProjectController < ApplicationController
+  before_action :connect, except: :all
+
   def all
-
-  	# TODO change this to use the search API for all public AA repos
     @repos = Octokit.client.search_repositories("topic:audiannotate", sort: 'stars').items
-  	Octokit.repositories('saracarl')
-
   end
 
   def mine
     # TODO  replace hard-wired string with current user
-    user_name = 'benwbrum'
-    @repos = Octokit.client.search_repositories("user:#{user_name} topic:audiannotate", sort: 'stars').items
+    user_name = @github_client.user.login
+    @repos = @github_client.search_repositories("user:#{user_name} topic:audiannotate", sort: 'stars').items
   end
 
 
@@ -23,9 +21,10 @@ class ProjectController < ApplicationController
     # instantiate the object from form parameters
     @project = Project.new(project_params)
     # create the repo 
+    @github_client.create_repository(@project.name, {topics: ['audiannotate']})
 
     # redirect or show an error
-    redirect_to project_path('benwbrum', @project.name)
+    redirect_to project_path(@github_client.user.login, @project.name)
   end
 
   def show
@@ -36,6 +35,11 @@ class ProjectController < ApplicationController
 
 
   private
+
+    def connect
+      @github_client = Octokit::Client.new(access_token: session[:github_token])
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
       params.require(:project).permit(:name)
