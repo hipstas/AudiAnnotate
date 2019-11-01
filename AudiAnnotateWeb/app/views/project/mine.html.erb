@@ -1,9 +1,7 @@
 <h2>My Projects</h2>
 <div>
   <% @repos.each do |repo| %>
-    <div>
-      <!-- Name, owner, link to jekyll home. -->
-      <%= link_to(repo.name, project_path(repo.owner.login, repo.name)) %>
+	  <%= render 'projectcard', repo: repo %>
   <% end %>
 </div>  
 
