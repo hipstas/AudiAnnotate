@@ -1,5 +1,5 @@
 <h2>My Projects</h2>
-<div>
+<div class="card-deck">
   <% @repos.each do |repo| %>
 	  <%= render 'projectcard', repo: repo %>
   <% end %>
