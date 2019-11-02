@@ -12,9 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.label :repo_name %>
+    <%= form.text_field :repo_name %>
   </div>
+  <%= form.hidden_field :user_name %>
 
   <div class="actions">
     <%= form.submit(class: "btn btn-light") %>

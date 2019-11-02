@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Label:</strong>
+  <%= @item.label %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @item.repo_name %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item.user_name, @item.repo_name, @item.label) %> |
+<%= link_to 'Back', project_path(@item.user_name, @item.repo_name) %>

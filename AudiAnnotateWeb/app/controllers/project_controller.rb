@@ -14,14 +14,14 @@ class ProjectController < ApplicationController
 
   def new
     # display the form
-    @project = Project.new
+    @project = Project.new(@github_client.user.login, nil)
   end
 
   def create
     # instantiate the object from form parameters
-    @project = Project.new(project_params)
+    @project = Project.new(project_params[:user_name], project_params[:repo_name])
     # create the repo 
-    response = @github_client.create_repository(@project.name, {topics: ['audiannotate']})
+    response = @github_client.create_repository(@project.repo_name, {topics: ['audiannotate']})
     @github_client.replace_all_topics(response.full_name, ['audiannotate'])
 
     @github_client.create_contents(
@@ -31,46 +31,25 @@ class ProjectController < ApplicationController
       'Repository created by AudiAnnotateWeb, version 0.0.0', # file contents
       {branch: 'gh-pages'})
     # redirect or show an error
-    redirect_to project_path(@github_client.user.login, @project.name)
+    redirect_to project_path(@project.user_name, @project.repo_name)
   end
 
   def show
-    user_name = params[:user_name]
-    repo_name = params[:repo_name]
-    clone(user_name, repo_name, session[:github_token])
-    @repo = Octokit.repository("#{user_name}/#{repo_name}")
+    @project = Project.new(params[:user_name], params[:repo_name])
+    @project.clone(session[:github_token])
+    @repo = Octokit.repository("#{@project.user_name}/#{@project.repo_name}")
+    @folders = Dir.glob(File.join(@project.repo_path,'*')).select {|f| File.directory? f}
   end
 
 
   private
-
     def connect
       @github_client = Octokit::Client.new(access_token: session[:github_token])
     end
 
-    def clone(user_name, repo_name, access_token)
-      # due to security concerns, we shouldn't actually clone the repository but pull into an empty one
-      # see https://github.blog/2012-09-21-easier-builds-and-deployments-using-git-over-https-and-oauth/
-      # create a (temporary-ish) directory for the user if there isn't one
-      user_path = File.join(Rails.root, 'tmp', user_name) 
-      Dir.mkdir(user_path) unless Dir.exists?(user_path)
-
-      # create a (temporary-ish) directory for the repo if there isn't one and initialize it
-      repo_path = File.join(user_path, repo_name)
-      unless Dir.exists?(repo_path)
-        Dir.mkdir(repo_path)
-        Git.init(repo_path)
-      end
-
-      # pull into the repo, using the access token
-      git = Git.open(repo_path)  # TODO consider using the logger here
-      # remote = git.add_remote('origin', "https://#{access_token}@github.com/#{user_name}/#{repo_name}.git")
-      git.pull("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')
-    end
-
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name)
+      params.require(:project).permit(:user_name, :repo_name)
     end
 
 
