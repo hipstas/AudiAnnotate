@@ -1,0 +1,44 @@
+{
+    "@context": "http://iiif.io/api/presentation/3/context.json",
+    "id": "<%= item.manifest_uri %>",
+    "type": "Manifest",
+    "label": { "en": [ "<%= item.manifest_label %>" ] },
+    "items": [
+      <% item.canvases.each do |canvas| %>
+      {
+        "id": "<%= canvas.canvas_id %>",
+        "type": "Canvas",
+        "duration": <%= canvas.duration %>,
+        "items": [
+          {
+            "id": "<%= canvas.painting_annotation_page_id %>",
+            "type": "AnnotationPage",
+            "items": [
+              {
+                "id": "<%= canvas.painting_annotation_id %>",
+                "type": "Annotation",
+                "motivation": "painting",
+                "body": {
+                  "id": "<%= canvas.audio_url %>",
+                  "type": "Sound",
+                  "format": "audio/mp3",
+                  "duration": <%= canvas.duration %>
+                },
+                "target": "<%= canvas.canvas_id %>"
+              }
+            ]
+          }
+        ]
+      }
+      <% end %>    
+    ],
+    "homepage": [
+      {
+        "id": "https://library.harvard.edu/poetry/listeningbooth/poets/sexton.html",
+        "type": "Text",
+        "label": { "en": [ "TODO Should this point to the origin or the item Jekyll site?  If the latter, then for the project or the item?  Ex:'Anne Sexton at the Woodberry Poetry Room'" ] },
+        "format": "text/html",
+        "language": [ "en" ]
+      }
+    ]
+} 

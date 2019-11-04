@@ -47,7 +47,9 @@ class Project
     File.join(user_path, repo_name)
   end
 
-
+  def uri_root
+    "https://#{user_name}.gihub.io/#{repo_name}"
+  end
 
 
 end

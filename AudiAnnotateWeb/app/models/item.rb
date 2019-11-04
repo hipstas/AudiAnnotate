@@ -54,14 +54,32 @@ class Item
   end
 
   def manifest_contents
-    {
-      label: label,
-      items: [
-        {
-          canvas: audio_url
-        }
-      ]
-    }.to_json
+    ApplicationController::render template: 'items/manifest.json', layout: false, locals: {item: self}
+  end
+
+
+  def slug
+    label
+  end
+
+  #######################
+  # Manifest helpers
+  #######################
+
+  def uri_root
+    "#{@project.uri_root}/#{slug}"
+  end
+
+  def manifest_uri
+    "#{uri_root}/manifest.json"
+  end
+
+  def manifest_label
+    label
+  end
+
+  def canvases
+    [Canvas.new(self, audio_url, 1)]
   end
 
 end
