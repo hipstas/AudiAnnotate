@@ -1,10 +1,13 @@
-<p>AudiAnnotate is a project to publish and share annotations on audio files.</p>
-<p>Big Sign up link goes here</p>
-<h2>Projects</h2>
-<p>The following projects have been created on AudiAnnotate</p>
+<h2>AudiAnnotate is a project to publish and share annotations on audio files.</h2>
+
+<h3>The following projects have been created on AudiAnnotate</h3>
 
 <div class="card-deck">
   <% @repos.each do |repo| %>
 	  <%= render 'projectcard', repo: repo %>
   <% end %>
 </div>  
+
+<p>Create your own project on AudiAnnotate by signing in with Github:</p>
+
+<%= link_to 'Sign in', '/auth/github', :class => "btn btn-light btn-lg" %>
