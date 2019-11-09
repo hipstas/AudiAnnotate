@@ -16,8 +16,13 @@
     <%= form.text_field :label %>
   </div>
   <div class="field">
-    <%= form.label :audio_url %>
+    <%= form.label :audio_url, 'Audio File URL' %>
     <%= form.text_field :audio_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duration, 'Duration (seconds)' %>
+    <%= form.text_field :duration %>
   </div>
 
   <%= form.hidden_field(:repo_name) %>

@@ -1,14 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Label:</strong>
-  <%= @item.label %>
-</p>
+<div>
+  The IIIF manifest for <%= @item.label %> is at <%= link_to @item.manifest_uri, @item.manifest_uri %>
+</div>
 
-<p>
-  <strong>Project:</strong>
-  <%= @item.repo_name %>
-</p>
+<div>
+  Annotation layers list
+  <% @item.canvases.each do |canvas| %>
+    <%= canvas.position %>
+    <% canvas.annotation_pages do |page| %>
 
-<%= link_to 'Edit', edit_item_path(@item.user_name, @item.repo_name, @item.label) %> |
+    <% end %>
+  <% end %> 
+</div>
+
+<div>
+  Add annotation
+</div>
+
+
 <%= link_to 'Back', project_path(@item.user_name, @item.repo_name) %>

@@ -2,6 +2,6 @@
 		  <div class="card-body text-dark">
 	    	<h5 class="card-title"><%= repo.name %></h5>
 	    	<p class="card-text">Created by <%= repo.owner.login %></p>
-	    	<a href="#" class="btn btn-primary">Go somewhere</a>
+        <%= link_to( 'Edit', project_path(repo.owner.login, repo.name), class: "btn btn-primary") %>
 	  	  </div>
 	  </div>
