@@ -5,17 +5,24 @@
 </div>
 
 <div>
-  Annotation layers list
-  <% @item.canvases.each do |canvas| %>
-    <%= canvas.position %>
-    <% canvas.annotation_pages do |page| %>
-
-    <% end %>
-  <% end %> 
+  Annotations
+  <ul>
+    <% @item.canvases.each do |canvas| %>
+      <li>
+        <%= canvas.position %>
+        <% canvas.annotation_pages do |page| %>
+          <ul>
+            <li>individual annotations here </li>
+          </ul>
+        <% end %>
+      </li>
+    <% end %> 
+    
+  </ul>
 </div>
 
 <div>
-  Add annotation
+  Add annotation file
 </div>
 
 

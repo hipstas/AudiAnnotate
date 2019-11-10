@@ -18,7 +18,3 @@
   </ul>
   <%= link_to "New Item", new_item_path(@project.user_name, @project.repo_name) %>
 </div>
-
-<pre>
-<%= JSON.pretty_generate(JSON.parse(@repo.to_json)) %>
-</pre>
