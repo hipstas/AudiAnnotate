@@ -12,7 +12,7 @@
     <% @folders.each do |folder| %>
 
       <li>
-        <%= folder %>
+        <%= link_to(File.basename(folder), item_path(@project.user_name, @project.repo_name, File.basename(folder))) %>
       </li>
     <% end %>
   </ul>

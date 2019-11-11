@@ -21,7 +21,7 @@ class Item
     end
     File.write(manifest_path, manifest_contents)
 
-    canvases.each { |canvas| canvas.save }
+    # canvases.each { |canvas| canvas.save }
 
     # add, commit, and push
     git.add(item_path)

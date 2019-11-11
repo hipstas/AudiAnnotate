@@ -10,9 +10,12 @@
     <% @item.canvases.each do |canvas| %>
       <li>
         <%= canvas.position %>
-        <% canvas.annotation_pages do |page| %>
+        <% canvas.annotation_pages.each do |page| %>
+          <%= page.label %>
           <ul>
-            <li>individual annotations here </li>
+            <% page.annotations.each do |annotation| %>
+              <li><%= annotation.start_time %>: <%= annotation.text %></li>
+            <% end %>
           </ul>
         <% end %>
       </li>
@@ -23,6 +26,27 @@
 
 <div>
   Add annotation file
+  <%= form_with(model: @item, url: add_annotation_file_path, local: true) do |form| %>
+
+
+    <div class="field">
+      <%= form.label :layer %>
+      <%= form.text_field :layer %><br />
+    </div>
+
+    <div class="field">
+      <%= form.label :annotation_file %>
+      <%= form.file_field :annotation_file %>
+    </div>
+
+    <%= form.hidden_field(:label) %>
+    <%= form.hidden_field(:repo_name) %>
+    <%= form.hidden_field(:user_name) %>
+
+    <div class="actions">
+      <%= form.submit 'Add' %>
+    </div>
+  <% end %>
 </div>
 
 

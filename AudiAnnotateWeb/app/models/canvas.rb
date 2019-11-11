@@ -9,7 +9,12 @@ class Canvas
   end
 
   def annotation_pages
-    []
+    folders = Dir.glob(File.join(canvas_path, "*"))
+    folders.map{|folder| AnnotationPage.new(self, folder)}
+  end
+
+  def item
+    @item
   end
 
   def save

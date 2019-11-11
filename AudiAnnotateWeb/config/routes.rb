@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
+  # resources :annotation_files
   post 'project/:user_name/:repo_name/items', to: 'items#create', as: 'create_item'
   get 'project/:user_name/:repo_name/items/new', to: 'items#new', as: 'new_item'
   get 'project/:user_name/:repo_name/items/:label/edit', to: 'items#edit', as: 'edit_item'
   get 'project/:user_name/:repo_name/items/:label', to: 'items#show', as: 'item'
   patch 'project/:user_name/:repo_name/items/:label', to: 'items#update', as: 'update_item'
   delete 'project/:user_name/:repo_name/items/:label', to: 'items#destroy', as: 'destroy_item'
-
+  post 'project/:user_name/:repo_name/items/:label/files', to: 'items#add_annotation_file', as: 'add_annotation_file'
 
   root to: 'project#all'
 
