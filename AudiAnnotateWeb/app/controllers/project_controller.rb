@@ -20,18 +20,14 @@ class ProjectController < ApplicationController
   def create
     # instantiate the object from form parameters
     @project = Project.new(project_params[:user_name], project_params[:repo_name])
-    # create the repo 
-    response = @github_client.create_repository(@project.repo_name, {topics: ['audiannotate']})
-    @github_client.replace_all_topics(response.full_name, ['audiannotate'])
+    if @project.valid?
+      # create the repo 
+      @project.create(@github_client)
 
-    @github_client.create_contents(
-      response.full_name, #repository full name
-      'README.md', 
-      'Initial creation', 
-      'Repository created by AudiAnnotateWeb, version 0.0.0', # file contents
-      {branch: 'gh-pages'})
-    # redirect or show an error
-    redirect_to project_path(@project.user_name, @project.repo_name)
+      redirect_to project_path(@project.user_name, @project.repo_name)
+    else
+      render :new
+    end
   end
 
   def show
@@ -43,10 +39,6 @@ class ProjectController < ApplicationController
 
 
   private
-    def connect
-      @github_client = Octokit::Client.new(access_token: session[:github_token])
-    end
-
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
       params.require(:project).permit(:user_name, :repo_name)

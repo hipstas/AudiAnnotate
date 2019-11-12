@@ -18,14 +18,11 @@ class ItemsController < ApplicationController
     @item = Item.new(params[:user_name], params[:repo_name])
   end
 
-  # GET /items/1/edit
-  def edit
-  end
 
   # POST /items
   # POST /items.json
   def create
-    @item = Item.new(item_params[:user_name], item_params[:repo_name], item_params[:label], item_params[:audio_url])
+    @item = Item.new(item_params[:user_name], item_params[:repo_name], item_params[:label], item_params[:audio_url], item_params[:duration])
 
     respond_to do |format|
       if @item.save(session[:github_token])
@@ -35,6 +32,23 @@ class ItemsController < ApplicationController
       end
     end
   end
+
+
+  def add_annotation_file
+    @item = Item.new(item_params[:user_name], item_params[:repo_name], item_params[:label])
+
+    annotation_file = AnnotationFile.new(@item.canvases.first, item_params[:layer], item_params[:annotation_file])
+    if annotation_file.save(session[:github_token])
+      render :show
+    end
+  end    
+
+
+
+  # GET /items/1/edit
+  def edit
+  end
+
 
   # PATCH/PUT /items/1
   # PATCH/PUT /items/1.json
@@ -68,6 +82,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:label, :audio_url, :user_name, :repo_name)
+      params.require(:item).permit(:label, :audio_url, :user_name, :repo_name, :duration, :layer, :annotation_file)
     end
 end

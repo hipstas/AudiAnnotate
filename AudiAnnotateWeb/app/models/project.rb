@@ -2,6 +2,8 @@ class Project
   include ActiveModel::Model
   attr_accessor :user_name, :repo_name
 
+  validates :repo_name, format: { with: /\A[\-\w]+\Z/, message: 'only allows letters, numbers, dashes, and underscores'}
+
 
   def initialize(user_name, repo_name)
     @user_name = user_name
@@ -9,11 +11,11 @@ class Project
   end
 
 
-  def create(github_clinet)
-    response = @github_client.create_repository(@project.repo_name, {topics: ['audiannotate']})
-    @github_client.replace_all_topics(response.full_name, ['audiannotate'])
+  def create(github_client)
+    response = github_client.create_repository(@repo_name, {topics: ['audiannotate']})
+    github_client.replace_all_topics(response.full_name, ['audiannotate'])
 
-    @github_client.create_contents(
+    github_client.create_contents(
       response.full_name, #repository full name
       'README.md', 
       'Initial creation', 

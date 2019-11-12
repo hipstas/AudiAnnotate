@@ -1,11 +1,12 @@
 class Item
   include ActiveModel::Model
-  attr_accessor :label, :user_name, :repo_name, :audio_url
+  attr_accessor :label, :user_name, :repo_name, :audio_url, :duration
 
-  def initialize(user_name, repo_name, label=nil, audio_url=nil)
+  def initialize(user_name, repo_name, label=nil, audio_url=nil, duration=nil)
     @project = Project.new(user_name, repo_name)
     @label=label
     @audio_url=audio_url
+    @duration=duration
   end    
 
   def save(access_token)
@@ -19,6 +20,8 @@ class Item
       Dir.mkdir(item_path)
     end
     File.write(manifest_path, manifest_contents)
+
+    # canvases.each { |canvas| canvas.save }
 
     # add, commit, and push
     git.add(item_path)
@@ -79,7 +82,7 @@ class Item
   end
 
   def canvases
-    [Canvas.new(self, audio_url, 1)]
+    [Canvas.new(self, audio_url, 1, duration)]
   end
 
 end

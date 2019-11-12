@@ -9,6 +9,18 @@
         "id": "<%= canvas.canvas_id %>",
         "type": "Canvas",
         "duration": <%= canvas.duration %>,
+        <% if canvas.annotation_pages.count > 0 %>
+        "annotations": [
+          <% canvas.annotation_pages.each_with_index do |page,i| %>
+          <%= ',' unless i==0 %>
+          {
+            "type": "AnnotationPage",
+            "id": "<%= page.annotation_page_uri %>",
+            "label": "<%= page.label %>"
+          }
+          <% end %>
+        ],
+        <% end %>
         "items": [
           {
             "id": "<%= canvas.painting_annotation_page_id %>",
