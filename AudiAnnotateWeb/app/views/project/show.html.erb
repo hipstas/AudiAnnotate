@@ -1,20 +1,22 @@
 
-<%= link_to 'My Projects', my_projects_path %><br/>
-
-<%= link_to @repo.name, @repo.url %>
+<h2><%= link_to 'My Projects', my_projects_path %> | <%= link_to @repo.name, @repo.url %> </br></h2>
 <p>
   <%= @repo.description %>
 </p>
 
-<div>
-  <h3>Items</h3>
+<div class="row">
+    <div class="col-sm">
+  <h3>Audio Files</h3>
   <ul>
     <% @folders.each do |folder| %>
 
-      <li>
+      <li class="list-group-item">
         <%= link_to(File.basename(folder), item_path(@project.user_name, @project.repo_name, File.basename(folder))) %>
       </li>
     <% end %>
   </ul>
-  <%= link_to "New Item", new_item_path(@project.user_name, @project.repo_name) %>
+  <%= link_to "New Item", new_item_path(@project.user_name, @project.repo_name), class: "btn btn-primary" %>
+</div>
+<div class="col-sm"></div>
+<div class="col-sm"></div>
 </div>
