@@ -1,0 +1,26 @@
+---
+layout: page
+---
+
+<div>
+Universal Viewer Goes Here
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Annotation</th>
+    </tr>
+  </thead>
+  <tbody>
+      {%- for annotation in site.data[page.manifest_name].canvas-1.annotations.items -%}
+      <tr>
+      	<td>{{annotation.target.selector.t}}</td>
+      	<td>{{annotation.body.value}}</td>
+      </tr>
+      {%- endfor -%}
+  </tbody>
+</table>
+
+{{ page.manifest_id }}

@@ -9,6 +9,7 @@ Universal Viewer Goes Here
 | Time                  | Annotation |
 | --------------------- | ---------- |
 {% for anno_files in site.data.1 -%}
+{{ anno_files | inspect }}
 	{% assign annos = anno_files[1] -%}
 	{% for annotation in annos.items -%}
 		| {{ annotation.target.selector.t }} | {{ annotation.body.value }} |

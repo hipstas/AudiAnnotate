@@ -18,7 +18,6 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Anne Sexton Poetry
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is a site with all known Anne Sexton poetry reading recordings.  Each poem has timestamped annotations.  If the audio is available online, you can play the reading and navigate to a specific annotation location by clicking on the annotation. 
@@ -31,6 +30,11 @@ github_username:  saracarl
 theme: minima
 plugins:
   - jekyll-feed
+
+collections:
+  items:
+    output: true
+    permalink: /items/:path/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
