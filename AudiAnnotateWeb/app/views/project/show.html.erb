@@ -1,4 +1,4 @@
-
+<div class="container">
 <h2><%= link_to 'My Projects', my_projects_path %> | <%= link_to @repo.name, @repo.url %> </br></h2>
 <p>
   <%= @repo.description %>
@@ -7,7 +7,7 @@
 <div class="row">
     <div class="col-sm">
   <h3>Audio Files</h3>
-  <ul>
+  <ul class="list-group">
     <% @folders.each do |folder| %>
 
       <li class="list-group-item">
@@ -19,4 +19,5 @@
 </div>
 <div class="col-sm"></div>
 <div class="col-sm"></div>
+</div>
 </div>
