@@ -1,30 +1,43 @@
-<p id="notice"><%= notice %></p>
 
-<div class="container">
+<div id='notice-container' class="container">
+  <div id="notice"><%= notice %></div>
+
   The IIIF manifest for <%= @item.label %> is at <%= link_to @item.manifest_uri, @item.manifest_uri %>
 </div>
 
-<div class="container">
-  Annotations
-  <ul>
-    <% @item.canvases.each do |canvas| %>
-      <li>
-        <%= canvas.position %>
+<div id='annotation-list' class="container">
+  <h2>Annotations</h2>
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th>Timestamp</th>
+        <th>Text</th>
+        <th>Layer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @item.canvases.each do |canvas| %>
         <% canvas.annotation_pages.each do |page| %>
-          <%= page.label %>
-          <ul>
-            <% page.annotations.each do |annotation| %>
-              <li><%= annotation.start_time %>: <%= annotation.text %></li>
-            <% end %>
-          </ul>
+          <% page.annotations.each do |annotation| %>
+            <tr>
+              <td>
+                <%= annotation.start_time %>
+              </td>
+              <td>
+                <%= annotation.text %>
+              </td>
+              <td>
+                <%= page.label %>
+              </td>
+            </tr>
+          <% end %>
         <% end %>
-      </li>
-    <% end %> 
-    
-  </ul>
+      <% end %> 
+    </tbody>
+  </table>
 </div>
 
-<div class="container">
+<div id='add-annotation-form' class="container">
   <h2>Add annotation file</h2>
   <%= form_with(model: @item, url: add_annotation_file_path, local: true) do |form| %>
 
@@ -51,7 +64,7 @@
       <%= form.submit('Add', class: "btn btn-light") %>
     </div>
   <% end %>
+
+  <%= link_to 'Back', project_path(@item.user_name, @item.repo_name) %>
 </div>
 
-
-<%= link_to 'Back', project_path(@item.user_name, @item.repo_name) %>
