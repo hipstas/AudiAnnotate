@@ -1,3 +1,4 @@
+<div class="container">
 <% unless ENV['GITHUB_KEY'] %>
 <h1>ERROR: This application must have GITHUB_KEY and GITHUB_SECRET environment variables set.</h1>
 <h2>Add these variables to your initializers or environment to proceed.</h2>
@@ -21,3 +22,4 @@
 
   <%= link_to 'Sign in', '/auth/github', :class => "btn btn-light btn-lg" %>
 <% end %>
+</div>
