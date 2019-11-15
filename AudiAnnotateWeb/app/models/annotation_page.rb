@@ -13,4 +13,8 @@ class AnnotationPage
     @page['items'].map { |anno| Annotation.new(anno) }
   end
 
+  def annotation_page_uri
+    @page['id']
+  end
+
 end

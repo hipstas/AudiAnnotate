@@ -1,3 +1,8 @@
+<% unless ENV['GITHUB_KEY'] %>
+<h1>ERROR: This application must have GITHUB_KEY and GITHUB_SECRET environment variables set.</h1>
+<h2>Add these variables to your initializers or environment to proceed.</h2>
+<% end %>
+
 <h2>AudiAnnotate is a project to publish and share annotations on audio files.</h2>
 
 <h3>The following projects have been created on AudiAnnotate</h3>
@@ -8,6 +13,11 @@
   <% end %>
 </div>  
 
-<p>Create your own project on AudiAnnotate by signing in with Github:</p>
 
-<%= link_to 'Sign in', '/auth/github', :class => "btn btn-light btn-lg" %>
+<% if session[:github_token] %>
+  <%= link_to 'My Projects', my_projects_path() %>
+<% else %>
+  <p>Create your own project on AudiAnnotate by signing in with Github:</p>
+
+  <%= link_to 'Sign in', '/auth/github', :class => "btn btn-light btn-lg" %>
+<% end %>

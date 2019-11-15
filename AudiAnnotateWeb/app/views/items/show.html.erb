@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<div>
+<div class="container">
   The IIIF manifest for <%= @item.label %> is at <%= link_to @item.manifest_uri, @item.manifest_uri %>
 </div>
 
-<div>
+<div class="container">
   Annotations
   <ul>
     <% @item.canvases.each do |canvas| %>
@@ -24,19 +24,23 @@
   </ul>
 </div>
 
-<div>
-  Add annotation file
+<div class="container">
+  <h2>Add annotation file</h2>
   <%= form_with(model: @item, url: add_annotation_file_path, local: true) do |form| %>
 
 
-    <div class="field">
-      <%= form.label :layer %>
-      <%= form.text_field :layer %><br />
+    <div class="form-group row">
+      <%= form.label :layer, class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-4">
+        <%= form.text_field :layer, class: 'form-control' %>
+      </div>
     </div>
 
-    <div class="field">
-      <%= form.label :annotation_file %>
-      <%= form.file_field :annotation_file %>
+    <div class="form-group row">
+      <%= form.label :annotation_file, class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-4">
+        <%= form.file_field :annotation_file, class: 'form-control' %>
+      </div>
     </div>
 
     <%= form.hidden_field(:label) %>
