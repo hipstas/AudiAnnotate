@@ -1,5 +1,7 @@
+<div class="container">
 <h1>New Item</h1>
 
 <%= render 'form', item: @item %>
 
 <%= link_to 'Back', project_path(@item.user_name, @item.repo_name) %>
+</div>
