@@ -1,5 +1,12 @@
 
 <div id='notice-container' class="container">
+  <h2>
+    <%= link_to 'My Projects', my_projects_path %> 
+    | 
+    <%= link_to @item.repo_name, project_path(@item.user_name, @item.repo_name) %>
+    |
+    <%= link_to @item.label, item_path(@item.user_name, @item.repo_name, @item.label) %>      
+  </h2>
   <div id="notice"><%= notice %></div>
 
   The IIIF manifest for <%= @item.label %> is at <%= link_to @item.manifest_uri, @item.manifest_uri %>

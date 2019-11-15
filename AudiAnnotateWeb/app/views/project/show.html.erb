@@ -1,5 +1,9 @@
 <div class="container">
-<h2><%= link_to 'My Projects', my_projects_path %> | <%= link_to @repo.name, @repo.url %> </br></h2>
+<h2>
+  <%= link_to 'My Projects', my_projects_path %> 
+  | 
+  <%= link_to @repo.name, project_path(@project.user_name, @project.repo_name) %>
+</h2>
 <p>
   <%= @repo.description %>
 </p>
