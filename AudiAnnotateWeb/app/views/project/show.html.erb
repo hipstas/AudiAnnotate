@@ -1,27 +1,27 @@
 <div class="container">
-<h2>
-  <%= link_to 'My Projects', my_projects_path %> 
-  | 
-  <%= link_to @repo.name, project_path(@project.user_name, @project.repo_name) %>
-</h2>
-<p>
-  <%= @repo.description %>
-</p>
-
-<div class="row">
+  <h2>
+    <%= link_to 'My Projects', my_projects_path %> 
+    | 
+    <%= link_to @repo.name, project_path(@project.user_name, @project.repo_name) %>
+  </h2>
+  <p>
+    <%= @repo.description %>
+  </p>
+  <p>
+    Your audio files are published at <%= link_to @project.uri_root, @project.uri_root %>
+  </p>
+  <div class="row">
     <div class="col-sm">
-  <h3>Audio Files</h3>
-  <ul class="list-group">
-    <% @folders.each do |folder| %>
+      <h3>Audio Files</h3>
+      <ul class="list-group">
+        <% @folders.each do |folder| %>
 
-      <li class="list-group-item">
-        <%= link_to(File.basename(folder), item_path(@project.user_name, @project.repo_name, File.basename(folder))) %>
-      </li>
-    <% end %>
-  </ul>
-  <%= link_to "New Item", new_item_path(@project.user_name, @project.repo_name), class: "btn btn-primary" %>
-</div>
-<div class="col-sm"></div>
-<div class="col-sm"></div>
-</div>
+          <li class="list-group-item">
+            <%= link_to(File.basename(folder), item_path(@project.user_name, @project.repo_name, File.basename(folder))) %>
+          </li>
+        <% end %>
+      </ul>
+      <%= link_to "New Item", new_item_path(@project.user_name, @project.repo_name), class: "btn btn-primary" %>
+    </div>
+  </div>
 </div>

@@ -84,7 +84,7 @@ EOF
   end
 
   def annotation_page_file
-    "page-#{slug}.json"
+    "#{slug}.json"
   end
 
   # def uri_root
@@ -92,11 +92,11 @@ EOF
   # end
 
   def annotation_page_uri
-    "#{@canvas.canvas_id}/page-#{slug}.json"
+    "#{@canvas.canvas_id}/#{slug}.json"
   end
 
   def annotation_uri(index)
-    "#{@canvas.canvas_id}/page-#{slug}-annotation-#{index}.json"
+    "#{@canvas.canvas_id}/#{slug}-annotation-#{index}.json"
   end
 
 

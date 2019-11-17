@@ -20,6 +20,7 @@ class Item
       Dir.mkdir(item_path)
     end
     File.write(manifest_path, manifest_contents)
+    File.write(jekyll_collection_item_path, jekyll_collection_item_contents)
 
     # canvases.each { |canvas| canvas.save }
 
@@ -49,7 +50,7 @@ class Item
   end
 
   def item_path
-    File.join(@project.repo_path, label)
+    File.join(@project.repo_path, '_data', label)
   end
 
   def manifest_path
@@ -58,6 +59,14 @@ class Item
 
   def manifest_contents
     ApplicationController::render template: 'items/manifest.json', layout: false, locals: {item: self}
+  end
+
+  def jekyll_collection_item_path
+    File.join(@project.repo_path, '_items', "#{slug}.md")
+  end
+
+  def jekyll_collection_item_contents
+    ApplicationController::render template: 'items/jekyll_collection_item.md', layout: false, locals: {item: self}
   end
 
 

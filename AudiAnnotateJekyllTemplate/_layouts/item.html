@@ -14,12 +14,14 @@ Universal Viewer Goes Here
     </tr>
   </thead>
   <tbody>
-      {%- for annotation in site.data[page.manifest_name].canvas-1.annotations.items -%}
-      <tr>
-      	<td>{{annotation.target.selector.t}}</td>
-      	<td>{{annotation.body.value}}</td>
-      </tr>
+    {%- for annotation_page in site.data[page.manifest_name].manifest.items[0].annotations -%}
+      {%- for annotation in site.data[page.manifest_name].canvas-1[annotation_page.label].items -%}
+        <tr>
+          <td>{{annotation.target.selector.t}}</td>
+          <td>{{annotation.body.value}}</td>
+        </tr>
       {%- endfor -%}
+    {%- endfor -%}
   </tbody>
 </table>
 

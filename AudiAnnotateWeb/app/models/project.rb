@@ -21,6 +21,8 @@ class Project
       'Initial creation', 
       'Repository created by AudiAnnotateWeb, version 0.0.0', # file contents
       {branch: 'gh-pages'})
+
+    populate(github_client.access_token)
   end
 
   def clone(access_token)
@@ -41,6 +43,55 @@ class Project
     git.pull("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')
   end
 
+
+  def populate(access_token)
+    # eliminate conflicts with deleted repositories (rare)
+    if Dir.exists?(repo_path)
+      Dir.rmdir(repo_path)
+    end
+
+    # sync with github and set up empty directory
+    clone(access_token)  # is this even needed?  TODO
+
+    git = Git.open(repo_path)  # TODO consider using the logger here
+    git.branch('gh-pages').checkout
+    git.pull("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')
+
+    # copy jekyll files
+    source_paths = JEKYLL_INITIAL_FILES.map {|fn| File.join(Rails.root, '..', 'AudiAnnotateJekyllTemplate', fn)}
+    FileUtils.cp_r(source_paths, repo_path)
+
+    # write initial collection manifest
+    File.write(collection_manifest_path, collection_manifest_contents)
+    File.write(jekyll_config_path, jekyll_config_contents)
+
+    # add, commit, and push
+    git.add(repo_path)
+    git.commit('Initial Jekyll Template')
+    response = git.push("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')    
+  end
+
+
+  def collection_manifest_path
+    File.join(repo_path, '_data', 'collection.json')
+  end
+
+  def collection_manifest_contents
+    ApplicationController::render template: 'project/collection.json', layout: false, locals: {project: self}
+  end
+
+  def jekyll_config_path
+    File.join(repo_path, '_config.yml')
+  end
+
+  def jekyll_config_contents
+    ApplicationController::render template: 'project/config.yml', layout: false, locals: {project: self}
+  end
+
+  def manifest_uri
+    'https://example.com/collection.json'
+  end
+
   def user_path
     File.join(Rails.root, 'tmp', user_name) 
   end
@@ -52,6 +103,8 @@ class Project
   def uri_root
     "https://#{user_name}.gihub.io/#{repo_name}"
   end
+
+  JEKYLL_INITIAL_FILES = %w(404.html  assets  _data  Gemfile  Gemfile.lock  _includes  index.markdown  _items  _layouts  _posts .gitignore)
 
 
 end
