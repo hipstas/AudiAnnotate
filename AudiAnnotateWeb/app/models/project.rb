@@ -101,7 +101,7 @@ class Project
   end
 
   def uri_root
-    "https://#{user_name}.gihub.io/#{repo_name}"
+    "https://#{user_name}.github.io/#{repo_name}"
   end
 
   JEKYLL_INITIAL_FILES = %w(404.html  assets  _data  Gemfile  Gemfile.lock  _includes  index.markdown  _items  _layouts  _posts .gitignore)
