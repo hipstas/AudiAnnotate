@@ -1,6 +1,6 @@
 <%= form_with(model: @project, url: create_project_path, local: true) do |form| %>
   <% if project.errors.any? %>
-    <div id="error_explanation">
+    <div>
       <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
 
       <ul>
@@ -11,9 +11,10 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :repo_name %>
-    <%= form.text_field :repo_name %>
+  <div class="field col-sm-4">
+    <%= form.label :repo_name, "Project ID", class: "col-form-label" %>
+    <%= form.text_field :repo_name, { class: "form-control"} %>
+    <small id="repoNameHelp" class="form-text form-muted">A label used in URLs for your project, and will be the repository name used on GitHub.  Please do not use spaces or punctuation other than hyphens.</small>
   </div>
   <%= form.hidden_field :user_name %>
 
