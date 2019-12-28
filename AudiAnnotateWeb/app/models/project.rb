@@ -1,18 +1,25 @@
 class Project
   include ActiveModel::Model
-  attr_accessor :user_name, :repo_name
+  attr_accessor :user_name, :repo_name, :description
 
   validates :repo_name, format: { with: /\A[\-\w]+\Z/, message: 'only allows letters, numbers, dashes, and underscores'}
+  validates :description, format: { with: /\A[^\r\n]+\Z/, message: 'only allows a single paragraph of text.  Please remove any newlines.'}
 
 
-  def initialize(user_name, repo_name)
+  def initialize(user_name, repo_name, description=nil)
     @user_name = user_name
     @repo_name = repo_name
+    @description = description
   end
 
 
   def create(github_client)
-    response = github_client.create_repository(@repo_name, {topics: ['audiannotate']})
+    options = {
+      topics: ['audiannotate'], 
+      description: @description, 
+      homepage: uri_root
+    }
+    response = github_client.create_repository(@repo_name, options)
     github_client.replace_all_topics(response.full_name, ['audiannotate'])
 
     github_client.create_contents(
@@ -47,7 +54,7 @@ class Project
   def populate(access_token)
     # eliminate conflicts with deleted repositories (rare)
     if Dir.exists?(repo_path)
-      Dir.rmdir(repo_path)
+      FileUtils.rm_r(repo_path)
     end
 
     # sync with github and set up empty directory

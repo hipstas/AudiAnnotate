@@ -14,7 +14,13 @@
   <div class="field col-sm-4">
     <%= form.label :repo_name, "Project ID", class: "col-form-label" %>
     <%= form.text_field :repo_name, { class: "form-control"} %>
-    <small id="repoNameHelp" class="form-text form-muted">A label used in URLs for your project, and will be the repository name used on GitHub.  Please do not use spaces or punctuation other than hyphens.</small>
+    <small id="repo-name-help" class="form-text form-muted">A label used in URLs for your project which will be the repository name used on GitHub.  Please do not use spaces or punctuation other than hyphens.  Ex: <code>coffeehouse-poetry-performances</code></small>
+  </div>
+
+  <div class="field col-sm-4">
+    <%= form.label :description, "Description", class: "col-form-label" %>
+    <%= form.text_area :description, { class: "form-control"} %>
+    <small id="description-help" class="form-text form-muted">A brief paragraph describing your project.</small>
   </div>
   <%= form.hidden_field :user_name %>
 
