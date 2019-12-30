@@ -3,7 +3,7 @@ class Project
   attr_accessor :user_name, :repo_name, :description
 
   validates :repo_name, format: { with: /\A[\-\w]+\Z/, message: 'only allows letters, numbers, dashes, and underscores'}
-  validates :description, format: { with: /\A[^\r\n]+\Z/, message: 'only allows a single paragraph of text.  Please remove any newlines.'}
+  validates :description, format: { with: /\A[^\r\n]+\Z|\A\Z/, message: 'only allows a single paragraph of text.  Please remove any newlines.'}
 
 
   def initialize(user_name, repo_name, description=nil)

@@ -15,8 +15,10 @@ class Item
     git.branch('gh-pages').checkout
     git.pull("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')
 
+    new_item=false
     # create the directory and manifest file
     unless Dir.exists?(item_path)
+      new_item=true
       Dir.mkdir(item_path)
     end
     File.write(manifest_path, manifest_contents)
@@ -26,7 +28,13 @@ class Item
 
     # add, commit, and push
     git.add(item_path)
-    git.commit("Added #{label}")
+    git.add(jekyll_collection_item_path)
+    git.add(manifest_path)
+    if new_item
+      git.commit("Added #{label}")
+    else
+      git.commit("Updated #{label}")
+    end      
     response = git.push("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')    
     true
   end
