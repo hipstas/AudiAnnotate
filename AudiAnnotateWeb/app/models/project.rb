@@ -111,7 +111,7 @@ class Project
     "https://#{user_name}.github.io/#{repo_name}"
   end
 
-  JEKYLL_INITIAL_FILES = %w(404.html  assets  _data  Gemfile  Gemfile.lock  _includes  index.markdown  _items  _layouts  _posts .gitignore)
+  JEKYLL_INITIAL_FILES = %w(404.html  assets  _data  Gemfile  Gemfile.lock  _includes  index.markdown  _items  _layouts _manifests _posts .gitignore)
 
 
 end

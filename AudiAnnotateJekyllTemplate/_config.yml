@@ -34,7 +34,11 @@ plugins:
 collections:
   items:
     output: true
-    permalink: /items/:path/
+    permalink: /:path/
+  manifests:
+    output: true
+    permalink: /:path/manifest.json
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

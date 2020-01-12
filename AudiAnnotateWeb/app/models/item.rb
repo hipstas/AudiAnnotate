@@ -23,13 +23,15 @@ class Item
     end
     File.write(manifest_path, manifest_contents)
     File.write(jekyll_collection_item_path, jekyll_collection_item_contents)
+    File.write(jekyll_collection_item_manifest_path, jekyll_collection_item_manifest_contents)
 
     # canvases.each { |canvas| canvas.save }
 
     # add, commit, and push
     git.add(item_path)
-    git.add(jekyll_collection_item_path)
     git.add(manifest_path)
+    git.add(jekyll_collection_item_path)
+    git.add(jekyll_collection_item_manifest_path)
     if new_item
       git.commit("Added #{label}")
     else
@@ -76,6 +78,15 @@ class Item
   def jekyll_collection_item_contents
     ApplicationController::render template: 'items/jekyll_collection_item.md', layout: false, locals: {item: self}
   end
+
+  def jekyll_collection_item_manifest_path
+    File.join(@project.repo_path, '_manifests', "#{slug}.md")
+  end
+
+  def jekyll_collection_item_manifest_contents
+    ApplicationController::render template: 'items/jekyll_collection_manifest.md', layout: false, locals: {item: self}
+  end
+
 
 
   def slug
