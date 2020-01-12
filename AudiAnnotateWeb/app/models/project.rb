@@ -68,6 +68,9 @@ class Project
     source_paths = JEKYLL_INITIAL_FILES.map {|fn| File.join(Rails.root, '..', 'AudiAnnotateJekyllTemplate', fn)}
     FileUtils.cp_r(source_paths, repo_path)
 
+    # remove example data
+    JEKYLL_INITIAL_BLACKLIST.map{|path| File.join(repo_path, path)}.each { |path| FileUtils.rm_r(path) } 
+
     # write initial collection manifest
     File.write(collection_manifest_path, collection_manifest_contents)
     File.write(jekyll_config_path, jekyll_config_contents)
@@ -112,6 +115,7 @@ class Project
   end
 
   JEKYLL_INITIAL_FILES = %w(404.html  assets  _data  Gemfile  Gemfile.lock  _includes  index.markdown  _items  _layouts _manifests _posts .gitignore)
+  JEKYLL_INITIAL_BLACKLIST = %w(_items/anne-sexton--woodberry--1974.md _data/anne-sexton--woodberry--1974)
 
 
 end
