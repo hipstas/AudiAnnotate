@@ -6,9 +6,12 @@ class ProjectController < ApplicationController
   end
 
   def mine
-    # TODO  replace hard-wired string with current user
     user_name = @github_client.user.login
-    @repos = @github_client.search_repositories("user:#{user_name} topic:audiannotate", sort: 'stars').items
+    if @github_client.repositories.size == 0
+      @repos = []
+    else
+      @repos = @github_client.search_repositories("user:#{user_name} topic:audiannotate", sort: 'stars').items
+    end
   end
 
 
