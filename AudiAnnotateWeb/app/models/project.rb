@@ -115,7 +115,7 @@ class Project
   end
 
   JEKYLL_INITIAL_FILES = %w(404.html  assets  _data  Gemfile  Gemfile.lock  _includes  index.markdown  _items  _layouts _manifests _posts .gitignore)
-  JEKYLL_INITIAL_BLACKLIST = %w(_items/anne-sexton--woodberry--1974.md _data/anne-sexton--woodberry--1974)
+  JEKYLL_INITIAL_BLACKLIST = %w(_items/anne-sexton--woodberry--1974.md _manifests/anne-sexton--woodberry--1974.md _data/anne-sexton--woodberry--1974)
 
 
 end

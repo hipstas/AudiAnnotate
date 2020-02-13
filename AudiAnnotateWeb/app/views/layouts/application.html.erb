@@ -1,5 +1,3 @@
-<%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,8 +5,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
@@ -16,8 +14,9 @@
       <a class="navbar-brand" href="/">AudiAnnotate</a>
       <% if @github_client %>
         <%= @github_client.user.login %>
+        <%= link_to 'Sign Out', '/user/logout' %>
       <% else %>
-        <%= link_to 'Sign in', '/auth/github' %>
+        <%= link_to 'Sign In', '/auth/github' %>
       <% end %>
     </nav>
     <div class="bg text-light">
@@ -26,8 +25,8 @@
   </body>
 
   <footer class="footer fixed-bottom py-1">
-  <div class="container">
-    <span class="text-white"><a href="https://hipstas.org/audiannotate/">About AudiAnnotate</a></span>
-  </div>
-</footer>
+    <div class="container">
+      <span class="text-white"><a href="https://hipstas.org/audiannotate/">About AudiAnnotate</a></span>
+    </div>
+  </footer>
 </html>
