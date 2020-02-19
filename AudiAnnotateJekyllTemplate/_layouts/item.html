@@ -14,8 +14,8 @@ layout: page
 
         myUV = createUV('#uv', {
             iiifResourceUri: 'manifest.json',
-            configUri: '/assets/uv-config.json',
-            root: '../assets/uv'
+            configUri: '{{ site.baseurl }}/assets/uv-config.json',
+            root: '../../{{ site.baseurl }}/assets/uv'
         }, new UV.URLDataProvider());
 
         myUV.on("created", function(obj) {
@@ -26,8 +26,7 @@ layout: page
     }, false);
 
 </script>
-
-<script src="/assets/uv/uv.js"></script>
+<script src="{{ site.baseurl }}/assets/uv/uv.js"></script>
 
 <table>
   <thead>
