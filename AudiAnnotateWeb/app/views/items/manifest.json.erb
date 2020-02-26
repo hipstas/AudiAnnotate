@@ -3,6 +3,25 @@
     "id": "<%= item.manifest_uri %>",
     "type": "Manifest",
     "label": { "en": [ "<%= item.label %>" ] },
+    <% if item.homepage %>  
+    "homepage": [
+      {
+        "id": "<%= item.homepage %>",
+        "type": "Text",
+        "label": { "en": [ "Home page for <%= item.label %>" ] },
+        "format": "text/html"
+      }
+    ],
+    <% end %>
+    <% if item.provider_label && item.provider_uri %>
+    "provider": [
+      {
+        "id": "<%= item.provider_uri %>",
+        "type": "Agent",
+        "label": { "en": [ "<%= item.provider_label %>" ] }
+      }
+    ],
+    <% end %>
     "items": [
       <% item.canvases.each do |canvas| %>
       {
@@ -43,14 +62,5 @@
         ]
       }
       <% end %>    
-    ],
-    "homepage": [
-      {
-        "id": "https://library.harvard.edu/poetry/listeningbooth/poets/sexton.html",
-        "type": "Text",
-        "label": { "en": [ "TODO Should this point to the origin or the item Jekyll site?  If the latter, then for the project or the item?  Ex:'Anne Sexton at the Woodberry Poetry Room'" ] },
-        "format": "text/html",
-        "language": [ "en" ]
-      }
     ]
 } 

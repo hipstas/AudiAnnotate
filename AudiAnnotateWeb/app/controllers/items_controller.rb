@@ -22,7 +22,15 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
-    @item = Item.new(item_params[:user_name], item_params[:repo_name], item_params[:label], item_params[:audio_url], item_params[:duration])
+    @item = Item.new(
+      item_params[:user_name], 
+      item_params[:repo_name], 
+      item_params[:label], 
+      item_params[:audio_url], 
+      item_params[:duration],
+      item_params[:provider_uri],
+      item_params[:provider_label],
+      item_params[:homepage])
 
     respond_to do |format|
       if @item.save(session[:github_token])
@@ -82,6 +90,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:label, :audio_url, :user_name, :repo_name, :duration, :layer, :annotation_file)
+      params.require(:item).permit(:label, :audio_url, :user_name, :repo_name, :duration, :layer, :annotation_file, :provider_uri, :provider_label, :homepage)
     end
 end

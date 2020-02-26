@@ -1,12 +1,15 @@
 class Item
   include ActiveModel::Model
-  attr_accessor :label, :user_name, :repo_name, :audio_url, :duration
+  attr_accessor :label, :user_name, :repo_name, :audio_url, :duration, :provider_uri, :provider_label, :homepage
 
-  def initialize(user_name, repo_name, label=nil, audio_url=nil, duration=nil)
+  def initialize(user_name, repo_name, label=nil, audio_url=nil, duration=nil, provider_uri=nil, provider_label=nil, homepage=nil)
     @project = Project.new(user_name, repo_name)
     @label=label
     @audio_url=audio_url
     @duration=duration
+    @provider_label=provider_label
+    @provider_uri=provider_uri
+    @homepage=homepage
   end    
 
   def save(access_token)
