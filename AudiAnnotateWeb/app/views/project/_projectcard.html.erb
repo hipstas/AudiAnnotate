@@ -1,7 +1,11 @@
 	  <div class="card text-white bg-secondary mb-3" style="width: 18rem;">
 		  <div class="card-body text-dark">
-	    	<h5 class="card-title"><%= repo.name %></h5>
+	    	<h5 class="card-title"><%= repo.description %></h5>
 	    	<p class="card-text">Created by <%= repo.owner.login %></p>
-        <%= link_to( 'Edit', project_path(repo.owner.login, repo.name), class: "btn btn-primary") %>
+	    	<% if logged_in? %>
+	    		<% if @github_client.user.login == repo.owner.login %>
+			        <%= link_to( 'Edit', project_path(repo.owner.login, repo.name), class: "btn btn-primary") %>
+			    <% end %>
+			<% end %>
 	  	  </div>
 	  </div>

@@ -1,5 +1,5 @@
 class ProjectController < ApplicationController
-  before_action :connect, except: :all
+  before_action :connect
 
   def all
     @repos = Octokit.client.search_repositories("topic:audiannotate", sort: 'stars').items
