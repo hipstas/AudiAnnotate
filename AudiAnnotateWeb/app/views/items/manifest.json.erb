@@ -2,7 +2,7 @@
     "@context": "http://iiif.io/api/presentation/3/context.json",
     "id": "<%= item.manifest_uri %>",
     "type": "Manifest",
-    "label": { "en": [ "<%= item.manifest_label %>" ] },
+    "label": { "en": [ "<%= item.label %>" ] },
     "items": [
       <% item.canvases.each do |canvas| %>
       {

@@ -60,7 +60,7 @@ class Item
   end
 
   def item_path
-    File.join(@project.repo_path, '_data', label)
+    File.join(@project.repo_path, '_data', slug)
   end
 
   def manifest_path
@@ -90,7 +90,7 @@ class Item
 
 
   def slug
-    label
+    label.gsub(/\W+/, '-').downcase
   end
 
   #######################
