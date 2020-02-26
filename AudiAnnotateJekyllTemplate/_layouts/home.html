@@ -6,6 +6,8 @@ layout: default
 
   {{ content }}
 
+  <div><p>{{ site.data.collection.summary.en[0] | escape }}</p></div>
+
   <ul class="post-list">
     {%- for item in site.items -%}
     <li>

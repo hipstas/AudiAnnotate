@@ -22,7 +22,7 @@ class ProjectController < ApplicationController
 
   def create
     # instantiate the object from form parameters
-    @project = Project.new(project_params[:user_name], project_params[:repo_name], project_params[:description])
+    @project = Project.new(project_params[:user_name], project_params[:repo_name], project_params[:description], project_params[:label])
     if @project.valid?
       # create the repo 
       @project.create(@github_client)
@@ -44,7 +44,7 @@ class ProjectController < ApplicationController
   private
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:user_name, :repo_name, :description)
+      params.require(:project).permit(:user_name, :repo_name, :description, :label)
     end
 
 

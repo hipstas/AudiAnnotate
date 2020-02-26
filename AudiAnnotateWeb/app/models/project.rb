@@ -1,22 +1,21 @@
 class Project
   include ActiveModel::Model
-  attr_accessor :user_name, :repo_name, :description
+  attr_accessor :user_name, :repo_name, :description, :label
 
   validates :repo_name, format: { with: /\A[\-\w]+\Z/, message: 'only allows letters, numbers, dashes, and underscores'}
-  validates :description, format: { with: /\A[^\r\n]+\Z|\A\Z/, message: 'only allows a single paragraph of text.  Please remove any newlines.'}
-
-
-  def initialize(user_name, repo_name, description=nil)
+ 
+  def initialize(user_name, repo_name, description=nil, label=nil)
     @user_name = user_name
     @repo_name = repo_name
     @description = description
+    @label = label #TODO read this from collection.json instead of creating from scratch
   end
 
 
   def create(github_client)
     options = {
       topics: ['audiannotate'], 
-      description: @description, 
+      description: @label, 
       homepage: uri_root
     }
     response = github_client.create_repository(@repo_name, options)
