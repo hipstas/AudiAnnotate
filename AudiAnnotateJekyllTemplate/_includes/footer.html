@@ -12,7 +12,7 @@
             {%- if site.author -%}
               {{ site.author | escape }}
             {%- else -%}
-              {{ site.data.collection.label.en[0] | escape }}
+              {{ site.data.collection.summary.en[0] | escape }}
             {%- endif -%}
             </li>
             {%- if site.email -%}
