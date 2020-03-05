@@ -12,6 +12,11 @@ class Item
     @homepage=homepage
   end    
 
+  def write_file(path, contents)
+    FileUtils.mkdir_p(File.dirname(path))
+    File.write(path,contents)
+  end
+
   def save(access_token)
     # sync with github
     git = Git.open(@project.repo_path)  # TODO consider using the logger here
@@ -24,9 +29,9 @@ class Item
       new_item=true
       Dir.mkdir(item_path)
     end
-    File.write(manifest_path, manifest_contents)
-    File.write(jekyll_collection_item_path, jekyll_collection_item_contents)
-    File.write(jekyll_collection_item_manifest_path, jekyll_collection_item_manifest_contents)
+    write_file(manifest_path, manifest_contents)
+    write_file(jekyll_collection_item_path, jekyll_collection_item_contents)
+    write_file(jekyll_collection_item_manifest_path, jekyll_collection_item_manifest_contents)
 
     # canvases.each { |canvas| canvas.save }
 
