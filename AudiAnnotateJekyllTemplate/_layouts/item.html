@@ -39,10 +39,20 @@ layout: page
     {%- for annotation_page in site.data[page.manifest_name].manifest.items[0].annotations -%}
       {%- for annotation in site.data[page.manifest_name].canvas-1[annotation_page.label].items -%}
         <tr>
-          <td>{{annotation.target.selector.t}}</td>
+          {% assign timestamp_array = annotation.target.selector.t | split: ',' %}
+          <td class="timestamp" data-timestamp="{{timestamp_array[0]}}">{{annotation.target.selector.t}}</td>
           <td>{{annotation.body.value}}</td>
         </tr>
       {%- endfor -%}
     {%- endfor -%}
   </tbody>
 </table>
+
+
+<script>
+  $('tr').on('click',function(){
+   var myDataAttr = $(this).find('td.timestamp').data('timestamp');
+   myUV.extension.centerPanel.avcomponent.canvasInstances[0]._setCurrentTime(myDataAttr);
+   myUV.extension.centerPanel.avcomponent.play();
+   });
+ </script>
