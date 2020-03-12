@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_item, only: [:show, :edit, :update, :destroy, :add_annotation_file]
   before_action :connect, only: [:create, :update, :destroy]
 
   # GET /items
@@ -34,7 +34,7 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.save(session[:github_token])
-        format.html { redirect_to item_path(@item.user_name, @item.repo_name, @item.label), notice: 'Item was successfully created.' }
+        format.html { redirect_to item_path(@item.user_name, @item.repo_name, @item.slug), notice: 'Item was successfully created.' }
       else
         format.html { render :new }
       end
@@ -43,7 +43,7 @@ class ItemsController < ApplicationController
 
 
   def add_annotation_file
-    @item = Item.new(item_params[:user_name], item_params[:repo_name], item_params[:label])
+    # @item = Item.new(item_params[:user_name], item_params[:repo_name], item_params[:label])
 
     annotation_file = AnnotationFile.new(@item.canvases.first, item_params[:layer], item_params[:annotation_file])
     if annotation_file.save(session[:github_token])
@@ -85,7 +85,7 @@ class ItemsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_item
-      @item = Item.new(params[:user_name], params[:repo_name], params[:label])
+      @item = Item.from_file(params[:user_name], params[:repo_name], params[:slug])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

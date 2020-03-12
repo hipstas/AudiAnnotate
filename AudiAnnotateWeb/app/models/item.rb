@@ -1,6 +1,6 @@
 class Item
   include ActiveModel::Model
-  attr_accessor :label, :user_name, :repo_name, :audio_url, :duration, :provider_uri, :provider_label, :homepage
+  attr_accessor :label, :slug, :user_name, :repo_name, :audio_url, :duration, :provider_uri, :provider_label, :homepage
 
   def initialize(user_name, repo_name, label=nil, audio_url=nil, duration=nil, provider_uri=nil, provider_label=nil, homepage=nil)
     @project = Project.new(user_name, repo_name)
@@ -11,6 +11,25 @@ class Item
     @provider_uri=provider_uri
     @homepage=homepage
   end    
+
+  def self.from_file(user_name, repo_name, slug)
+    item = Item.new(user_name, repo_name)
+    item.slug=slug
+    manifest = JSON.parse(File.read(item.manifest_path))
+
+    item.label = manifest['label']['en'][0]
+    item.homepage = manifest['homepage'][0]['label']['en'][0] if manifest['homepage']
+    if manifest['provider']
+      item.provider_uri = manifest['provider'][0]['id']
+      item.provider_label = manifest['provider'][0]['label']['en'][0]
+    end
+    if manifest['items']
+      item.duration = manifest['items'][0]['duration']
+      item.audio_url = manifest['items'][0]['items'][0]['items'][0]['body']['id']
+    end
+
+    item
+  end
 
   def write_file(path, contents)
     FileUtils.mkdir_p(File.dirname(path))
@@ -95,10 +114,12 @@ class Item
     ApplicationController::render template: 'items/jekyll_collection_manifest.md', layout: false, locals: {item: self}
   end
 
-
+  def slug=(slug)
+    @slug=slug
+  end
 
   def slug
-    label.gsub(/\W+/, '-').downcase
+    @slug || label.gsub(/\W+/, '-').downcase
   end
 
   #######################
