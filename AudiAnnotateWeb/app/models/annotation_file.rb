@@ -27,7 +27,7 @@ EOF
 
   def save(access_token)
     # TODO validation
-    csv = CSV.open(@uploaded_file, col_sep: "\t")
+    csv = CSV.open(@uploaded_file, col_sep: "\t", quote_char: "𒊬") # people may use double-quotes but should not be annotating in cuneiform
 
     Dir.mkdir(@canvas.canvas_path) unless Dir.exists?(@canvas.canvas_path)
     File.write(annotation_page_file_path, page_contents(csv))
