@@ -1,14 +1,21 @@
 <div class="container">
-  <h2>
-    <%= link_to 'My Projects', my_projects_path %> 
-    | 
-    <%= link_to @repo.name, project_path(@project.user_name, @project.repo_name) %>
-  </h2>
+  <div class="row">
+    <div class="col-sm-11" >
+      <h2>
+        <%= link_to 'My Projects', my_projects_path %> 
+        | 
+        <%= link_to @project.repo_name, project_path(@project.user_name, @project.repo_name) %>
+      </h2>
+    </div>
+    <%= render 'shared/build_status' %>
+  </div>
   <p>
     <%= @repo.description %>
   </p>
   <p>
-    Your audio files are published at <%= link_to @project.uri_root, @project.uri_root %>
+    Your audio files are published at <%= link_to @project.uri_root, @project.uri_root %> 
+    <br />
+
   </p>
   <div class="row">
     <div class="col-sm">

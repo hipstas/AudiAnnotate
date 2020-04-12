@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :edit, :update, :destroy, :add_annotation_file]
-  before_action :connect, only: [:create, :update, :destroy]
+  before_action :connect, only: [:add_annotation_file, :create, :destroy, :edit, :show, :update]
+  before_action :set_item, only: [:add_annotation_file, :destroy, :edit, :show, :update]
 
   # GET /items
   # GET /items.json
@@ -47,7 +47,8 @@ class ItemsController < ApplicationController
 
     annotation_file = AnnotationFile.new(@item.canvases.first, item_params[:layer], item_params[:annotation_file])
     if annotation_file.save(session[:github_token])
-      render :show
+      sleep 2 # wait for the build status to update
+      redirect_to item_path(@item.user_name, @item.repo_name, @item.slug)
     end
   end    
 
@@ -86,6 +87,9 @@ class ItemsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_item
       @item = Item.from_file(params[:user_name], params[:repo_name], params[:slug])
+      if @github_client
+        @pages_site_status = @github_client.pages("#{@item.user_name}/#{@item.repo_name}").status
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

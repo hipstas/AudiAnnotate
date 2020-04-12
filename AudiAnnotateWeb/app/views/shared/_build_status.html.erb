@@ -1,0 +1,11 @@
+<% if defined? @pages_site_status && @pages_site_status %>
+  <% if @pages_site_status == 'built' %>
+    <div class="col-sm-1 alert alert-success" role="alert">
+      <a href="?reload=true" title="Your site reflects the latest changes.">Ready</a>
+    </div>
+  <% else %>
+    <div class="col-sm-1 alert alert-warning" role="alert">
+      <a href="?reload=true" title="Your site does not reflect your changes.  Reload this page to check the site status again."><%= @pages_site_status.titleize  %></a>
+    </div>
+  <% end %> 
+<% end %> 

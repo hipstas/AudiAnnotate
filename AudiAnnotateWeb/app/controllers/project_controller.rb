@@ -37,6 +37,7 @@ class ProjectController < ApplicationController
     @project = Project.new(params[:user_name], params[:repo_name])
     @project.clone(session[:github_token])
     @repo = Octokit.repository("#{@project.user_name}/#{@project.repo_name}")
+    @pages_site_status = @github_client.pages("#{@project.user_name}/#{@project.repo_name}").status
     @folders = Dir.glob(File.join(@project.repo_path,'_data','*')).select {|f| File.directory? f}
   end
 
