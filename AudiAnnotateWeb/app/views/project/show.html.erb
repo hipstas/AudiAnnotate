@@ -22,6 +22,8 @@
         <% end %>
       </ul>
       <%= link_to "New Item", new_item_path(@project.user_name, @project.repo_name), class: "btn btn-primary" %>
+      <br \>
+      <%= link_to 'Delete Project', delete_project_path, :class => "btn btn-light btn-lg", :role=> "button"%>
     </div>
   </div>
 </div>

@@ -14,7 +14,7 @@
   <body>
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="/">AudiAnnotate</a>
-      <% if @github_client %>
+      <% if @github_client && @github_client.user_authenticated? %>
         <%= @github_client.user.login %>
         <%= link_to 'Sign Out', '/user/logout' %>
       <% else %>

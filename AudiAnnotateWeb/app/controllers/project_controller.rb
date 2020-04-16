@@ -40,6 +40,16 @@ class ProjectController < ApplicationController
     @folders = Dir.glob(File.join(@project.repo_path,'_data','*')).select {|f| File.directory? f}
   end
 
+  def delete
+    #@project = Project.new(params[:user_name], params[:repo_name])
+    binding.pry
+    Octokit.delete_repository("#{params[:user_name]}/#{params[:repo_name]}")
+    #@project.clone(session[:github_token])
+    #@repo = Octokit.repository("#{@project.user_name}/#{@project.repo_name}")
+    #@folders = Dir.glob(File.join(@project.repo_path,'_data','*')).select {|f| File.directory? f}
+    redirect_to my_projects_path
+  end
+
 
   private
     # Never trust parameters from the scary internet, only allow the white list through.

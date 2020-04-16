@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get 'project/:user_name/:repo_name', to: 'project#show', as: 'project'
   get 'project/new', to: 'project#new', as: 'new_project'
   post 'project', to: 'project#create', as: 'create_project'
-
+  get 'project/:user_name/:repo_name/delete', to: 'project#delete', as: 'delete_project'
 
   get 'user/login'
   get 'user/logout'
