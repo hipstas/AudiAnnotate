@@ -26,9 +26,11 @@ layout: page
     }, false);
 
 </script>
+<script src="{{ site.baseurl }}/assets/datatables/datatables.min.js"></script>
 <script src="{{ site.baseurl }}/assets/uv/uv.js"></script>
 
-<table>
+
+<table id="annotation-table">
   <thead>
     <tr>
       <th style="width: 15%;">Time</th>
@@ -49,10 +51,17 @@ layout: page
 </table>
 
 
+
+
+
 <script>
   $('tr').on('click',function(){
    var myDataAttr = $(this).find('td.timestamp').data('timestamp');
    myUV.extension.centerPanel.avcomponent.canvasInstances[0]._setCurrentTime(myDataAttr);
    myUV.extension.centerPanel.avcomponent.play();
    });
+
+$(document).ready( function () {
+    $('#annotation-table').DataTable();
+} );
  </script>
