@@ -35,6 +35,7 @@ layout: page
     <tr>
       <th style="width: 15%;">Time</th>
       <th>Annotation</th>
+      <th>Layer</th>
     </tr>
   </thead>
   <tbody>
@@ -44,6 +45,7 @@ layout: page
           {% assign timestamp_array = annotation.target.selector.t | split: ',' %}
           <td class="timestamp" data-timestamp="{{timestamp_array[0]}}">{{annotation.target.selector.t}}</td>
           <td>{{annotation.body.value}}</td>
+          <td>{{annotation_page.label}}</td>
         </tr>
       {%- endfor -%}
     {%- endfor -%}
@@ -62,6 +64,8 @@ layout: page
    });
 
 $(document).ready( function () {
-    $('#annotation-table').DataTable();
+    $('#annotation-table').DataTable(
+	{ paging: false }
+);
 } );
  </script>
