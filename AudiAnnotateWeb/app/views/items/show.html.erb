@@ -19,7 +19,7 @@
 
 <div id='annotation-list' class="container">
   <h2>Annotations</h2>
-  <table class="table table-bordered table-dark">
+  <table id="annotation-table" class="table table-bordered table-dark">
     <thead>
       <tr>
         <th>Timestamp</th>
@@ -80,3 +80,10 @@
   <%= link_to 'Back', project_path(@item.user_name, @item.repo_name) %>
 </div>
 
+<script>
+$(document).ready( function() {
+    $('#annotation-table').DataTable(
+  { paging: false }
+);
+} );
+</script>
