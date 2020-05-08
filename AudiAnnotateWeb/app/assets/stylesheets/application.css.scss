@@ -34,6 +34,22 @@ body, html {
 .card-title, .card-text {
   a {
 	 color: #ffffff;
+  
+    &:visited {
+      color: #fff;
+    }
+
+  }
+}
+
+.btn, .btn-primary {
+  a {
+   color: #ffffff;
+  
+    &:visited {
+      color: #fff;
+    }
+
   }
 }
 
