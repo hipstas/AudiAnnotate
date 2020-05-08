@@ -38,7 +38,18 @@ body, html {
     &:visited {
       color: #fff;
     }
-    
+
+  }
+}
+
+.btn, .btn-primary {
+  a {
+   color: #ffffff;
+  
+    &:visited {
+      color: #fff;
+    }
+
   }
 }
 
