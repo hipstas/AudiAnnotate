@@ -43,7 +43,12 @@ layout: page
       {%- for annotation in site.data[page.manifest_name].canvas-1[annotation_page.label].items -%}
         <tr>
           {% assign timestamp_array = annotation.target.selector.t | split: ',' %}
-          <td class="timestamp" data-timestamp="{{timestamp_array[0]}}">{{annotation.target.selector.t}}</td>
+          <td class="timestamp" data-timestamp="{{timestamp_array[0]}}">
+            {{timestamp_array[0] | divided_by: 60 | floor }}:{{timestamp_array[0] | modulo: 60 | ceil }}
+            {% if timestamp_array[1] %}
+              - {{timestamp_array[1] | divided_by: 60 | floor }}:{{timestamp_array[1] | modulo: 60 | round }}
+            {% endif %}
+          </td>
           <td>{{annotation.body.value}}</td>
           <td>{{annotation_page.label}}</td>
         </tr>
@@ -63,7 +68,7 @@ layout: page
    myUV.extension.centerPanel.avcomponent.play();
    });
 
-$(document).ready( function () {
+$(document).ready( function() {
     $('#annotation-table').DataTable(
 	{ paging: false }
 );
