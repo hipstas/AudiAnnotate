@@ -12,27 +12,27 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :label, class: "col-sm-2 col-form-label"  %>
+    <%= form.label :label, class: "col-sm-4 col-form-label"  %>
     <div class="col-sm-4">
       <%= form.text_field :label, class: 'form-control', required: 'true' %>
     </div>
   </div>
   <div class="field">
-    <%= form.label :audio_url, 'Audio File URL', class: "col-sm-2 col-form-label"  %>
+    <%= form.label :audio_url, 'Audio File URL', class: "col-sm-4 col-form-label"  %>
     <div class="col-sm-4">
       <%= form.text_field :audio_url, class: 'form-control', required: 'true' %>
     </div>
   </div>
 
   <div class="field">
-    <%= form.label :duration, 'Duration (seconds)', class: "col-sm-2 col-form-label"  %>
-    <div class="col-sm-4">
+    <%= form.label :duration, 'Duration (seconds or minutes:seconds)', class: "col-sm-4 col-form-label"  %>
+    <div class="col-sm-2">
       <%= form.text_field :duration, class: 'form-control', required: 'true' %>
     </div>
   </div>
 
   <div class="field">
-    <%= form.label :homepage, 'Item Homepage', class: "col-sm-2 col-form-label"  %>
+    <%= form.label :homepage, 'Item Homepage', class: "col-sm-4 col-form-label"  %>
     <div class="col-sm-4">
       <%= form.text_field :homepage, class: 'form-control' %>
     </div>
@@ -41,14 +41,14 @@
 
   <fieldset class="form-group">
     <div class="field">
-      <%= form.label :provider_label, 'Provider Name', class: "col-sm-2 col-form-label"  %>
+      <%= form.label :provider_label, 'Provider Name', class: "col-sm-4 col-form-label"  %>
       <div class="col-sm-4">
         <%= form.text_field :provider_label, class: 'form-control' %>
       </div>
     </div>
 
     <div class="field">
-      <%= form.label :provider_uri, 'Provider URL', class: "col-sm-2 col-form-label"  %>
+      <%= form.label :provider_uri, 'Provider URL', class: "col-sm-4 col-form-label"  %>
       <div class="col-sm-4">
         <%= form.text_field :provider_uri, class: 'form-control' %>
       </div>

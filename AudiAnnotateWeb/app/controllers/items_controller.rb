@@ -22,12 +22,19 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
+    duration = item_params[:duration]
+    md = duration.match(/(\d+):(\S+)/)
+    if md
+      duration = md[1].to_f * 60
+      duration += md[2].to_f
+    end
+
     @item = Item.new(
       item_params[:user_name], 
       item_params[:repo_name], 
       item_params[:label], 
       item_params[:audio_url], 
-      item_params[:duration],
+      duration,
       item_params[:provider_uri],
       item_params[:provider_label],
       item_params[:homepage])
