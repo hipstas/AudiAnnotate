@@ -16,15 +16,15 @@
 
 4. Click the time marker line to mark the place in time where you want to add the label. This typically will correspond to the place where you paused the audio (see image below)
 
-![image](Pages-Images/workflowclickimage.png) 
+    ![image](Pages-Images/workflowclickimage.png) 
 
 5. Then, you’ll click command + b to add a label. A field will pop up, and you can type your annotation. (Example: You may add “Stanza1” to mark the first stanza of a poem.)
 
-![image](Pages-Images/workflowlabeltypeimage.png)
+    ![image](Pages-Images/workflowlabeltypeimage.png)
 
 6. To create the range, you’ll click and drag the right edge of the point to the end of the stanza. You’ll have to play the recording to know where to end the stanza. A completed range will look like this: 
 
-![image](Pages-Images/workflowrangeimage.png)
+    ![image](Pages-Images/workflowrangeimage.png)
 
 7. Those are the basics. Feel free to annotate as you wish, thinking about the issues you run into and what works or doesn’t work for you. 
 
