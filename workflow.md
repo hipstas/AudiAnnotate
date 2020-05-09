@@ -6,7 +6,9 @@
 
 * If you have a pc, navigate to [Audacity's pc download page](https://www.audacityteam.org/download/windows/). There, you'll download the installer and follow instructions for downloading Audacity to your machine. We recommend downloading the latest version, 2.3.3.
 
-### Part 1: Creating Labels in Audacity
+### During the Workshop: Audacity to AudiAnnotate
+
+#### Part 1: Creating Labels in Audacity
 
 1. Open Audacity, and in the top left, navigate to file→ Open → file name
 
@@ -36,13 +38,13 @@
 
 3. Using this method, to pause the audio, you need to use the pause button on the upper left of the interface
 
-### Part 2: Exporting Labels from Audacity
+#### Part 2: Exporting Labels from Audacity
 
 1. Go to File → Export → Export Labels
 
 2. Name your labels and save as a .txt file. You will need this file when creating your project with the AudiAnnotate application. 
 
-### Part 3: Using AudiAnnotate to Save and Align Labels with Audio
+#### Part 3: Using AudiAnnotate to Save and Align Labels with Audio
 
 1\. Navigate to the AudiAnnotate application: http://audiannotate.brumfieldlabs.com/
 
