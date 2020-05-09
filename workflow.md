@@ -16,7 +16,81 @@
 
 4. Click the time marker line to mark the place in time where you want to add the label. This typically will correspond to the place where you paused the audio (see image below)
 
-![image](Pages-Images/Screen Shot 2020-05-09 at 12.57.06 AM.png) <!-- .element height="30%" width="30%" -->
+![image](Pages-Images/workflowclickimage.png) 
+
+5. Then, you’ll click command + b to add a label. A field will pop up, and you can type your annotation. (Example: You may add “Stanza1” to mark the first stanza of a poem.)
+
+![image](Pages-Images/workflowlabeltypeimage.png)
+
+6. To create the range, you’ll click and drag the right edge of the point to the end of the stanza. You’ll have to play the recording to know where to end the stanza. A completed range will look like this: 
+
+![image](Pages-Images/workflowrangeimage.png)
+
+7. Those are the basics. Feel free to annotate as you wish, thinking about the issues you run into and what works or doesn’t work for you. 
+
+#### Another way to add labels in Audacity
+
+1. When you open the app and add audio, go to Edit → Labels, then click “Type to create a label”
+
+2. Now as you’re listening, when you type any key, a label will begin
+
+3. Using this method, to pause the audio, you need to use the pause button on the upper left of the interface
+
+### Part 2: Exporting Labels from Audacity
+
+1. Go to File → Export → Export Labels
+
+2. Name your labels and save as a .txt file. You will need this file when creating your project with the AudiAnnotate application. 
+
+### Part 3: 
+
+1. Navigate to the AudiAnnotate application: http://audiannotate.brumfieldlabs.com/
+
+  * This will prompt you to log in through GitHub (make sure to allow the app to authorize saracarl)
+
+  * Enter your GitHub password to log in
+
+2. Click "Create New Project"
+
+  * Project ID = repository name (no spaces)
+
+  * Add title and description
+
+3. Click “Create project”
+
+  * This contacts the github page and  generates repository
+
+4. Now, on the Audio files page, click “New Item.” This is where you will add metadata for your audio recording.
+
+  * Add label for your audio file
+  
+  * Add URL for  audio 
+  
+  * Add duration in seconds
+  
+  * Other fields are additional metadata from provider
+  
+5. Click “Create item” 
+
+6. Now, on the  annotations page, add a label for your annotations layer. This is where you will upload your .txt labels from Audacity
+
+7. Click “Choose file”  (.txt labels export from Audacity) 
+
+8. Click “Add” at the bottom of the page. This will generate your annotations and align them in the IIIF manifest with the audio file. 
+
+9. From the next screen, you can use the links on the top of the  screen to access your  IIIF manifest and the github pages site. 
+
+10. Clicking “add” at the bottom of the page allows you to add additional annotation layers to the same audio 
+
+
+
+
+
+
+
+
+
+
 
 
 
