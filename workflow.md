@@ -44,7 +44,7 @@
 
 ### Part 3: Using AudiAnnotate to Save and Align Labels with Audio
 
-1. Navigate to the AudiAnnotate application: http://audiannotate.brumfieldlabs.com/
+1\. Navigate to the AudiAnnotate application: http://audiannotate.brumfieldlabs.com/
 
   * This will prompt you to log in through GitHub (make sure to allow the app to authorize saracarl)
 
