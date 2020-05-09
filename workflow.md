@@ -16,7 +16,7 @@
 
 4. Click the time marker line to mark the place in time where you want to add the label. This typically will correspond to the place where you paused the audio (see image below)
 
-![image](Pages-Images/Screen Shot 2020-05-09 at 12.57.06 AM.png | width=100)
+![image](Pages-Images/Screen Shot 2020-05-09 at 12.57.06 AM.png) <!-- .element height="50%" width="50%" -->
 
 
 
