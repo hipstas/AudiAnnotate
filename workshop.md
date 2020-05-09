@@ -5,7 +5,7 @@ You can sign up for the workshop here.
 
 This workshop will be presented virtually via zoom.
 
-<! -- [Workshop Materials] Button (for day of) - !>
+
 
 
 
