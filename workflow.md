@@ -30,7 +30,7 @@
 
 7. Those are the basics. Feel free to annotate as you wish, thinking about the issues you run into and what works or doesn’t work for you. 
 
-#### Another way to add labels in Audacity
+##### Another way to add labels in Audacity
 
 1. When you open the app and add audio, go to Edit → Labels, then click “Type to create a label”
 
