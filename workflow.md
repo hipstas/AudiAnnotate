@@ -50,17 +50,17 @@
 
   * Enter your GitHub password to log in
 
-2. Click "Create New Project"
+2\. Click "Create New Project"
 
   * Project ID = repository name (no spaces)
 
   * Add title and description
 
-3. Click “Create project”
+3\. Click “Create project”
 
   * This contacts the github page and  generates repository
 
-4. Now, on the Audio files page, click “New Item.” This is where you will add metadata for your audio recording.
+4\. Now, on the Audio files page, click “New Item.” This is where you will add metadata for your audio recording.
 
   * Add label for your audio file
   
@@ -70,17 +70,17 @@
   
   * Other fields are additional metadata from provider
   
-5. Click “Create item” 
+5\. Click “Create item” 
 
-6. Now, on the  annotations page, add a label for your annotations layer. This is where you will upload your .txt labels from Audacity
+6\. Now, on the  annotations page, add a label for your annotations layer. This is where you will upload your .txt labels from Audacity
 
-7. Click “Choose file”  (.txt labels export from Audacity) 
+7\. Click “Choose file”  (.txt labels export from Audacity) 
 
-8. Click “Add” at the bottom of the page. This will generate your annotations and align them in the IIIF manifest with the audio file. 
+8\. Click “Add” at the bottom of the page. This will generate your annotations and align them in the IIIF manifest with the audio file. 
 
-9. From the next screen, you can use the links on the top of the  screen to access your  IIIF manifest and the github pages site. 
+9\. From the next screen, you can use the links on the top of the  screen to access your  IIIF manifest and the github pages site. 
 
-10. Clicking “add” at the bottom of the page allows you to add additional annotation layers to the same audio 
+10\. Clicking “add” at the bottom of the page allows you to add additional annotation layers to the same audio 
 
 
 
