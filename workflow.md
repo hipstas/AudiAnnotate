@@ -42,7 +42,7 @@
 
 2. Name your labels and save as a .txt file. You will need this file when creating your project with the AudiAnnotate application. 
 
-### Part 3: 
+### Part 3: Using AudiAnnotate to Save and Align Labels with Audio
 
 1. Navigate to the AudiAnnotate application: http://audiannotate.brumfieldlabs.com/
 
