@@ -5,6 +5,7 @@ You can sign up for the workshop here.
 
 This workshop will be presented virtually via zoom.
 
-[Workshop Materials](http://www.google.com){: .btn}
+<! -- [Workshop Materials] Button (for day of) - !>
+
 
 
