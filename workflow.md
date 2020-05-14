@@ -1,6 +1,7 @@
 * [ Downloading Audacity ](#aud)
 * [Creating Labels in Audacity](#labels)
 * [Exporting Labels From Audacity](#export)
+* [Getting Linked Audio for Your Project](#audilink)
 * [Using AudiAnnotate to Save and Align Labels with Audio](#aa)
 
 <a name="aud"></a>
@@ -47,6 +48,54 @@
 1. Go to File → Export → Export Labels
 
 2. Name your labels and save as a .txt file. You will need this file when creating your project with the AudiAnnotate application. 
+
+<a name="audiolink"></a>
+### Getting an Audio Link for Your Project
+AudiAnnotate needs a direct link to either a .mp3 or .wav audio file to add audio to your project. Below are instructions on how to get a direct link for your audio file from three common file-hosting sites: Internet Archive, Google Drive, and Box.
+
+##### Internet Archive
+*Uploading a file to Internet Archive*
+1. Click the upload button at the top right corner of your screen.
+2. Click the “Upload Files” button. 
+3. Select your desired file and click the “Open” button.
+4. Fill in the required fields of the metadata box and click the “Upload and Create Your Item” button. 
+
+*Retrieving a file link from Internet Archive:*
+1\. On the details page of your desired file, navigate to the “VBR MP3” download option and click the link.  
+2\. The link in your browser’s search bar can be used in AudiAnnotate.
+
+##### Google Drive
+*Uploading a file to Google Drive:*
+1\. Click the “New” button in the top left corner of your screen.
+2\. Select “File Upload.” 
+3\. Select your desired file. Make sure it is one of the supported file types (.mp3, .wav).
+4\. Click the “Open” button.
+
+*Retrieving a file link from Google Drive:*
+1\. Click on the file in your Google Drive. 
+*Note: This will bring you to a page that plays the audio file, not the file itself. The link in your bowser’s search bar cannot be used in AudiAnnotate.*
+2\. Click the dotted icon at the top right corner of the page and click “Share.” The sharing box will pop up on your screen.
+3\. Click “Get shareable link” at the top corner of the box and make sure your sharing settings are on “Anyone with the link can edit.”
+4\. Copy and paste this link somewhere where you can view it in full.
+5\. Copy the File ID. The File ID is the characters between “https://drive.google.com/filed/d/” and “/view?usp=sharing”. 
+6\. Paste the File ID in either of these two links, replacing the Xs with your File ID: 
+7\. This new link can be used in AudiAnnotate. It will look something like this:
+
+##### Box
+*Uploading a file to Box:*
+1\. Click the “Upload” button in the top right corner of your screen. 
+2\. Click “File.”
+3\. Select your desired file and click the “Open” button. 
+
+*Retrieving a file link from Box:*
+1\. Navigate your mouse until it’s hovering over your desired file.
+2\. Click the link button.
+3\. Make sure the shared link button is enabled and copy the link from the highlighted.
+4\. This link can now be used in AudiAnnotate. The example link (from a UT Box account) in full:
+
+
+
+
 
 <a name="aa"></a>
 ### Using AudiAnnotate to Save and Align Labels with Audio
