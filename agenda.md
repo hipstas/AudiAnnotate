@@ -10,7 +10,7 @@
 
 12:35-12:40 - Creating annotations in Audacity
 
-12:40-1:00  - Hands-on create your own annotations 
+12:40-1:00  - Hands-on creation of your own annotations 
 
 1:00-1:05 - Layers and kinds of annotations
 
