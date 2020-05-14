@@ -83,7 +83,7 @@ AudiAnnotate needs a direct link to either a .mp3 or .wav audio file to add audi
 6\. Paste the File ID in either of these two links, replacing the Xs with your File ID: 
 7\. This new link can be used in AudiAnnotate. It will look something like this:
 
-##### [Box](box.com)
+##### [Box](https://account.box.com/login)
 *Uploading a file to Box:*
 1\. Click the “Upload” button in the top right corner of your screen. 
 2\. Click “File.”
