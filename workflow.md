@@ -1,20 +1,20 @@
 # AudiAnnotate Workflow
 
-* [ Downloading Audacity ](#aud)
-* [Creating Labels in Audacity](#labels)
-* [Exporting Labels From Audacity](#export)
-* [Getting an Audio Link for Your Project](#audilink)
-* [Using AudiAnnotate to Save and Align Labels with Audio](#aa)
+* [Part 1: Downloading Audacity](#aud)
+* [Part 2: Creating Labels in Audacity](#labels)
+* [Part 3: Exporting Labels From Audacity](#export)
+* [Part 4: Getting an Audio Link for Your Project](#audilink)
+* [Part 5: Using AudiAnnotate to Save and Align Labels with Audio](#aa)
 
 <a name="aud"></a>
-### Downloading Audacity
+### Part 1: Downloading Audacity
 
 * If you have a Mac, navigate to [Audacity's Mac download page](https://www.audacityteam.org/download/mac/). There, you'll download the .dmg file and double-click to follow instructions for downloading Audacity to your machine. We recommend downloading the latest version, 2.3.3.
 
 * If you have a PC, navigate to [Audacity's PC download page](https://www.audacityteam.org/download/windows/). There, you'll download the installer and follow instructions for downloading Audacity to your machine. We recommend downloading the latest version, 2.3.3.
 
 <a name="labels"></a>
-### Creating Labels in Audacity
+### Part 2: Creating Labels in Audacity
 
 1. Open Audacity, and in the top left, navigate to file→ Open → file name
 
@@ -45,14 +45,14 @@
 3. Using this method, to pause the audio, you need to use the pause button on the upper left of the interface
 
 <a name="export"></a>
-### Exporting Labels from Audacity
+### Part 3: Exporting Labels from Audacity
 
 1. Go to File → Export → Export Labels
 
 2. Name your labels and save as a .txt file. You will need this file when creating your project with the AudiAnnotate application. 
 
 <a name="audiolink"></a>
-### Getting an Audio Link for Your Project
+### Part 4: Getting an Audio Link for Your Project
 AudiAnnotate needs a direct link to either a .mp3 or .wav audio file to add audio to your project. Below are instructions on how to get a direct link for your audio file from three common file-hosting sites: Internet Archive, Google Drive, and Box.
 
 ##### Internet Archive
@@ -97,10 +97,8 @@ AudiAnnotate needs a direct link to either a .mp3 or .wav audio file to add audi
 
 
 
-
-
 <a name="aa"></a>
-### Using AudiAnnotate to Save and Align Labels with Audio
+### Part 5: Using AudiAnnotate to Save and Align Labels with Audio
 
 1\. Navigate to the [AudiAnnotate Application](http://audiannotate.brumfieldlabs.com/)
 
