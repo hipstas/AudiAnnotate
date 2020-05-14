@@ -1,14 +1,14 @@
-1. [ Downloading Audacity ](#aud)
-2. [Creating Labels in Audacity](#labels)
-3. [Exporting Labels From Audacity](#export)
-4. [Using AudiAnnotate to Save and Align Labels with Audio](#aa)
+* [ Downloading Audacity ](#aud)
+* [Creating Labels in Audacity](#labels)
+* [Exporting Labels From Audacity](#export)
+* [Using AudiAnnotate to Save and Align Labels with Audio](#aa)
 
 <a name="aud"></a>
 ### Downloading Audacity
 
-* If you have a mac, navigate to [Audacity's mac download page](https://www.audacityteam.org/download/mac/). There, you'll download the .dmg file and double-click to follow instructions for downloading Audacity to your machine. We recommend downloading the latest version, 2.3.3.
+* If you have a Mac, navigate to [Audacity's Mac download page](https://www.audacityteam.org/download/mac/). There, you'll download the .dmg file and double-click to follow instructions for downloading Audacity to your machine. We recommend downloading the latest version, 2.3.3.
 
-* If you have a pc, navigate to [Audacity's pc download page](https://www.audacityteam.org/download/windows/). There, you'll download the installer and follow instructions for downloading Audacity to your machine. We recommend downloading the latest version, 2.3.3.
+* If you have a PC, navigate to [Audacity's PC download page](https://www.audacityteam.org/download/windows/). There, you'll download the installer and follow instructions for downloading Audacity to your machine. We recommend downloading the latest version, 2.3.3.
 
 <a name="labels"></a>
 ### Creating Labels in Audacity
