@@ -1,7 +1,7 @@
 * [ Downloading Audacity ](#aud)
 * [Creating Labels in Audacity](#labels)
 * [Exporting Labels From Audacity](#export)
-* [Getting Linked Audio for Your Project](#audilink)
+* [Getting an Audio Link for Your Project](#audilink)
 * [Using AudiAnnotate to Save and Align Labels with Audio](#aa)
 
 <a name="aud"></a>
