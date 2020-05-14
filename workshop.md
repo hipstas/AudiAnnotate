@@ -19,6 +19,8 @@ Before the workshop, we request that you:
 
 #### Materials and Links for Workshop: 
 
+* [Workshop Agenda](agenda.md) 
+
 * [AudiAnnotate Application](http://audiannotate.brumfieldlabs.com/)
 
 * [AudiAnnotate Workflow](workflow.md)
