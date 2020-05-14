@@ -55,7 +55,7 @@
 ### Part 4: Getting an Audio Link for Your Project
 AudiAnnotate needs a direct link to either a .mp3 or .wav audio file to add audio to your project. Below are instructions on how to get a direct link for your audio file from three common file-hosting sites: Internet Archive, Google Drive, and Box.
 
-##### Internet Archive
+##### [Internet Archive](https://archive.org/)
 *Uploading a file to Internet Archive*
 1. Click the upload button at the top right corner of your screen.
 2. Click the “Upload Files” button. 
@@ -66,7 +66,7 @@ AudiAnnotate needs a direct link to either a .mp3 or .wav audio file to add audi
 1\. On the details page of your desired file, navigate to the “VBR MP3” download option and click the link.  
 2\. The link in your browser’s search bar can be used in AudiAnnotate.
 
-##### Google Drive
+##### [Google Drive](https://www.google.com/drive/)
 *Uploading a file to Google Drive:*
 1\. Click the “New” button in the top left corner of your screen.
 2\. Select “File Upload.” 
@@ -83,7 +83,7 @@ AudiAnnotate needs a direct link to either a .mp3 or .wav audio file to add audi
 6\. Paste the File ID in either of these two links, replacing the Xs with your File ID: 
 7\. This new link can be used in AudiAnnotate. It will look something like this:
 
-##### Box
+##### [Box](box.com)
 *Uploading a file to Box:*
 1\. Click the “Upload” button in the top right corner of your screen. 
 2\. Click “File.”
