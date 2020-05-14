@@ -1,8 +1,7 @@
 1. [ Downloading Audacity ](#aud)
-2. [Audacity to AudiAnnotate](#audtoaa)
-3. [Creating Labels in Audacity](#labels)
-4. [Exporting Labels From Audacity](#export)
-5. [Using AudiAnnotate to Save and Align Labels with Audio](#aa)
+2. [Creating Labels in Audacity](#labels)
+3. [Exporting Labels From Audacity](#export)
+4. [Using AudiAnnotate to Save and Align Labels with Audio](#aa)
 
 <a name="aud"></a>
 ### Downloading Audacity
