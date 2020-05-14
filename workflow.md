@@ -1,15 +1,18 @@
-1. [ Downloading Audacity. ](#aud) 
+1. [ Downloading Audacity ](#aud)
+2. [Audacity to AudiAnnotate](#audtoaa)
+3. [Creating Labels in Audacity](#labels)
+4. [Exporting Labels From Audacity](#export)
+5. [Using AudiAnnotate to Save and Align Labels with Audio](#aa)
 
 <a name="aud"></a>
-### Before the Workshop: Downloading Audacity
+### Downloading Audacity
 
 * If you have a mac, navigate to [Audacity's mac download page](https://www.audacityteam.org/download/mac/). There, you'll download the .dmg file and double-click to follow instructions for downloading Audacity to your machine. We recommend downloading the latest version, 2.3.3.
 
 * If you have a pc, navigate to [Audacity's pc download page](https://www.audacityteam.org/download/windows/). There, you'll download the installer and follow instructions for downloading Audacity to your machine. We recommend downloading the latest version, 2.3.3.
 
-### During the Workshop: Audacity to AudiAnnotate
-
-#### Part 1: Creating Labels in Audacity
+<a name="labels"></a>
+### Creating Labels in Audacity
 
 1. Open Audacity, and in the top left, navigate to file→ Open → file name
 
@@ -31,7 +34,7 @@
 
 7. Those are the basics. Feel free to annotate as you wish, thinking about the issues you run into and what works or doesn’t work for you. 
 
-##### Another way to add labels in Audacity
+#### Another way to add labels in Audacity
 
 1. When you open the app and add audio, go to Edit → Labels, then click “Type to create a label”
 
@@ -39,13 +42,15 @@
 
 3. Using this method, to pause the audio, you need to use the pause button on the upper left of the interface
 
-#### Part 2: Exporting Labels from Audacity
+<a name="export"></a>
+### Exporting Labels from Audacity
 
 1. Go to File → Export → Export Labels
 
 2. Name your labels and save as a .txt file. You will need this file when creating your project with the AudiAnnotate application. 
 
-#### Part 3: Using AudiAnnotate to Save and Align Labels with Audio
+<a name="aa"></a>
+### Using AudiAnnotate to Save and Align Labels with Audio
 
 1\. Navigate to the [AudiAnnotate Application](http://audiannotate.brumfieldlabs.com/)
 
