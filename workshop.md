@@ -1,9 +1,10 @@
 # AudiAnnotate Workshop 
 ## Thursday, May 28, 2020 12-2pm CST
+
+This introductory workshop will include basic information about [the AudiAnnotate project](http://hipstas.org/audiannotate/), about using [IIIF](https://iiif.io/) and the [IIIF specifications for AV](https://iiif.io/community/groups/av/), using   
+
+This workshop will be presented virtually via Zoom. Please [register](https://docs.google.com/forms/d/e/1FAIpQLSeO-Rf_QeqYDB6KXKhqwwvYYzCkKUJ8fs9Fg7Ysv5lBdrI_Vw/viewform?usp=sf_link). 
 [Workshop agenda](agenda.md).
-
-This workshop will be presented virtually via Zoom. [Register](https://docs.google.com/forms/d/e/1FAIpQLSeO-Rf_QeqYDB6KXKhqwwvYYzCkKUJ8fs9Fg7Ysv5lBdrI_Vw/viewform?usp=sf_link). 
-
 #### Workshop Prep
 Before the workshop, we request that you: 
 
