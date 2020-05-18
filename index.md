@@ -1,4 +1,4 @@
-# AudiAnnotate is a project to publish and share annotations on audio files.
+# AudiAnnotate is a project to publish and share annotations on audio files. More on the project is available on the [HiPSTAS](http://hipstas.org/audiannotate/) website.
 
 
 
