@@ -19,20 +19,20 @@
       <% end %>
 
       <div class="field">
-        <%= form.label :label, class: "col-sm-12 col-form-label"  %>
+        <%= form.label :label, 'Label*', class: "col-sm-12 col-form-label" %>
         <div class="col-sm-12">
           <%= form.text_field :label, class: 'form-control', required: 'true' %>
         </div>
       </div>
       <div class="field">
-        <%= form.label :audio_url, 'Audio File URL', class: "col-sm-12 col-form-label"  %>
+        <%= form.label :audio_url, 'Audio File URL*', class: "col-sm-12 col-form-label"  %>
         <div class="col-sm-12">
           <%= form.text_field :audio_url, class: 'form-control', required: 'true' %>
         </div>
       </div>
 
       <div class="field">
-        <%= form.label :duration, 'Duration (seconds or minutes:seconds)', class: "col-sm-12 col-form-label"  %>
+        <%= form.label :duration, 'Duration* (seconds or minutes:seconds)', class: "col-sm-12 col-form-label"  %>
         <div class="col-sm-4">
           <%= form.text_field :duration, class: 'form-control', required: 'true' %>
         </div>
@@ -74,6 +74,8 @@
       <p>On this page, you’ll add metadata associated with your project’s audio. AudiAnnotate does not host audio, so you will need to provide a public-facing URL to create your project. The audio URL and the duration of your audio will be used to construct the manifest of your project.</p>
 
       <p>The additional fields provide provenance information about the audio.</p>
+
+      <p>Fields with "*" are required.
 
       <p>Click “Save” once you’re done adding metadata, and this data will be published to your project’s  GitHib repository.</p>
 
