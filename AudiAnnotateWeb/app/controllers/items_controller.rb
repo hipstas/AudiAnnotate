@@ -69,9 +69,22 @@ class ItemsController < ApplicationController
   # PATCH/PUT /items/1
   # PATCH/PUT /items/1.json
   def update
+    @item.label = item_params[:label]
+    @item.audio_url = item_params[:audio_url]
+    duration = item_params[:duration]
+    md = duration.match(/(\d+):(\S+)/)
+    if md
+      duration = md[1].to_f * 60
+      duration += md[2].to_f
+    end
+    @item.duration = duration
+    @item.provider_uri = item_params[:provider_uri]
+    @item.provider_label = item_params[:provider_label]
+    @item.homepage = item_params[:homepage]
+
     respond_to do |format|
-      if @item.update(item_params)
-        format.html { redirect_to @item, notice: 'Item was successfully updated.' }
+      if @item.save(session[:github_token])
+        format.html { redirect_to item_path(@item.user_name, @item.repo_name, @item.slug), notice: 'Item was successfully updated.' }
         format.json { render :show, status: :ok, location: @item }
       else
         format.html { render :edit }
