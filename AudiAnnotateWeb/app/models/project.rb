@@ -1,6 +1,6 @@
 class Project
   include ActiveModel::Model
-  attr_accessor :user_name, :repo_name, :description, :label
+  attr_accessor :user_name, :repo_name, :description, :label, :email
 
   validates :repo_name, format: { with: /\A[\-\w]+\Z/, message: 'only allows letters, numbers, dashes, and underscores'}
  
@@ -28,7 +28,7 @@ class Project
       'Repository created by AudiAnnotateWeb, version 0.0.0', # file contents
       {branch: 'gh-pages'})
 
-    populate(github_client.access_token)
+    populate(github_client)
   end
 
   def clone(access_token)
@@ -50,7 +50,8 @@ class Project
   end
 
 
-  def populate(access_token)
+  def populate(github_client)
+    access_token = github_client.access_token
     # eliminate conflicts with deleted repositories (rare)
     if Dir.exists?(repo_path)
       FileUtils.rm_r(repo_path)
@@ -72,7 +73,7 @@ class Project
 
     # write initial collection manifest
     File.write(collection_manifest_path, collection_manifest_contents)
-    File.write(jekyll_config_path, jekyll_config_contents)
+    File.write(jekyll_config_path, jekyll_config_contents(github_client))
 
     # add, commit, and push
     git.add(repo_path)
@@ -93,8 +94,9 @@ class Project
     File.join(repo_path, '_config.yml')
   end
 
-  def jekyll_config_contents
-    ApplicationController::render template: 'project/config.yml', layout: false, locals: {project: self}
+  def jekyll_config_contents(github_client)
+
+    ApplicationController::render template: 'project/config.yml', layout: false, locals: {project: self, name: github_client.user.name}
   end
 
   def manifest_uri
