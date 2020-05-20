@@ -12,7 +12,7 @@ Before the workshop, we request that you:
 
 2. Download Audacity. There will be an optional opportunity to incorporate Audacity, an open-source audio editing application, into the AudiAnnotate workflow. If you are interested in participating, please download Audacity before the workshop. You can find instructions [here](workflow.md).
 
-3. Find an audio file. You can bring your own audio to the workshop, but the audio needs to be accessible via a direct URL to that file. Follow these [instructions](workflow.md) for uploading an audio file to Box, DropBox, or the Internet Archive in order to create a URL. We will also have audio available for you to use on the workshop day. 
+3. Find an audio file. You can bring your own audio to the workshop, but the audio needs to be accessible via a direct URL to that file. Follow these [instructions](workflow.md) (navigate to "Part 4: Getting an Audio Link for Your Project") for uploading an audio file to Box, DropBox, or the Internet Archive in order to create a URL. We will also have audio available for you to use on the workshop day. 
 
 
 #### Materials and Links for Workshop: 
