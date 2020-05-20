@@ -15,19 +15,19 @@
 
 
       <div class="field">
-        <%= form.label :label, "Title", class: "col-form-label" %>
+        <%= form.label :label, "Title*", class: "col-form-label" %>
         <%= form.text_field :label, { class: "form-control"} %>
         <small id="label-help" class="form-text form-muted">A title that will show up at the top of your project pages.</small>
       </div>
 
       <div class="field">
-        <%= form.label :description, "Description", class: "col-form-label" %>
+        <%= form.label :description, "Description*", class: "col-form-label" %>
         <%= form.text_area :description, { class: "form-control"} %>
         <small id="description-help" class="form-text form-muted">A brief paragraph describing your project.</small>
       </div>
 
       <div class="field">
-        <%= form.label :repo_name, "Project Slug", class: "col-form-label" %>
+        <%= form.label :repo_name, "Project Slug*", class: "col-form-label" %>
         <%= form.text_field :repo_name, { class: "form-control"} %>
         <small id="repo-name-help" class="form-text form-muted">A short name used in URLs for your project which will be the repository name used on GitHub.  Please do not use spaces or punctuation other than hyphens.  Ex: <code>coffeehouse-poetry-performances</code></small>
       </div>
