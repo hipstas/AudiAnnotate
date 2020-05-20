@@ -18,7 +18,7 @@ class Item
     manifest = JSON.parse(File.read(item.manifest_path))
 
     item.label = manifest['label']['en'][0]
-    item.homepage = manifest['homepage'][0]['label']['en'][0] if manifest['homepage']
+    item.homepage = manifest['homepage'][0]['id'] if manifest['homepage']
     if manifest['provider']
       item.provider_uri = manifest['provider'][0]['id']
       item.provider_label = manifest['provider'][0]['label']['en'][0]

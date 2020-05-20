@@ -2,13 +2,13 @@
     "@context": "http://iiif.io/api/presentation/3/context.json",
     "id": "<%= item.manifest_uri %>",
     "type": "Manifest",
-    "label": { "en": [ "<%= item.label %>" ] },
+    "label": { "en": [ "<%= item.label.html_safe %>" ] },
     <% if item.homepage %>  
     "homepage": [
       {
         "id": "<%= item.homepage %>",
         "type": "Text",
-        "label": { "en": [ "Home page for <%= item.label %>" ] },
+        "label": { "en": [ "Home page for <%= item.label.html_safe %>" ] },
         "format": "text/html"
       }
     ],
@@ -16,9 +16,9 @@
     <% if item.provider_label && item.provider_uri %>
     "provider": [
       {
-        "id": "<%= item.provider_uri %>",
+        "id": "<%= item.provider_uri.html_safe %>",
         "type": "Agent",
-        "label": { "en": [ "<%= item.provider_label %>" ] }
+        "label": { "en": [ "<%= item.provider_label.html_safe %>" ] }
       }
     ],
     <% end %>
@@ -34,8 +34,8 @@
           <%= ',' unless i==0 %>
           {
             "type": "AnnotationPage",
-            "id": "<%= page.annotation_page_uri %>",
-            "label": "<%= page.label %>"
+            "id": "<%= page.annotation_page_uri.html_safe %>",
+            "label": "<%= page.label.html_safe %>"
           }
           <% end %>
         ],
@@ -50,7 +50,7 @@
                 "type": "Annotation",
                 "motivation": "painting",
                 "body": {
-                  "id": "<%= canvas.audio_url %>",
+                  "id": "<%= canvas.audio_url.html_safe %>",
                   "type": "Sound",
                   "format": "audio/mp3",
                   "duration": <%= canvas.duration %>
