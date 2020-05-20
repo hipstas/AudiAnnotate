@@ -8,7 +8,7 @@ Please [register](https://docs.google.com/forms/d/e/1FAIpQLSeO-Rf_QeqYDB6KXKhqww
 #### Workshop Prep
 Before the workshop, we request that you: 
 
-1. [Create a GitHub Account](https://github.com/account/organizations/new?plan=free&ref_cta=Create%2520a%2520free%2520organization&ref_loc=topcarousel&ref_page=%2Fpricing) to do so. 
+1. [Create a GitHub Account](https://github.com/account/organizations/new?plan=free&ref_cta=Create%2520a%2520free%2520organization&ref_loc=topcarousel&ref_page=%2Fpricing) 
 
 2. Download Audacity. There will be an optional opportunity to incorporate Audacity, an open-source audio editing application, into the AudiAnnotate workflow. If you are interested in participating, please download Audacity before the workshop. You can find instructions [here](workflow.md).
 
