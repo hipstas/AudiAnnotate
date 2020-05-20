@@ -1,65 +1,77 @@
+  <div class="row">
+    <div class="col-sm-4">
+      <%= form_with(model: @item, url: form_path, local: true) do |form| %>
+      <% if item.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
 
-<%= form_with(model: @item, url: form_path, local: true) do |form| %>
-  <% if item.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
-
-      <ul>
-        <% item.errors.full_messages.each do |message| %>
+        <ul>
+          <% item.errors.full_messages.each do |message| %>
           <li class="invalid"><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :label, class: "col-sm-4 col-form-label"  %>
-    <div class="col-sm-4">
-      <%= form.text_field :label, class: 'form-control', required: 'true' %>
-    </div>
-  </div>
-  <div class="field">
-    <%= form.label :audio_url, 'Audio File URL', class: "col-sm-4 col-form-label"  %>
-    <div class="col-sm-4">
-      <%= form.text_field :audio_url, class: 'form-control', required: 'true' %>
-    </div>
-  </div>
-
-  <div class="field">
-    <%= form.label :duration, 'Duration (seconds or minutes:seconds)', class: "col-sm-4 col-form-label"  %>
-    <div class="col-sm-2">
-      <%= form.text_field :duration, class: 'form-control', required: 'true' %>
-    </div>
-  </div>
-
-  <div class="field">
-    <%= form.label :homepage, 'Item Homepage', class: "col-sm-4 col-form-label"  %>
-    <div class="col-sm-4">
-      <%= form.text_field :homepage, class: 'form-control' %>
-    </div>
-  </div>
-
-
-  <fieldset class="form-group">
-    <div class="field">
-      <%= form.label :provider_label, 'Provider Name', class: "col-sm-4 col-form-label"  %>
-      <div class="col-sm-4">
-        <%= form.text_field :provider_label, class: 'form-control' %>
+          <% end %>
+        </ul>
       </div>
-    </div>
+      <% end %>
 
-    <div class="field">
-      <%= form.label :provider_uri, 'Provider URL', class: "col-sm-4 col-form-label"  %>
-      <div class="col-sm-4">
-        <%= form.text_field :provider_uri, class: 'form-control' %>
+      <div class="field">
+        <%= form.label :label, class: "col-sm-12 col-form-label"  %>
+        <div class="col-sm-12">
+          <%= form.text_field :label, class: 'form-control', required: 'true' %>
+        </div>
       </div>
-    </div> 
-  </fieldset>
+      <div class="field">
+        <%= form.label :audio_url, 'Audio File URL', class: "col-sm-12 col-form-label"  %>
+        <div class="col-sm-12">
+          <%= form.text_field :audio_url, class: 'form-control', required: 'true' %>
+        </div>
+      </div>
 
-  <%= form.hidden_field(:repo_name) %>
-  <%= form.hidden_field(:user_name) %>
+      <div class="field">
+        <%= form.label :duration, 'Duration (seconds or minutes:seconds)', class: "col-sm-12 col-form-label"  %>
+        <div class="col-sm-2">
+          <%= form.text_field :duration, class: 'form-control', required: 'true' %>
+        </div>
+      </div>
 
-  <div class="actions">
-    <%= form.submit("Save", class: "btn btn-light") %>
+      <div class="field">
+        <%= form.label :homepage, 'Item Homepage', class: "col-sm-12 col-form-label"  %>
+        <div class="col-sm-4">
+          <%= form.text_field :homepage, class: 'form-control' %>
+        </div>
+      </div>
+
+
+      <fieldset class="form-group">
+        <div class="field">
+          <%= form.label :provider_label, 'Provider Name', class: "col-sm-12 col-form-label"  %>
+          <div class="col-sm-4">
+            <%= form.text_field :provider_label, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="field">
+          <%= form.label :provider_uri, 'Provider URL', class: "col-sm-12 col-form-label"  %>
+          <div class="col-sm-4">
+            <%= form.text_field :provider_uri, class: 'form-control' %>
+          </div>
+        </div> 
+      </fieldset>
+
+      <%= form.hidden_field(:repo_name) %>
+      <%= form.hidden_field(:user_name) %>
+
+      <div class="actions col-sm-4">
+        <%= form.submit("Save", class: "btn btn-light") %>
+      </div>
+      <% end %>
+    </div>
+    <div class="col-sm-8 inline-explanation">
+      <p>On this page, you’ll add metadata associated with your project’s audio. AudiAnnotate does not host audio, so you will need to provide a public-facing URL to create your project. The audio URL and the duration of your audio will be used to construct the manifest of your project.</p>
+
+      <p>The additional fields provide provenance information about the audio.</p>
+
+      <p>Click “Create Item” once you’re done adding metadata, and this data will be published to your project’s  GitHib repository.</p>
+
+    </div>
   </div>
-<% end %>
+

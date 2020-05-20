@@ -23,9 +23,9 @@
       <ul class="list-group">
         <% @folders.each do |folder| %>
 
-          <li class="list-group-item">
-            <%= link_to(File.basename(folder), item_path(@project.user_name, @project.repo_name, File.basename(folder))) %>
-          </li>
+        <li class="list-group-item">
+          <%= link_to(File.basename(folder), item_path(@project.user_name, @project.repo_name, File.basename(folder))) %>
+        </li>
         <% end %>
       </ul>
       <%= link_to "New Item", new_item_path(@project.user_name, @project.repo_name), class: "btn btn-primary" %>

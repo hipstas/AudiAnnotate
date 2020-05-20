@@ -1,8 +1,17 @@
 <div class="container">
-<h1>New Item</h1>
-
-<%= render 'form', item: @item, form_path: create_item_path %>
-
-
-<%= link_to 'Back', project_path(@item.user_name, @item.repo_name) %>
+	<div class="row">
+		<div class="col-sm-11" >
+			<h2>
+				<%= link_to 'My Projects', my_projects_path %> 
+				| 
+				<%= link_to @item.repo_name, project_path(@item.user_name, @item.repo_name) %> 
+			</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4">
+			<h1 class="col-sm-12">New Item</h1>
+		</div>
+	</div>
+	<%= render 'form', item: @item, form_path: create_item_path %>
 </div>
