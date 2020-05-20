@@ -1,37 +1,51 @@
-<%= form_with(model: @project, url: create_project_path, local: true) do |form| %>
-  <% if project.errors.any? %>
-    <div>
-      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+  <div class="row">
+    <div class="col-sm-4">
 
-      <ul>
-        <% project.errors.full_messages.each do |message| %>
+      <%= form_with(model: @project, url: create_project_path, local: true) do |form| %>
+      <% if project.errors.any? %>
+      <div>
+        <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+        <ul>
+          <% project.errors.full_messages.each do |message| %>
           <li><%= message %></li>
-        <% end %>
-      </ul>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
+
+
+      <div class="field">
+        <%= form.label :label, "Title", class: "col-form-label" %>
+        <%= form.text_field :label, { class: "form-control"} %>
+        <small id="label-help" class="form-text form-muted">A title that will show up at the top of your project pages.</small>
+      </div>
+
+      <div class="field">
+        <%= form.label :description, "Description", class: "col-form-label" %>
+        <%= form.text_area :description, { class: "form-control"} %>
+        <small id="description-help" class="form-text form-muted">A brief paragraph describing your project.</small>
+      </div>
+
+      <div class="field">
+        <%= form.label :repo_name, "Project Slug", class: "col-form-label" %>
+        <%= form.text_field :repo_name, { class: "form-control"} %>
+        <small id="repo-name-help" class="form-text form-muted">A short name used in URLs for your project which will be the repository name used on GitHub.  Please do not use spaces or punctuation other than hyphens.  Ex: <code>coffeehouse-poetry-performances</code></small>
+      </div>
+
+      <%= form.hidden_field :user_name %>
+
+      <div class="actions">
+        <%= form.submit(class: "btn btn-light") %>
+      </div>
     </div>
+    <div class="col-sm-8 inline-explanation">
+      <p>This is where your project begins. You create your project here, through the AudiAnnotate application, which runs on top of a repository of data in GitHub. Each new project creates a new repository.</p>
+
+      <p>Filling out the fields to the left are required, and provide metadata for naming and accessing your project. On this page, “Title” is the name of your project on the AudiAnnotate application and “Project Slug” is the name and URL of the project in your GitHub repository. </p>
+
+      <p>When you click “Create Project,” the GitHub API is contacted, creating your new project repository. </p>
+
+    </div>
+  </div>
   <% end %>
-
-  <div class="field col-sm-4">
-    <%= form.label :label, "Title", class: "col-form-label" %>
-    <%= form.text_field :label, { class: "form-control"} %>
-    <small id="label-help" class="form-text form-muted">A title that will show up at the top of your project pages.</small>
-  </div>
-
-  <div class="field col-sm-4">
-    <%= form.label :description, "Description", class: "col-form-label" %>
-    <%= form.text_area :description, { class: "form-control"} %>
-    <small id="description-help" class="form-text form-muted">A brief paragraph describing your project.</small>
-  </div>
-
-  <div class="field col-sm-4">
-    <%= form.label :repo_name, "Project Slug", class: "col-form-label" %>
-    <%= form.text_field :repo_name, { class: "form-control"} %>
-    <small id="repo-name-help" class="form-text form-muted">A short name used in URLs for your project which will be the repository name used on GitHub.  Please do not use spaces or punctuation other than hyphens.  Ex: <code>coffeehouse-poetry-performances</code></small>
-  </div>
-
-  <%= form.hidden_field :user_name %>
-
-  <div class="actions">
-    <%= form.submit(class: "btn btn-light") %>
-  </div>
-<% end %>

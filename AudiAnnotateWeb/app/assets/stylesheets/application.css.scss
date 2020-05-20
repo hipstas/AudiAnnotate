@@ -20,7 +20,8 @@ body, html {
 }
 .bg {
   /* The image used */
-  background-image: url("blaz-photo-cZWZjymwI9o-unsplash.jpg");
+  /* background-image: url("blaz-photo-cZWZjymwI9o-unsplash.jpg"); */
+  background-color: #3e4750;  /*here for other color ideas http://www.html-color-names.com/slategray.php */
 
   /* Full height */
   height: 100%;
@@ -53,3 +54,6 @@ body, html {
   }
 }
 
+.inline-explanation {
+  p {font-size: 15px;}
+}
