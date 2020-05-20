@@ -41,7 +41,7 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.save(session[:github_token])
-        format.html { redirect_to item_path(@item.user_name, @item.repo_name, @item.slug), notice: 'Item was successfully created.' }
+        format.html { redirect_to item_path(@item.user_name, @item.repo_name, @item.slug), notice: 'Item manifest was successfully created.' }
       else
         format.html { render :new }
       end
@@ -84,7 +84,7 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.save(session[:github_token])
-        format.html { redirect_to item_path(@item.user_name, @item.repo_name, @item.slug), notice: 'Item was successfully updated.' }
+        format.html { redirect_to item_path(@item.user_name, @item.repo_name, @item.slug), notice: 'Item manifest was successfully updated.' }
         format.json { render :show, status: :ok, location: @item }
       else
         format.html { render :edit }
@@ -98,7 +98,7 @@ class ItemsController < ApplicationController
   def destroy
     @item.destroy
     respond_to do |format|
-      format.html { redirect_to items_url, notice: 'Item was successfully destroyed.' }
+      format.html { redirect_to items_url, notice: 'Item manifest was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
