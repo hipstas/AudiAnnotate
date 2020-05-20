@@ -68,6 +68,27 @@ class Item
     true
   end
 
+  def destroy(access_token)
+    git = Git.open(@project.repo_path)  # TODO consider using the logger here
+    git.branch('gh-pages').checkout
+    git.pull("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')
+
+    # remove everything in the item path under _data
+    FileUtils.rm_rf(item_path)
+    FileUtils.rm(jekyll_collection_item_path)
+    FileUtils.rm(jekyll_collection_item_manifest_path)
+
+    # remove the same from the repository
+    git.remove(item_path, recursive: true)
+    git.remove(jekyll_collection_item_path, recursive: true)
+    git.remove(jekyll_collection_item_manifest_path, recursive: true)
+
+    git.commit("Removed #{label}")
+    response = git.push("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')    
+    true
+
+  end
+
 
   def user_name
     @project.user_name
