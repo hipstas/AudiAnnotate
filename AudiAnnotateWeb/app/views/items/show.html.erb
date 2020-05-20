@@ -29,21 +29,21 @@
     </thead>
     <tbody>
       <% @item.canvases.each do |canvas| %>
-        <% canvas.annotation_pages.each do |page| %>
-          <% page.annotations.each do |annotation| %>
-            <tr>
-              <td>
-                <%= annotation.start_time %>
-              </td>
-              <td>
-                <%= annotation.text %>
-              </td>
-              <td>
-                <%= page.label %>
-              </td>
-            </tr>
-          <% end %>
-        <% end %>
+      <% canvas.annotation_pages.each do |page| %>
+      <% page.annotations.each do |annotation| %>
+      <tr>
+        <td>
+          <%= annotation.start_time %>
+        </td>
+        <td>
+          <%= annotation.text %>
+        </td>
+        <td>
+          <%= page.label %>
+        </td>
+      </tr>
+      <% end %>
+      <% end %>
       <% end %> 
     </tbody>
   </table>
@@ -51,35 +51,35 @@
 
 <div id='add-annotation-form' class="container">
   <h2>Add annotation file</h2>
-    <div class="row">
+  <div class="row">
     <div class="col-sm-4">
-  <%= form_with(model: @item, url: add_annotation_file_path, local: true) do |form| %>
+      <%= form_with(model: @item, url: add_annotation_file_path, local: true) do |form| %>
 
 
-    <div class="form-group row">
-      <%= form.label :layer, "Layer Label", class: "col-sm-12 col-form-label" %>
-      <div class="col-sm-12">
-        <%= form.text_field :layer, class: 'form-control' %>
+      <div class="form-group row">
+        <%= form.label :layer, "Layer Label", class: "col-sm-12 col-form-label" %>
+        <div class="col-sm-12">
+          <%= form.text_field :layer, class: 'form-control' %>
+        </div>
       </div>
-    </div>
 
-    <div class="form-group row">
-      <%= form.label :annotation_file, class: "col-sm-12 col-form-label" %>
-      <div class="col-sm-12">
-        <%= form.file_field :annotation_file, class: 'form-control' %>
+      <div class="form-group row">
+        <%= form.label :annotation_file, class: "col-sm-12 col-form-label" %>
+        <div class="col-sm-12">
+          <%= form.file_field :annotation_file, class: 'form-control' %>
+        </div>
       </div>
-    </div>
 
-    <%= form.hidden_field(:label) %>
-    <%= form.hidden_field(:repo_name) %>
-    <%= form.hidden_field(:user_name) %>
+      <%= form.hidden_field(:label) %>
+      <%= form.hidden_field(:repo_name) %>
+      <%= form.hidden_field(:user_name) %>
 
-    <div class="actions">
-      <%= form.submit('Add', class: "btn btn-light") %>
+      <div class="actions">
+        <%= form.submit('Add', class: "btn btn-light") %>
+      </div>
+      <% end %>
     </div>
-  <% end %>
-</div>
-   <div class="col-sm-8 inline-explanation">
+    <div class="col-sm-8 inline-explanation">
       <p>This is where your project begins. You create your project here, through the AudiAnnotate application, which runs on top of a repository of data in GitHub. Each new project creates a new repository.</p>
 
       <p>Filling out the fields to the left are required, and provide metadata for naming and accessing your project. On this page, “Title” is the name of your project on the AudiAnnotate application and “Project Slug” is the name and URL of the project in your GitHub repository. </p>
@@ -87,19 +87,19 @@
       <p>When you click “Create Project,” the GitHub API is contacted, creating your new project repository. </p>
 
     </div>
-</div>
-<div id='actions' class="container">
-  <div class="row">
-  <%= link_to 'Edit Item', edit_item_path(@item.user_name, @item.repo_name, @item.slug), class: "btn btn-light" %>
-  <%= link_to 'Delete Item', destroy_item_path(@item.user_name, @item.repo_name, @item.slug), class: "btn btn-light" %>
   </div>
-</div>
+  <div id='actions' class="container">
+    <div class="row">
+      <%= link_to 'Edit Item', edit_item_path(@item.user_name, @item.repo_name, @item.slug), class: "btn btn-light" %>
+      <%= link_to 'Delete Item', destroy_item_path(@item.user_name, @item.repo_name, @item.slug), class: "btn btn-light" %>
+    </div>
+  </div>
 </div>
 
 <script>
-$(document).ready( function() {
+  $(document).ready( function() {
     $('#annotation-table').DataTable(
-  { paging: false }
-);
-} );
+      { paging: false }
+      );
+  } );
 </script>
