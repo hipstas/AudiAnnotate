@@ -17,6 +17,11 @@
   The IIIF manifest for <%= @item.label %> is at <%= link_to @item.manifest_uri, @item.manifest_uri %>
 </div>
 
+<div id='actions' class="container">
+  <%= link_to 'Edit', edit_item_path(@item.user_name, @item.repo_name, @item.slug) %>
+  <%= link_to 'Delete', destroy_item_path(@item.user_name, @item.repo_name, @item.slug) %>
+</div>
+
 <div id='annotation-list' class="container">
   <h2>Annotations</h2>
   <table id="annotation-table" class="table table-bordered table-dark">
