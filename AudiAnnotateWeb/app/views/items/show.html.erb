@@ -57,7 +57,7 @@
 
 
       <div class="form-group row">
-        <%= form.label :layer, "Layer Label*", class: "col-sm-12 col-form-label" %>
+        <%= form.label :layer, "Annotation Layer Label*", class: "col-sm-12 col-form-label" %>
         <div class="col-sm-12">
           <%= form.text_field :layer, class: 'form-control' %>
         </div>
@@ -80,12 +80,7 @@
       <% end %>
     </div>
     <div class="col-sm-8 inline-explanation">
-      <p>This is where your project begins. You create your project here, through the AudiAnnotate application, which runs on top of a repository of data in GitHub. Each new project creates a new repository.</p>
-
-      <p>Filling out the fields to the left are required, and provide metadata for naming and accessing your project. On this page, “Title” is the name of your project on the AudiAnnotate application and “Project Slug” is the name and URL of the project in your GitHub repository. </p>
-
-      <p>When you click “Create Project,” the GitHub API is contacted, creating your new project repository. </p>
-
+      <p>You’ll add the annotations that correspond with your project’s audio. This should be uploaded in a .tsv file. If you have multiple annotation layers, you can upload them individually, and your annotations will generate on the next screen.</p>
     </div>
   </div>
   <div id='actions' class="container">
