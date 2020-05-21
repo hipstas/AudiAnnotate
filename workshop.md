@@ -27,6 +27,8 @@ Before the workshop, we request that you:
 
 * [Links to Audio]
 
+* [Resources](resources.md)
+
 
 
 
