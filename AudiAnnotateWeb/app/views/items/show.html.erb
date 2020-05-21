@@ -85,7 +85,7 @@
   </div>
   <div id='actions' class="container">
     <div class="row">
-      <%= button_to 'Edit Item', edit_item_path(@item.user_name, @item.repo_name, @item.slug), class: "btn btn-light" %>
+      <%= button_to 'Edit Item', edit_item_path(@item.user_name, @item.repo_name, @item.slug), method: 'get', class: "btn btn-light" %>
       <%= button_to 'Delete Item', destroy_item_path(@item.user_name, @item.repo_name, @item.slug), method: 'delete', class: "btn btn-light" %>
     </div>
   </div>
