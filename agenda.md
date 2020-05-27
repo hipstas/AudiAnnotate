@@ -8,7 +8,7 @@
 
 12:25-12:35 - [AudiAnnotate Application](http://audiannotate.brumfieldlabs.com/) simple workflow walkthrough
 
-12:35-12:45 - Hands-on creation of AudiAnnotate project and manifest
+12:35-12:45 - Break out rooms: Hands-on creation of AudiAnnotate project and manifest
 
 Links to SpokenWeb Audio: 
 
@@ -16,19 +16,15 @@ Links to SpokenWeb Audio:
 
 - [Margaret Atwood at SGWU, 1974 - Item Page](https://montreal.spokenweb.ca/sgw-poetry-readings/margaret-atwood-at-sgwu/) 
 
-
 12:45-12:50  - Q&A
 
 12:50-12:55 - Creating annotations using Audacity
 
 12:55-1:05 - Layers and kinds of annotations; adding layers to project
 
-1:10-1:25 - Static sites, Jekyll and GitHub ([slides](https://drive.google.com/open?id=1r1y_9mqicci5Ow6cBe3hdYdK2_a5-4JirMwgYwQpC90)) 
+1:05-1:20 - Break out rooms: Hands-on create your own annotations and upload into AudiAnnotate
 
-1:05-1:20 - Hands-on creation of annotations and upload to AudiAnnotate project 
-
-1:20-1:35 - Static sites, Jekyll and GitHib
+1:20-1:35 - Static sites, Jekyll and GitHub([slides](https://drive.google.com/open?id=1r1y_9mqicci5Ow6cBe3hdYdK2_a5-4JirMwgYwQpC90)) 
 
 1:35-2:00 - Q&A and conclusions
-
 
