@@ -4,7 +4,7 @@
 
 12:10-12:15 - Introduce [AudiAnnotate](https://github.com/hipstas/audi-annotate) project and [SpokenWeb](https://spokenweb.ca/) example
 
-12:15-12:25 - IIIF-AV and annotations intro
+12:15-12:25 - IIIF-AV and annotations ([slides](https://drive.google.com/open?id=1bPyC3wJVm2q9KAig-07OBNRFlhGKS23o5Mq47jDkASg))
 
 12:25-12:35 - [AudiAnnotate Application](http://audiannotate.brumfieldlabs.com/) simple workflow walkthrough
 
