@@ -16,7 +16,7 @@
 
 12:55-1:05 - Layers and kinds of annotations; adding layers to project
 
-1:10-1:25 - [Static sites, Jekyll and GitHub](https://programminghistorian.org/en/lessons/building-static-sites-with-jekyll-github-pages) 
+1:10-1:25 - Static sites, Jekyll and GitHub([slides](https://drive.google.com/open?id=1r1y_9mqicci5Ow6cBe3hdYdK2_a5-4JirMwgYwQpC90)) 
 
 1:05-1:20 - Hands-on creation of annotations and upload to AudiAnnotate project 
 
