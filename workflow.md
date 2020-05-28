@@ -130,31 +130,33 @@ AudiAnnotate needs a direct link to either a .mp3 or .wav audio file to add audi
 
 1\. Navigate to the [AudiAnnotate Application](http://audiannotate.brumfieldlabs.com/)
 
-  * This will prompt you to log in through GitHub (make sure to allow the app to authorize saracarl)
+  * This will prompt you to log in through GitHub (make sure to allow the app to authorize AudiAnnotate)
 
   * Enter your GitHub password to log in
 
-2\. Click "Create New Project"
+2\. Click "New Project"
 
-  * Project ID = repository name (no spaces)
+  * Title = repository name. 
 
-  * Add title and description
+  * Add description
+  
+  * Add project slug (this is the GitHub url. Please use hyphens.)
 
 3\. Click “Create project”
 
   * This contacts the github page and  generates repository
 
-4\. Now, on the Audio files page, click “New Item.” This is where you will add metadata for your audio recording.
+4\. Now, on the Audio files page, click “New Item Manifest.” This is where you will add metadata for your audio recording.
 
-  * Add label for your audio file
+  * Add a label for your audio file. This should be human-readable.
   
-  * Add URL for  audio 
+  * Add "Audio File URL" for  audio (This should be a direct link to the audio file)
   
-  * Add duration in seconds
+  * Add duration in seconds or minutes:seconds
   
-  * Other fields are additional metadata from provider
+  * Other fields are additional provenance metadata from provider 
   
-5\. Click “Create item” 
+5\. Click “Save." 
 
 6\. Now, on the  annotations page, add a label for your annotations layer. This is where you will upload your .txt labels from Audacity
 
