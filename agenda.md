@@ -2,7 +2,7 @@
 
 12:00-12:10 - Introductions
 
-12:10-12:15 - Introduce [AudiAnnotate](http://hipstas.org/audiannotate/) project and [SpokenWeb](https://spokenweb.ca/) example
+12:10-12:15 - Introduce [AudiAnnotate](http://hipstas.org/audiannotate/) project and [SpokenWeb](https://spokenweb.ca/) example ([slides](https://docs.google.com/presentation/d/1-7n-mlyO7wzKxCrt13pOdmvT_j9d2ggiMTTmSNTAgbA/edit?usp=sharing)
 
 12:15-12:25 - IIIF-AV and annotations ([slides](https://drive.google.com/open?id=1bPyC3wJVm2q9KAig-07OBNRFlhGKS23o5Mq47jDkASg))
 
