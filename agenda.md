@@ -12,7 +12,7 @@
 
 Links to SpokenWeb Audio: 
 
-- [Margaret Atwood at SGWU, 1974 - Direct Link to Audio MP3](https://montreal.spokenweb.ca/wp-content/uploads/2011/01/margaret_atwood_i006-11-008.mp3) (This is what you will add as "Audio URL")
+- [Margaret Atwood at SGWU, 1974 - Direct Link to Audio MP3](https://montreal.spokenweb.ca/wp-content/uploads/2011/01/margaret_atwood_i006-11-008.mp3) (This is what you will add as "Audio File URL")
 
 - [Margaret Atwood at SGWU, 1974 - Item Page](https://montreal.spokenweb.ca/sgw-poetry-readings/margaret-atwood-at-sgwu/) 
 
