@@ -24,7 +24,7 @@ Links to SpokenWeb Audio:
 
 1:05-1:20 - Break out rooms: Hands-on create your own annotations and upload into AudiAnnotate
 
-1:20-1:35 - Static sites, Jekyll and GitHub([slides](https://drive.google.com/open?id=1r1y_9mqicci5Ow6cBe3hdYdK2_a5-4JirMwgYwQpC90)) 
+1:20-1:35 - Static sites, Jekyll and GitHub ([slides](https://drive.google.com/open?id=1r1y_9mqicci5Ow6cBe3hdYdK2_a5-4JirMwgYwQpC90)) 
 
 1:35-2:00 - Q&A and conclusions
 
