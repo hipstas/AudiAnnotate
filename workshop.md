@@ -23,10 +23,6 @@ Before the workshop, we request that you:
 
 * [AudiAnnotate Workflow](workflow.md)
 
-* [Workshop Survey]
-
-* [Links to Audio]
-
 * [Resources](resources.md)
 
 
