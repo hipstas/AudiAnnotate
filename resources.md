@@ -1,4 +1,4 @@
-### Resources
+### [AudiAnnotate](https://hipstas.github.io/AudiAnnotate/) Resources
 
 * [IIIF](https://iiif.io/)
 
