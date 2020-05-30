@@ -1,4 +1,4 @@
-# AudiAnnotate Workflow
+# [AudiAnnotate](https://hipstas.github.io/AudiAnnotate/) Workflow
 
 * [Part 1: Downloading Audacity](#aud)
 * [Part 2: Creating Labels in Audacity](#labels)
