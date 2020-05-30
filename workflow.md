@@ -5,7 +5,7 @@
 * [Part 3: Exporting Labels From Audacity](#export)
 * [Part 4: Getting an Audio Link for Your Project](#audiolink)
 * [Part 5: Using AudiAnnotate to Save and Align Labels with Audio](#aa)
-* [Walkthrough Videos](#vid)
+* [Demonstration Videos](#vid)
 
     1\. [Annotating with Audacity](https://drive.google.com/file/d/1dpOkBX2-ABIzM7Z2Anle7HHQTr24mN39/view?usp=sharing)
 
@@ -177,7 +177,7 @@ AudiAnnotate needs a direct link to either a .mp3 or .wav audio file to add audi
 10\. Clicking “add” at the bottom of the page allows you to add additional annotation layers to the same audio 
 
 <a name="vid"></a>
-### Walkthrough Videos
+### Demonstration Videos
 1\. [Annotating with Audacity](https://drive.google.com/file/d/1dpOkBX2-ABIzM7Z2Anle7HHQTr24mN39/view?usp=sharing)
 
 2\. [Creating manifests with AudiAnnotate](https://drive.google.com/file/d/1LAHGDO1fqnN3Y6emXB1FJUi1g8tSk9a7/view?usp=sharing)
