@@ -5,7 +5,7 @@
 * [Part 3: Exporting Labels From Audacity](#export)
 * [Part 4: Getting an Audio Link for Your Project](#audiolink)
 * [Part 5: Using AudiAnnotate to Save and Align Labels with Audio](#aa)
-* [Videos] (#vid)
+* [Videos](#vid)
 
 <a name="aud"></a>
 ### Part 1: Downloading Audacity
