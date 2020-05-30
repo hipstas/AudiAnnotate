@@ -5,3 +5,4 @@ More on the project is available at the [HiPSTAS](http://hipstas.org/audiannotat
 * [AudiAnnotate Application](http://audiannotate.brumfieldlabs.com/)
 * [Workflow](workflow.md) 
 * [Virtual Workshop](workshop.md)
+* [Resources](resources.md)
