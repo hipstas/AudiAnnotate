@@ -8,7 +8,7 @@
 
 12:25-12:35 - [AudiAnnotate Application](http://audiannotate.brumfieldlabs.com/) simple workflow walkthrough
 
-[Documentation of workflow](https://hipstas.github.io/audi-annotate/workflow.html)
+[Documentation of workflow](workflow.md)
 
 12:35-12:45 - Break out rooms: Hands-on creation of AudiAnnotate project and manifest
 
