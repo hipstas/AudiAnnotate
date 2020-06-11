@@ -1,5 +1,10 @@
 theme: jekyll-theme-slate
 navigation:
 - title: Home
-  url: https://hipstas.github.io/AudiAnnotate/
-- title: 
+  url: index.md
+- title: Workflow
+  url: workflow.md
+- title: Resources
+  url: resources.md
+- title: Workshop
+  url: workshop.md
