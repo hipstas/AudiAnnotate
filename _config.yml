@@ -1,1 +1,5 @@
 theme: jekyll-theme-slate
+navigation:
+- title: Home
+  url: https://hipstas.github.io/AudiAnnotate/
+- title: 
