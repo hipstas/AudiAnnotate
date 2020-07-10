@@ -1,5 +1,5 @@
 # [AudiAnnotate](https://hipstas.github.io/AudiAnnotate/) Workshop 
-## Thursday, May 28, 2020 12-2pm CST
+## Wednesday, July 22, 2020 11am-1pm ET; 10am-12pm CST
 
 [Workshop agenda](agenda.md): This introductory workshop will include basic information about [the AudiAnnotate project](http://hipstas.org/audiannotate/), about using [IIIF](https://iiif.io/) and the [IIIF specifications for AV](https://iiif.io/community/groups/av/), how we are using Audacity to annotate audio files, and how we are using static sites, Jekyll, and GitHub to manage editing and publishing IIIF manifests and annotations. 
 
@@ -26,7 +26,8 @@ Before the workshop, we request that you:
 * [Resources](resources.md)
 
 
-
+#### Previous Workshops
+* [Thursday, May 28, 2020 12-2pm CST](agenda.md)
 
 
 
