@@ -1,4 +1,5 @@
-### Workshop Agenda 
+### Workshop Agenda
+Thursday, May 28 12-2pm CT.
 
 12:00-12:10 - Introductions
 
