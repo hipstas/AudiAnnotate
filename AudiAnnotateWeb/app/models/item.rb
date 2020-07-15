@@ -143,6 +143,10 @@ class Item
     @slug || label.gsub(/\W+/, '-').downcase
   end
 
+  def project
+    @project
+  end
+
   #######################
   # Manifest helpers
   #######################
