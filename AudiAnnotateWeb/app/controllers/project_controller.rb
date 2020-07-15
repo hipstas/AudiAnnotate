@@ -37,11 +37,16 @@ class ProjectController < ApplicationController
   def show
     @project = Project.new(params[:user_name], params[:repo_name])
     @project.clone(session[:github_token])
+    @pages_site_status = @github_client.pages("#{params[:user_name]}/#{params[:repo_name]}").status
     @repo = @github_client.repository("#{@project.user_name}/#{@project.repo_name}")
-    @pages_site_status = @github_client.pages("#{@project.user_name}/#{@project.repo_name}").status
     @folders = Dir.glob(File.join(@project.repo_path,'_data','*')).select {|f| File.directory? f}
   end
 
+
+  def build_status
+    pages_site_status = @github_client.pages("#{params[:user_name]}/#{params[:repo_name]}").status
+    render json: pages_site_status
+  end
 
   private
     # Never trust parameters from the scary internet, only allow the white list through.

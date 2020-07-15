@@ -11,6 +11,7 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
+    @project = @item.project
   end
 
   # GET /items/new
@@ -54,7 +55,6 @@ class ItemsController < ApplicationController
 
     annotation_file = AnnotationFile.new(@item.canvases.first, item_params[:layer], item_params[:annotation_file])
     if annotation_file.save(session[:github_token])
-      sleep 2 # wait for the build status to update
       redirect_to item_path(@item.user_name, @item.repo_name, @item.slug)
     end
   end    
