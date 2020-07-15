@@ -2,7 +2,8 @@ class ProjectController < ApplicationController
   before_action :connect
 
   def all
-    @repos = Octokit.client.search_repositories("topic:audiannotate", sort: 'stars').items
+    client = @github_client || Octokit.client
+    @repos = client.search_repositories("topic:audiannotate", sort: 'stars').items
   end
 
   def mine
@@ -36,7 +37,7 @@ class ProjectController < ApplicationController
   def show
     @project = Project.new(params[:user_name], params[:repo_name])
     @project.clone(session[:github_token])
-    @repo = Octokit.repository("#{@project.user_name}/#{@project.repo_name}")
+    @repo = @github_client.repository("#{@project.user_name}/#{@project.repo_name}")
     @pages_site_status = @github_client.pages("#{@project.user_name}/#{@project.repo_name}").status
     @folders = Dir.glob(File.join(@project.repo_path,'_data','*')).select {|f| File.directory? f}
   end
