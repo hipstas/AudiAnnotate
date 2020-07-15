@@ -4,10 +4,10 @@
  *
  * To rebuild or modify this file with the latest versions of the included
  * software please visit:
- *   https://datatables.net/download/#dt/dt-1.10.20
+ *   https://datatables.net/download/#dt/dt-1.10.21
  *
  * Included libraries:
- *   DataTables 1.10.20
+ *   DataTables 1.10.21
  */
 
 /*
@@ -55,19 +55,19 @@ table.dataTable thead .sorting_desc_disabled {
   background-position: center right;
 }
 table.dataTable thead .sorting {
-  background-image: url("DataTables-1.10.20/images/sort_both.png");
+  background-image: url("DataTables-1.10.21/images/sort_both.png");
 }
 table.dataTable thead .sorting_asc {
-  background-image: url("DataTables-1.10.20/images/sort_asc.png");
+  background-image: url("DataTables-1.10.21/images/sort_asc.png");
 }
 table.dataTable thead .sorting_desc {
-  background-image: url("DataTables-1.10.20/images/sort_desc.png");
+  background-image: url("DataTables-1.10.21/images/sort_desc.png");
 }
 table.dataTable thead .sorting_asc_disabled {
-  background-image: url("DataTables-1.10.20/images/sort_asc_disabled.png");
+  background-image: url("DataTables-1.10.21/images/sort_asc_disabled.png");
 }
 table.dataTable thead .sorting_desc_disabled {
-  background-image: url("DataTables-1.10.20/images/sort_desc_disabled.png");
+  background-image: url("DataTables-1.10.21/images/sort_desc_disabled.png");
 }
 table.dataTable tbody tr {
   background-color: #ffffff;
@@ -187,7 +187,7 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
 }
 table.dataTable.compact thead th,
 table.dataTable.compact thead td {
-  padding: 4px 17px 4px 4px;
+  padding: 4px 17px;
 }
 table.dataTable.compact tfoot th,
 table.dataTable.compact tfoot td {
