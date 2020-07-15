@@ -6,7 +6,7 @@
 
 <h2>AudiAnnotate is a project to publish and share annotations on audio files.</h2>
 
-<h3>The following projects have been created on AudiAnnotate</h3>
+<h4>The following projects have been created on AudiAnnotate</h4>
 
 <div class="card-deck">
   <% @repos.each do |repo| %>
@@ -14,12 +14,4 @@
   <% end %>
 </div>  
 
-
-<% if session[:github_token] %>
-  <%= link_to 'My Projects', my_projects_path() %>
-<% else %>
-  <p>Create your own project on AudiAnnotate by signing in with Github:</p>
-
-  <%= link_to 'Sign in', '/auth/github', :class => "btn btn-light btn-lg" %>
-<% end %>
 </div>

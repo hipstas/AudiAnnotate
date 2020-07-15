@@ -32,7 +32,7 @@
       <% canvas.annotation_pages.each do |page| %>
       <% page.annotations.each do |annotation| %>
       <tr>
-        <td>
+        <td data-sort="<%= annotation.start_time.split(",").first %>">
           <%= annotation.start_time %>
         </td>
         <td>
