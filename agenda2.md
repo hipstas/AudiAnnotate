@@ -9,7 +9,7 @@ Wednesday, July 22, 2020 11am-1pm ET; 10am-12pm CST.
 
 10:25-10:35 - [AudiAnnotate Application](http://audiannotate.brumfieldlabs.com/) simple workflow walkthrough
 
-[Documentation of workflow](workflow.md)
+- [Documentation of workflow](workflow.md)
 
 10:35-10:45 - Break out rooms: Hands-on creation of AudiAnnotate project and manifest
 
