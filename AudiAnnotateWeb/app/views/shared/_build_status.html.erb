@@ -1,11 +1,40 @@
 <% if defined? @pages_site_status && @pages_site_status %>
   <% if @pages_site_status == 'built' %>
-    <div class="col-sm-1 alert alert-success" role="alert">
+    <div id="build-status-indicator" class="col-sm-1 alert alert-success" style="text-transform: capitalize;" role="alert">
       <a href="?reload=true" title="Your site reflects the latest changes.">Ready</a>
     </div>
   <% else %>
-    <div class="col-sm-1 alert alert-warning" role="alert">
+    <div  id="build-status-indicator" class="col-sm-1 alert alert-warning" role="alert" style="text-transform: capitalize;">
       <a href="?reload=true" title="Your site does not reflect your changes.  Reload this page to check the site status again."><%= @pages_site_status.titleize  %></a>
     </div>
   <% end %> 
 <% end %> 
+
+
+<script>
+  var check_build = true;
+  setInterval("status_periodic_timer()", 5000);
+
+  function status_periodic_timer() {
+    if(check_build) {
+      $.ajax({
+        url: "<%= project_build_status_path(@project.user_name, @project.repo_name) %>",
+
+        complete: function(data) {
+          // look at the response
+          // set the build indicator
+          // set the check_build flag
+          if(data.responseText=="built") {
+            $("#build-status-indicator").removeClass("alert-warning").addClass("alert-success").text("Ready");
+            check_build = false;
+          } else {
+            $("#build-status-indicator").removeClass("alert-success").addClass("alert-warning").text(data.responseText);
+          }
+        }
+      });
+
+
+
+    }
+  }
+</script>
