@@ -112,27 +112,18 @@ AudiAnnotate needs a direct link to either a .mp3 or .wav audio file to add audi
 
 7\. This link can now be used in AudiAnnotate.
 
-
+<!---
 ##### [Box](https://account.box.com/login) (Please use either Internet Archive or Dropbox. Box is not currently cooperating for audio on AudiAnnotate.)
-
 *Uploading a file to Box:*
-
 1\. Click the “Upload” button in the top right corner of your screen. 
-
 2\. Click “File.”
-
 3\. Select your desired file and click the “Open” button. 
-
 *Retrieving a file link from Box:*
-
 1\. Hover over your desired file.
-
 2\. Click the link button.
-
 3\. Make sure the shared link button is enabled and copy the link from the highlighted.
-
 4\. This link can now be used in AudiAnnotate. 
-
+--->
 
 <a name="aa"></a>
 ### Part 5: Using AudiAnnotate to Save and Align Labels with Audio
