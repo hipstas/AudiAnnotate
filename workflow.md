@@ -113,7 +113,7 @@ AudiAnnotate needs a direct link to either a .mp3 or .wav audio file to add audi
 7\. This link can now be used in AudiAnnotate.
 
 
-##### [Box](https://account.box.com/login) (Please use either Internet Archive or Dropbox. Box is not currently cooperating for audio files on AudiAnnotate.)
+##### [Box](https://account.box.com/login) (Please use either Internet Archive or Dropbox. Box is not currently cooperating for audio on AudiAnnotate.)
 
 *Uploading a file to Box:*
 
