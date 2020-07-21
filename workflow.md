@@ -104,7 +104,7 @@ AudiAnnotate needs a direct link to either a .mp3 or .wav audio file to add audi
 
 4\. The sharing box will close and a message reading “Link copied” will appear with the sharing link highlighted at the bottom of your screen.
 
-*Note: This link will bring you to a page that displays the audio file, not the file itself. This sharing link cannot be used in AudiAnnotate.*
+*Note: This link will bring you to a page that displays the audio file, not to the audio (.mp3) itself. This sharing link cannot be used in AudiAnnotate.*
 
 5\. Copy and paste this link somewhere you can view it in full.
 
@@ -113,7 +113,7 @@ AudiAnnotate needs a direct link to either a .mp3 or .wav audio file to add audi
 7\. This link can now be used in AudiAnnotate.
 
 
-##### [Box](https://account.box.com/login)
+##### [Box](https://account.box.com/login) (Please use either Internet Archive or Dropbox. Box is not currently cooperating for audio files on AudiAnnotate.)
 
 *Uploading a file to Box:*
 
@@ -132,6 +132,7 @@ AudiAnnotate needs a direct link to either a .mp3 or .wav audio file to add audi
 3\. Make sure the shared link button is enabled and copy the link from the highlighted.
 
 4\. This link can now be used in AudiAnnotate. 
+
 
 <a name="aa"></a>
 ### Part 5: Using AudiAnnotate to Save and Align Labels with Audio
