@@ -1,4 +1,4 @@
-[AudiAnnotate Home](index.md) | [Workshop Home](workshop.md) 
+[AudiAnnotate Home](index.md) | [Workshop Information](workshop.md) 
 
 ### Workshop Agenda 
 Wednesday, July 22, 2020 11am-1pm ET; 10am-12pm CST.
