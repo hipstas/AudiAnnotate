@@ -1,4 +1,4 @@
-[AudiAnnotate Home](index.md) | [Workshop Home](workshop.md)
+[AudiAnnotate Home](index.md) | [Workshop Information](workshop.md)
 
 
 # [AudiAnnotate](https://hipstas.github.io/AudiAnnotate/) Workflow
