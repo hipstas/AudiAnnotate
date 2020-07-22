@@ -1,3 +1,6 @@
+[AudiAnnotate Home](index.md) | [Workshop Home](workshop.md)
+
+
 # [AudiAnnotate](https://hipstas.github.io/AudiAnnotate/) Workflow
 
 * [Part 1: Downloading Audacity](#aud)
