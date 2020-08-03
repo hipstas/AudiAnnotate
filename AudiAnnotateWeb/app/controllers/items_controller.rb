@@ -108,7 +108,11 @@ class ItemsController < ApplicationController
     def set_item
       @item = Item.from_file(params[:user_name], params[:repo_name], params[:slug])
       if @github_client
-        @pages_site_status = @github_client.pages("#{@item.user_name}/#{@item.repo_name}").status
+        begin
+          @pages_site_status = @github_client.pages("#{params[:user_name]}/#{params[:repo_name]}").status
+        rescue Octokit::NotFound
+          @pages_site_status = "Missing"
+        end
       end
     end
 

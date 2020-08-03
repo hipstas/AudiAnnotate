@@ -29,21 +29,23 @@
     </thead>
     <tbody>
       <% @item.canvases.each do |canvas| %>
-      <% canvas.annotation_pages.each do |page| %>
-      <% page.annotations.each do |annotation| %>
-      <tr>
-        <td data-sort="<%= annotation.start_time.split(",").first %>">
-          <%= annotation.start_time %>
-        </td>
-        <td>
-          <%= annotation.text %>
-        </td>
-        <td>
-          <%= page.label %>
-        </td>
-      </tr>
-      <% end %>
-      <% end %>
+        <% canvas.annotation_pages.each do |page| %>
+          <% page.annotations.each do |annotation| %>
+            <% if annotation.start_time #sanity check %>
+              <tr>
+                <td data-sort="<%= annotation.start_time.split(",").first %>">
+                  <%= annotation.start_time %>
+                </td>
+                <td>
+                  <%= annotation.text %>
+                </td>
+                <td>
+                  <%= page.label %>
+                </td>
+              </tr>
+            <% end %>
+          <% end %>
+        <% end %>
       <% end %> 
     </tbody>
   </table>
