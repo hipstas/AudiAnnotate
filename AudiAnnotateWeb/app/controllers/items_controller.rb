@@ -11,7 +11,6 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
-    @project = @item.project
   end
 
   # GET /items/new
@@ -107,6 +106,7 @@ class ItemsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_item
       @item = Item.from_file(params[:user_name], params[:repo_name], params[:slug])
+      @project = @item.project
       if @github_client
         begin
           @pages_site_status = @github_client.pages("#{params[:user_name]}/#{params[:repo_name]}").status
