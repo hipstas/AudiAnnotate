@@ -2,7 +2,16 @@
 	  <div class="card text-white bg-secondary mb-3">
 		  <div class="card-body text-dark">
 	    	<h5 class="card-title"><%= link_to(repo.description, "https://#{repo.owner.login}.github.io/#{repo.name}") %></h5>
-	    	<p class="card-text">Created by <%= repo.owner.login %></p>
+	    	<p class="card-text">
+	    		Created by <%= repo.owner.login %>
+	    		<% if repo[:fork] %>
+	    			<% parent = @github_client.repository(repo.full_name).parent %>
+	    			<% if parent %>
+	    				<br />
+		    		  (Forked from <%= link_to(parent.full_name, parent.html_url) %>)
+	    		  <% end %>
+    		  <% end %>
+    	  </p>
 	    	<% if logged_in? %>
 	    		<% if @github_client.user.login == repo.owner.login %>
 			        <%= link_to( 'Edit', project_path(repo.owner.login, repo.name), class: "btn btn-primary") %>

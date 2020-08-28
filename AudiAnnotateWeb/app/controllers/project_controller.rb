@@ -3,7 +3,7 @@ class ProjectController < ApplicationController
 
   def all
     client = @github_client || Octokit.client
-    @repos = client.search_repositories("topic:audiannotate", sort: 'stars').items
+    @repos = client.search_repositories("topic:audiannotate fork:true", sort: 'stars', per_page: 20).items
   end
 
   def mine
@@ -11,7 +11,7 @@ class ProjectController < ApplicationController
     if @github_client.repositories.size == 0
       @repos = []
     else
-      @repos = @github_client.search_repositories("user:#{user_name} topic:audiannotate", sort: 'stars').items
+      @repos = @github_client.search_repositories("user:#{user_name} topic:audiannotate fork:true", sort: 'stars').items
     end
   end
 
