@@ -10,7 +10,7 @@
 
 <div class="card-deck">
   <% @repos.each do |repo| %>
-	  <%= render 'projectcard', repo: repo %>
+	  <%= render 'projectcard', repo: repo, editable: false %>
   <% end %>
 </div>  
 

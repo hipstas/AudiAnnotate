@@ -13,6 +13,7 @@ class ProjectController < ApplicationController
     else
       @repos = @github_client.search_repositories("user:#{user_name} topic:audiannotate fork:true", sort: 'stars').items
     end
+    @shared_repos = @github_client.repositories(nil, {:type => 'member'}) # shared repos are not filterd by topic
   end
 
 

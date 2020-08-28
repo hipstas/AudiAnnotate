@@ -13,7 +13,7 @@
     		  <% end %>
     	  </p>
 	    	<% if logged_in? %>
-	    		<% if @github_client.user.login == repo.owner.login %>
+	    		<% if @github_client.user.login == repo.owner.login || editable %>
 			        <%= link_to( 'Edit', project_path(repo.owner.login, repo.name), class: "btn btn-primary") %>
 			    <% end %>
 			<% end %>
