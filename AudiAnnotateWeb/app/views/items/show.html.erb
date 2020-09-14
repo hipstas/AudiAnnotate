@@ -14,7 +14,9 @@
   </div>
   <div id="notice"><%= notice %></div>
   The GitHub Pages site for <%= @item.label %> is <%= link_to @item.uri_root, @item.uri_root %><br />
-  The IIIF manifest for <%= @item.label %> is at <%= link_to @item.manifest_uri, @item.manifest_uri %>
+  The IIIF manifest for <%= @item.label %> is at <%= link_to @item.manifest_uri, @item.manifest_uri %>    <br />
+  You can add introductory material by modifying <%= link_to "#{@item.slug}.md", "https://github.com/#{@project.user_name}/#{@project.repo_name}/edit/gh-pages/_items/#{@item.slug}.md" %>
+
 </div>
 
 <div id='annotation-list' class="container">

@@ -15,6 +15,7 @@
   <p>
     Your project is published at <%= link_to @project.uri_root, @project.uri_root %> 
     <br />
+    You can add introductory material by modifying <%= link_to 'index.markdown', "https://github.com/#{@project.user_name}/#{@project.repo_name}/edit/gh-pages/index.markdown" %>
 
   </p>
   <div class="row">
