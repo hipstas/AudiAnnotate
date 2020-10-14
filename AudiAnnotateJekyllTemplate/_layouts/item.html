@@ -3,8 +3,9 @@ layout: page
 ---
 
 
+ {%- assign format = site.data[page.manifest_name].manifest.items[0].items[0].items[0].body.format -%}
 
- <div id="uv" class="uv"></div>
+ <div id="uv" {%- if format == "audio/mp3" -%} class="uv-audio" {%- endif -%} {%- if format == "video/mp4" -%} class="uv-video" {%- endif -%} ></div>
 
 <script>
 
