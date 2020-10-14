@@ -51,9 +51,14 @@
                 "motivation": "painting",
                 "body": {
                   "id": "<%= canvas.audio_url.html_safe %>",
+                  <% if canvas.audio_url.contains("mp3") %>
                   "type": "Sound",
                   "format": "audio/mp3",
-                  "duration": <%= canvas.duration %>
+                  <% elsif canvas.audio_url.contains("mp4") %>
+                    "type": "Video",
+                    "format": "video/mp4",
+                  <% end %>
+                    "duration": <%= canvas.duration %>
                 },
                 "target": "<%= canvas.canvas_id %>"
               }
