@@ -45,9 +45,20 @@ layout: page
         <tr>
           {% assign timestamp_array = annotation.target.selector.t | split: ',' %}
           <td class="timestamp" data-timestamp="{{timestamp_array[0]}}"  data-sort="{{timestamp_array[0]}}">
-            {{timestamp_array[0] | divided_by: 60 | floor }}:{{timestamp_array[0] | modulo: 60 | ceil }}
+           {% assign seconds = timestamp_array[0] | times: 1 %}
+            {% if seconds >= 3600 %}
+              {{ seconds | divided_by: 3600 | floor }}:{{seconds | divided_by: 60 | modulo: 60 | floor | prepend: '00' | slice: -2, 2 }}:{{seconds | modulo: 60 | ceil | prepend: '00' | slice: -2, 2}} 
+            {% else %}
+              {{seconds | divided_by: 60 | modulo: 60 | floor }}:{{seconds | modulo: 60 | ceil | prepend: '00' | slice: -2, 2}} 
+            {% endif %}
             {% if timestamp_array[1] %}
-              - {{timestamp_array[1] | divided_by: 60 | floor }}:{{timestamp_array[1] | modulo: 60 | round }}
+              {% assign endseconds = timestamp_array[1] | times: 1 %}
+              - 
+                {% if endseconds >= 3600 %}
+                  {{ endseconds | divided_by: 3600 | floor }}:{{endseconds | divided_by: 60 | modulo: 60 | floor | prepend: '00' | slice: -2, 2 }}:{{endseconds | modulo: 60 | ceil | prepend: '00' | slice: -2, 2}} 
+                {% else %}
+                  {{endseconds | divided_by: 60 | modulo: 60 | floor }}:{{endseconds | modulo: 60 | ceil | prepend: '00' | slice: -2, 2}} 
+                {% endif %}
             {% endif %}
           </td>
           <td>{{annotation.body.value}}</td>
