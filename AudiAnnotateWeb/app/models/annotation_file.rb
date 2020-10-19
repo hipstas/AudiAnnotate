@@ -35,6 +35,20 @@ EOF
     @canvas.item.save(access_token)
   end
 
+  def seconds_from_raw(raw)
+    if md=raw.match(/(\d\d):(\d\d):(\d\d):(\d\d)/)
+      #this is adobe premiere export format
+      seconds=0.0
+      seconds += md[1].to_i*60*60 #take hours convert to seconds
+      seconds += md[2].to_i*60 #take minutes convert to seconds
+      seconds += md[3].to_i #add seconds
+      seconds += md[4].to_f/100 #add hundreths of seconds
+      seconds.to_s
+    else
+      raw
+    end
+  end
+
   def page_contents(csv)
     page = {
       "@context": "http://iiif.io/api/presentation/3/context.json",
@@ -53,12 +67,16 @@ EOF
       body = { "type" => "TextualBody", "value" => row[2], "format" => "text/plain" }
       wa["body"] = body
       # TODO if on point vs range
-      if row[0]==row[1]
+      # pull row[0] and row[1] into variables
+      row0=seconds_from_raw(row[0])
+      row1=seconds_from_raw(row[1])
+      # parse them into seconds
+      if row0==row1
         # point selection
-        selector = { "type" => "PointSelector", "t" => row[0] }
+        selector = { "type" => "PointSelector", "t" => row0 }
       else
         # range selection
-        selector = {"type" => "RangeSelector", "t" => "#{row[0]},#{row[1]}" }
+        selector = {"type" => "RangeSelector", "t" => "#{row0},#{row1}" }
       end
       wa["id"] = annotation_uri(i)
       wa["target"] = { "source" => @canvas.canvas_id, "selector" => selector }
