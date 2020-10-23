@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   patch 'project/:user_name/:repo_name/items/:slug', to: 'items#update', as: 'update_item'
   delete 'project/:user_name/:repo_name/items/:slug', to: 'items#destroy', as: 'destroy_item'
   post 'project/:user_name/:repo_name/items/:slug/files', to: 'items#add_annotation_file', as: 'add_annotation_file'
+  get 'project/:user_name/:repo_name/items/:slug/files/:layer/destroy', to: 'items#delete_annotation_layer', as: 'delete_annotation_layer'
 
   root to: 'project#all'
 
