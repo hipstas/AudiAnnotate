@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
-  before_action :connect, only: [:add_annotation_file, :create, :destroy, :edit, :show, :update]
-  before_action :set_item, only: [:add_annotation_file, :destroy, :edit, :show, :update]
+  before_action :connect, only: [:add_annotation_file, :create, :destroy, :edit, :show, :update, :delete_annotation_layer]
+  before_action :set_item, only: [:add_annotation_file, :destroy, :edit, :show, :update, :delete_annotation_layer]
 
   # GET /items
   # GET /items.json
@@ -43,13 +43,21 @@ class ItemsController < ApplicationController
 
 
   def add_annotation_file
-    # @item = Item.new(item_params[:user_name], item_params[:repo_name], item_params[:label])
-
     annotation_file = AnnotationFile.new(@item.canvases.first, item_params[:layer], item_params[:annotation_file])
     if annotation_file.save(session[:github_token])
       redirect_to item_path(@item.user_name, @item.repo_name, @item.slug)
     end
   end    
+
+  def delete_annotation_layer
+    #binding.pry
+    canvas = @item.canvases.first
+    layer = canvas.annotation_pages.detect{|page| page.label == params[:layer] }
+    annotation_file = AnnotationFile.new(@item.canvases.first, params[:layer], nil)
+    if annotation_file.destroy(session[:github_token])
+      redirect_to item_path(@item.user_name, @item.repo_name, @item.slug)
+    end
+  end
 
 
 

@@ -75,6 +75,11 @@ EOF
     @canvas.item.save(access_token)
   end
 
+  def destroy(access_token)
+    File.unlink(annotation_page_file_path)
+    @canvas.item.save(access_token)
+  end
+
   def seconds_from_raw(raw)
     if md=raw.match(/(\d\d);(\d\d);(\d\d);(\d\d)/)
       #this is adobe premiere export format

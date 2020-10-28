@@ -58,9 +58,9 @@
 </div>
 
 <div id='add-annotation-form' class="container">
-  <h2>Add annotation file</h2>
   <div class="row">
     <div class="col-sm-4">
+        <h3>Add annotation file</h3>
       <%= form_with(model: @item, url: add_annotation_file_path, local: true) do |form| %>
 
 
@@ -85,6 +85,14 @@
       <div class="actions">
         <%= form.submit('Add', class: "btn btn-light") %>
       </div>
+      <% end %>
+    </div>
+    <div class="col-sm-4">
+      <h3> Annotation Layers </h3>
+        <% @item.canvases.each do |canvas| %>
+        <% canvas.annotation_pages.each do |page| %>
+          <%= page.label %> <%= link_to("Delete", delete_annotation_layer_path(@item.user_name, @item.repo_name, @item.slug, page.label)) %>
+        <% end %>
       <% end %>
     </div>
     <div class="col-sm-8 inline-explanation">
