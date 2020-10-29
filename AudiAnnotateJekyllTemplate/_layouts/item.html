@@ -34,14 +34,16 @@ layout: page
 <table id="annotation-table"  class="table table-bordered table-dark">
   <thead>
     <tr>
-      <th style="width: 15%;">Time</th>
+      <th style="width: 20%;">Time</th>
       <th>Annotation</th>
       <th>Layer</th>
     </tr>
   </thead>
   <tbody>
     {%- for annotation_page in site.data[page.manifest_name].manifest.items[0].annotations -%}
-      {%- for annotation in site.data[page.manifest_name].canvas-1[annotation_page.label].items -%}
+      {% assign portions = annotation_page.id | split: '/' %}
+      {% assign real_slug = portions[7] | replace: ".json", "" %}
+      {%- for annotation in site.data[page.manifest_name].canvas-1[real_slug].items -%}
         <tr>
           {% assign timestamp_array = annotation.target.selector.t | split: ',' %}
           <td class="timestamp" data-timestamp="{{timestamp_array[0]}}"  data-sort="{{timestamp_array[0]}}">

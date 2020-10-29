@@ -91,7 +91,7 @@
       <h3> Annotation Layers </h3>
         <% @item.canvases.each do |canvas| %>
         <% canvas.annotation_pages.each do |page| %>
-          <%= page.label %> <%= link_to("Delete", delete_annotation_layer_path(@item.user_name, @item.repo_name, @item.slug, page.label)) %>
+          <%= page.label %> <%= link_to("Delete", delete_annotation_layer_path(@item.user_name, @item.repo_name, @item.slug, page.label)) %><br/>
         <% end %>
       <% end %>
     </div>

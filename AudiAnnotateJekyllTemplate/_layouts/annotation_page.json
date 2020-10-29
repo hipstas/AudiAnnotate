@@ -1,0 +1,1 @@
+{{ site.data[page.manifest_name].canvas-1[page.annotation_slug] | jsonify }}
