@@ -105,8 +105,6 @@ EOF
       wa["motivation"]=["supplementing", "commenting"]
       body = { "type" => "TextualBody", "value" => row[config[:text_col]], "format" => "text/plain" }
       wa["body"] = body
-      # TODO if on point vs range
-      # pull row[0] and row[1] into variables
       start_seconds=seconds_from_raw(row[config[:start_col]])
       end_seconds=seconds_from_raw(row[config[:end_col]])
       # parse them into seconds
@@ -127,6 +125,10 @@ EOF
     JSON.pretty_generate(page)
   end
 
+  def destroy(access_token)
+    File.unlink(annotation_page_file_path)
+    @canvas.item.save(access_token)
+  end
 
 
   #######################

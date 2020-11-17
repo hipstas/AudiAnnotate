@@ -27,6 +27,7 @@ class AnnotationFile
       contents = File.read(@uploaded_file)
       detection = CharlockHolmes::EncodingDetector.detect(contents)
 
+
       # configuration specific to Adobe Premiere
       config = {
         col_sep: "\t",
@@ -79,13 +80,4 @@ class AnnotationFile
 
     @canvas.item.save(access_token)
   end
-
-  def destroy(access_token)
-    File.unlink(annotation_page_file_path)
-    @canvas.item.save(access_token)
-  end
-
-
-
-
 end

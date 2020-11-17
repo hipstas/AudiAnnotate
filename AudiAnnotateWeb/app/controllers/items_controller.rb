@@ -53,10 +53,8 @@ class ItemsController < ApplicationController
     #binding.pry
     canvas = @item.canvases.first
     layer = canvas.annotation_pages.detect{|page| page.label == params[:layer] }
-    annotation_file = AnnotationFile.new(@item.canvases.first, params[:layer], nil)
-    if annotation_file.destroy(session[:github_token])
-      redirect_to item_path(@item.user_name, @item.repo_name, @item.slug)
-    end
+    layer.destroy(session[:github_token])
+    redirect_to item_path(@item.user_name, @item.repo_name, @item.slug)
   end
 
 
