@@ -5,7 +5,7 @@ layout: page
  {%- assign format = site.data[page.manifest_name].manifest.items[0].items[0].items[0].body.type -%}
 {{ content }}
 
- <div id="uv" {%- if format == "Audio" -%} class="uv-audio" {%- endif -%} {%- if format == "Video" -%} class="uv-video" {%- endif -%} ></div>
+ <div id="uv" {%- if format == "Audio" -%} class="uv-audio sticky" {%- endif -%} {%- if format == "Video" -%} class="uv-video sticky" {%- endif -%} ></div>
 
 <script>
 
