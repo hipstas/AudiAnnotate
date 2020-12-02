@@ -2,13 +2,13 @@
     "@context": "http://iiif.io/api/presentation/3/context.json",
     "id": "<%= item.manifest_uri %>",
     "type": "Manifest",
-    "label": { "en": [ "<%= item.label.html_safe %>" ] },
+    "label": { "en": [ <%= item.label.to_json.html_safe %> ] },
     <% if item.homepage %>  
     "homepage": [
       {
         "id": "<%= item.homepage %>",
         "type": "Text",
-        "label": { "en": [ "Home page for <%= item.label.html_safe %>" ] },
+        "label": { "en": [ <%= item.label.to_json.html_safe %> ] },
         "format": "text/html"
       }
     ],
@@ -18,7 +18,7 @@
       {
         "id": "<%= item.provider_uri.html_safe %>",
         "type": "Agent",
-        "label": { "en": [ "<%= item.provider_label.html_safe %>" ] }
+        "label": { "en": [ <%= item.provider_label.to_json.html_safe %> ] }
       }
     ],
     <% end %>
@@ -35,7 +35,7 @@
           {
             "type": "AnnotationPage",
             "id": "<%= page.annotation_page_uri.html_safe %>",
-            "label": "<%= page.label.html_safe %>"
+            "label": <%= page.label.to_json.html_safe %>
           }
           <% end %>
         ],
