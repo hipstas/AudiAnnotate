@@ -2,8 +2,8 @@
     "@context": "http://iiif.io/api/presentation/3/context.json",
     "id": "<%= project.manifest_uri %>",
     "type": "Collection",
-    "label": { "en": [ "<%= project.label %>" ] },
-    "summary": { "en": [ "<%= project.description %>" ] },
+    "label": { "en": [ <%= project.label.to_json.html_safe %> ] },
+    "summary": { "en": [ <%= project.description.to_json.html_safe %> ] },
     "items": [
     ]
 }
