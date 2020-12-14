@@ -47,9 +47,9 @@ class Item
     unless Dir.exists?(item_path)
       new_item=true
       Dir.mkdir(item_path)
+      write_file(jekyll_collection_item_path, jekyll_collection_item_contents)
     end
     write_file(manifest_path, manifest_contents)
-    write_file(jekyll_collection_item_path, jekyll_collection_item_contents)
     write_file(jekyll_collection_item_manifest_path, jekyll_collection_item_manifest_contents)
 
     # canvases.each { |canvas| canvas.save }
