@@ -58,12 +58,18 @@ class Item
 
     # pull down any external manifest
     unless external_manifest_url.blank?
-      # TODO catch exceptions and return errors
-
-      # import the file from the net
-      raw_manifest = URI.open(external_manifest_url).read
-      # parse the file
-      manifest = JSON.parse(raw_manifest)
+      begin
+        # import the file from the net
+        raw_manifest = URI.open(external_manifest_url).read
+        # parse the file
+        manifest = JSON.parse(raw_manifest)
+      rescue Errno::ENOENT
+        errors.add(:external_manifest_url, :invalid, message: 'IIIF manifest could not be resolved to a valid URL')
+        return false
+      rescue JSON::ParserError
+        errors.add(:external_manifest_url, :invalid, message: 'IIIF manifest was not a valid JSON file')
+        return false
+      end
 
       # set a label and slug
       if manifest['label'].blank?
