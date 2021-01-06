@@ -18,6 +18,29 @@ class ItemsController < ApplicationController
     @item = Item.new(params[:user_name], params[:repo_name])
   end
 
+  def new_import
+    @item = Item.new(params[:user_name], params[:repo_name])
+  end
+
+  def import_manifest
+    @item = Item.from_url(
+      item_params[:user_name], 
+      item_params[:repo_name], 
+      item_params[:manifest_url]
+    )
+
+    # TODO what should the slug be?
+
+    # test that the manifest is resolvable and is JSON and is a IIIF manifest within the save method
+    respond_to do |format|
+      if @item.save(session[:github_token])
+        format.html { redirect_to item_path(@item.user_name, @item.repo_name, @item.slug), notice: 'Item manifest was successfully imported.' }
+      else
+        format.html { render :new_import }
+      end
+    end
+  end
+
 
   # POST /items
   # POST /items.json
@@ -111,7 +134,7 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:label, :audio_url, :user_name, :repo_name, :duration, :layer, :annotation_file, :provider_uri, :provider_label, :homepage)
+      params.require(:item).permit(:label, :audio_url, :user_name, :repo_name, :duration, :layer, :annotation_file, :provider_uri, :provider_label, :homepage, :manifest_url)
     end
 
     def duration_to_seconds(duration)

@@ -1,6 +1,7 @@
 class Item
+  require 'open-uri'
   include ActiveModel::Model
-  attr_accessor :label, :slug, :user_name, :repo_name, :audio_url, :duration, :provider_uri, :provider_label, :homepage
+  attr_accessor :label, :slug, :user_name, :repo_name, :audio_url, :duration, :provider_uri, :provider_label, :homepage, :external_manifest_url
 
   def initialize(user_name, repo_name, label=nil, audio_url=nil, duration=nil, provider_uri=nil, provider_label=nil, homepage=nil)
     @project = Project.new(user_name, repo_name)
@@ -10,6 +11,17 @@ class Item
     @provider_label=provider_label
     @provider_uri=provider_uri
     @homepage=homepage
+  end    
+
+  def self.from_url(user_name, repo_name, manifest_url)
+    item = Item.new(user_name, repo_name)
+    item.user_name = user_name
+    item.repo_name = repo_name
+    item.external_manifest_url = manifest_url
+    # we need a label
+    # we need a slug
+    # do we need them now?
+    item
   end    
 
   def self.from_file(user_name, repo_name, slug)
@@ -43,13 +55,42 @@ class Item
     git.pull("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')
 
     new_item=false
+
+    # pull down any external manifest
+    unless external_manifest_url.blank?
+      # TODO catch exceptions and return errors
+
+      # import the file from the net
+      raw_manifest = URI.open(external_manifest_url).read
+      # parse the file
+      manifest = JSON.parse(raw_manifest)
+
+      # set a label and slug
+      if manifest['label'].blank?
+        errors.add(:external_manifest_url, :invalid, message: 'IIIF manifest does not contain a label')
+        return false
+      end
+      raw_label = manifest['label']
+      compound_label = raw_label.first[1].join(' ')
+
+      self.label = compound_label
+
+    end
+
+
     # create the directory and manifest file
     unless Dir.exists?(item_path)
       new_item=true
       Dir.mkdir(item_path)
       write_file(jekyll_collection_item_path, jekyll_collection_item_contents)
     end
-    write_file(manifest_path, manifest_contents)
+
+    if external_manifest_url.blank?
+      write_file(manifest_path, manifest_contents)
+    else
+      write_file(manifest_path, raw_manifest)
+    end
+
     write_file(jekyll_collection_item_manifest_path, jekyll_collection_item_manifest_contents)
 
     # canvases.each { |canvas| canvas.save }

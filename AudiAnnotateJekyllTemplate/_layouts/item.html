@@ -11,9 +11,7 @@ layout: page
   The media file is not available
 
 {% else %}
-
- <div id="uv" class="uv-audio sticky"</div>
-
+  <div id="uv" {%- if format == "Audio" or format == "Sound" -%} class="uv-audio sticky" {%- else -%} class="uv-video sticky" {%- endif -%}  ></div>
 {% endif %}
 
 <script>

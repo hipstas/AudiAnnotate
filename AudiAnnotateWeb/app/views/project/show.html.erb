@@ -29,7 +29,8 @@
         </li>
         <% end %>
       </ul>
-      <%= link_to "New Item Manifest", new_item_path(@project.user_name, @project.repo_name), class: "btn btn-primary" %>
+      <%= link_to "Create Item Manifest", new_item_path(@project.user_name, @project.repo_name), class: "btn btn-primary" %>
+      <%= link_to "Import Existing Manifest", new_import_item_path(@project.user_name, @project.repo_name), class: "btn btn-primary" %>
     </div>
   </div>
 </div>
