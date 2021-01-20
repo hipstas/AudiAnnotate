@@ -7,6 +7,7 @@ More on the project is available at the [HiPSTAS](http://hipstas.org/audiannotat
 * AudiAnnotate Audio Examples: 
   * [Margaret Atwood, 1974](https://kywark.github.io/link-tests/margaret-atwood-1974/), from [SpokenWeb](https://montreal.spokenweb.ca/sgw-poetry-readings/margaret-atwood-at-sgwu/), annotations by Kylie Warkentin; [example manifest](https://github.com/bethanycayeradcliff/margaret-atwood-spokenweb/blob/gh-pages/_data/margaret-atwood-at-sgwu-1974/manifest.json), annotations by Bethany Radcliff
   * [Zora Neale Hurston's WPA field recordings in Jacksonville, FL (1939)](https://tanyaclement.github.io/znh_jacksonville_1939/t86-243/#?c=&m=&s=&cv=), annotations and transcription by Tanya Clement
+  * [Anne Sexton, Sweetbriar College, 1966](https://tanyaclement.github.io/sexton_sweetbriar_1966/), annotations and transcription by Tanya Clement
 * AudiAnntotate Video Examples:
   * [Camille](https://benwbrum.github.io/mp4/camille-test/#?c=&m=&s=&cv=), annotations by Janet Reinschmidt
 * [IIIF Resources and Examples](resources.md)
