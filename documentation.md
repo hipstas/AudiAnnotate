@@ -1,7 +1,7 @@
 [AudiAnnotate Home](index.md) | [Workshop Information](workshop.md)
 
 
-# [AudiAnnotate](https://hipstas.github.io/AudiAnnotate/) Workflow
+# Getting Started: Workflow Documentation and Demonstration Videos
 
 * [Part 1: Downloading Audacity](#aud)
 * [Part 2: Creating Labels in Audacity](#labels)
