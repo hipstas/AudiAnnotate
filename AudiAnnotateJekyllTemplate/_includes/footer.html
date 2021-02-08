@@ -6,7 +6,7 @@
     <h2 class="footer-heading">{{ site.data.collection.label.en[0] | escape }}</h2>
 
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
+      <div class="footer-col">
         <ul class="contact-list">
           <li class="p-name">
             {%- if site.author -%}
@@ -15,15 +15,15 @@
               {{ site.data.collection.summary.en[0] | escape }}
             {%- endif -%}
             </li>
-            <li>Project by {{ site.name }}</li>
+            <li><br>Project by {{ site.name }}</li>
         </ul>
       </div>
 
-      <div class="footer-col footer-col-2">
+      <div class="footer-col footer-col-1">
         {%- include social.html -%}
       </div>
 
-      <div class="footer-col footer-col-3">
+      <div class="footer-col footer-col-2">
         <p>{{- site.description -}}</p>
       </div>
     </div>
