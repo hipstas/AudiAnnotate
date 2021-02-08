@@ -5,7 +5,6 @@ layout: page
  {%- assign format = site.data[page.manifest_name].manifest.items[0].items[0].items[0].body.type -%}
 {{ content }}
 
-<p>Find the item page for <a href="{{ site.data[page.manifest_name].manifest.homepage[0].id }}">{{ site.data[page.manifest_name].manifest.homepage[0].label.en[0] }}</a> at <a href="{{ site.data[page.manifest_name].manifest.provider[0].id }}">{{ site.data[page.manifest_name].manifest.provider[0].label.en[0] }}</a>. </p>
 
 {% if site.data[page.manifest_name].manifest.items[0].items[0].items[0].body.id == "" %}
   The media file is not available
@@ -79,6 +78,7 @@ layout: page
 </table>
 
 <div>
+<p></p><p><a href="{{ site.data[page.manifest_name].manifest.homepage[0].id }}">{{ site.data[page.manifest_name].manifest.homepage[0].label.en[0] }}</a> at <a href="{{ site.data[page.manifest_name].manifest.provider[0].id }}">{{ site.data[page.manifest_name].manifest.provider[0].label.en[0] }}</a>. </p>
 IIIF manifest: <a href="{{site.data[page.manifest_name].manifest.id}}">{{site.data[page.manifest_name].manifest.id}}</a>
 </div>
 
