@@ -1,1 +1,1 @@
-### Lesson Plan Coming Soon! :memo::soon:
+### Lesson Plan Coming Soon!
