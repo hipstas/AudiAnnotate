@@ -11,8 +11,8 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
   * [Anne Sexton, Sweetbriar College, 1966](https://tanyaclement.github.io/sexton_sweetbriar_1966/), annotations and transcription by Tanya Clement
   
 #### AudiAnntotate Video Examples:
-  * *[Camille]*(https://benwbrum.github.io/mp4/camille-test/#?c=&m=&s=&cv=), annotations by Janet Reinschmidt
-  * *[The Kindergarten Teacher]*(https://zillingworth.github.io/the-kindergarten-teacher-poetry/), annotations by Zoe Bursztajn-Illingworth
+  * [*Camille*](https://benwbrum.github.io/mp4/camille-test/#?c=&m=&s=&cv=), annotations by Janet Reinschmidt
+  * [*The Kindergarten Teacher*](https://zillingworth.github.io/the-kindergarten-teacher-poetry/), annotations by Zoe Bursztajn-Illingworth
  
 #### AudiAnnotate in the Classroom:
  * [Lesson Plan and Resources](lessonplan.md)
