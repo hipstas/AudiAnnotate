@@ -12,5 +12,14 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
   
 #### AudiAnntotate Video Examples:
   * [Camille](https://benwbrum.github.io/mp4/camille-test/#?c=&m=&s=&cv=), annotations by Janet Reinschmidt
+ 
+#### AudiAnnotate in the Classroom
+ * [Lesson Plan and Resources](lessonplan.md)
+ * Example Project: [John Beecher - Criminal Syndicalism Case, McComb, Mississippi (Side 1)](https://kywark.github.io/beecher-syndicalism/beecher-criminal-syndicalism-case-mccomb-mississippi-side-1-/#?c=&m=&s=&cv=)
+
+#### Other Resources
 * [IIIF Resources and Examples](resources.md)
 * [Virtual Workshop](workshop.md)
+
+
+
