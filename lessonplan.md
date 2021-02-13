@@ -1,1 +1,1 @@
-### Lesson Plan Coming Soon!! 
+### Lesson Plan Coming Soon! :pencil:
