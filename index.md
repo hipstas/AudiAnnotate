@@ -5,11 +5,11 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
 * [Getting Started: Workflow Documentation and Demonstration Videos](documentation.md) 
 
 #### AudiAnnotate Audio Examples: 
+  * [Anne Sexton, Sweetbriar College, 1966](https://tanyaclement.github.io/sexton_sweetbriar_1966/), annotations and transcription by Tanya Clement
   * [Improving Gentle Transcription Using SENT Metadata Structure](https://kywark.github.io/gentle-improvement/), from [SpokenWeb](https://spokenweb.ca/), annotations by Kylie Warkentin
   * [Zora Neale Hurston's WPA field recordings in Jacksonville, FL (1939)](https://tanyaclement.github.io/znh_jacksonville_1939/), annotations and transcription by Tanya Clement
   * [Zora Neale Hurston's WPA field recording T86-243](https://hyp.is/go?url=https%3A%2F%2Ftanyaclement.github.io%2Fznh_jacksonville_1939%2Ft86-243%2F&group=__world__), annotations and transcription by Tanya Clement, with Hypothesis annotations by Zoe Bursztajn-Illingworth
-  * [Anne Sexton, Sweetbriar College, 1966](https://tanyaclement.github.io/sexton_sweetbriar_1966/), annotations and transcription by Tanya Clement
-  * [Example manifest](https://github.com/bethanycayeradcliff/margaret-atwood-spokenweb/blob/gh-pages/_data/margaret-atwood-at-sgwu-1974/manifest.json) created by Bethany Radcliff
+  * [Example audio manifest](https://github.com/bethanycayeradcliff/margaret-atwood-spokenweb/blob/gh-pages/_data/margaret-atwood-at-sgwu-1974/manifest.json) created by Bethany Radcliff
   
 #### AudiAnntotate Video Examples:
   * [*Camille*](https://benwbrum.github.io/mp4/camille-test/#?c=&m=&s=&cv=), annotations by Janet Reinschmidt
