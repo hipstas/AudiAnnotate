@@ -99,6 +99,7 @@ EOF
 
     items = []
     csv.each_with_index do |row, i|
+      next if row == []
       wa = JSON.parse(PROTOTYPE)
       # set the constants
       wa["@context"] = "http://www.w3.org/ns/anno.jsonld"
