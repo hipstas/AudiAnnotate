@@ -6,8 +6,7 @@
 * [AudiAnnotate Overview](#overview)
 * [Part 1: Creating a Project](#project)
 * [Part 2: Exporting for Preservation and Publication](#exportprespub)
-* [Part 4: Getting an Audio Link for Your Project](#audiolink)
-* [Part 5: Using AudiAnnotate to Save and Align Labels with Audio](#aa)
+
 * [Demonstration Videos](#vid)
 
     1\. [Annotating with Audacity](https://drive.google.com/file/d/1dpOkBX2-ABIzM7Z2Anle7HHQTr24mN39/view?usp=sharing)
@@ -39,9 +38,9 @@ The instructions below will guide you through building a project with the AA. Fo
 
 On this page, you will add the metadata to allow AA to generate your project. AA creates a repository or “repo” in GitHub, which is your project’s storage space for any files related to your project.  
 
-    - Add a “Title.” This is the project name, and the name of the GitHub repository that will be generated in this process. This title will also appear as the project name on the AA site under “My Projects.”
-    - Add a description of your project.
-    - Add a project slug. This becomes the GitHub repository url. Note, spaces are not recognized. Please use hyphens instead of spaces.
+   - Add a “Title.” This is the project name, and the name of the GitHub repository that will be generated in this process. This title will also appear as the project name on the AA site under “My Projects.”
+   - Add a description of your project.
+   - Add a project slug. This becomes the GitHub repository url. Note, spaces are not recognized. Please use hyphens instead of spaces.
 
 
  4. Select “Create Project.”This contacts GitHub and generates the repository. 
