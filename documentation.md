@@ -57,7 +57,7 @@ Now you have created an AudiAnnotate project, with all information stored in a G
 
  6. Once metadata has been added, select “Save” to save reference and metadata to this item in the IIF manifest.
  
-*If you are continuing from step 6 above*
+**If you are continuing from step 6 above**
 
 Now, you’re on the annotations page, where you can manage your project’s annotations. Annotations are uploaded to AudiAnnotate via .tsv file(s). Each .tsv file uploaded to your AudiAnnotate project is one annotation layer. Your resulting project page may present one or more annotation layers.
 
@@ -66,7 +66,7 @@ Now, you’re on the annotations page, where you can manage your project’s ann
  9. Select  “Add” at the bottom of the page. This will generate your annotations and align them in the IIIF manifest with the audiovisual file.
  10. Select “Add” at the bottom of the page. You may now add additional annotation layers to the same audiovisual item.
 
-*If you are accessing an existing project to add annotations:*
+**If you are accessing an existing project to add annotations:**
 
  1. Sign in to AudiAnnotate.
  2. Select “My Projects” in the upper right corner.
