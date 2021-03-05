@@ -294,6 +294,73 @@ These annotations can be either point or range annotations.
  3. Enter your annotation(s) into the sheet(s) as necessary. You may find a template spreadsheet with explanations for creating properly formatted annotations using Google Sheets [here](https://docs.google.com/spreadsheets/d/1ImjhjLD1g-lQulJX3UJe4Y91z04EOriYCqiN1rz9gnw/copy#gid=0). It will prompt you to make a copy of the template for your own use.
  4. Once you have completed your annotations, download each annotation layer as one .tsv file to upload into AudiAnnotate. 
 
+### Creating Annotations Using Adobe Premiere 
+
+1. Before creating annotations in Adobe Premiere for your AudiAnnotate video, you will need to create a new project in Adobe Premiere and title the project. Select“New Project…” on the left-hand opening menu of Premiere when prompted.
+2. List a title for your project under “Name” and select “Ok.”
+3. Once you have done so you can import a .mp4 file by selecting “File” then selecting “Import…” and selecting your downloaded .mp4 to import into Adobe Premiere from your files. 
+4. Double click the still from the .mp4 video in the bottom left hand corner of the screen to put the clip into the timeline for annotating. Once the .mp4 is visible in the timeline, Adobe Premiere should look like this: <!--- [add image*] --->
+
+***Annotating Videos in Adobe Premiere Using Markers***
+
+1. Annotations are added using the “Marker” feature. To add a marker, select the play icon on the timeline to begin the video. Pause the video then select “Marker,”then “Add Marker” where you want to begin annotating. This will drop a marker at that point. 
+2. Once you have dropped a marker, select “Edit Marker” from the drop down menu. 
+3. The Marker “Name” should be the name of each layer you ultimately want in your AudiAnnotate project. The Marker “Comments” should be the text of annotation itself, such as a transcription.
+4. You can also add a duration by clicking and holding the blue timecode (above the marker) and dragging it to the right. You can drag the second marker to the end of the clip to annotate a range instead of a point in time. <!--- [add image*] --->
+5. Continue adding markers with names for each layer and your annotations under “Comments.” It may help your organization to use distinct colors for markers corresponding to each layer, but it is not necessary. 
+6. Once you have finished annotating your video using markers, follow the instructions below to export your annotation file.
+
+***Exporting Your Annotations from Premiere:***
+
+1. Select “File” then select “Export.”
+2. Under the options for “Export” select “Markers.”
+3. The default setting for a .csv file works for AudiAnnotate, so keep this export setting. 
+4. You can rename the file as you wish and select a location for it, but do not edit the formatting of the file before uploading it to AudiAnnotate. 
+<!--- [add image*] --->
+
+#### Uploading to the Internet Archive
+
+AudiAnnotate supports direct links to: 
+    - Audio:  HTML: MP3, WAV, and OGG.
+    - Video: MP4, WebM, and Ogg
+If you own an audio or video file that does not exist on the internet, you can upload your materials to the Internet Archive and retrieve a link:
+
+***Uploading a File to the Internet Archive***
+
+1. Select the upload button at the top right corner of your screen.
+2. Select the “Upload Files” button.
+3. Select your desired file and select the “Open” button.
+4. Fill in the required fields of the metadata box and select the “Upload and Create Your Item” button.
+
+***Retrieving a file link from Internet Archive***
+
+1. On the details page of your desired file, navigate to the “VBR MP3” download option and select the link.
+2. The link in your browser’s search bar can be used in AudiAnnotate.
+
+#### Adding Introductory Text to an AudiAnnotate Project 
+
+AudiAnnotate projects support introductory material on the project page and on pages for each audiovisual item. To add introductory text, follow the steps below. 
+
+***Adding introductory material to a project page***
+1. Navigate to the [AudiAnnotate Application](http://audiannotate.brumfieldlabs.com/).
+2. After signing in, select the blue “edit” button on your project tile.
+3. On the “My Projects” page, you will see text that says “You can add introductory material by modifying index.markdown.” Select the linked text. This will take you to the index.md file for your project in your GitHub repository.
+4. To modify introductory material, add information below the dashed line. 
+5. To publish changes, select the green “Commit Changes” at the bottom of the page. 
+
+***Adding introductory material to an audiovisual item page***
+
+1. Navigate to the [AudiAnnotate Application](http://audiannotate.brumfieldlabs.com/).
+2. After signing in, select the blue “Edit” button on your project tile.
+3. On the “My Projects” page, select the linked audio item that you would like to add introductory material to. 
+4. On the project page for your audiovisual item, you will see text that says “You can add introductory material by modifying [audio item].md.” Select the linked text. This will take you to the markdown file for your project’s audiovisual item in your GitHub repository.
+5. To modify introductory material, add information below the dashed line. 
+6. To publish changes, select the green “Commit Changes” at the bottom of the page. 
+
+
+
+
+
 
 
 
