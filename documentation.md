@@ -230,6 +230,10 @@ Once a collaborator has created a pull request from their copied repository requ
 | AudiAnnotate  | IIIF | Aviary | Notes | Examples |
 | ---           | ---  | ------ | ------|----------|
 | Item          | Canvas | File | Could have more than one media file but practically does not; Two media files would be two canvases (see example) on one manifest. | https://universalviewer.io/examples/#?c=&m=&s=&cv=&manifest=https%3A%2F%2Fiiif-commons.github.io%2Fiiif-av-component%2Fexamples%2Fdata%2Fbl%2Fsounds-tests%2Floose-ends%2FC1685_98_P3.json&rid= |  
+| One or more file(s) that we annotate. | Manifest | Resource | Must have a Canvas. May contain more than one Canvas. | Three interviews by a single Holocaust survivor. Two sides of one tape. |
+| Annotation: Timestamped text commentary on AV | W3C Web Annotation | User-created annotation; index point; transcript | There’s a target and there is a body. | Target might be an audio file timestamp or range; the body could be a media file; commentary; links |
+| Annotation Page: A file aggregating annotations of the same layer on the same Canvas. | A W3C-compliant file aggregating annotations, associated with a manifest | | | SENT example: see video. All the annotations identifying environmental noise for one recording; another annotation page might have technical sounds |
+
 
 
 
