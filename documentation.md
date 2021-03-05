@@ -279,16 +279,17 @@ Note: Each .tsv file is one annotation layer in AudiAnnotate. If you have multip
 These annotations can be either point or range annotations.
     - A *point* annotation references one point in the audio. Its beginning and end times are the same. (You may also input just one time value.) An example point annotation looks like:
 
-
-| --- | --- | --- |
-| 3 | 3 | bpNichol says “urnspits” |
-| 3 | 3 | bpNichol says “urnspits” |
+|   |   |   |
+|---|---|---|
+| 3  | 3  |  bpNichol says “urnspits” |
+| 3  | 3  | bpNichol says “urnspits”  |
 
    - A *range* annotation has different start and end time values, referencing a range of time in the audio. An example range annotation looks like:
 
 
-| --- | --- | --- |
-| 0 | 2 | bpNichol talking sensically | 
+|   |   |   |
+|---|---|---|
+| 0  | 2  |  bpNichol talking sensically |
 
  3. Enter your annotation(s) into the sheet(s) as necessary. You may find a template spreadsheet with explanations for creating properly formatted annotations using Google Sheets [here](https://docs.google.com/spreadsheets/d/1ImjhjLD1g-lQulJX3UJe4Y91z04EOriYCqiN1rz9gnw/copy#gid=0). It will prompt you to make a copy of the template for your own use.
  4. Once you have completed your annotations, download each annotation layer as one .tsv file to upload into AudiAnnotate. 
