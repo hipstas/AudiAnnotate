@@ -229,13 +229,16 @@ Once a collaborator has created a pull request from their copied repository requ
 
 | AudiAnnotate  | IIIF | Aviary | Notes | Examples |
 | ---           | ---  | ------ | ------|----------|
-| Item          | Canvas | File | Could have more than one media file but practically does not; Two media files would be two canvases (see example) on one manifest. | https://universalviewer.io/examples/#?c=&m=&s=&cv=&manifest=https%3A%2F%2Fiiif-commons.github.io%2Fiiif-av-component%2Fexamples%2Fdata%2Fbl%2Fsounds-tests%2Floose-ends%2FC1685_98_P3.json&rid= |  
+| Item          | Canvas | File | Could have more than one media file but practically does not; Two media files would be two canvases (see example) on one manifest. | [Universal Viewer example](https://universalviewer.io/examples/#?c=&m=&s=&cv=&manifest=https%3A%2F%2Fiiif-commons.github.io%2Fiiif-av-component%2Fexamples%2Fdata%2Fbl%2Fsounds-tests%2Floose-ends%2FC1685_98_P3.json&rid=) |  
 | One or more file(s) that we annotate. | Manifest | Resource | Must have a Canvas. May contain more than one Canvas. | Three interviews by a single Holocaust survivor. Two sides of one tape. |
 | Annotation: Timestamped text commentary on AV | W3C Web Annotation | User-created annotation; index point; transcript | There’s a target and there is a body. | Target might be an audio file timestamp or range; the body could be a media file; commentary; links |
 | Annotation Page: A file aggregating annotations of the same layer on the same Canvas. | A W3C-compliant file aggregating annotations, associated with a manifest | | | SENT example: see video. All the annotations identifying environmental noise for one recording; another annotation page might have technical sounds |
 | An annotation layer: Aggregate collection of annotation pages in one or across multiple manifests or canvases | W3C annotation collections (bag) | Annotation page type label | Conceptually: A means of organizing annotations by category. Multiple audio files have the same kinds of annotations across them. | Multiple environmental annotation pages associated with multiple Canvases or manifests. |
-| Projects, editions, exhibition -- multiple Manifests associated with one GitHub repository | Collections: assembly of one or more than one manifest into a IIIF JSON file. | TBD | A set of related AV materials with contextual information (e.g., front matter, explicatory prose | https://tanyaclement.github.io/znh_jacksonville_1939/ |
-| TBD | Structures -- an index or a TOC for a single manifest; a structure can span multiple canvases. | | An array with a range and a label and a list of items (which also have ranges so can be nested). | https://iiif-commons.github.io/iiif-av-component/examples/data/bl/sounds-tests/loose-ends/C1685_98_P3.json; Go to Index and “Saturday Review” on this [example](https://universalviewer.io/examples/#?c=&m=&s=&cv=1&manifest=https%3A%2F%2Fiiif-commons.github.io%2Fiiif-av-component%2Fexamples%2Fdata%2Fbl%2Fsounds-tests%2Floose-ends%2FC1685_98_P3.json&rid=https%3A%2F%2Fapi.bl.uk%2Fmetadata%2Fiiif%2Fark%3A%2F81055%2Fvdc_100052359795.0x00000e) |
+| Projects, editions, exhibition -- multiple Manifests associated with one GitHub repository | Collections: assembly of one or more than one manifest into a IIIF JSON file. | TBD | A set of related AV materials with contextual information (e.g., front matter, explicatory prose | [Example AudiAnnotate Project](https://tanyaclement.github.io/znh_jacksonville_1939/) |
+| TBD | Structures -- an index or a TOC for a single manifest; a structure can span multiple canvases. | | An array with a range and a label and a list of items (which also have ranges so can be nested). | [IIIF manifest example](https://iiif-commons.github.io/iiif-av-component/examples/data/bl/sounds-tests/loose-ends/C1685_98_P3.json); Go to Index and “Saturday Review” on this [Universal Viewer example](https://universalviewer.io/examples/#?c=&m=&s=&cv=1&manifest=https%3A%2F%2Fiiif-commons.github.io%2Fiiif-av-component%2Fexamples%2Fdata%2Fbl%2Fsounds-tests%2Floose-ends%2FC1685_98_P3.json&rid=https%3A%2F%2Fapi.bl.uk%2Fmetadata%2Fiiif%2Fark%3A%2F81055%2Fvdc_100052359795.0x00000e) |
+
+
+
 
 
 
@@ -250,6 +253,8 @@ Once a collaborator has created a pull request from their copied repository requ
 
 
 <!---
+OLD DOCUMENTATION
+
 
 1. Go to File → Export → Export Labels
 
