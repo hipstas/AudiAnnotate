@@ -198,6 +198,7 @@ Once a collaborator has created a pull request from their copied repository requ
 3. To accept the changes, you select “Merge pull request.” <!--- [add image*] --->
 4. If you are unsure of changes, or have questions for the collaborator, you can continue a discussion by commenting on the thread. <!--- [add image*] --->
 
+<a name="appendix"></a>
 ### Appendix
 
 #### Glossary of Terms 
@@ -231,7 +232,7 @@ Once a collaborator has created a pull request from their copied repository requ
 | Projects, editions, exhibition -- multiple Manifests associated with one GitHub repository | Collections: assembly of one or more than one manifest into a IIIF JSON file. | TBD | A set of related AV materials with contextual information (e.g., front matter, explicatory prose | [Example AudiAnnotate Project](https://tanyaclement.github.io/znh_jacksonville_1939/) |
 | TBD | Structures -- an index or a TOC for a single manifest; a structure can span multiple canvases. | | An array with a range and a label and a list of items (which also have ranges so can be nested). | [IIIF manifest example](https://iiif-commons.github.io/iiif-av-component/examples/data/bl/sounds-tests/loose-ends/C1685_98_P3.json); Go to Index and “Saturday Review” on this [Universal Viewer example](https://universalviewer.io/examples/#?c=&m=&s=&cv=1&manifest=https%3A%2F%2Fiiif-commons.github.io%2Fiiif-av-component%2Fexamples%2Fdata%2Fbl%2Fsounds-tests%2Floose-ends%2FC1685_98_P3.json&rid=https%3A%2F%2Fapi.bl.uk%2Fmetadata%2Fiiif%2Fark%3A%2F81055%2Fvdc_100052359795.0x00000e) |
 
-
+<a name="supplemental"></a>
 ### Supplemental Documentation
 
 #### Creating Annotations (before using AudiAnnotate)
