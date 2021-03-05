@@ -279,7 +279,7 @@ Note: Each .tsv file is one annotation layer in AudiAnnotate. If you have multip
 These annotations can be either point or range annotations.
     - A *point* annotation references one point in the audio. Its beginning and end times are the same. (You may also input just one time value.) An example point annotation looks like:
 
-
+|   |   |   |
 |---|---|---|
 | 3  | 3  |  bpNichol says “urnspits” |
 | 3  | 3  | bpNichol says “urnspits”  |
