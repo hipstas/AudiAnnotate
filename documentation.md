@@ -225,6 +225,14 @@ Once a collaborator has created a pull request from their copied repository requ
     - Materially: One or more WC3 web annotation AnnotationPage file(s) that contains the JSON annotation elements.
 
 
+#### AudiAnnotate IIIF Concept Chart
+
+| AudiAnnotate  | IIIF | Aviary | Notes | Examples |
+| ---           | ---  | ------ | ------|----------|
+| Item          | Canvas | File | Could have more than one media file but practically does not; Two media files would be two canvases (see example) on one manifest. | https://universalviewer.io/examples/#?c=&m=&s=&cv=&manifest=https%3A%2F%2Fiiif-commons.github.io%2Fiiif-av-component%2Fexamples%2Fdata%2Fbl%2Fsounds-tests%2Floose-ends%2FC1685_98_P3.json&rid= |  
+
+
+
 
 
 
