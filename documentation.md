@@ -58,7 +58,8 @@ Now you have created an AudiAnnotate project, with all information stored in a G
 
  6. Once metadata has been added, select “Save” to save reference and metadata to this item in the IIF manifest.
  
- #### Adding Annotations 
+
+#### Adding Annotations
  
 ***If you are continuing from step 6 above***
 
