@@ -238,6 +238,60 @@ Once a collaborator has created a pull request from their copied repository requ
 | TBD | Structures -- an index or a TOC for a single manifest; a structure can span multiple canvases. | | An array with a range and a label and a list of items (which also have ranges so can be nested). | [IIIF manifest example](https://iiif-commons.github.io/iiif-av-component/examples/data/bl/sounds-tests/loose-ends/C1685_98_P3.json); Go to Index and “Saturday Review” on this [Universal Viewer example](https://universalviewer.io/examples/#?c=&m=&s=&cv=1&manifest=https%3A%2F%2Fiiif-commons.github.io%2Fiiif-av-component%2Fexamples%2Fdata%2Fbl%2Fsounds-tests%2Floose-ends%2FC1685_98_P3.json&rid=https%3A%2F%2Fapi.bl.uk%2Fmetadata%2Fiiif%2Fark%3A%2F81055%2Fvdc_100052359795.0x00000e) |
 
 
+### Supplemental Documentation
+
+#### Creating Annotations (before using AudiAnnotate)
+AudiAnnotate exists as a tool to compile and present annotations. Because of that, you do not create your annotations in AudiAnnotate, but bring your existing annotations to the application. Editing software like Audacity and Adobe Premiere can facilitate the annotation-creation process, but because annotations just need to be uploaded as structured data on a simple tab-separated file, you do not need to use other software if that is not your preference. The instructions below will walk you through annotation creation using Audacity, a simple spreadsheet, and Adobe Premiere.
+
+### Creating Annotations Using Audacity
+
+1. Downloading Audacity
+    - If you have a Mac: Navigate to [Audacity’s Mac download page](https://www.audacityteam.org/download/mac/). There, you’ll download the .dmg file and double-click to follow instructions for downloading Audacity to your machine. We recommend downloading the latest version.
+    - If you have a PC: Navigate to [Audacity’s PC download page](https://www.audacityteam.org/download/windows/). There, you’ll download the installer and follow instructions for downloading Audacity to your machine. We recommend downloading the latest version. 
+ 2. Annotating in Audacity (Method 1)
+    - Open Audacity, and in the top left, navigate to File→ Open, and then select the audio file you will be adding annotations to.
+    - On the warning screen, make sure the “make a copy” choice is selected, then select ok.
+    - We’ll use the “Label Track” to add annotations. Select “Tracks,” then “Add New,” then select “Label Track.” 
+    - To insert a label at a point in time, you’ll pause the poem by selecting the “p” key, or pressing the pause symbol in the upper left, at the place you want to add a label.
+    - Select the time marker line to mark the place in time where you want to add the label. This typically will correspond to the place where you paused the audio.
+    - Then, you’ll select command + b  (the shortcut for Edit → Label → Add Label at Selection) to add a label on the label track. A field will pop up, and you can type your annotation. (Example: You may add “Stanza1” to mark the first stanza of a poem.) You could leave the point annotation as it is, or create an annotation as a range with a starting and an ending point. <!--- [add image*] --->
+    - To create a range, you’ll select and drag the right edge of the point marker in the label track to the end of the moment you would like to annotate. You’ll have to play the recording to know where to end your range. A completed range will look like this: <!--- [add image*] --->
+    - You can also add multiple label tracks to organize your annotations as you work. To do so, navigate to Tracks → Add New → Label Track.
+ 3. Annotating in Audacity (Method 2)
+    - When you open the app and add audio, navigate to Edit → Labels, then select “Type to create a label.”
+    - This creates a shortcut to add a label when any key is pressed. Now as you’re listening, when you type any key, a label will begin, allowing you to add labels without pausing. (Note: This will only add point-in-time labels, not ranges.)
+    - Using this method, to pause the audio, you need to use the pause button on the upper left of the interface (the “p” shortcut will not work).
+ 4.  Exporting labels from Audacity
+    - Go to File → Export → Export Labels.
+    - Name your labels and save as a .txt file. You will need this file when creating your project with the AudiAnnotate application.
+
+### Creating Annotations Using a Spreadsheet
+
+You can use spreadsheet programs (like Excel or Google sheets) that export .tsv files to create and organize annotations for AudiAnnotate. To do so:
+
+1. Create a blank spreadsheet.
+Note: Each .tsv file is one annotation layer in AudiAnnotate. If you have multiple annotation layers, you will need multiple files of annotations.
+
+2. AudiAnnotate accepts annotations formatted with three tab-separated columns.
+    - The first column should contain the beginning time (in total seconds) of the annotations. 
+    - The second column should contain the end time (in total seconds) of the annotation (if necessary).
+    - The third column should contain the contents of your annotation. 
+These annotations can be either point or range annotations.
+    - A *point* annotation references one point in the audio. Its beginning and end times are the same. (You may also input just one time value.) An example point annotation looks like:
+
+| 3 | 3 | bpNichol says “urnspits” |
+| 3 | 3 | bpNichol says “urnspits” |
+
+   - A *range* annotation has different start and end time values, referencing a range of time in the audio. An example range annotation looks like:
+
+| 0 | 2 | bpNichol talking sensically | 
+
+ 3. Enter your annotation(s) into the sheet(s) as necessary. You may find a template spreadsheet with explanations for creating properly formatted annotations using Google Sheets [here](https://docs.google.com/spreadsheets/d/1ImjhjLD1g-lQulJX3UJe4Y91z04EOriYCqiN1rz9gnw/copy#gid=0). It will prompt you to make a copy of the template for your own use.
+ 4. Once you have completed your annotations, download each annotation layer as one .tsv file to upload into AudiAnnotate. 
+
+
+
+
 
 
 
