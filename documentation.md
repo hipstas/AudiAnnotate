@@ -6,6 +6,7 @@
 * [AudiAnnotate Overview](#overview)
 * [Part 1: Creating a Project](#project)
 * [Part 2: Exporting for Preservation and Publication](#exportprespub)
+* [Part 3: Collaborative Project Scenarios](#collaborative)
 
 * [Demonstration Videos](#vid)
 
@@ -85,6 +86,54 @@ Now, you’re on the annotations page, where you can manage your project’s ann
 
 <a name="exportprespub"></a>
 ### Part 2: Exporting for Preservation and Publication
+
+Because AudiAnnotate project sites are built using Jekyll, a static site generator, you can export them from Github and preserve or publish elsewhere.  
+
+To export from Github, go to the repository page and look for the green “Code” button.  Select “Download ZIP”:
+
+<!--- [add image*] --->
+
+#### Using the Export for Preservation
+
+1. Unzip the file from the previous step.  In the top level directory run “jekyll build”.  This generates the static web pages as html files. Jekyll build does not create the correct filenames for IIIF manifests, so each directory within the generated site will have a manifest.json.html file instead of the correct manifest.json file.
+2. Rename the files to remove the .html extension, which will allow the A/V player to work (provided that the media is still available).
+3. Zip up the directory again, and place it in your preservation system.
+
+#### Using the Export for Publication Elsewhere
+
+You can serve a Jekyll site on a variety of web hosts or your own web server.  [This list](https://jekyllrb.com/docs/deployment/third-party/) is a good starting point, or contact the IT staff at your institution for other options.  
+
+<a name="collaborative"></a>
+### Part 3: Collaborative Project Scenarios
+
+#### Using Hypothesis to Annotate an AudiAnnotate Project
+
+[Hypothesis](https://web.hypothes.is/about/) is “a conversation layer over the entire web that works everywhere, without needing implementation by any underlying site.” Integrating Hypothesis with an AudiAnnotate project allows for a layer of commentary on top of AudiAnnotate annotations from multiple contributors. When annotating with Hypothesis, you can annotate in a group, individually, privately, or publicly.
+
+***Creating a Hypothesis account***
+
+1. Navigate to [Hypothesis](https://web.hypothes.is/about/).
+2. Select “Create a Free Account” and follow the prompts.
+3. You’ll also need to follow [these instructions](https://web.hypothes.is/start/) to install the chrome extension or bookmarklet.
+
+***Creating a group on Hypothesis***
+
+1. Navigate to Hypothesis and select “Log in”.
+2. On your profile page, select the dropdown arrow next to “Groups.”
+3. Select “Create new group” and name your group.
+4. From the group page, you can now share the invitation link to invite others to annotate in your group.
+
+***Annotating with Hypothesis***
+
+1. Navigate to your AudiAnnotate project page. ([This is an example](https://tanyaclement.github.io/sexton_sweetbriar_1966/anne-sexton-class-visit-at-sweetbriar-college-1966/#?c=&m=&s=&cv=) GitHub Pages project page.)
+2. Select the Hypothesis bookmarklet. <!--- [add image*] --->
+3. Select the arrow on the right side of your screen to expand your view. <!--- [add image*] --->
+4. If you do not see the  group, select log in at the upper right of the window. 
+5. Select the  dropdown arrow next to “My Annotations,” and select your group. <!--- [add image*] --->
+6. Next, highlight text on the page you would like to annotate. A small bubble will pop-up that invites you to annotate or highlight. Select “annotate.” <!--- [add image*] --->
+7. In the window on the right, you can add an annotation: <!--- [add image*] --->
+8. Select “Post to [Group Name]”; when you hover and select on the place you annotated, you can view the annotation in the right sidebar
+9. You can also add tags in the field that says “add new tags,” by typing in text and selecting the enter key. <!--- [add image*] --->
 
 
 
