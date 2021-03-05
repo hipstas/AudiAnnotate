@@ -136,6 +136,51 @@ You can serve a Jekyll site on a variety of web hosts or your own web server.  [
 8. Select “Post to [Group Name]”; when you hover and select on the place you annotated, you can view the annotation in the right sidebar
 9. You can also add tags in the field that says “add new tags,” by typing in text and selecting the enter key. <!--- [add image*] --->
 
+#### Advanced AudiAnnotate Collaborative Project Scenarios
+
+The scenarios below require some  familiarity with GitHub, but the instructions will guide you through initial setup of your collaborative projects. There are two methods of collaborative projects. The simplest method is the Shared Repository, where one user creates an AudiAnnotate project and additional users are manually invited to that project by the initial user. The Fork and Pull method is a bit more complex, and involves one user creating a repository and additional collaborators making a copy of that repository using GitHub’s fork (i.e., copy) feature, making changes,  and making pull requests which can then be merged into the original repository after being reviewed and approved by the repository owner.
+
+***Method 1: Shared Project/Repository***
+
+##### Creating a shared project 
+
+To create a shared repository (i.e., project), first follow the above steps (under “Creating a Project”) to create a project in AudiAnnotate.  Once you have created an AudiAnnotate project,  you will need to give collaborators access to the generated repository. Even if collaborators have not set up a GitHub account yet, you can invite them to the shared project using their email address, which will prompt them to create an account. To do so:
+
+1. Navigate to [GitHub](https://github.com/).
+2. From your profile,  select “Your Repositories.” 
+3. Select the repository to which you would like to invite others.
+4. Select Settings>Manage Access> Invite a Collaborator
+5. Here, you can add collaborators by email or existing username. Note that email invites expire after 7 days. If you add them by email and they do not have an account, the invite will prompt them to create one.
+6. Once collaborators have access to the repository, they will be able to add annotations to the project through the AudiAnnotate application. 
+
+***Method 2: Fork and Pull***
+
+##### Project Creation and Sharing for Initial User
+
+1. Follow the instructions under [“Creating a Project”](<a name="project"></a>) above. 
+2. Follow the instructions to add audiovisual items and upload any annotations according to the steps above. 
+3. Navigate to [GitHub](https://github.com/). 
+4. From your profile,  select “Your Repositories.” 
+5. Select on the repository that will be used to collaborate with other users, and copy the link to that repository. Note here that on the right side of the page under “About,” there is a tag that says “audiannotate” (see below). This tag will be added manually by collaborators in a later step. <!--- [add image*] --->
+6. This link can now be shared with other users.
+
+##### Access Instructions for Collaborators
+
+1. Navigate to the repository link provided by the initial user.
+2. Look for the button in the upper right corner of the repository that says “Fork.” <!--- [add image*] --->
+3. Select Fork and the account to which you would like to copy the repository. Now you have an exact copy of the original repository.
+4. Because this repository is no longer associated with AudiAnnotate, you will need to manually add this back so that AudiAnnotate knows to manage this repository as well as the original. Select the gear icon next to “About” on the repository page. <!--- [add image*] --->
+5. Once you select the gear, you’ll see a window that looks like this: <!--- [add image*] --->
+6. The “Website” reflects the URL details of the original project. You will want to change the username portion of the URL to your username (between https:// and .github.io). <!--- [add image*] --->
+7. Notice that there are no topics associated with this project. You will need to associate the project with AudiAnnotate manually. Type “audiannotate” in the box and select enter. This tag tells GitHub that your repository is an AudiAnnotate project. It will look something like this: <!--- [add image*] --->
+8. Select “Save changes.”
+9. When you make a project in AudiAnnotate, a GitHub repository is created, along with a website that corresponds to it. When you fork a project, a website is not automatically created, so you will have to force GitHub to do this. The simplest way to do this is to edit the README file. 
+10. On the repository page, scroll to the bottom and select README.md and select the pencil icon to edit. <!--- [add image*] --->
+11. Add some text to the readme. We suggest text that shares the origins of the repository, something like: “Forked from [username of original user]/[repository name].” This text will display on the AudiAnnotate site project tile to signal that this is a forked repository. <!--- [add image*] --->
+12. Select “Commit changes” at the bottom of the page.
+13. Wait a minute, then check the link you just edited under “About.” You should see a site at that link.
+14. Now navigate back to AudiAnnotate and sign in. You should now see the forked project tile with the note you added on the readme. 
+
 
 
 
