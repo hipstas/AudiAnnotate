@@ -184,15 +184,25 @@ To create a shared repository (i.e., project), first follow the above steps (und
 7. Notice that there are no topics associated with this project. You will need to associate the project with AudiAnnotate manually. Type “audiannotate” in the box and select enter. This tag tells GitHub that your repository is an AudiAnnotate project. It will look something like this:
 
 <img src="Pages-Images/New documentation Images/image12.png" width="350">
+
 8\. Select “Save changes.”
+
 9\. When you make a project in AudiAnnotate, a GitHub repository is created, along with a website that corresponds to it. When you fork a project, a website is not automatically created, so you will have to force GitHub to do this. The simplest way to do this is to edit the README file. 
+
 10\. On the repository page, scroll to the bottom and select README.md and select the pencil icon to edit. 
+
 <img src="Pages-Images/New documentation Images/image13.png" width="500">
+
 11\. Add some text to the readme. We suggest text that shares the origins of the repository, something like: “Forked from [username of original user]/[repository name].” This text will display on the AudiAnnotate site project tile to signal that this is a forked repository.
+
 <img src="Pages-Images/New documentation Images/image14.png" width="500">
+
 12\. Select “Commit changes” at the bottom of the page.
+
 13\. Wait a minute, then check the link you just edited under “About.” You should see a site at that link.
+
 14\. Now navigate back to AudiAnnotate and sign in. You should now see the forked project tile with the note you added to the README.md file.
+
 
 ##### Making changes to the project
 
