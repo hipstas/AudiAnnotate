@@ -88,7 +88,7 @@ Because AudiAnnotate project sites are built using Jekyll, a static site generat
 
 To export from Github, go to the repository page and look for the green “Code” button.  Select “Download ZIP”:
 
-![Image](Pages-Images/New documentation Images/image1.png)
+![Image](Pages-Images/New documentation Images/image1.png =250x250)
 
 #### Using the Export for Preservation
 
