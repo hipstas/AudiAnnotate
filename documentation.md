@@ -127,7 +127,7 @@ You can serve a Jekyll site on a variety of web hosts or your own web server.  [
 3. Select the arrow on the right side of your screen to expand your view. <img src="Pages-Images/New documentation Images/image3.png" width="150">
 4. If you do not see the  group, select log in at the upper right of the window. 
 5. Select the  dropdown arrow next to “My Annotations,” and select your group. 
-<img src="Pages-Images/New documentation Images/image4.png" width="150">
+<img src="Pages-Images/New documentation Images/image4.png" width="350">
 6. Next, highlight text on the page you would like to annotate. A small bubble will pop-up that invites you to annotate or highlight. Select “annotate.” 
 <img src="Pages-Images/New documentation Images/image5.png" width="350">
 7. In the window on the right, you can add an annotation: 
