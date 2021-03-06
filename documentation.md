@@ -134,6 +134,7 @@ You can serve a Jekyll site on a variety of web hosts or your own web server.  [
 <img src="Pages-Images/New documentation Images/image6.png" width="350">
 8. Select “Post to [Group Name]”; when you hover and select on the place you annotated, you can view the annotation in the right sidebar
 9. You can also add tags in the field that says “add new tags,” by typing in text and selecting the enter key. 
+
 <img src="Pages-Images/New documentation Images/image7.png" width="350">
 
 #### Advanced AudiAnnotate Collaborative Project Scenarios
