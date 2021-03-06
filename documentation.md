@@ -210,10 +210,12 @@ Changes are made by collaborators on their copy of the original repository (crea
 
 ***For collaborators***
 
-1. Log in to AudiAnnotate and locate the project tile of the forked repository. You will see a tile for the collaborative repository you made in the above steps. The text added to the README.md file will be visible on the tile. Select “Edit.” <!--- [add image*] --->
+1. Log in to AudiAnnotate and locate the project tile of the forked repository. You will see a tile for the collaborative repository you made in the above steps. The text added to the README.md file will be visible on the tile. Select “Edit.”
+<img src="Pages-Images/New documentation Images/image15.png" width="500">
 2. Make changes! Follow steps above to add an audiovisual item or to add annotations to an existing item. 
 3. After making changes, it is time to merge the changes you made in your repository copy with the original project. To do this, return to the repository page on GitHub. (You can navigate to your repository page using the dropdown in the top right corner once you log in, and selecting the repository.)
-4. Select the button that says “Pull Request.” (You can also use the “Compare” button to compare changes before merging.) <!--- [add image*] --->
+4. Select the button that says “Pull Request.” (You can also use the “Compare” button to compare changes before merging.)
+<img src="Pages-Images/New documentation Images/image16.png" width="500">
 5. Select “Pull request” and then “Create Pull Request.”  Here you can add  a note about what you changed (i.e. “added additional field recording found at the Library of Congress site”) and then select “Create Pull Request” again. This does not actually make a change to the repository. It sends a request to the owner of the original project, which they can review before merging. 
 
 ***For the initial user***
@@ -222,8 +224,10 @@ Once a collaborator has created a pull request from their copied repository requ
 
 1. You should get an email notification that a pull request has been created. This email will link you to the pull request made by the collaborator. 
 2. When you open the pull request, you will see the changes being requested by the collaborator. You can select into the files where changes are being. Additions to each file appear in green with a plus (+) sign at the start of the row, while items being deleted appear in red with a minus (-) sign. 
-3. To accept the changes, you select “Merge pull request.” <!--- [add image*] --->
-4. If you are unsure of changes, or have questions for the collaborator, you can continue a discussion by commenting on the thread. <!--- [add image*] --->
+3. To accept the changes, you select “Merge pull request.” 
+<img src="Pages-Images/New documentation Images/image17.png" width="500">
+4. If you are unsure of changes, or have questions for the collaborator, you can continue a discussion by commenting on the thread.
+<img src="Pages-Images/New documentation Images/image18.png" width="500">
 
 <a name="appendix"></a>
 ### Appendix
