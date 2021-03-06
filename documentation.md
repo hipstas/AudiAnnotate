@@ -331,15 +331,17 @@ These annotations can be either point or range annotations.
 1. Before creating annotations in Adobe Premiere for your AudiAnnotate video, you will need to create a new project in Adobe Premiere and title the project. Select“New Project…” on the left-hand opening menu of Premiere when prompted.
 2. List a title for your project under “Name” and select “Ok.”
 3. Once you have done so you can import a .mp4 file by selecting “File” then selecting “Import…” and selecting your downloaded .mp4 to import into Adobe Premiere from your files. 
-4. Double click the still from the .mp4 video in the bottom left hand corner of the screen to put the clip into the timeline for annotating. Once the .mp4 is visible in the timeline, Adobe Premiere should look like this: <!--- [add image*] --->
+4. Double click the still from the .mp4 video in the bottom left hand corner of the screen to put the clip into the timeline for annotating. Once the .mp4 is visible in the timeline, Adobe Premiere should look like this:
+<img src="Pages-Images/New documentation Images/premier1.jpg" width="500">
 
 ***Annotating Videos in Adobe Premiere Using Markers***
 
 1. Annotations are added using the “Marker” feature. To add a marker, select the play icon on the timeline to begin the video. Pause the video then select “Marker,”then “Add Marker” where you want to begin annotating. This will drop a marker at that point. 
 2. Once you have dropped a marker, select “Edit Marker” from the drop down menu. 
 3. The Marker “Name” should be the name of each layer you ultimately want in your AudiAnnotate project. The Marker “Comments” should be the text of annotation itself, such as a transcription.
-4. You can also add a duration by clicking and holding the blue timecode (above the marker) and dragging it to the right. You can drag the second marker to the end of the clip to annotate a range instead of a point in time. <!--- [add image*] --->
-5. Continue adding markers with names for each layer and your annotations under “Comments.” It may help your organization to use distinct colors for markers corresponding to each layer, but it is not necessary. 
+4. You can also add a duration by clicking and holding the blue timecode (above the marker) and dragging it to the right. You can drag the second marker to the end of the clip to annotate a range instead of a point in time.
+<img src="Pages-Images/New documentation Images/premiere2.jpg" width="500">
+5. Continue adding markers with names for each layer and your annotations under “Comments.” It may help your organization to use distinct colors for markers corresponding to each layer, but it is not necessary.
 6. Once you have finished annotating your video using markers, follow the instructions below to export your annotation file.
 
 ***Exporting Your Annotations from Premiere:***
@@ -348,7 +350,7 @@ These annotations can be either point or range annotations.
 2. Under the options for “Export” select “Markers.”
 3. The default setting for a .csv file works for AudiAnnotate, so keep this export setting. 
 4. You can rename the file as you wish and select a location for it, but do not edit the formatting of the file before uploading it to AudiAnnotate. 
-<!--- [add image*] --->
+<img src="Pages-Images/New documentation Images/premier3.jpg" width="500">
 
 #### Uploading to the Internet Archive
 
