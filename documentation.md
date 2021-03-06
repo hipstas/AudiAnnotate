@@ -126,11 +126,15 @@ You can serve a Jekyll site on a variety of web hosts or your own web server.  [
 2. Select the Hypothesis bookmarklet. <img src="Pages-Images/New documentation Images/image2.png" width="150">
 3. Select the arrow on the right side of your screen to expand your view. <img src="Pages-Images/New documentation Images/image3.png" width="150">
 4. If you do not see the  group, select log in at the upper right of the window. 
-5. Select the  dropdown arrow next to “My Annotations,” and select your group. <img src="Pages-Images/New documentation Images/image4.png" width="150">
-6. Next, highlight text on the page you would like to annotate. A small bubble will pop-up that invites you to annotate or highlight. Select “annotate.” <img src="Pages-Images/New documentation Images/image5.png" width="150">
-7. In the window on the right, you can add an annotation: <img src="Pages-Images/New documentation Images/image6.png" width="150">
+5. Select the  dropdown arrow next to “My Annotations,” and select your group. 
+<img src="Pages-Images/New documentation Images/image4.png" width="150">
+6. Next, highlight text on the page you would like to annotate. A small bubble will pop-up that invites you to annotate or highlight. Select “annotate.” 
+<img src="Pages-Images/New documentation Images/image5.png" width="350">
+7. In the window on the right, you can add an annotation: 
+<img src="Pages-Images/New documentation Images/image6.png" width="350">
 8. Select “Post to [Group Name]”; when you hover and select on the place you annotated, you can view the annotation in the right sidebar
-9. You can also add tags in the field that says “add new tags,” by typing in text and selecting the enter key. <img src="Pages-Images/New documentation Images/image7.png" width="150">
+9. You can also add tags in the field that says “add new tags,” by typing in text and selecting the enter key. 
+<img src="Pages-Images/New documentation Images/image7.png" width="350">
 
 #### Advanced AudiAnnotate Collaborative Project Scenarios
 
