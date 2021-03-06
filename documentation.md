@@ -350,7 +350,8 @@ These annotations can be either point or range annotations.
 2. Under the options for “Export” select “Markers.”
 3. The default setting for a .csv file works for AudiAnnotate, so keep this export setting. 
 4. You can rename the file as you wish and select a location for it, but do not edit the formatting of the file before uploading it to AudiAnnotate. 
-<img src="Pages-Images/New documentation Images/premier3.jpg" width="500">
+
+<img src="Pages-Images/New documentation Images/premier3.png" width="450">
 
 #### Uploading to the Internet Archive
 
