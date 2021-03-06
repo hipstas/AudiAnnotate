@@ -272,29 +272,30 @@ AudiAnnotate exists as a tool to compile and present annotations. Because of tha
 ### Creating Annotations Using Audacity
 
 ***Downloading Audacity***
-    1. If you have a Mac: Navigate to [Audacity’s Mac download page](https://www.audacityteam.org/download/mac/). There, you’ll download the .dmg file and double-click to follow instructions for downloading Audacity to your machine. We recommend downloading the latest version.
-    2. If you have a PC: Navigate to [Audacity’s PC download page](https://www.audacityteam.org/download/windows/). There, you’ll download the installer and follow instructions for downloading Audacity to your machine. We recommend downloading the latest version. 
+1. If you have a Mac: Navigate to [Audacity’s Mac download page](https://www.audacityteam.org/download/mac/). There, you’ll download the .dmg file and double-click to follow instructions for downloading Audacity to your machine. We recommend downloading the latest version.
+2. If you have a PC: Navigate to [Audacity’s PC download page](https://www.audacityteam.org/download/windows/). There, you’ll download the installer and follow instructions for downloading Audacity to your machine. We recommend downloading the latest version. 
 
 ***Annotating in Audacity (Method 1)***
-    1. Open Audacity, and in the top left, navigate to File→ Open, and then select the audio file you will be adding annotations to.
-    2. On the warning screen, make sure the “make a copy” choice is selected, then select ok.
-    3. We’ll use the “Label Track” to add annotations. Select “Tracks,” then “Add New,” then select “Label Track.”
-    4. To insert a label at a point in time, you’ll pause the poem by selecting the “p” key, or pressing the pause symbol in the upper left, at the place you want to add a label.
-    5. Select the time marker line to mark the place in time where you want to add the label. This typically will correspond to the place where you paused the audio.
+1. Open Audacity, and in the top left, navigate to File→ Open, and then select the audio file you will be adding annotations to.
+2. On the warning screen, make sure the “make a copy” choice is selected, then select ok.
+3. We’ll use the “Label Track” to add annotations. Select “Tracks,” then “Add New,” then select “Label Track.”
+4. To insert a label at a point in time, you’ll pause the poem by selecting the “p” key, or pressing the pause symbol in the upper left, at the place you want to add a label.
+5. Select the time marker line to mark the place in time where you want to add the label. This typically will correspond to the place where you paused the audio.
     <img src="Pages-Images/New documentation Images/audacity1.png" width="500">
-    6. Then, you’ll select command + b  (the shortcut for Edit → Label → Add Label at Selection) to add a label on the label track. A field will pop up, and you can type your annotation. (Example: You may add “Stanza1” to mark the first stanza of a poem.) You could leave the point annotation as it is, or create an annotation as a range with a starting and an ending point. 
+6. Then, you’ll select command + b  (the shortcut for Edit → Label → Add Label at Selection) to add a label on the label track. A field will pop up, and you can type your annotation. (Example: You may add “Stanza1” to mark the first stanza of a poem.) You could leave the point annotation as it is, or create an annotation as a range with a starting and an ending point. 
     <img src="Pages-Images/New documentation Images/audacity2.png" width="500">
-    8. To create a range, you’ll select and drag the right edge of the point marker in the label track to the end of the moment you would like to annotate. You’ll have to play the recording to know where to end your range. A completed range will look like this: 
+7. To create a range, you’ll select and drag the right edge of the point marker in the label track to the end of the moment you would like to annotate. You’ll have to play the recording to know where to end your range. A completed range will look like this: 
    <img src="Pages-Images/New documentation Images/audacity3.png" width="500">
-    9. You can also add multiple label tracks to organize your annotations as you work. To do so, navigate to Tracks → Add New → Label Track.
+8. You can also add multiple label tracks to organize your annotations as you work. To do so, navigate to Tracks → Add New → Label Track.
 
 ***Annotating in Audacity (Method 2)***
-    1. When you open the app and add audio, navigate to Edit → Labels, then select “Type to create a label.”
-    2. This creates a shortcut to add a label when any key is pressed. Now as you’re listening, when you type any key, a label will begin, allowing you to add labels without pausing. (Note: This will only add point-in-time labels, not ranges.) Using this method, to pause the audio, you need to use the pause button on the upper left of the interface (the “p” shortcut will not work).
+1. When you open the app and add audio, navigate to Edit → Labels, then select “Type to create a label.”
+2. This creates a shortcut to add a label when any key is pressed. Now as you’re listening, when you type any key, a label will begin, allowing you to add labels without pausing. (Note: This will only add point-in-time labels, not ranges.) Using this method, to pause the audio, you need to use the pause button on the upper left of the interface (the “p” shortcut will not work).
 
 ***Exporting labels from Audacity***
-    1. Go to File → Export → Export Labels.
-    2. Name your labels and save as a .txt file. You will need this file when creating your project with the AudiAnnotate application.
+1. Go to File → Export → Export Labels.
+2. Name your labels and save as a .txt file. You will need this file when creating your project with the AudiAnnotate application.
+
 
 ### Creating Annotations Using a Spreadsheet
 
