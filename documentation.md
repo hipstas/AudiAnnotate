@@ -32,7 +32,6 @@ The instructions below will guide you through building a project with the AA. Fo
     - Enter your GitHub password to log in.
     
  3. Select “New Project.” 
-
 On this page, you will add the metadata to allow AA to generate your project. AA creates a repository or “repo” in GitHub, which is your project’s storage space for any files related to your project.  
 
    - Add a “Title.” This is the project name, and the name of the GitHub repository that will be generated in this process. This title will also appear as the project name on the AA site under “My Projects.”
@@ -40,11 +39,11 @@ On this page, you will add the metadata to allow AA to generate your project. AA
    - Add a project slug. This becomes the GitHub repository url. Note, spaces are not recognized. Please use hyphens instead of spaces.
 
 
- 4. Select “Create Project.”This contacts GitHub and generates the repository. 
+ 4\. Select “Create Project.”This contacts GitHub and generates the repository. 
 Now you have created an AudiAnnotate project, with all information stored in a GitHub repository. The next step will be to build the IIIF Manifest, which allows you to associate audiovisual material and annotations with your project.
 
 #### Adding an Audiovisual Item
- 5. On the Audio Files page, select “Create Item Manifest.” This creates a new item in the IIIF manifest associated with your project. This is where you will add metadata for your audiovisual material.
+ 5\. On the Audio Files page, select “Create Item Manifest.” This creates a new item in the IIIF manifest associated with your project. This is where you will add metadata for your audiovisual material.
     - Add a label for your audiovisual file. The label refers to the title of the audiovisual material to which you will be providing a URL and should be human-readable.
     - Add “Audio File URL.” This is the direct link to the audiovisual file.If you need to create a link, see our [Supplemental Documentation](#supplemental) below.
     - Add the duration of your audiovisual file. Duration can be input in minutes:seconds or hours:minutes:seconds. 
@@ -52,7 +51,7 @@ Now you have created an AudiAnnotate project, with all information stored in a G
     - Provider name is the organization that made the recording available.
     - Provider URL is a link to the organization that made this audiovisual material available.
 
- 6. Once metadata has been added, select “Save” to save reference and metadata to this item in the IIF manifest.
+ 6\. Once metadata has been added, select “Save” to save reference and metadata to this item in the IIF manifest.
  
 
 #### Adding Annotations
@@ -61,10 +60,10 @@ Now you have created an AudiAnnotate project, with all information stored in a G
 
 Now, you’re on the annotations page, where you can manage your project’s annotations. Annotations are uploaded to AudiAnnotate via .tsv file(s). Each .tsv file uploaded to your AudiAnnotate project is one annotation layer. Your resulting project page may present one or more annotation layers.
 
- 7. Add a label for the name of your annotation layer.
- 8. Select “Choose file.” Choose the .tsv (or .txt from Audacity) that you would like to add to your project.
- 9. Select  “Add” at the bottom of the page. This will generate your annotations and align them in the IIIF manifest with the audiovisual file.
- 10. You may now add additional annotation layers to the same audiovisual item by repeating steps 8 and 9.
+ 7\. Add a label for the name of your annotation layer.
+ 8\. Select “Choose file.” Choose the .tsv (or .txt from Audacity) that you would like to add to your project.
+ 9\. Select  “Add” at the bottom of the page. This will generate your annotations and align them in the IIIF manifest with the audiovisual file.
+ 10\. You may now add additional annotation layers to the same audiovisual item by repeating steps 8 and 9.
 
 ***If you are accessing an existing project to add annotations:***
 
@@ -88,7 +87,7 @@ Because AudiAnnotate project sites are built using Jekyll, a static site generat
 
 To export from Github, go to the repository page and look for the green “Code” button.  Select “Download ZIP”:
 
-<img src="Pages-Images/New documentation Images/image1.png" width="350">
+<img src="Pages-Images/New documentation Images/image1.png" width="250">
 
 #### Using the Export for Preservation
 
@@ -124,14 +123,14 @@ You can serve a Jekyll site on a variety of web hosts or your own web server.  [
 
 1. Navigate to your AudiAnnotate project page. ([This is an example](https://tanyaclement.github.io/sexton_sweetbriar_1966/anne-sexton-class-visit-at-sweetbriar-college-1966/#?c=&m=&s=&cv=) GitHub Pages project page.)
 2. Select the Hypothesis bookmarklet. <img src="Pages-Images/New documentation Images/image2.png" width="150">
-3. Select the arrow on the right side of your screen to expand your view. <img src="Pages-Images/New documentation Images/image3.png" width="150">
+3. Select the arrow on the right side of your screen to expand your view. <img src="Pages-Images/New documentation Images/image3.png" width="100">
 4. If you do not see the  group, select log in at the upper right of the window. 
 5. Select the  dropdown arrow next to “My Annotations,” and select your group. 
-<img src="Pages-Images/New documentation Images/image4.png" width="350">
+<img src="Pages-Images/New documentation Images/image4.png" width="250">
 6. Next, highlight text on the page you would like to annotate. A small bubble will pop-up that invites you to annotate or highlight. Select “annotate.” 
-<img src="Pages-Images/New documentation Images/image5.png" width="350">
+<img src="Pages-Images/New documentation Images/image5.png" width="250">
 7. In the window on the right, you can add an annotation: 
-<img src="Pages-Images/New documentation Images/image6.png" width="350">
+<img src="Pages-Images/New documentation Images/image6.png" width="250">
 8. Select “Post to [Group Name]”; when you hover and select on the place you annotated, you can view the annotation in the right sidebar
 9. You can also add tags in the field that says “add new tags,” by typing in text and selecting the enter key. 
 
@@ -165,9 +164,9 @@ To create a shared repository (i.e., project), first follow the above steps (und
 4. From your profile,  select “Your Repositories.” 
 5. Select on the repository that will be used to collaborate with other users, and copy the link to that repository. Note here that on the right side of the page under “About,” there is a tag that says “audiannotate” (see below). This tag will be added manually by collaborators in a later step. 
 
-<img src="Pages-Images/New documentation Images/image8.png" width="400">
+<img src="Pages-Images/New documentation Images/image8.png" width="300">
 
-6. This link can now be shared with other users.
+6\. This link can now be shared with other users.
 
 
 ##### Access Instructions for Collaborators
@@ -179,11 +178,11 @@ To create a shared repository (i.e., project), first follow the above steps (und
 4. Because this repository is no longer associated with AudiAnnotate, you will need to manually add this back so that AudiAnnotate knows to manage this repository as well as the original. Select the gear icon next to “About” on the repository page.
 <img src="Pages-Images/New documentation Images/image10.png" width="300">
 5. Once you select the gear, you’ll see a window that looks like this:
-<img src="Pages-Images/New documentation Images/image11.png" width="350">
+<img src="Pages-Images/New documentation Images/image11.png" width="300">
 6. The “Website” reflects the URL details of the original project. You will want to change the username portion of the URL to your username (between https:// and .github.io).
 7. Notice that there are no topics associated with this project. You will need to associate the project with AudiAnnotate manually. Type “audiannotate” in the box and select enter. This tag tells GitHub that your repository is an AudiAnnotate project. It will look something like this:
 
-<img src="Pages-Images/New documentation Images/image12.png" width="350">
+<img src="Pages-Images/New documentation Images/image12.png" width="300">
 
 8\. Select “Save changes.”
 
@@ -191,11 +190,11 @@ To create a shared repository (i.e., project), first follow the above steps (und
 
 10\. On the repository page, scroll to the bottom and select README.md and select the pencil icon to edit. 
 
-<img src="Pages-Images/New documentation Images/image13.png" width="500">
+<img src="Pages-Images/New documentation Images/image13.png" width="350">
 
 11\. Add some text to the readme. We suggest text that shares the origins of the repository, something like: “Forked from [username of original user]/[repository name].” This text will display on the AudiAnnotate site project tile to signal that this is a forked repository.
 
-<img src="Pages-Images/New documentation Images/image14.png" width="500">
+<img src="Pages-Images/New documentation Images/image14.png" width="350">
 
 12\. Select “Commit changes” at the bottom of the page.
 
@@ -234,19 +233,19 @@ Once a collaborator has created a pull request from their copied repository requ
 
 #### Glossary of Terms 
 
-- Project (Example: https://tanyaclement.github.io/znh_jacksonville_1939/)
+- **Project** (Example: https://tanyaclement.github.io/znh_jacksonville_1939/)
     - Conceptually: A set of related AV materials with contextual information (e.g., front matter, explicatory prose) 
     - Materially: a GitHub repository that includes collection IIIF manifests, web annotations, and web pages generated by Jekyll that present the project and items
 
-- Items (Example: https://tanyaclement.github.io/znh_jacksonville_1939/t86-243/)
+- **Items** (Example: https://tanyaclement.github.io/znh_jacksonville_1939/t86-243/)
     - Conceptually: An annotated audiovisual artifact that can be played online. 
     - Materially: An item IIIF Manifest with a reference to an audiovisual file; one or more web annotation files; a web page generated by Jekyll for the item; and a Universal Viewer javascript application
 
-- Annotations 
+- **Annotations** 
     - Conceptually: might include metadata or commentary added by a user that provides additional description or explanation of an audiovisual object for a variety of purposes from facilitating access and discovery to teaching and sharing scholarship.
     - Materially: A JSON element (that is part of the AnnotationPage, see below) that includes a textual body and a target on the referenced audiovisual file.
 
-- Layer
+- **Layer**
     - Conceptually: A means of organizing annotations by category. 
     - Materially: One or more WC3 web annotation AnnotationPage file(s) that contains the JSON annotation elements.
 
@@ -357,8 +356,10 @@ These annotations can be either point or range annotations.
 #### Uploading to the Internet Archive
 
 AudiAnnotate supports direct links to: 
-    - Audio:  HTML: MP3, WAV, and OGG.
-    - Video: MP4, WebM, and Ogg
+
+- Audio:  HTML: MP3, WAV, and OGG.
+- Video: MP4, WebM, and Ogg
+
 If you own an audio or video file that does not exist on the internet, you can upload your materials to the Internet Archive and retrieve a link:
 
 ***Uploading a File to the Internet Archive***
