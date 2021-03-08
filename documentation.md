@@ -122,8 +122,10 @@ You can serve a Jekyll site on a variety of web hosts or your own web server.  [
 ***Annotating with Hypothesis***
 
 1. Navigate to your AudiAnnotate project page. ([This is an example](https://tanyaclement.github.io/sexton_sweetbriar_1966/anne-sexton-class-visit-at-sweetbriar-college-1966/#?c=&m=&s=&cv=) GitHub Pages project page.)
-2. Select the Hypothesis bookmarklet. <img src="Pages-Images/New documentation Images/image2.png" width="150">
-3. Select the arrow on the right side of your screen to expand your view. <img src="Pages-Images/New documentation Images/image3.png" width="100">
+2. Select the Hypothesis bookmarklet. 
+<img src="Pages-Images/New documentation Images/image2.png" width="150">
+3. Select the arrow on the right side of your screen to expand your view.
+<img src="Pages-Images/New documentation Images/image3.png" width="100">
 4. If you do not see the  group, select log in at the upper right of the window. 
 5. Select the  dropdown arrow next to “My Annotations,” and select your group. 
 <img src="Pages-Images/New documentation Images/image4.png" width="250">
