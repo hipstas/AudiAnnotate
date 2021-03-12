@@ -8,6 +8,11 @@ class Page
     @title=title
   end    
 
+  def write_file(path, contents)
+    FileUtils.mkdir_p(File.dirname(path))
+    File.write(path,contents)
+  end
+
 
   def self.from_file(user_name, repo_name, slug)
     page = Page.new(user_name, repo_name)
@@ -16,11 +21,6 @@ class Page
     page.title = slug
 
     page
-  end
-
-  def write_file(path, contents)
-    FileUtils.mkdir_p(File.dirname(path))
-    File.write(path,contents)
   end
 
   def save(access_token)
@@ -59,6 +59,8 @@ class Page
 
     # remove everything in the item path under _data
     FileUtils.rm(jekyll_page_path)
+    self.project.remove_item(self)
+    git.add(self.project.navigation_path)
 
     # remove the same from the repository
     git.remove(jekyll_page_path, recursive: true)

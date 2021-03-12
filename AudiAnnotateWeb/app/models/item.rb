@@ -130,6 +130,8 @@ class Item
     git.remove(item_path, recursive: true)
     git.remove(jekyll_collection_item_path, recursive: true)
     git.remove(jekyll_collection_item_manifest_path, recursive: true)
+    self.project.remove_item(self)
+    git.add(self.project.navigation_path)
 
     git.commit("Removed #{label}")
     response = git.push("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')    

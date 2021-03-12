@@ -91,6 +91,12 @@ class Project
     File.write(navigation_path, navigation.to_yaml)
   end
 
+  def remove_item(item)
+    navigation = self.navigation
+    navigation.delete("pages/#{item.slug}.md")
+    File.write(navigation_path, navigation.to_yaml)
+  end
+
   def navigation
     YAML.load(File.read(navigation_path)) || []
   end
