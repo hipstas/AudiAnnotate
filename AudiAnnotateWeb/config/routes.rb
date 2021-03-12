@@ -11,6 +11,15 @@ Rails.application.routes.draw do
   get 'project/:user_name/:repo_name/items/import/new', to: 'items#new_import', as: 'new_import_item'
   post 'project/:user_name/:repo_name/items/import', to: 'items#import_manifest', as: 'import_manifest'
 
+
+  post 'project/:user_name/:repo_name/pages', to: 'pages#create', as: 'create_page'
+  get 'project/:user_name/:repo_name/pages/new', to: 'pages#new', as: 'new_page'
+  get 'project/:user_name/:repo_name/pages/:slug/edit', to: 'pages#edit', as: 'edit_page'
+  get 'project/:user_name/:repo_name/pages/:slug', to: 'pages#show', as: 'page'
+  patch 'project/:user_name/:repo_name/pages/:slug', to: 'pages#update', as: 'update_page'
+  delete 'project/:user_name/:repo_name/pages/:slug', to: 'pages#destroy', as: 'destroy_page'
+
+
   root to: 'project#all'
 
   get 'project/all', as: 'all_projects'

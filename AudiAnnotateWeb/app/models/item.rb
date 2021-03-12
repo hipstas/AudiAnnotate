@@ -88,7 +88,7 @@ class Item
     unless Dir.exists?(item_path)
       new_item=true
       Dir.mkdir(item_path)
-      write_file(jekyll_collection_item_path, jekyll_collection_item_contents)
+      write_file(jekyll_page_item_path, jekyll_page_item_contents)
     end
 
     if external_manifest_url.blank?
@@ -99,12 +99,13 @@ class Item
 
     write_file(jekyll_collection_item_manifest_path, jekyll_collection_item_manifest_contents)
 
-    # canvases.each { |canvas| canvas.save }
+    self.project.add_item(self)
+    git.add(self.project.navigation_path)
 
     # add, commit, and push
     git.add(item_path)
     git.add(manifest_path)
-    git.add(jekyll_collection_item_path)
+    git.add(jekyll_page_item_path)
     git.add(jekyll_collection_item_manifest_path)
     if new_item
       git.commit("Added #{label}")
@@ -166,11 +167,11 @@ class Item
     ApplicationController::render template: 'items/manifest.json', layout: false, locals: {item: self}
   end
 
-  def jekyll_collection_item_path
-    File.join(@project.repo_path, '_items', "#{slug}.md")
+  def jekyll_page_item_path
+    File.join(@project.repo_path, 'pages', "#{slug}.md")
   end
 
-  def jekyll_collection_item_contents
+  def jekyll_page_item_contents
     ApplicationController::render template: 'items/jekyll_collection_item.md', layout: false, locals: {item: self}
   end
 

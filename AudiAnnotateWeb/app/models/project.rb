@@ -67,6 +67,9 @@ class Project
     # copy jekyll files
     source_paths = JEKYLL_INITIAL_FILES.map {|fn| File.join(Rails.root, '..', 'AudiAnnotateJekyllTemplate', fn)}
     FileUtils.cp_r(source_paths, repo_path)
+    unless Dir.exists?(File.join(repo_path, 'pages'))
+      Dir.mkdir(File.join(repo_path, 'pages'))
+    end
 
     # remove example data
     JEKYLL_INITIAL_BLACKLIST.map{|path| File.join(repo_path, path)}.each { |path| FileUtils.rm_r(path) } 
@@ -81,6 +84,20 @@ class Project
     response = git.push("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')    
   end
 
+
+  def add_item(item)
+    navigation = self.navigation
+    navigation << "pages/#{item.slug}.md"
+    File.write(navigation_path, navigation.to_yaml)
+  end
+
+  def navigation
+    YAML.load(File.read(navigation_path)) || []
+  end
+
+  def navigation_path
+    File.join(repo_path, '_data', 'navigation.yml')
+  end
 
   def collection_manifest_path
     File.join(repo_path, '_data', 'collection.json')

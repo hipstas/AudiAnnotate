@@ -1,0 +1,24 @@
+
+<div id='notice-container' class="container">
+  <div class="row">
+    <div class="col-sm-11" >
+      <h2>
+        <%= link_to 'My Projects', my_projects_path %> 
+        | 
+        <%= link_to @page.repo_name, project_path(@page.user_name, @page.repo_name) %>
+        |
+        <%= link_to @page.title, page_path(@page.user_name, @page.repo_name, @page.title) %>      
+      </h2>
+    </div>
+    <%= render 'shared/build_status' %>
+  </div>
+  <div id="notice"><%= notice %></div>
+  The GitHub Pages page for <%= @page.title %> is <%= link_to @page.uri_root, @page.uri_root %><br />
+  You can add introductory material by modifying <%= link_to "#{@page.slug}.md", "https://github.com/#{@project.user_name}/#{@project.repo_name}/edit/gh-pages/pages/#{@page.slug}.md" %>
+  <div id='actions' class="container">
+    <div class="row">
+      <%= button_to 'Edit Page Title', edit_page_path(@page.user_name, @page.repo_name, @page.slug), method: 'get', class: "btn btn-light" %>
+      <%= button_to 'Delete Page', destroy_page_path(@page.user_name, @page.repo_name, @page.slug), method: 'delete', class: "btn btn-light" %>
+    </div>
+  </div>
+</div>

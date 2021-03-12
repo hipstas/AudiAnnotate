@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :connect, only: [:add_annotation_file, :create, :destroy, :edit, :show, :update, :delete_annotation_layer]
-  before_action :set_item, only: [:add_annotation_file, :destroy, :edit, :show, :update, :delete_annotation_layer]
+  before_action :set_item, only: [:add_annotation_file, :destroy, :edit, :update, :delete_annotation_layer]
 
   # GET /items
   # GET /items.json
@@ -11,6 +11,12 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
+    if Dir.exist?(Item.new(params[:user_name], params[:repo_name], params[:slug]).item_path)
+      set_item
+    else
+      redirect_to page_path(params[:user_name], params[:repo_name], params[:slug])
+      return
+    end
   end
 
   # GET /items/new

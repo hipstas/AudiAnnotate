@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-11" >
+			<h2>
+				<%= link_to 'My Projects', my_projects_path %> 
+				| 
+				<%= link_to @page.repo_name, project_path(@page.user_name, @page.repo_name) %> 
+			</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-5">
+			<h1 class="col-sm-12">New Page</h1>
+		</div>
+	</div>
+	<%= render 'form', item: @page, form_path: create_page_path %>
+</div>

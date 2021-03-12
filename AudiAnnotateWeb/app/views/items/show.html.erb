@@ -15,7 +15,7 @@
   <div id="notice"><%= notice %></div>
   The GitHub Pages site for <%= @item.label %> is <%= link_to @item.uri_root, @item.uri_root %><br />
   The IIIF manifest for <%= @item.label %> is at <%= link_to @item.manifest_uri, @item.manifest_uri %>    <br />
-  You can add introductory material by modifying <%= link_to "#{@item.slug}.md", "https://github.com/#{@project.user_name}/#{@project.repo_name}/edit/gh-pages/_items/#{@item.slug}.md" %>
+  You can add introductory material by modifying <%= link_to "#{@item.slug}.md", "https://github.com/#{@project.user_name}/#{@project.repo_name}/edit/gh-pages/pages/#{@item.slug}.md" %>
   <div id='actions' class="container">
     <div class="row">
       <%= button_to 'Edit Item', edit_item_path(@item.user_name, @item.repo_name, @item.slug), method: 'get', class: "btn btn-light" %>

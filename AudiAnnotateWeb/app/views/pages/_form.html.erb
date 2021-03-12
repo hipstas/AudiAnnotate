@@ -1,0 +1,46 @@
+  <div class="row">
+    <div class="col-sm-4">
+<%  if action_name == 'edit'
+      method_name = :patch
+    else
+      method_name = :post
+    end %>
+<%= form_with(model: @page, url: form_path, local: true, method: method_name) do |form| %>
+      <% if @page.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@page.errors.count, "error") %> prohibited this page from being saved:</h2>
+
+        <ul>
+          <% @page.errors.full_messages.each do |message| %>
+          <li class="invalid"><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
+
+      <div class="field">
+        <%= form.label :title, 'Title*', class: "col-sm-12 col-form-label" %>
+        <div class="col-sm-12">
+          <%= form.text_field :title, class: 'form-control', required: 'true' %>
+        </div>
+      </div>
+      </fieldset>
+
+      <%= form.hidden_field(:repo_name) %>
+      <%= form.hidden_field(:user_name) %>
+
+      <div class="actions col-sm-4">
+        <%= form.submit("Save", class: "btn btn-light") %>
+      </div>
+      <% end %>
+    </div>
+    <div class="col-sm-8 inline-explanation">
+      <p>On this page, you’ll create a stub page that will be available to add text to the project.</p>
+
+      <p>Fields with "*" are required.
+
+      <p>Click “Save” once you’re done, and this page will be published to your project’s  GitHib repository.</p>
+
+    </div>
+  </div>
+
