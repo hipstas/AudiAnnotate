@@ -21,14 +21,34 @@
   <div class="row">
     <div class="col-sm">
       <h3>Audiovisual Items and Pages</h3>
-      <ul class="list-group">
-        <% @project.navigation.each do |nav_path| %>
+      <table class="table table-light">
+        <% @project.navigation.each_with_index do |nav_path,i| %>
 
-        <li class="list-group-item">
-          <%= link_to(File.basename(nav_path), item_path(@project.user_name, @project.repo_name, File.basename(nav_path))) %>
-        </li>
+        <tr>
+          <td>
+            <%= link_to(File.basename(nav_path), item_path(@project.user_name, @project.repo_name, File.basename(nav_path))) %>
+          </td>
+
+          <td>
+            <% unless i == 0 %>
+              <%= link_to(raw('<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16"> <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z"/> </svg>'), 
+                          move_up_page_path(@project.user_name, 
+                                            @project.repo_name, 
+                                            File.basename(nav_path).sub(File.extname(nav_path),''))) %>
+            <%end%>
+          </td>
+          <td>
+            <% unless i == @project.navigation.size - 1 %>
+              <%= link_to(raw('<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-square-fill" viewBox="0 0 16 16"> <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0z"/> </svg>'), 
+                          move_down_page_path(@project.user_name, 
+                                              @project.repo_name, 
+                                              File.basename(nav_path).sub(File.extname(nav_path),''))) %>
+            <%end%>
+  
+          </td>
+        </tr> 
         <% end %>
-      </ul>
+      </table>
       <%= link_to "Create Item Manifest", new_item_path(@project.user_name, @project.repo_name), class: "btn btn-primary" %>
       <%= link_to "Import Existing Manifest", new_import_item_path(@project.user_name, @project.repo_name), class: "btn btn-primary" %>
       <%= link_to "Create Page", new_page_path(@project.user_name, @project.repo_name), class: "btn btn-primary" %>

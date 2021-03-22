@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   get 'project/:user_name/:repo_name/pages/:slug', to: 'pages#show', as: 'page'
   patch 'project/:user_name/:repo_name/pages/:slug', to: 'pages#update', as: 'update_page'
   delete 'project/:user_name/:repo_name/pages/:slug', to: 'pages#destroy', as: 'destroy_page'
+  get 'project/:user_name/:repo_name/pages/:slug/move_up', to: 'pages#move_up', as: 'move_up_page'
+  get 'project/:user_name/:repo_name/pages/:slug/move_down', to: 'pages#move_down', as: 'move_down_page'
 
 
   root to: 'project#all'

@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
-  before_action :connect, only: [:create, :destroy, :edit, :show, :update]
-  before_action :set_page, only: [:destroy, :edit, :show, :update]
+  before_action :connect, only: [:create, :destroy, :edit, :move_up, :move_down, :show, :update]
+  before_action :set_page, only: [:destroy, :edit, :move_up, :move_down, :show, :update]
 
 
   def show
@@ -27,6 +27,16 @@ class PagesController < ApplicationController
     end
   end
 
+
+  def move_up
+    @project.move_up(session[:github_token], @page)
+    redirect_to project_path(@page.user_name, @page.repo_name)
+  end
+
+  def move_down
+    @project.move_down(session[:github_token], @page)
+    redirect_to project_path(@page.user_name, @page.repo_name)
+  end
 
 
   # GET /pages/1/edit

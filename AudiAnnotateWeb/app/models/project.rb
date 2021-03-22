@@ -91,11 +91,42 @@ class Project
     File.write(navigation_path, navigation.to_yaml)
   end
 
+
   def remove_item(item)
     navigation = self.navigation
     navigation.delete("pages/#{item.slug}.md")
     File.write(navigation_path, navigation.to_yaml)
   end
+
+
+  def swap_nav_position(access_token, item, increment)
+    git = Git.open(repo_path)  # TODO consider using the logger here
+    git.branch('gh-pages').checkout
+    git.pull("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')
+
+    current_value = "pages/#{item.slug}.md"
+    navigation = self.navigation
+    current_position = navigation.index(current_value)
+    new_position = current_position + increment
+    old_value = navigation[new_position]
+    navigation[new_position] = current_value
+    navigation[current_position] = old_value
+    File.write(navigation_path, navigation.to_yaml)
+
+    git.add(navigation_path)
+    git.commit('Modified navigation')
+    response = git.push("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')    
+  end
+
+  def move_up(access_token, item)
+    swap_nav_position(access_token, item, -1)
+  end
+
+
+  def move_down(access_token, item)
+    swap_nav_position(access_token, item, 1)
+  end
+
 
   def navigation
     YAML.load(File.read(navigation_path)) || []
