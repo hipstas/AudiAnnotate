@@ -76,7 +76,7 @@ class PagesController < ApplicationController
       @project = @page.project
       if @github_client
         begin
-          @pages_site_status = @github_client.pages("#{params[:user_name]}/#{params[:repo_name]}").status
+          @pages_site_status = @github_client.pages("#{params[:user_name]}/#{params[:repo_name]}").status || "Missing"
         rescue Octokit::NotFound
           @pages_site_status = "Missing"
         end

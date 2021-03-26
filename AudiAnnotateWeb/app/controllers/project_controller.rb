@@ -39,7 +39,7 @@ class ProjectController < ApplicationController
     @project = Project.new(params[:user_name], params[:repo_name])
     @project.clone(session[:github_token])
     begin
-      @pages_site_status = @github_client.pages("#{params[:user_name]}/#{params[:repo_name]}").status
+      @pages_site_status = @github_client.pages("#{params[:user_name]}/#{params[:repo_name]}").status || "Missing"
     rescue 
       @pages_site_status = "Missing"
     end

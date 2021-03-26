@@ -123,7 +123,7 @@ class Item
 
     # remove everything in the item path under _data
     FileUtils.rm_rf(item_path)
-    FileUtils.rm(jekyll_collection_item_path)
+    FileUtils.rm(jekyll_collection_page_path)
     FileUtils.rm(jekyll_collection_item_manifest_path)
 
     # remove the same from the repository

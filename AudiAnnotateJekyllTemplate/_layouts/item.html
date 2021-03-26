@@ -20,7 +20,7 @@ layout: page
     window.addEventListener('uvLoaded', function (e) {
 
         myUV = createUV('#uv', {
-            iiifResourceUri: 'manifest.json',
+            iiifResourceUri: '{{site.data[page.manifest_name].manifest.id}}',
             configUri: '{{ site.baseurl }}/assets/uv-config.json',
             root: '../../{{ site.baseurl }}/assets/uv'
         }, new UV.URLDataProvider());
