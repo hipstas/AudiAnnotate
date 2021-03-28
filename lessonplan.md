@@ -13,5 +13,11 @@ In this lesson, you will learn how to create and present annotations using AudiA
 
 You will need to set up a [GitHub](https://github.com/) account in order to use the AudiAnnotate application. You might prefer to download an open-source application such as [Audacity](https://www.audacityteam.org/) to assist in generating annotations with time-stamps in the steps below, but, alternatively, you can also mark time-stamps manually on a spreadsheet. Our [documentation](https://hipstas.github.io/AudiAnnotate/documentation.html) walks you through creating a GitHub account, downloading Audacity, and creating a spreadsheet for use in AudiAnnotate.
 
+## The Audio
+
+### Audio Considerations
+
+Though any publicly-accessible sound can be used for this lesson, this lesson is structured and based on [“‘Criminal Syndicalism’ case, McComb, Mississippi,”](https://hrc.contentdm.oclc.org/digital/collection/p15878coll1/id/37) a sound recording that is part of the [John Beecher Sound Recordings Collection](https://hrc.contentdm.oclc.org/digital/collection/p15878coll1) at the Harry Ransom Center. We have chosen this recording for this lesson plan because, like many historical recordings, it contains sensitive content that students and teachers often find difficult to discuss. In this case, this content includes racial slurs and descriptions of the experiences of Black students who were falsely arrested and imprisoned. Please read the full content warning and summary below before listening to the audio.
+
 
 
