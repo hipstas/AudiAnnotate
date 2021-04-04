@@ -67,12 +67,14 @@ After listening to the audio recording and deciding what part of the audio you w
  
 Focus first on understanding the situation, events, and participants in the recording before moving to moments of meaning making.  After listening to the audio, it may be helpful to think about the following questions as you begin to understand the events of the recording: 
 
+
 ---
 
 - What characteristics or events did I hear? (People talking, horns honking, clapping, etc.)
 - What stuck out to me in this recording? (Moments of laughter, tension, modern relevance, etc.)
 
 ---
+
 
 > **_Classrooom Suggestion:_** 
 The above questions could serve as a whole-class discussion starter after the class has read about the audio and listened to the clip from 14:07-15:37.
@@ -82,16 +84,20 @@ The above questions could serve as a whole-class discussion starter after the cl
 Pushing a little further, you can make notes, answering the questions below to better understand the specific events in the recording and begin to add your own perspective/interpretation. While we would not recommend getting lost in the granularities of noting the exact time stamp where your responses to any of the following prompts occur in the recording, it might be helpful to note generally where they occur to assist in formatting your annotations in Part 3. As mentioned previously, Audacity is a useful program to concurrently annotate and generate timestamps. Documentation on how to use Audacity for annotation is available [here](https://hipstas.github.io/AudiAnnotate/documentation.html#supplemental). 
 
 ---
+
 - What did I notice about the events and the people in the recording? (People speaking angrily, movement around the room, fluctuation in applause, etc.)
 - How would I describe this?
 - What did I notice about the recording itself? (Clipping, increases/decreases in volume, etc.)
 - What are some topics or themes associated with this recording? (Topics, speakers, etc.)
+
 ---
+
 
 Any of your responses to these questions and those previous can become annotations. It’s important to realize that annotating is almost always a slow and tedious process, and will likely involve listening and re-listening to your audio sample, perhaps even in multiple sessions. This may not be an easy process with any audio recording, but might be especially challenging with more sensitive audio. Focusing on a portion of the audio as suggested above can make the annotating process more digestible.
 
 You might also consider the challenges of listening to and interpreting the audio as you annotate. 
 For example, you might ask yourself: 
+
 
 ---
 - What makes annotating this recording challenging? (volume changes in tape, emotional moments, lack of context, etc.)
@@ -100,12 +106,15 @@ For example, you might ask yourself:
 
 ---
 
+
 A helpful framework for writing annotations can be  to think of “categories” for annotation features and can make the annotating process less overwhelming and more generative. As you begin to think about and notice the  events and moments you might annotate, you can begin to think of categories that you might annotate. For example, if you notice environmental sounds (like cars horns or birds in the background), you might create a  category or list for annotations in the category of environmental sounds. If you are adding annotations that focus on transcription of the audio, you could create a category for transcript. This method will be helpful later when you begin formatting your annotation layers for uploading to AudiAnnotate, as described below. 
+
 
 
 > **_Classrooom Suggestion:_** 
 In a classroom setting, students can work in groups to sort general observations and descriptions of audio into  “categories” for annotation, deciding on these category titles as a group. Students can be put in groups/breakout rooms to decide on what annotation “categories” to create annotations for and then move to working together to write annotations.
  
+
 
 The questions listed throughout the “Annotating” section could serve as a way to press discussion further and allow students to think deeper about how and what they might focus on in annotations. The more specific questions in the last section regarding challenges of annotating that link observation to interpretation could be posed to students as prompts during group work to brainstorm annotations. This step can be combined with Part 3 (below), and students can annotate directly into a formatted Google spreadsheet in their groups. 
 
@@ -118,7 +127,10 @@ AudiAnnotate accepts structured annotations for upload in .tsv format. There are
 
 Below is a set of sample annotations created for the Beecher “Syndicalism” recording project found on AudiAnnotate. The layer titles (“Environment_Kylie,” “Transcription_Bethany”) came from categories (like the ones described in the previous section) described and decided upon by the creators of the project. Note: Each .tsv file is one annotation layer in AudiAnnotate. If you have multiple annotation layers, you will need multiple annotations files. 
 
+
+
 <img src="Pages-Images/Lesson Plan Images/AAProjectImage.png" width="500">
+
 
 
 
@@ -131,6 +143,7 @@ After working together to choose annotation categories students can begin to cre
 ## Part 4: Uploading and Presenting Audio for AudiAnnotate
 
 After you have created your annotations, you’ll add them to your AudiAnnotate project. To do so, you will sign in to the AudiAnnotate application (after authenticating GitHub) to create a project. 
+
 
 ---
 
@@ -151,6 +164,7 @@ Because this particular audio is sensitive and has potentially offensive moments
 Because AudiAnnotate presents audio and associated annotations publicly on the web, there are a few different ways to implement this final step in a classroom setting. 
  
 First, the teacher could manage project creation and focus the student lesson on generating annotations. Students could then use Hypothesis to comment on each other’s work, facilitating further discussion of the audio recording and the annotation process (see [Chapter 6 of *Annotation*](https://mitpressonpubpub.mitpress.mit.edu/pub/451exgdi/release/1), by Remi Kalir and Antero Garcia  for further discussion of learning extensions with annotation)[^6]. 
+
 
 
 A second approach to using this lesson would require that students have more time in class to grow familiar with working with AudiAnnotate and GitHub. Here, the teacher could create a collaborative project on AudiAnnotate by following the steps in our [documentation](https://hipstas.github.io/AudiAnnotate/documentation.html#collaborative). In this scenario, students would have more autonomy in adding layers and annotation to the final product (vs. the teacher as the final reviewer in the previous scenario). Here, too, Hypothesis would be a valuable tool in adding comments and suggestions to other projects. The teacher may even choose to use Hypothesis as an evaluative tool, adding comments, supplementary material, or grades as necessary.[^7]
