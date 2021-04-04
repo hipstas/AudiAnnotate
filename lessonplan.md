@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Annotation, an important paratextual genre, has expanded past the typical text-based work in recent years to include things like web-pages and online resources. Further, the rising popularity of social annotation movements in educational practices (especially during the move to more interactive, virtual learning activities as a result of the COVID-19 pandemic), means that understanding and using annotation is more relevant than ever[^1]. Audio annotation is particularly important when that audio material contains sensitive or traumatic content. This lesson serves as an introduction to annotation as a method for understanding sensitive audiovisual resources, structuring annotations in a machine-readable format, and uploading and presenting audio annotations using the AudiAnnotate application. While much of this lesson will focus on engaging with sensitive archival material in individual or group settings, it may also be read as a general introduction to annotating with AudiAnnotate. Throughout the lesson below, we have included suggestions for modifying this lesson for use in a classroom setting. 
+Annotation, an important paratextual genre, has expanded past the typical text-based work in recent years to include things like web-pages and online resources. Further, the rising popularity of social annotation movements in educational practices (especially during the move to more interactive, virtual learning activities as a result of the COVID-19 pandemic), means that understanding and using annotation is more relevant than ever[^[1]]. Audio annotation is particularly important when that audio material contains sensitive or traumatic content. This lesson serves as an introduction to annotation as a method for understanding sensitive audiovisual resources, structuring annotations in a machine-readable format, and uploading and presenting audio annotations using the AudiAnnotate application. While much of this lesson will focus on engaging with sensitive archival material in individual or group settings, it may also be read as a general introduction to annotating with AudiAnnotate. Throughout the lesson below, we have included suggestions for modifying this lesson for use in a classroom setting. 
 
 
 ## Learning Objectives
@@ -151,7 +151,7 @@ After you have created your annotations, you’ll add them to your AudiAnnotate 
 
 ---
 
-**As mentioned above, This recording is hosted on the [Harry Ransom Center’s CONTENTdm site](https://hrc.contentdm.oclc.org/digital/collection/p15878coll1/id/37), but the direct link to the audio (while publicly accessible for listening and downloading) is not supported by AudiAnnotate at this time. The Ransom Center provided [a working link to the audio](https://norman.hrc.utexas.edu/audioFiles/open/R_0124_01_01_acc_20091001.mp3) which you will need when creating your AudiAnnotate project.** 
+**As mentioned above, this recording is hosted on the [Harry Ransom Center’s CONTENTdm site](https://hrc.contentdm.oclc.org/digital/collection/p15878coll1/id/37), but the direct link to the audio (while publicly accessible for listening and downloading) is not supported by AudiAnnotate at this time. The Ransom Center provided [a working link to the audio](https://norman.hrc.utexas.edu/audioFiles/open/R_0124_01_01_acc_20091001.mp3) which you will need when creating your AudiAnnotate project.** 
 
 ---
 
