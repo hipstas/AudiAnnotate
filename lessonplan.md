@@ -180,7 +180,7 @@ A second approach to using this lesson would require that students have more tim
 
 
 
-[^1]:Kalir, J., Cantrill, C., Dean, J., & Dillon, J. (2020). Iterating the marginal syllabus: Social reading and annotation while social distancing. Journal of Technology and Teacher Education, 28(2), 463-471. 
+[^[1]]:Kalir, J., Cantrill, C., Dean, J., & Dillon, J. (2020). Iterating the marginal syllabus: Social reading and annotation while social distancing. Journal of Technology and Teacher Education, 28(2), 463-471. 
 
 [^2]:Carello, J., & Butler, L. D. (2015). Practicing What We Teach: Trauma-informed Educational Practice. *Journal of Teaching in Social Work*, 35(3), 262-278. doi:10.1080/08841233.2015.1030059
 
