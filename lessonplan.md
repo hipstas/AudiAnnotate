@@ -110,7 +110,7 @@ AudiAnnotate accepts structured annotations for upload in .tsv format. There are
 
 Below is a set of sample annotations created for the Beecher “Syndicalism” recording project found on AudiAnnotate. The layer titles (“Environment_Kylie,” “Transcription_Bethany”) came from categories (like the ones described in the previous section) described and decided upon by the creators of the project. Note: Each .tsv file is one annotation layer in AudiAnnotate. If you have multiple annotation layers, you will need multiple annotations files. 
 
-<img src="Pages-Images/Lesson Plan Images/AAProjectImage.png" width="350">
+<img src="Pages-Images/Lesson Plan Images/AAProjectImage.png" width="500">
 
 
 
