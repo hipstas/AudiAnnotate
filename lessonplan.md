@@ -167,7 +167,7 @@ Because this particular audio is sensitive and has potentially offensive moments
 > **_Classrooom Suggestion:_** 
 Because AudiAnnotate presents audio and associated annotations publicly on the web, there are a few different ways to implement this final step in a classroom setting. 
  
-First, the teacher could manage project creation and focus the student lesson on generating annotations. Students could then use Hypothesis to comment on each other’s work, facilitating further discussion of the audio recording and the annotation process (see [Chapter 6 of *Annotation*](https://mitpressonpubpub.mitpress.mit.edu/pub/451exgdi/release/1), by Remi Kalir and Antero Garcia  for further discussion of learning extensions with annotation)[^6]. 
+First, the teacher could manage project creation and focus the student lesson on generating annotations. Students could then use Hypothesis to comment on each other’s work, facilitating further discussion of the audio recording and the annotation process (see [Chapter 6 of *Annotation*](https://mitpressonpubpub.mitpress.mit.edu/pub/451exgdi/release/1), by Remi Kalir and Antero Garcia  for further discussion of learning extensions with annotation).[^6] 
 
 
 
