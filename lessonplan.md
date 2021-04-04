@@ -33,6 +33,14 @@ In this recording, a racial slur is used at 16:06 by a student quoting the langu
 
 **This recording is hosted on the [Harry Ransom Center’s CONTENTdm site](https://hrc.contentdm.oclc.org/digital/collection/p15878coll1/id/37), but the direct link to the audio (while publicly accessible for listening and downloading) is not supported by AudiAnnotate at this time. The Ransom Center provided [a working link to the audio](https://norman.hrc.utexas.edu/audioFiles/open/R_0124_01_01_acc_20091001.mp3), which you will need when creating your AudiAnnotate project in later lesson steps.** 
 
+---
+**Classrooom Suggestion**
+
+For classroom settings, make sure you follow your school’s guidelines for classroom work involving potentially upsetting or controversial material. While we recognize the value and necessity of having difficult conversations, we also recommend discussing class expectations repeatedly and prior to working with these types of materials. You may also choose to modify the lesson introductory materials to add the necessary context for the material your class is working with based on your class’s learning objectives. To minimize student harm and risk When working with sensitive audio, we recommend having a secondary recording for students who express a high level of discomfort to work with that may explore similar themes, but not include explicit or triggering language.  The Studs Terkel Radio Archive provides a number of [related resources and audio recordings](https://studsterkel.wfmt.com/classroom) geared at classroom use. 
+
+
+---
+
 
 
 [^1]:Kalir, J., Cantrill, C., Dean, J., & Dillon, J. (2020). Iterating the marginal syllabus: Social reading and annotation while social distancing. Journal of Technology and Teacher Education, 28(2), 463-471. 
