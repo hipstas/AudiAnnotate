@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Annotation, an important paratextual genre, has expanded past the typical text-based work in recent years to include things like web-pages and online resources. Further, the rising popularity of social annotation movements in educational practices (especially during the move to more interactive, virtual learning activities as a result of the COVID-19 pandemic), means that understanding and using annotation is more relevant than ever[^[1]]. Audio annotation is particularly important when that audio material contains sensitive or traumatic content. This lesson serves as an introduction to annotation as a method for understanding sensitive audiovisual resources, structuring annotations in a machine-readable format, and uploading and presenting audio annotations using the AudiAnnotate application. While much of this lesson will focus on engaging with sensitive archival material in individual or group settings, it may also be read as a general introduction to annotating with AudiAnnotate. Throughout the lesson below, we have included suggestions for modifying this lesson for use in a classroom setting. 
+Annotation, an important paratextual genre, has expanded past the typical text-based work in recent years to include things like web-pages and online resources. Further, the rising popularity of social annotation movements in educational practices (especially during the move to more interactive, virtual learning activities as a result of the COVID-19 pandemic), means that understanding and using annotation is more relevant than ever.[^1] Audio annotation is particularly important when that audio material contains sensitive or traumatic content. This lesson serves as an introduction to annotation as a method for understanding sensitive audiovisual resources, structuring annotations in a machine-readable format, and uploading and presenting audio annotations using the AudiAnnotate application. While much of this lesson will focus on engaging with sensitive archival material in individual or group settings, it may also be read as a general introduction to annotating with AudiAnnotate. Throughout the lesson below, we have included suggestions for modifying this lesson for use in a classroom setting. 
 
 
 ## Learning Objectives
@@ -180,7 +180,7 @@ A second approach to using this lesson would require that students have more tim
 
 
 
-[^[1]]:Kalir, J., Cantrill, C., Dean, J., & Dillon, J. (2020). Iterating the marginal syllabus: Social reading and annotation while social distancing. Journal of Technology and Teacher Education, 28(2), 463-471. 
+[^1]:Kalir, J., Cantrill, C., Dean, J., & Dillon, J. (2020). Iterating the marginal syllabus: Social reading and annotation while social distancing. Journal of Technology and Teacher Education, 28(2), 463-471. 
 
 [^2]:Carello, J., & Butler, L. D. (2015). Practicing What We Teach: Trauma-informed Educational Practice. *Journal of Teaching in Social Work*, 35(3), 262-278. doi:10.1080/08841233.2015.1030059
 
