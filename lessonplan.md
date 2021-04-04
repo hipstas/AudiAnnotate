@@ -22,7 +22,7 @@ You will need to set up a [GitHub](https://github.com/) account in order to use 
 
 Though any publicly-accessible sound can be used for this lesson, this lesson is structured and based on [“‘Criminal Syndicalism’ case, McComb, Mississippi,”](https://hrc.contentdm.oclc.org/digital/collection/p15878coll1/id/37) a sound recording centered around Civil Rights issues in 1964 that is part of the [John Beecher Sound Recordings Collection](https://hrc.contentdm.oclc.org/digital/collection/p15878coll1) at the Harry Ransom Center. We have chosen this recording not only  because of its historical value,  but also because it  speaks clearly to current reckonings with systemic racism in 2021. Like many historical recordings, this recording contains sensitive content that students and teachers often find difficult to discuss. In this case, this content includes racial slurs and descriptions of the experiences of Black students who were falsely arrested and imprisoned. Please read the full content warning and summary below before listening to the audio.
 
-We have structured this lesson in a way that seeks to be mindful of trauma-informed pedagogy when working with sensitive resources. Trauma-informed pedagogy, developed by Janice Carello and Lisa D. Butler, emphasizes the importance of ensuring the physical and emotional security of learners by emphasizing the importance of contextualizing content and acknowledging and validating any challenges learners face when working with sensitive materials[^2]. Importantly, the goal of trauma-informed pedagogy is “to remove possible barriers to learning, not to remove traumatic, sensitive, or difficult material from the curriculum.” Likewise, we believe the unique challenge of working with sensitive materials should not deter anyone from learning from them. A trauma-informed approach to working with these materials allows both independent researchers and groups of researchers to empathetically and carefully work with materials others may have difficulties with that are nonetheless important to history. For further discussion of trauma-informed pedagogy and other inclusive practices when working with these sensitive materials (not necessarily in the classroom!), we recommend Emory’s ["Inclusive Pedagogy: Discussion and Resources"](https://cfde.emory.edu/_includes/documents/sections/resources/inclusive-pedagogy-2019-2020.pdf). 
+We have structured this lesson in a way that seeks to be mindful of trauma-informed pedagogy when working with sensitive resources. Trauma-informed pedagogy, developed by Janice Carello and Lisa D. Butler, emphasizes the importance of ensuring the physical and emotional security of learners by emphasizing the importance of contextualizing content and acknowledging and validating any challenges learners face when working with sensitive materials.[^2] Importantly, the goal of trauma-informed pedagogy is “to remove possible barriers to learning, not to remove traumatic, sensitive, or difficult material from the curriculum.” Likewise, we believe the unique challenge of working with sensitive materials should not deter anyone from learning from them. A trauma-informed approach to working with these materials allows both independent researchers and groups of researchers to empathetically and carefully work with materials others may have difficulties with that are nonetheless important to history. For further discussion of trauma-informed pedagogy and other inclusive practices when working with these sensitive materials (not necessarily in the classroom!), we recommend Emory’s ["Inclusive Pedagogy: Discussion and Resources"](https://cfde.emory.edu/_includes/documents/sections/resources/inclusive-pedagogy-2019-2020.pdf). 
 
 In general, when selecting the audio material with which you’ll be working, you should review the holding institution's language in describing and categorizing the audio for cues in handling, listening to, and ultimately presenting your chosen audio material. While some holding institutions may not have content warnings or descriptions of sensitive content for individual items, other institutions will have some kind of acknowledgement of troubling content or metadata listed either on the holding institution's main site or collection page for the item. We recommend you look towards these places for language cues first[^3]. For example, the Harry Ransom Center contextualizes the Beecher Sound Collection [here](https://hrc.contentdm.oclc.org/digital/collection/p15878coll1), but at this time does not include a specific content warning related to the racist language in the tapes. The Ransom Center’s [statement](https://www.hrc.utexas.edu/policies/language-statement/) on outdated language shares a general warning that users may encounter sensitive, offensive, or outdated information in descriptions of archival materials.
 
@@ -175,10 +175,7 @@ A second approach to using this lesson would require that students have more tim
 
 
 
-
 ---
-
-
 
 [^1]:Kalir, J., Cantrill, C., Dean, J., & Dillon, J. (2020). Iterating the marginal syllabus: Social reading and annotation while social distancing. Journal of Technology and Teacher Education, 28(2), 463-471. 
 
@@ -194,5 +191,6 @@ A second approach to using this lesson would require that students have more tim
 
 [^7]:See [Hypothesis for Education](https://web.hypothes.is/education/) for further information and ways to implement Hypothesis into the classroom.
 
----
+--- 
+
 
