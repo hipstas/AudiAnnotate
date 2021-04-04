@@ -38,8 +38,79 @@ In this recording, a racial slur is used at 16:06 by a student quoting the langu
 
 For classroom settings, make sure you follow your school’s guidelines for classroom work involving potentially upsetting or controversial material. While we recognize the value and necessity of having difficult conversations, we also recommend discussing class expectations repeatedly and prior to working with these types of materials. You may also choose to modify the lesson introductory materials to add the necessary context for the material your class is working with based on your class’s learning objectives. To minimize student harm and risk When working with sensitive audio, we recommend having a secondary recording for students who express a high level of discomfort to work with that may explore similar themes, but not include explicit or triggering language.  The Studs Terkel Radio Archive provides a number of [related resources and audio recordings](https://studsterkel.wfmt.com/classroom) geared at classroom use. 
 
+---
+
+## Part 1: Listening
+
+The first step to annotating audio is listening to the whole recording before listening to any selections to understand the context of the recording (though in the classroom setting, we recommend listening to a short portion of the tape. See note below). Listening is a different method than reading or watching and will accordingly require different methods of approach with different demands on time and attention. As you might carefully read and re-read a passage in close-reading, audio requires close-listening. 
+
+For audio with sensitive moments, like the one we have chosen for this lesson,  listening can present a unique challenge. By pressing play on an audio recording, you become a sort of “witness” to the moments taking place in the audio. Communication and media theorist Amit Pinchevski, writing about audiovisual testimonies of Holocaust survivors at Yale’s Fortunoff Library, acknowledges the place of the listener as witness and says unlike text, the recordings “impose on the audience a complex audio-visual narrative, which calls for the development of collective skills of interpretation and active engagement” (p. 258-259).[^4] Further (as with other kinds of media), exposing listeners to potentially sensitive or upsetting material with no warning may forcibly shift their focus from the material to their reaction provoked by the difficult content, making any new learning nearly impossible.[^5] 
+
+We have structured the lesson in a way that is aware of this mode of listening and witnessing, and acknowledge that the potential of trauma is an important thing to keep in mind for listeners. Note that we have broadly described the Beecher “Syndicalism” case (informed via historical and social context) and provided an audio content warning noting where racial slurs occur and their context prior to any discussions of listening and annotating. You may wish to follow a similar approach if listening to sensitive audio, particularly when listening to it with others. Further, be aware that this audio recording was created in 1964, so some highschoolers recorded on the tape may still be living. Similarly, many archival materials, like the one we have chosen, have connections to the present that can be unsettling or surprising, particularly if the same sorts of trauma described or captured in the recording is something listeners are still experiencing today. 
+ 
+With this in mind, take some time to listen to the recording, or the portion you will be annotating. The steps below will help you think about ways to create and organize  annotations. 
 
 ---
+**Classrooom Suggestion**
+
+For teaching in a classroom setting, we recommend focusing on a 1-2 minute portion of the audio to ensure students have sufficient time to listen, process, and engage critically with the content. In the Beecher recording, we recommend the clip from 14:07-15:37 for classroom discussion, where the recently released students discuss their limited recreational privileges and lack of sufficient nutrition and have many surprising moments of levity. This particular clip does not contain racist slurs, but due to the overall sensitivity of this recording, students should still read the content warning and summary before listening.
+
+---
+
+
+## Part 2: Annotating
+
+There is not one particular way to annotate audio, and the methods you use for crafting annotations might vary based on your choice of audio and your own preferences. The steps below can be a helpful guideline as you get started. 
+ 
+After listening to the audio recording and deciding what part of the audio you will focus on, begin to take note of some general features you noticed. 
+ 
+Focus first on understanding the situation, events, and participants in the recording before moving to moments of meaning making.  After listening to the audio, it may be helpful to think about the following questions as you begin to understand the events of the recording: 
+
+- What characteristics or events did I hear? (People talking, horns honking, clapping, etc.)
+- What stuck out to me in this recording? (Moments of laughter, tension, modern relevance, etc.)
+
+---
+**Classrooom Suggestion**
+
+The above questions could serve as a whole-class discussion starter after the class has read about the audio and listened to the clip from 14:07-15:37.
+
+---
+
+Pushing a little further, you can make notes, answering the questions below to better understand the specific events in the recording and begin to add your own perspective/interpretation. While we would not recommend getting lost in the granularities of noting the exact time stamp where your responses to any of the following prompts occur in the recording, it might be helpful to note generally where they occur to assist in formatting your annotations in Part 3. As mentioned previously, Audacity is a useful program to concurrently annotate and generate timestamps. Documentation on how to use Audacity for annotation is available [here](https://hipstas.github.io/AudiAnnotate/documentation.html#supplemental). 
+
+- What did I notice about the events and the people in the recording? (People speaking angrily, movement around the room, fluctuation in applause, etc.)
+- How would I describe this?
+- What did I notice about the recording itself? (Clipping, increases/decreases in volume, etc.)
+- What are some topics or themes associated with this recording? (Topics, speakers, etc.)
+
+Any of your responses to these questions and those previous can become annotations. It’s important to realize that annotating is almost always a slow and tedious process, and will likely involve listening and re-listening to your audio sample, perhaps even in multiple sessions. This may not be an easy process with any audio recording, but might be especially challenging with more sensitive audio. Focusing on a portion of the audio as suggested above can make the annotating process more digestible.
+
+You might also consider the challenges of listening to and interpreting the audio as you annotate. 
+For example, you might ask yourself: 
+
+- What makes annotating this recording challenging? (volume changes in tape, emotional moments, lack of context, etc.)
+- What context am I missing? What am I uncertain about? (location of meeting, time of day, unsure of speakers, challenging to locate context about specific events, unidentifiable noises, etc.)
+- What might I research more in-depth as I consider this recording? (the students who were arrested, more information about the events surrounding the meeting, what is criminal syndicalism?, etc.)
+
+A helpful framework for writing annotations can be  to think of “categories” for annotation features and can make the annotating process less overwhelming and more generative. As you begin to think about and notice the  events and moments you might annotate, you can begin to think of categories that you might annotate. For example, if you notice environmental sounds (like cars horns or birds in the background), you might create a  category or list for annotations in the category of environmental sounds. If you are adding annotations that focus on transcription of the audio, you could create a category for transcript. This method will be helpful later when you begin formatting your annotation layers for uploading to AudiAnnotate, as described below. 
+
+---
+**Classrooom Suggestion**
+
+In a classroom setting, students can work in groups to sort general observations and descriptions of audio into  “categories” for annotation, deciding on these category titles as a group. Students can be put in groups/breakout rooms to decide on what annotation “categories” to create annotations for and then move to working together to write annotations.
+ 
+The questions listed throughout the “Annotating” section could serve as a way to press discussion further and allow students to think deeper about how and what they might focus on in annotations. The more specific questions in the last section regarding challenges of annotating that link observation to interpretation could be posed to students as prompts during group work to brainstorm annotations. This step can be combined with Part 3 (below), and students can annotate directly into a formatted Google spreadsheet in their groups. 
+
+
+---
+
+## Part 3: Formatting Audio Annotations for AudiAnnotate
+
+AudiAnnotate accepts structured annotations for upload in .tsv format. There are many methods for formatting your annotations. You can use a software application, such as Audacity, or a simple spreadsheet. Details on how to do so can be found in the [AudiAnnotate documentation](https://hipstas.github.io/AudiAnnotate/documentation.html#supplemental).
+
+Below is a set of sample annotations created for the Beecher “Syndicalism” recording project found on AudiAnnotate. The layer titles (“Environment_Kylie,” “Transcription_Bethany”) came from categories (like the ones described in the previous section) described and decided upon by the creators of the project. Note: Each .tsv file is one annotation layer in AudiAnnotate. If you have multiple annotation layers, you will need multiple annotations files. 
+
+
 
 
 
@@ -48,4 +119,8 @@ For classroom settings, make sure you follow your school’s guidelines for clas
 [^2]:Carello, J., & Butler, L. D. (2015). Practicing What We Teach: Trauma-informed Educational Practice. *Journal of Teaching in Social Work*, 35(3), 262-278. doi:10.1080/08841233.2015.1030059
 
 [^3]:See Archives for Black Lives in Philadelphia’s (A4BLiP) ["Anti-Racist Description Resources"](https://archivesforblacklives.files.wordpress.com/2020/11/ardr_202010.pdf) (2020) for further information on archival language descisions and culturally-conscious recommendations. 
+
+[^4]:Pinchevski A. (2011) Archive, Media, Trauma. In: Neiger M., Meyers O., Zandberg E. (eds) On Media Memory. Palgrave Macmillan Memory Studies. Palgrave Macmillan, London. [https://doi.org/10.1057/9780230307070_19](https://doi.org/10.1057/9780230307070_19)
+
+[^5]:Hammond, Z. (2015). *Culturally Responsive Teaching and The Brain: Promoting Authentic Engagement and Rigor Among Culturally and Linguistically Diverse Students*. Corwin, a SAGE company.
 
