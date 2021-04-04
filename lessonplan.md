@@ -49,7 +49,6 @@ With this in mind, take some time to listen to the recording, or the portion you
 
 
 > **_Classrooom Suggestion:_** 
-
 For teaching in a classroom setting, we recommend focusing on a 1-2 minute portion of the audio to ensure students have sufficient time to listen, process, and engage critically with the content. In the Beecher recording, we recommend the clip from 14:07-15:37 for classroom discussion, where the recently released students discuss their limited recreational privileges and lack of sufficient nutrition and have many surprising moments of levity. This particular clip does not contain racist slurs, but due to the overall sensitivity of this recording, students should still read the content warning and summary before listening.
 
 
@@ -68,7 +67,6 @@ Focus first on understanding the situation, events, and participants in the reco
 
 
 > **_Classrooom Suggestion:_** 
-
 The above questions could serve as a whole-class discussion starter after the class has read about the audio and listened to the clip from 14:07-15:37.
 
 
@@ -93,9 +91,9 @@ A helpful framework for writing annotations can be  to think of “categories”
 
 
 > **_Classrooom Suggestion:_** 
-
 In a classroom setting, students can work in groups to sort general observations and descriptions of audio into  “categories” for annotation, deciding on these category titles as a group. Students can be put in groups/breakout rooms to decide on what annotation “categories” to create annotations for and then move to working together to write annotations.
  
+
 The questions listed throughout the “Annotating” section could serve as a way to press discussion further and allow students to think deeper about how and what they might focus on in annotations. The more specific questions in the last section regarding challenges of annotating that link observation to interpretation could be posed to students as prompts during group work to brainstorm annotations. This step can be combined with Part 3 (below), and students can annotate directly into a formatted Google spreadsheet in their groups. 
 
 
@@ -111,7 +109,6 @@ Below is a set of sample annotations created for the Beecher “Syndicalism” r
 
 
 > **_Classrooom Suggestion:_** 
-
 After working together to choose annotation categories students can begin to create or format their annotations. The students can create annotations in a spreadsheet as shown above, using our Google sheets annotation [template](https://docs.google.com/spreadsheets/d/1ImjhjLD1g-lQulJX3UJe4Y91z04EOriYCqiN1rz9gnw/copy#gid=0) with formatting instructions. We suggest each student contribute at least one sentence of transcription and one commentary annotation, though we of course encourage further annotation. 
 
 
@@ -130,7 +127,6 @@ Because this particular audio is sensitive and has potentially offensive moments
 
 
 > **_Classrooom Suggestion:_** 
-
 Because AudiAnnotate presents audio and associated annotations publicly on the web, there are a few different ways to implement this final step in a classroom setting. 
  
 First, the teacher could manage project creation and focus the student lesson on generating annotations. Students could then use Hypothesis to comment on each other’s work, facilitating further discussion of the audio recording and the annotation process (see [Chapter 6 of *Annotation*](https://mitpressonpubpub.mitpress.mit.edu/pub/451exgdi/release/1), by Remi Kalir and Antero Garcia  for further discussion of learning extensions with annotation)[^6]. 
