@@ -191,6 +191,6 @@ A second approach to using this lesson would require that students have more tim
 
 [^7]:See [Hypothesis for Education](https://web.hypothes.is/education/) for further information and ways to implement Hypothesis into the classroom.
 
---- 
+
 
 
