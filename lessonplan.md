@@ -47,12 +47,12 @@ We have structured the lesson in a way that is aware of this mode of listening a
  
 With this in mind, take some time to listen to the recording, or the portion you will be annotating. The steps below will help you think about ways to create and organize  annotations. 
 
----
-**Classrooom Suggestion**
+
+> **_Classrooom Suggestion:_** 
 
 For teaching in a classroom setting, we recommend focusing on a 1-2 minute portion of the audio to ensure students have sufficient time to listen, process, and engage critically with the content. In the Beecher recording, we recommend the clip from 14:07-15:37 for classroom discussion, where the recently released students discuss their limited recreational privileges and lack of sufficient nutrition and have many surprising moments of levity. This particular clip does not contain racist slurs, but due to the overall sensitivity of this recording, students should still read the content warning and summary before listening.
 
----
+
 
 
 ## Part 2: Annotating
@@ -66,12 +66,12 @@ Focus first on understanding the situation, events, and participants in the reco
 - What characteristics or events did I hear? (People talking, horns honking, clapping, etc.)
 - What stuck out to me in this recording? (Moments of laughter, tension, modern relevance, etc.)
 
----
-**Classrooom Suggestion**
+
+> **_Classrooom Suggestion:_** 
 
 The above questions could serve as a whole-class discussion starter after the class has read about the audio and listened to the clip from 14:07-15:37.
 
----
+
 
 Pushing a little further, you can make notes, answering the questions below to better understand the specific events in the recording and begin to add your own perspective/interpretation. While we would not recommend getting lost in the granularities of noting the exact time stamp where your responses to any of the following prompts occur in the recording, it might be helpful to note generally where they occur to assist in formatting your annotations in Part 3. As mentioned previously, Audacity is a useful program to concurrently annotate and generate timestamps. Documentation on how to use Audacity for annotation is available [here](https://hipstas.github.io/AudiAnnotate/documentation.html#supplemental). 
 
@@ -91,15 +91,15 @@ For example, you might ask yourself:
 
 A helpful framework for writing annotations can be  to think of “categories” for annotation features and can make the annotating process less overwhelming and more generative. As you begin to think about and notice the  events and moments you might annotate, you can begin to think of categories that you might annotate. For example, if you notice environmental sounds (like cars horns or birds in the background), you might create a  category or list for annotations in the category of environmental sounds. If you are adding annotations that focus on transcription of the audio, you could create a category for transcript. This method will be helpful later when you begin formatting your annotation layers for uploading to AudiAnnotate, as described below. 
 
----
-**Classrooom Suggestion**
+
+> **_Classrooom Suggestion:_** 
 
 In a classroom setting, students can work in groups to sort general observations and descriptions of audio into  “categories” for annotation, deciding on these category titles as a group. Students can be put in groups/breakout rooms to decide on what annotation “categories” to create annotations for and then move to working together to write annotations.
  
 The questions listed throughout the “Annotating” section could serve as a way to press discussion further and allow students to think deeper about how and what they might focus on in annotations. The more specific questions in the last section regarding challenges of annotating that link observation to interpretation could be posed to students as prompts during group work to brainstorm annotations. This step can be combined with Part 3 (below), and students can annotate directly into a formatted Google spreadsheet in their groups. 
 
 
----
+
 
 ## Part 3: Formatting Audio Annotations for AudiAnnotate
 
@@ -109,12 +109,12 @@ Below is a set of sample annotations created for the Beecher “Syndicalism” r
 
 <img src="Pages-Images/Lesson Plan Images/AAProjectImage.png" width="500">
 
----
-**Classrooom Suggestion**
+
+> **_Classrooom Suggestion:_** 
 
 After working together to choose annotation categories students can begin to create or format their annotations. The students can create annotations in a spreadsheet as shown above, using our Google sheets annotation [template](https://docs.google.com/spreadsheets/d/1ImjhjLD1g-lQulJX3UJe4Y91z04EOriYCqiN1rz9gnw/copy#gid=0) with formatting instructions. We suggest each student contribute at least one sentence of transcription and one commentary annotation, though we of course encourage further annotation. 
 
----
+
 
 ## Part 4: Uploading and Presenting Audio for AudiAnnotate
 
@@ -128,8 +128,8 @@ Once you have created your project page and added annotations, you will now be a
 
 Because this particular audio is sensitive and has potentially offensive moments, we recommend adding a content warning above your project by editing the introductory text. You can find steps on how to edit that text in our [documentation](https://hipstas.github.io/AudiAnnotate/documentation.html#supplemental). The introductory text is also a great place to add any other contextual material, commentary, or provenance necessary to introduce your audio project. Remember: context is important when exposing large, varied researchers to sensitive material. 
 
----
-**Classrooom Suggestion**
+
+> **_Classrooom Suggestion:_** 
 
 Because AudiAnnotate presents audio and associated annotations publicly on the web, there are a few different ways to implement this final step in a classroom setting. 
  
@@ -155,4 +155,6 @@ A second approach to using this lesson would require that students have more tim
 [^6]:Kalir, R., & Garcia, A. (2019). Chapter 6. In Annotation. Retrieved from [https://mitpressonpubpub.mitpress.mit.edu/pub/451exgdi](https://mitpressonpubpub.mitpress.mit.edu/pub/451exgdi)
 
 [^7]:See [Hypothesis for Education](https://web.hypothes.is/education/) for further information and ways to implement Hypothesis into the classroom.
+
+---
 
