@@ -123,7 +123,7 @@ After working together to choose annotation categories students can begin to cre
 
 After you have created your annotations, you’ll add them to your AudiAnnotate project. To do so, you will sign in to the AudiAnnotate application (after authenticating GitHub) to create a project. 
 
-**As mentioned above, This recording is hosted on the [Harry Ransom Center’s CONTENTdm site](https://hrc.contentdm.oclc.org/digital/collection/p15878coll1/id/37), but the direct link to the audio (while publicly accessible for listening and downloading) is not supported by AudiAnnotate at this time. The Ransom Center provided [a working link to the audio](https://norman.hrc.utexas.edu/audioFiles/open/R_0124_01_01_acc_20091001.mp3) which you will need when creating your AudiAnnotate project** 
+**As mentioned above, This recording is hosted on the [Harry Ransom Center’s CONTENTdm site](https://hrc.contentdm.oclc.org/digital/collection/p15878coll1/id/37), but the direct link to the audio (while publicly accessible for listening and downloading) is not supported by AudiAnnotate at this time. The Ransom Center provided [a working link to the audio](https://norman.hrc.utexas.edu/audioFiles/open/R_0124_01_01_acc_20091001.mp3) which you will need when creating your AudiAnnotate project.** 
 
 Documentation for creating a project, adding a link to your audio file, and uploading your annotation layers to your AudiAnnotate project can be found [here](https://hipstas.github.io/AudiAnnotate/documentation.html#project). 
 
