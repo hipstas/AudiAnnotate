@@ -1,4 +1,4 @@
-#### AudiAnnotate Guide to Annotating Film and Video Using Terminology Standard to Film Criticism and Production 
+### AudiAnnotate Guide to Annotating Film and Video Using Terminology Standard to Film Criticism and Production 
 
 ##### by Zoe Bursztajn-Illingworth and Janet Reinschmidt
 
