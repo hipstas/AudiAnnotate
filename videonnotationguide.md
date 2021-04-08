@@ -2,15 +2,15 @@
 
 ##### by Zoe Bursztajn-Illingworth and Janet Reinschmidt
 
-The following list of standard film terms for annotation has been created by Zoe Bursztajn-Illingworth and Janet Reinschmidt based on handouts for two University of Texas at Austin courses:  E314J: Literature and Film-Form, Medium, and Politics Spring 2021 (Instructor Zoe Bursztajn-Illingworth) and RTF385K: Film Noir, Spring 2021 (Professor Noah Isenberg, Teaching Assistant Janet Reinschmidt).
+*The following list of standard film terms for annotation has been created by Zoe Bursztajn-Illingworth and Janet Reinschmidt based on handouts for two University of Texas at Austin courses:  E314J: Literature and Film-Form, Medium, and Politics Spring 2021 (Instructor Zoe Bursztajn-Illingworth) and RTF385K: Film Noir, Spring 2021 (Professor Noah Isenberg, Teaching Assistant Janet Reinschmidt).*
 
 Scholars annotating film and video will need to create layers in AdobePremier for their AudiAnnotate annotations that fit their research purposes. The film researchers who have made this list have found it useful to create layers such as--intertitles, effects, cinematography, editing, sound, and dialogue--and then use the more specific films terms below as well as transcribing dialogue or intertitles in individual annotations. This list and the above categories corresponding to layers are intended to be suggestions rather than prescriptions for research purposes; the types of film annotation and terms necessary for scholarship, preservation, and pedagogy will likely differ. Similarly, some researchers may need to note the duration of shots, intertitles, or scenes in their annotations while others may input markers on a moment by moment basis. 
 
 You may also use the alphabetized list below as a glossary to clarify the meaning of film terms in annotations you find on AudiAnnotate. 
 
-To learn more about how to describe and annotate film form using standard terminology please consult [Film Art: An Introduction](https://hdl.handle.net/2027/uc1.32106016979509) by David Bordwell and Kristin Thompson and [Yale’s Film Analysis Website](https://filmanalysis.yale.edu/) 
+To learn more about how to describe and annotate film form using standard terminology please consult [Film Art: An Introduction](https://catalog.hathitrust.org/Record/003326496?) by David Bordwell and Kristin Thompson and [Yale’s Film Analysis Website](https://filmanalysis.yale.edu/) 
 
-##**Standard Film and Video Terminology**
+**Standard Film and Video Terminology**
 
 **Aerial shot:** A camera shot filmed in an exterior location from far above the camera’s object; from a bird’s-eye view.
 
