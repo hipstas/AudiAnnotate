@@ -10,6 +10,7 @@ You may also use the alphabetized list below as a glossary to clarify the meanin
 
 To learn more about how to describe and annotate film form using standard terminology please consult [Film Art: An Introduction](https://hdl.handle.net/2027/uc1.32106016979509) by David Bordwell and Kristin Thompson and [Yale’s Film Analysis Website](https://filmanalysis.yale.edu/) 
 
+##**Standard Film and Video Terminology**
 
 **Aerial shot:** A camera shot filmed in an exterior location from far above the camera’s object; from a bird’s-eye view.
 
