@@ -7,7 +7,7 @@
         | 
         <%= link_to @item.repo_name, project_path(@item.user_name, @item.repo_name) %>
         |
-        <%= link_to @item.label, item_path(@item.user_name, @item.repo_name, @item.label) %>      
+        <%= link_to @item.label, item_path(@item.user_name, @item.repo_name, @item.slug) %>      
       </h2>
     </div>
     <%= render 'shared/build_status' %>
@@ -92,6 +92,12 @@
         <% @item.canvases.each do |canvas| %>
         <% canvas.annotation_pages.each do |page| %>
           <%= page.label %> <%= link_to("Delete", delete_annotation_layer_path(@item.user_name, @item.repo_name, @item.slug, page.label)) %><br/>
+        <% end %>
+      <% end %>
+      <h3> Annotation Files </h3>
+        <% @item.canvases.each do |canvas| %>
+        <% canvas.annotation_files.each do |file| %>
+          <%= file %> <%= link_to("Download", download_annotation_file_path(@item.user_name, @item.repo_name, @item.slug, file)) %><br/>
         <% end %>
       <% end %>
     </div>

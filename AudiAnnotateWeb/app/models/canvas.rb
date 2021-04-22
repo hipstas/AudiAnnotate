@@ -10,7 +10,13 @@ class Canvas
 
   def annotation_pages
     folders = Dir.glob(File.join(canvas_path, "*"))
+    folders.delete_if{|name| File.basename(name)=="originals"}
     folders.map{|folder| AnnotationPage.new(self, folder)}
+  end
+
+  def annotation_files
+    files = Dir.glob(File.join(canvas_path, "originals", "*"))
+    files.map{|fullpath| File.basename(fullpath)}
   end
 
   def item
