@@ -6,8 +6,6 @@ layout: default
 
   {{ content }}
 
-  <div><p>{{ site.data.collection.summary.en[0] | escape }}</p></div>
-
   <ul class="post-list">
     {%- for item in site.data.navigation -%}
     {%- assign my_page = site.pages | where: "path", item | first -%}
