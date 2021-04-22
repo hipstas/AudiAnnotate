@@ -1,0 +1,46 @@
+
+<div id='notice-container' class="container">
+  <div class="row">
+    <div class="col-sm-11" >
+      <h2>
+        <%= link_to 'My Projects', my_projects_path %> 
+        | 
+        <%= link_to @item.repo_name, project_path(@item.user_name, @item.repo_name) %>
+        |
+        <%= link_to @item.label, item_path(@item.user_name, @item.repo_name, @item.slug) %>      
+      </h2>
+    </div>
+    <%= render 'shared/build_status' %>
+  </div>
+  <div id="notice"><%= notice %></div>
+
+</div>
+<div id='process-annotation-form' class="container">
+  <div class="row">
+    <div class="col-sm-4">
+        <h3>Process annotation file</h3>
+      <%= form_with(model: @item, url: process_annotation_file_path, local: true) do |form| %>
+
+
+      <div class="form-group row">
+        <%= form.label :layer, "Annotation Layer Label*", class: "col-sm-12 col-form-label" %>
+        <div class="col-sm-12">
+          <%= form.text_field :layer, class: 'form-control' %>
+        </div>
+      </div>
+
+      <%= hidden_field_tag(:annotation_file_basename, @file) %>
+      <%= form.hidden_field(:label) %>
+      <%= form.hidden_field(:repo_name) %>
+      <%= form.hidden_field(:user_name) %>
+
+      <div class="actions">
+        <%= form.submit('Process', class: "btn btn-light") %>
+      </div>
+      <% end %>
+    </div>
+    <div class="col-sm-8 inline-explanation">
+      <p>Explanation goes here.</p>
+    </div>
+  </div>
+</div>

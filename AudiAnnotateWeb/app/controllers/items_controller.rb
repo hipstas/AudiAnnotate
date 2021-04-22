@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
-  before_action :connect, only: [:add_annotation_file, :create, :destroy, :edit, :show, :update, :delete_annotation_layer]
-  before_action :set_item, only: [:add_annotation_file, :destroy, :edit, :update, :delete_annotation_layer, :download_annotation_file]
+  before_action :connect, only: [:add_annotation_file, :create, :destroy, :edit, :show, :update, :delete_annotation_layer, :configure_annotation_file, :process_annotation_file]
+  before_action :set_item, only: [:add_annotation_file, :destroy, :edit, :update, :delete_annotation_layer, :download_annotation_file, :configure_annotation_file, :process_annotation_file]
 
   # GET /items
   # GET /items.json
@@ -74,6 +74,11 @@ class ItemsController < ApplicationController
   def add_annotation_file
     annotation_file = AnnotationFile.new(@item.canvases.first, item_params[:layer], item_params[:annotation_file])
     annotation_file.park(session[:github_token])
+    redirect_to configure_annotation_file_path(@item.user_name, @item.repo_name, @item.slug, annotation_file.basename)
+  end    
+
+  def process_annotation_file
+    annotation_file = AnnotationFile.from_file(@item.canvases.first, item_params[:layer], params[:annotation_file_basename])
     if annotation_file.save(session[:github_token])
       redirect_to item_path(@item.user_name, @item.repo_name, @item.slug)
     end
@@ -93,6 +98,10 @@ class ItemsController < ApplicationController
     send_file(File.join(canvas.canvas_path, "originals", file), filename: file)
   end
 
+  def configure_annotation_file
+    @canvas = @item.canvases.first
+    @file = params[:file]
+  end
 
   # GET /items/1/edit
   def edit

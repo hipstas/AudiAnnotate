@@ -1,23 +1,33 @@
 class AnnotationFile
-  attr_accessor :layer
+  attr_accessor :layer, :filename, :canvas, :layer
 
-  def initialize(canvas, layer, uploaded_file)
+  def initialize(canvas=nil, layer=nil, uploaded_file=nil)
     @canvas = canvas
     @uploaded_file = uploaded_file
     @layer = layer
   end
 
+  def self.from_file(canvas, layer, basename)
+    file = AnnotationFile.new
+    file.canvas = canvas
+    file.layer = layer
+    file.filename = basename
+
+    file
+  end
+
   def park(access_token)
     Dir.mkdir(@canvas.canvas_path) unless Dir.exists?(@canvas.canvas_path)
     Dir.mkdir(parked_filepath) unless Dir.exists?(parked_filepath)
-    File.write(parked_filename,File.read(@uploaded_file))
+    @filename = parked_filename
+    File.write(@filename,File.read(@uploaded_file))
   end
 
   def save(access_token)
     # TODO validation
     config = {}
     begin
-      csv = CSV.read(@uploaded_file, col_sep: "\t", quote_char: "𒊬") # people may use double-quotes but should not be annotating in cuneiform
+      csv = CSV.read(File.join(parked_filepath, filename), col_sep: "\t", quote_char: "𒊬") # people may use double-quotes but should not be annotating in cuneiform
       # configuration specific to Audacity uploads
       config = {
         col_sep: "\t",
@@ -29,7 +39,7 @@ class AnnotationFile
       }
     rescue
 
-      contents = File.read(@uploaded_file)
+      contents = File.read(File.join(parked_filepath, filename))
       detection = CharlockHolmes::EncodingDetector.detect(contents)
 
 
@@ -50,7 +60,7 @@ class AnnotationFile
 
       # TODO store config in first-class object project wide (to be filled in
       # by an import wizard)
-      csv = CSV.read(@uploaded_file, 
+      csv = CSV.read(File.join(parked_filepath, filename), 
                       :encoding => "bom|#{detection[:encoding]}",
                       :col_sep => config[:col_sep], 
                       :quote_char => '"', 
@@ -84,6 +94,14 @@ class AnnotationFile
 
 
     @canvas.item.save(access_token)
+  end
+
+  def filename
+    @filename
+  end
+
+  def basename
+    File.basename(@filename)
   end
 
   def parked_filename
