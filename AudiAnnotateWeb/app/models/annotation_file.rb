@@ -23,49 +23,29 @@ class AnnotationFile
     File.write(@filename,File.read(@uploaded_file))
   end
 
-  def save(access_token)
-    # TODO validation
-    config = {}
-    begin
-      csv = CSV.read(File.join(parked_filepath, filename), col_sep: "\t", quote_char: "𒊬") # people may use double-quotes but should not be annotating in cuneiform
-      # configuration specific to Audacity uploads
-      config = {
-        col_sep: "\t",
-        layer_col: nil,
-        text_col: 2,
-        start_col: 0,
-        end_col: 1,
-        headers: false
-      }
-    rescue
+  def detect_delimiter()
+    tab_csv = CSV.read(File.join(parked_filepath, filename), col_sep: "\t", quote_char: "𒊬")
+    comma_csv = CSV.read(File.join(parked_filepath, filename), col_sep: ",", quote_char: "𒊬")
+    if tab_csv[0].size > 1
+      "\t"
+    elsif comma_csv[0].size > 1 
+      ","
+    else
+      "not found" 
+    end   
+  end
 
-      contents = File.read(File.join(parked_filepath, filename))
-      detection = CharlockHolmes::EncodingDetector.detect(contents)
+  def sample_snippet()
+    delimiter=detect_delimiter
+    csv=CSV.read(File.join(parked_filepath, filename), col_sep: delimiter, quote_char: "𒊬")
+    csv[0..10]
+  end
 
-
-      # configuration specific to Adobe Premiere
-      config = {
-        col_sep: "\t",
-        layer_col: 0,
-        text_col: 1,
-        start_col: 2,
-        end_col: 3,
-        headers: true
-      }
-
-      # to figure out quote string an delimiter, consider testing whether
-      # csv.map { |r| r.count }.max == csv.map { |r| r.count }.in
-      # to see whether the results of csv parsing are rectangular or jagged
-
-
-      # TODO store config in first-class object project wide (to be filled in
-      # by an import wizard)
-      csv = CSV.read(File.join(parked_filepath, filename), 
-                      :encoding => "bom|#{detection[:encoding]}",
-                      :col_sep => config[:col_sep], 
-                      :quote_char => '"', 
-                      :liberal_parsing => true)
-    end
+  def save(access_token, config)
+    csv = CSV.read(File.join(parked_filepath, filename), 
+                    :col_sep => config[:col_sep], 
+                    :quote_char => '"', 
+                    :liberal_parsing => true)
 
 
     layers = {}

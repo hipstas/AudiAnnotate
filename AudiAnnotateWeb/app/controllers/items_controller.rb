@@ -79,7 +79,16 @@ class ItemsController < ApplicationController
 
   def process_annotation_file
     annotation_file = AnnotationFile.from_file(@item.canvases.first, item_params[:layer], params[:annotation_file_basename])
-    if annotation_file.save(session[:github_token])
+
+    config = {
+      col_sep: params[:delimiter],
+      layer_col: params[:layer].to_i,
+      text_col: params[:annotation].to_i,
+      start_col: params[:start_time].to_i,
+      end_col: params[:end_time].to_i,
+      headers: params[:headers]=="1"
+    }
+    if annotation_file.save(session[:github_token], config)
       redirect_to item_path(@item.user_name, @item.repo_name, @item.slug)
     end
   end    
@@ -101,6 +110,7 @@ class ItemsController < ApplicationController
   def configure_annotation_file
     @canvas = @item.canvases.first
     @file = params[:file]
+    @annotation_file = AnnotationFile.from_file(@item.canvases.first, nil, params[:file])
   end
 
   # GET /items/1/edit

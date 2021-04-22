@@ -29,7 +29,49 @@
         </div>
       </div>
 
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+            <% @annotation_file.sample_snippet.first.each_with_index do |cell, i|%>
+            <th>
+              <%= (i+65).chr %>
+            </th>
+            <% end %>
+          </tr>
+        </thead>
+        <tbody>
+          <% @annotation_file.sample_snippet.each do |row| %>
+          <tr>
+            <% row.each do |cell| %>
+            <td><%= cell %></td>
+            <% end %>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <div class="field">
+        <%= check_box_tag(:headers, "1", class: "form-check-input") %> <%= label(:headers, "First row is a header") %>
+      </div>
+      <div class="field">
+        <%= label(:start_time, "Which column contains the start time?") %>
+          <%= select_tag(:start_time, options_for_select(@annotation_file.sample_snippet.first.map.with_index{ |cell,i| i }.map{|i| [(65+i).chr, i]})) %>
+      </div>
+      <div class="field">
+        <%= label(:end_time, "Which column contains the end time?") %>
+        <%= select_tag(:end_time, options_for_select(@annotation_file.sample_snippet.first.map.with_index{ |cell,i| i }.map{|i| [(65+i).chr, i]})) %>
+      </div>
+        <div class="field">
+        <%= label(:annotation, "Which column contains the annotation?") %>
+        <%= select_tag(:annotation, options_for_select(@annotation_file.sample_snippet.first.map.with_index{ |cell,i| i }.map{|i| [(65+i).chr, i]})) %>
+      </div>
+      <div class="field">
+        <%= label(:layer, "Which column contains the layer label?") %>
+        <%= select_tag(:layer, options_for_select(@annotation_file.sample_snippet.first.map.with_index{ |cell,i| i }.map{|i| [(65+i).chr, i]})) %>
+      </div>
+
       <%= hidden_field_tag(:annotation_file_basename, @file) %>
+      <%= hidden_field_tag(:delimiter, @annotation_file.detect_delimiter) %>
       <%= form.hidden_field(:label) %>
       <%= form.hidden_field(:repo_name) %>
       <%= form.hidden_field(:user_name) %>
