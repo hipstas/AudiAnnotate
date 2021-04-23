@@ -21,14 +21,6 @@
         <h3>Process annotation file</h3>
       <%= form_with(model: @item, url: process_annotation_file_path, local: true) do |form| %>
 
-
-      <div class="form-group row">
-        <%= form.label :layer, "Annotation Layer Label*", class: "col-sm-12 col-form-label" %>
-        <div class="col-sm-12">
-          <%= form.text_field :layer, class: 'form-control' %>
-        </div>
-      </div>
-
       <table class="table table-bordered table-dark">
         <thead>
           <tr>
@@ -53,22 +45,41 @@
       <div class="field">
         <%= check_box_tag(:headers, "1", class: "form-check-input") %> <%= label(:headers, "First row is a header") %>
       </div>
+
+      <h3>Column Configuration</h3>
       <div class="field">
         <%= label(:start_time, "Which column contains the start time?") %>
-          <%= select_tag(:start_time, options_for_select(@annotation_file.sample_snippet.first.map.with_index{ |cell,i| i }.map{|i| [(65+i).chr, i]})) %>
+          <%= select_tag(:start_time, options_for_select(@annotation_file.sample_snippet.first.map.with_index{ |cell,i| i }.map{|i| [(65+i).chr, i]}), class: 'form-control') %>
       </div>
       <div class="field">
         <%= label(:end_time, "Which column contains the end time?") %>
-        <%= select_tag(:end_time, options_for_select(@annotation_file.sample_snippet.first.map.with_index{ |cell,i| i }.map{|i| [(65+i).chr, i]})) %>
+        <%= select_tag(:end_time, options_for_select(@annotation_file.sample_snippet.first.map.with_index{ |cell,i| i }.map{|i| [(65+i).chr, i]}), class: 'form-control') %>
       </div>
         <div class="field">
         <%= label(:annotation, "Which column contains the annotation?") %>
-        <%= select_tag(:annotation, options_for_select(@annotation_file.sample_snippet.first.map.with_index{ |cell,i| i }.map{|i| [(65+i).chr, i]})) %>
+        <%= select_tag(:annotation, options_for_select(@annotation_file.sample_snippet.first.map.with_index{ |cell,i| i }.map{|i| [(65+i).chr, i]}), class: 'form-control') %>
       </div>
-      <div class="field">
-        <%= label(:layer, "Which column contains the layer label?") %>
-        <%= select_tag(:layer, options_for_select(@annotation_file.sample_snippet.first.map.with_index{ |cell,i| i }.map{|i| [(65+i).chr, i]})) %>
+
+      <h3>Layers</h3>
+      <div class="form-group">
+        <%= label(:has_layer_column, "Does this file contain a layer column?") %>
+        <%= select_tag(:has_layer_column, 
+                        options_for_select(['Yes', 'No']), 
+                        class: "form-control", id:"file-has-layer-column") %>
       </div>
+
+
+      <div class="field" id="layer-column-div">
+        <%= label(:layer_column, "Which column contains the layer label?") %>
+        <%= select_tag(:layer_column, options_for_select(@annotation_file.sample_snippet.first.map.with_index{ |cell,i| i }.map{|i| [(65+i).chr, i]}), class: 'form-control') %>
+      </div>
+      <div class="form-group row" id="layer-label-div">
+        <%= form.label :layer_label, "Annotation Layer Label*", class: "col-sm-12 col-form-label" %>
+        <div class="col-sm-12">
+          <%= form.text_field :layer_label, class: 'form-control' %>
+        </div>
+      </div>
+
 
       <%= hidden_field_tag(:annotation_file_basename, @file) %>
       <%= hidden_field_tag(:delimiter, @annotation_file.detect_delimiter) %>
@@ -86,3 +97,20 @@
     </div>
   </div>
 </div>
+
+
+<script>
+  $('#layer-column-div').show();
+  $('#layer-label-div').hide();
+
+  $("#file-has-layer-column").change(function() {
+    if ($(this).val() == "Yes") {
+      $('#layer-column-div').show();
+      $('#layer-label-div').hide();
+    } else {
+      $('#layer-column-div').hide();
+      $('#layer-label-div').show();
+    }
+  });
+
+</script>

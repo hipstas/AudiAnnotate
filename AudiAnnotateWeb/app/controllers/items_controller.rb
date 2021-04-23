@@ -78,11 +78,20 @@ class ItemsController < ApplicationController
   end    
 
   def process_annotation_file
-    annotation_file = AnnotationFile.from_file(@item.canvases.first, item_params[:layer], params[:annotation_file_basename])
+    annotation_file = AnnotationFile.from_file(
+      @item.canvases.first, 
+      params[:item][:layer_label], 
+      params[:annotation_file_basename])
+
+    if params[:has_layer_column] == "No"
+      layer_column = nil
+    else
+      layer_column = params[:layer_column].to_i
+    end
 
     config = {
       col_sep: params[:delimiter],
-      layer_col: params[:layer].to_i,
+      layer_col: layer_column,
       text_col: params[:annotation].to_i,
       start_col: params[:start_time].to_i,
       end_col: params[:end_time].to_i,

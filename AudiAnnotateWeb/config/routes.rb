@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   delete 'project/:user_name/:repo_name/items/:slug', to: 'items#destroy', as: 'destroy_item'
   post 'project/:user_name/:repo_name/items/:slug/files', to: 'items#add_annotation_file', as: 'add_annotation_file'
   post 'project/:user_name/:repo_name/items/:slug/process', to: 'items#process_annotation_file', as: 'process_annotation_file'
-  get 'project/:user_name/:repo_name/items/:slug/files/:layer/destroy', to: 'items#delete_annotation_layer', as: 'delete_annotation_layer'
+  get 'project/:user_name/:repo_name/items/:slug/files/:layer/destroy', to: 'items#delete_annotation_layer', as: 'delete_annotation_layer', constraints: { layer: /[^\/]+/ }
   get 'project/:user_name/:repo_name/items/:slug/files/:file/download', to: 'items#download_annotation_file', as:  'download_annotation_file', constraints: { file: /[^\/]+/ }
   get 'project/:user_name/:repo_name/items/:slug/files/:file/configure', to: 'items#configure_annotation_file', as:  'configure_annotation_file', constraints: { file: /[^\/]+/ }
   get 'project/:user_name/:repo_name/items/import/new', to: 'items#new_import', as: 'new_import_item'
