@@ -18,7 +18,7 @@
         <div class="text-light"><%= link_to 'My Projects | ', my_projects_path() %>
         <%= link_to 'Sign Out', '/user/logout' %></div>
       <% else %>
-      <div class="text-light">Create your own project on AudiAnnotate by signing in with Github <%= link_to 'Sign in', '/auth/github', :class => "btn btn-light btn-lg" %></div>
+      <div class="text-light">Create your own project on AudiAnnotate by signing in with Github <%= button_to 'Sign in', '/auth/github', :class => "btn btn-light btn-lg" %></div>
       <% end %>
     </nav>
     <div class="bg text-light">
