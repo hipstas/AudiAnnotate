@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
-  before_action :connect, only: [:add_annotation_file, :create, :destroy, :edit, :show, :update, :delete_annotation_layer, :configure_annotation_file, :process_annotation_file]
-  before_action :set_item, only: [:add_annotation_file, :destroy, :edit, :update, :delete_annotation_layer, :download_annotation_file, :configure_annotation_file, :process_annotation_file]
+  before_action :connect, only: [:add_annotation_file, :create, :destroy, :edit, :show, :update, :delete_annotation_layer, :configure_annotation_file, :process_annotation_file, :delete_annotation_file]
+  before_action :set_item, only: [:add_annotation_file, :destroy, :edit, :update, :delete_annotation_layer, :download_annotation_file, :configure_annotation_file, :process_annotation_file, :delete_annotation_file]
 
   # GET /items
   # GET /items.json
@@ -113,6 +113,13 @@ class ItemsController < ApplicationController
     canvas = @item.canvases.first
     file = params[:file]
     send_file(File.join(canvas.canvas_path, "originals", file), filename: file)
+  end
+
+  def delete_annotation_file
+    canvas = @item.canvases.first
+    file = params[:file]
+    File.unlink(File.join(canvas.canvas_path, "originals", file))
+    redirect_to item_path(@item.user_name, @item.repo_name, @item.slug)    
   end
 
   def configure_annotation_file

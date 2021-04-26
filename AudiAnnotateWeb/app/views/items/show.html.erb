@@ -89,7 +89,7 @@
       <h3> Annotation Files </h3>
         <% @item.canvases.each do |canvas| %>
         <% canvas.annotation_files.each do |file| %>
-          <%= file %> <%= link_to("Download", download_annotation_file_path(@item.user_name, @item.repo_name, @item.slug, file)) %><br/>
+          <%= file %> <%= link_to("Download", download_annotation_file_path(@item.user_name, @item.repo_name, @item.slug, file)) %> <%= link_to("Delete", delete_annotation_file_path(@item.user_name, @item.repo_name, @item.slug, file), :data => {:confirm => "Are you sure you want to delete #{file}?"}) %><br/>
         <% end %>
       <% end %>
     </div>
