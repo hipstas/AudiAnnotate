@@ -50,11 +50,12 @@ class AnnotationFile
       roo_object = Roo::Spreadsheet.open(parked_file)
       raw_csv = roo_object.to_csv
       csv = CSV.new(raw_csv)
+      csv_array = csv.read
     else
-      csv = CSV.read(parked_file, col_sep: detect_delimiter, quote_char: "𒊬")
+      csv_array = CSV.read(parked_file, col_sep: detect_delimiter, quote_char: "𒊬")
     end
 
-    csv.read
+    csv_array
   end
 
 
