@@ -36,17 +36,30 @@ class AnnotationFile
   end
 
   def sample_snippet()
-    delimiter=detect_delimiter
-    csv=CSV.read(File.join(parked_filepath, filename), col_sep: delimiter, quote_char: "𒊬")
+    csv=read_csv
     csv[0..10]
   end
 
-  def save(access_token, config)
-    csv = CSV.read(File.join(parked_filepath, filename), 
-                    :col_sep => config[:col_sep], 
-                    :quote_char => '"', 
-                    :liberal_parsing => true)
+  def is_xls?
+    File.extname(filename) == '.xlsx'
+  end
 
+  def read_csv
+    parked_file = File.join(parked_filepath, filename)
+    if is_xls?
+      roo_object = Roo::Spreadsheet.open(parked_file)
+      raw_csv = roo_object.to_csv
+      csv = CSV.new(raw_csv)
+    else
+      csv = CSV.read(parked_file, col_sep: detect_delimiter, quote_char: "𒊬")
+    end
+
+    csv.read
+  end
+
+
+  def save(access_token, config)
+    csv = read_csv
 
     layers = {}
     if config[:layer_col].nil?

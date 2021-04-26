@@ -42,6 +42,7 @@
         </tbody>
       </table>
 
+      <h3>Row Configuration</h3>
       <div class="field">
         <%= check_box_tag(:headers, "1", class: "form-check-input") %> <%= label(:headers, "First row is a header") %>
       </div>
@@ -60,7 +61,7 @@
         <%= select_tag(:annotation, options_for_select(@annotation_file.sample_snippet.first.map.with_index{ |cell,i| i }.map{|i| [(65+i).chr, i]}), class: 'form-control') %>
       </div>
 
-      <h3>Layers</h3>
+      <h3>Layer Configuration</h3>
       <div class="form-group">
         <%= label(:has_layer_column, "Does this file contain a layer column?") %>
         <%= select_tag(:has_layer_column, 
@@ -82,7 +83,6 @@
 
 
       <%= hidden_field_tag(:annotation_file_basename, @file) %>
-      <%= hidden_field_tag(:delimiter, @annotation_file.detect_delimiter) %>
       <%= form.hidden_field(:label) %>
       <%= form.hidden_field(:repo_name) %>
       <%= form.hidden_field(:user_name) %>

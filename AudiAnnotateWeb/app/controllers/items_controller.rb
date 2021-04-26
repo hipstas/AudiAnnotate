@@ -90,7 +90,6 @@ class ItemsController < ApplicationController
     end
 
     config = {
-      col_sep: params[:delimiter],
       layer_col: layer_column,
       text_col: params[:annotation].to_i,
       start_col: params[:start_time].to_i,

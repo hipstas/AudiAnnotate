@@ -16,7 +16,7 @@ class Canvas
 
   def annotation_files
     files = Dir.glob(File.join(canvas_path, "originals", "*"))
-    files.map{|fullpath| File.basename(fullpath)}
+    files.map{|fullpath| File.basename(fullpath)}.sort
   end
 
   def item
