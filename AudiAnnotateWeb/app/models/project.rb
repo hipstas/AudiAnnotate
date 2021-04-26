@@ -87,8 +87,14 @@ class Project
 
   def add_item(item)
     navigation = self.navigation
-    navigation << "pages/#{item.slug}.md"
-    File.write(navigation_path, navigation.to_yaml)
+    nav_path = "pages/#{item.slug}.md"
+    unless navigation.include? nav_path
+      navigation << nav_path
+      File.write(navigation_path, navigation.to_yaml)
+    end
+    if navigation.size > navigation.uniq.size
+      File.write(navigation_path, navigation.uniq.to_yaml)
+    end
   end
 
 
