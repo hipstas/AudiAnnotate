@@ -4,7 +4,7 @@
 
 ### Summary
 
-The list below includes a selection of citations and resources related to audio annotation. The goal of this compilation was to find current standards or reference frameworks being used to structure audio annotations or analysis. We found that audio annotation standards or frameworks are being used and researched in areas related to linguistics, archives and libraries, music annotation, and machine learning and automation, among others. Further, standards for transcription for accessibility of recordings and for oral histories are included below as related resources. 
+The list below includes a selection of citations and resources related to audio annotation. The goal of this list is to  compile current standards or reference frameworks being used to structure audio annotations or analysis. We found that audio annotation standards or frameworks are being used and researched in areas related to linguistics, archives and libraries, music annotation, and machine learning and automation, among others. Further, standards for transcription for accessibility of recordings and for oral histories are included below as related resources. 
 
 #### Linguistic Annotation
 
