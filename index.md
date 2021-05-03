@@ -16,7 +16,7 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
   * [*The Kindergarten Teacher*](https://zillingworth.github.io/the-kindergarten-teacher-poetry/), annotations by Zoe Bursztajn-Illingworth
  
 #### AudiAnnotate in the Classroom:
- * [Lesson Plan and Resources](lessonplan.md)
+ * [Lesson Plan and Resources](lesson-plan.md)
  * Example Project: [John Beecher - Criminal Syndicalism Case, McComb, Mississippi (Side 1)](https://kywark.github.io/beecher-syndicalism/beecher-criminal-syndicalism-case-mccomb-mississippi-side-1-/#?c=&m=&s=&cv=), from the Harry Ransom Center’s [John Beecher Sound Recordings Collection](https://hrc.contentdm.oclc.org/digital/collection/p15878coll1/id/37/rec/1), annotations and transcription by Kylie Warkentin and Bethany Radcliff
 
 #### Other Resources
