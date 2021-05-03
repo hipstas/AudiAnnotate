@@ -21,6 +21,7 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
 
 #### Other Resources
 * [AudiAnnotate Guide to Annotating Film and Video Using Terminology Standard to Film Criticism and Production](videonnotationguide.md) by Zoe Bursztajn-Illingworth and Janet Reinschmidt
+* [List of Audio Annotation Standards and Frameworks](audio-annotation-resources.md) compiled by Bethany Radcliff and Kylie Warkentin
 * [IIIF Resources and Examples](resources.md)
 * [Virtual Workshop](workshop.md)
 
