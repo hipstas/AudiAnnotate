@@ -1,6 +1,6 @@
 # Lesson Plans
 
-The lessons below serve as an introduction to annotation as a method for understanding sensitive audiovisual resources, structuring annotations in a machine-readable format, and uploading and presenting audio annotations using the AudiAnnotate application.Both lessons focus on engaging with sensitive archival material in individual or group settings. The first lesson may also be read as a general introduction to annotating with AudiAnnotate, but includes tips for classroom settings. The second lesson is structured as a more traditional classroom lesson plan. The pages throughout the lesson serves as guides for teachers and students. 
+The lessons below serve as an introduction to annotation as a method for understanding sensitive audiovisual resources, structuring annotations in a machine-readable format, and uploading and presenting audio annotations using the [AudiAnnotate application](http://audiannotate.brumfieldlabs.com/). Both lessons focus on engaging with sensitive archival material in individual or group settings. The first lesson may also be read as a general introduction to annotating with AudiAnnotate, but includes tips for classroom settings. The second lesson is structured as a more traditional classroom lesson plan. The pages throughout the lesson serves as guides for teachers and students. 
 
 
 
