@@ -12,7 +12,7 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
   * [Example audio manifest](https://github.com/bethanycayeradcliff/margaret-atwood-spokenweb/blob/gh-pages/_data/margaret-atwood-at-sgwu-1974/manifest.json) created by Bethany Radcliff
   
 #### AudiAnntotate Video Examples:
-  * [*Camille*](https://benwbrum.github.io/mp4/camille-test/#?c=&m=&s=&cv=), annotations by Janet Reinschmidt
+  * [*Camille*](https://jreinschmidt.github.io/camille-1921/), annotations by Janet Reinschmidt
   * [*The Kindergarten Teacher*](https://zillingworth.github.io/the-kindergarten-teacher-poetry/), annotations by Zoe Bursztajn-Illingworth
  
 #### AudiAnnotate in the Classroom:
