@@ -61,11 +61,14 @@ Now you have created an AudiAnnotate project, with all information stored in a G
 Now, you’re on the annotations page, where you can manage your project’s annotations. Annotations are uploaded to AudiAnnotate via .tsv file(s). Each .tsv file uploaded to your AudiAnnotate project is one annotation layer. Your resulting project page may present one or more annotation layers.
 
  7\. Select “Choose file.” Choose the .tsv (or .txt from Audacity) that you would like to add to your project.
- 8\. Select  “Add” at the bottom of the page. This will generate your annotations and align them in the IIIF manifest with the audiovisual file.
+
+8\. Select  “Add” at the bottom of the page. This will generate your annotations and align them in the IIIF manifest with the audiovisual file.
+ 
  9\. On the next screen, you will configure your file so the application knows how to read each column. 
   - Under "Row Header," uncheck the check box if the first row is not your column titles/header
   - Under "Column Configuration" use the dropdowns to select the appropriate label for each column that corresponds to start time, end time, and annotation
   - If your file contains an additional column with a layer label, select "yes" on the dropdown under "Layer Configuration" and select the apprpriate column. If your file does not have a column for layer label, select "no" in the dropdown. You will then be prompted to name your layer in the field "Annotation Layer Label." 
+ 
  10\. You may now add additional annotation layers to the same audiovisual item by repeating steps 7 through 9.
 
 ***If you are accessing an existing project to add annotations:***
