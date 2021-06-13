@@ -44,12 +44,19 @@ Now you have created an AudiAnnotate project, with all information stored in a G
 
 #### Adding an Audiovisual Item
  5\. On the Audio Files page, select “Create Item Manifest.” This creates a new item in the IIIF manifest associated with your project. This is where you will add metadata for your audiovisual material.
+ 
     - Add a label for your audiovisual file. The label refers to the title of the audiovisual material to which you will be providing a URL and should be human-readable.
+    
     - Add “Audio File URL.” This is the direct link to the audiovisual file.If you need to create a link, see our [Supplemental Documentation](#supplemental) below.
+    
     - Add the duration of your audiovisual file. Duration can be input in minutes:seconds or hours:minutes:seconds. 
+    
     - Item Homepage URL is the item page where the audiovisual material was retrieved. This, and the fields below, will add provenance metadata to the IIIF manifest.
+    
     - Provider name is the organization that made the recording available.
+    
     - Provider URL is a link to the organization that made this audiovisual material available.
+    
 
  6\. Once metadata has been added, select “Save” to save reference and metadata to this item in the IIF manifest.
  
