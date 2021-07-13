@@ -3,7 +3,7 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
 ### Using AudiAnnotate 
 * [AudiAnnotate Application](http://audiannotate.brumfieldlabs.com/)
 * [Getting Started: Workflow Documentation and Demonstration Videos](documentation.md) 
-* [Classroom QuickStart Guide] (https://bethanycayeradcliff.github.io/spokenweb-pedagogy-workshop/classroom-quick-start-guide) for teaching with AudiAnnotate
+* [Classroom QuickStart Guide](https://bethanycayeradcliff.github.io/spokenweb-pedagogy-workshop/classroom-quick-start-guide) for teaching with AudiAnnotate
 
 #### AudiAnnotate Audio Examples: 
   * [Anne Sexton, Sweetbriar College, 1966](https://tanyaclement.github.io/sexton_sweetbriar_1966/), annotations and transcription by Tanya Clement
