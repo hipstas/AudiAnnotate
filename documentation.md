@@ -293,6 +293,15 @@ Once a collaborator has created a pull request from their copied repository requ
 #### Creating Annotations (before using AudiAnnotate)
 AudiAnnotate exists as a tool to compile and present annotations. Because of that, you do not create your annotations in AudiAnnotate, but bring your existing annotations to the application. Editing software like Audacity and Adobe Premiere can facilitate the annotation-creation process, but because annotations just need to be uploaded as structured data on a simple tab-separated file, you do not need to use other software if that is not your preference. The instructions below will walk you through annotation creation using Audacity, a simple spreadsheet, and Adobe Premiere.
 
+---
+
+Note on Audacity Spyware Controversy: 
+
+Audacity was recently accused of potentially being spyware, when a [new privacy policy](https://www.audacityteam.org/about/desktop-privacy-notice/#:~:text=This%20Privacy%20Notice%20(%E2%80%9CNotice%E2%80%9C,limited%20Personal%20Data%20about%20you.) mentioned that data may be shared with the company that recently acquired Audacity, WSM Group, that has their headquarters in Russia. Audacity published [a statement on GitHub](https://github.com/audacity/audacity/discussions/1225) that shares more context on the privacy policy update. The post mentions that Audacity does not sell any 3rd party data, and the shares that data collected at the desktop level includes IP address, OS version and CPU type, and error report data. 
+
+
+---
+
 ### Creating Annotations Using Audacity
 
 ***Downloading Audacity***
