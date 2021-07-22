@@ -17,7 +17,7 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
  
 #### AudiAnnotate in the Classroom:
  * [Lesson Plans and Introductory Resources](lesson-plan.md)
- * Example Project: [John Beecher - Criminal Syndicalism Case, McComb, Mississippi (Side 1)](https://kywark.github.io/example-sensitive-audio-lesson-syndicalism/), from the Harry Ransom Center’s [John Beecher Sound Recordings Collection](https://hrc.contentdm.oclc.org/digital/collection/p15878coll1/id/37/rec/1), annotations and transcription by Kylie Warkentin and Bethany Radcliff
+ * Example Project: [Example Sensitive Audio Lesson: John Beecher, McComb “Criminal Syndicalism” Case](https://kywark.github.io/example-sensitive-audio-lesson-syndicalism/), from the Harry Ransom Center’s [John Beecher Sound Recordings Collection](https://hrc.contentdm.oclc.org/digital/collection/p15878coll1/id/37/rec/1), annotations and transcription by Kylie Warkentin and Bethany Radcliff
 
 #### Other Resources
 * [AudiAnnotate Guide to Annotating Film and Video Using Terminology Standard to Film Criticism and Production](videonnotationguide.md) by Zoe Bursztajn-Illingworth and Janet Reinschmidt
