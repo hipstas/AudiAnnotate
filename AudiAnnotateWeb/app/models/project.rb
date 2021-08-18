@@ -175,7 +175,7 @@ class Project
     "https://#{user_name}.github.io/#{repo_name}"
   end
 
-  JEKYLL_INITIAL_FILES = %w(404.html  assets  _data  Gemfile  Gemfile.lock  _includes  index.markdown  _items  _layouts _manifests _posts .gitignore)
+  JEKYLL_INITIAL_FILES = %w(404.html  _data  Gemfile  Gemfile.lock  index.markdown  _items _manifests _posts .gitignore)
   JEKYLL_INITIAL_BLACKLIST = %w(_items/anne-sexton--woodberry--1974.md _data/anne-sexton--woodberry--1974)
 
 
