@@ -57,6 +57,35 @@
   </table>
 </div>
 
+<% unless @item.external_manifest_url.blank? %>
+  <% if @item.manifest_json['items'].first %>
+    <% external_annotation_pages = @item.manifest_json['items'].first['annotations'] %>
+    <% if external_annotation_pages && external_annotation_pages.size > 0 %>
+      <div id='import-annotation-form' class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <h3>Import annotations</h3>
+            <% external_annotation_pages.each do |external_page| %>
+              <div class="row">
+                <!-- the structures in thsi manifest look suspicious: why not have an array of label hashes?  Why have the value of the 'en' key be an array?  this might have been a mis-reading of the spec -->
+                <div class="col-sm-12">
+                  <%= link_to(external_page['label']['en'].first, 
+                              review_external_annotations_path( @item.user_name, 
+                                                                @item.repo_name, 
+                                                                @item.slug, 
+                                                                external_page['id']))   %>
+                </div>                 
+              </div>                 
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+
+
 <div id='add-annotation-form' class="container">
   <div class="row">
     <div class="col-sm-4">

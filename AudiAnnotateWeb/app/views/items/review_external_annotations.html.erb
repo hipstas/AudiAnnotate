@@ -1,0 +1,57 @@
+
+<div id='notice-container' class="container">
+  <div class="row">
+    <div class="col-sm-11" >
+      <h2>
+        <%= link_to 'My Projects', my_projects_path %> 
+        | 
+        <%= link_to @item.repo_name, project_path(@item.user_name, @item.repo_name) %>
+        |
+        <%= link_to @item.label, item_path(@item.user_name, @item.repo_name, @item.slug) %>      
+      </h2>
+    </div>
+    <%= render 'shared/build_status' %>
+  </div>
+<div id='annotation-list' class="container">
+  <h2>Annotations in <i><%= @external_annotation_page['label'].values.join(' ') %></i></h2>
+  <table id="annotation-table" class="table table-bordered table-dark">
+    <thead>
+      <tr>
+        <th>Target</th>
+        <th>Body</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @external_annotation_page['items'].each do |raw_annotation| %>
+        <% if raw_annotation['body']  %>
+          <tr>
+            <td >
+              <%= raw_annotation['target'] %>
+            </td>
+            <td>
+              <dl>
+                <% raw_annotation['body'].each_pair do |k,v| %>
+                  <dt>
+                    <%= k %>
+                  </dt>
+                  <dd>
+                    <%= v %>
+                  </dd>
+                <% end %>
+              </dl>
+            </td>
+          </tr>
+        <% end %>
+      <% end %> 
+    </tbody>
+  </table>
+</div>
+
+
+<script>
+  $(document).ready( function() {
+    $('#annotation-table').DataTable(
+      { paging: false }
+      );
+  } );
+</script>

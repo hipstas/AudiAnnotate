@@ -26,6 +26,7 @@ class AnnotationFile
   def detect_delimiter()
     tab_csv = CSV.read(File.join(parked_filepath, filename), col_sep: "\t", quote_char: "𒊬")
     comma_csv = CSV.read(File.join(parked_filepath, filename), col_sep: ",", quote_char: "𒊬")
+    binding.pry
     if tab_csv[0].size > 1
       "\t"
     elsif comma_csv[0].size > 1 

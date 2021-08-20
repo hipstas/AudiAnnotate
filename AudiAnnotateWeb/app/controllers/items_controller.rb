@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
-  before_action :connect, only: [:add_annotation_file, :create, :destroy, :edit, :show, :update, :delete_annotation_layer, :configure_annotation_file, :process_annotation_file, :delete_annotation_file]
-  before_action :set_item, only: [:add_annotation_file, :destroy, :edit, :update, :delete_annotation_layer, :download_annotation_file, :configure_annotation_file, :process_annotation_file, :delete_annotation_file]
+  before_action :connect, only: [:add_annotation_file, :create, :destroy, :edit, :show, :update, :delete_annotation_layer, :configure_annotation_file, :process_annotation_file, :delete_annotation_file, :import_external_annotations, :review_external_annotations]
+  before_action :set_item, only: [:add_annotation_file, :destroy, :edit, :update, :delete_annotation_layer, :download_annotation_file, :configure_annotation_file, :process_annotation_file, :delete_annotation_file, :review_external_annotations, :import_external_annotations]
 
   # GET /items
   # GET /items.json
@@ -162,6 +162,14 @@ class ItemsController < ApplicationController
       format.html { redirect_to project_path(@item.user_name, @item.repo_name), notice: 'Item was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def review_external_annotations
+    # find the link to the annotations within the manifest
+    at_id = params[:at_id]    
+    external_annotation_pages = @item.manifest_json['items'].first['annotations']
+    @external_annotation_page = external_annotation_pages.detect { |page| page['id'] == at_id}
+    # if the link has a body, use it -- otherwise dereference the annotation page
   end
 
   private
