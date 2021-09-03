@@ -132,7 +132,7 @@ class Item
 
     # remove the same from the repository
     git.remove(item_path, recursive: true)
-    git.remove(jekyll_collection_item_path, recursive: true)
+    git.remove(jekyll_page_item_path, recursive: true)
     git.remove(jekyll_collection_item_manifest_path, recursive: true)
     self.project.remove_item(self)
     git.add(self.project.navigation_path)

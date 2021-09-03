@@ -172,6 +172,20 @@ class ItemsController < ApplicationController
     # if the link has a body, use it -- otherwise dereference the annotation page
   end
 
+  def import_external_annotations
+    # find the link to the annotations within the manifest
+    at_id = params[:at_id]    
+    external_annotation_pages = @item.manifest_json['items'].first['annotations']
+    @external_annotation_page = external_annotation_pages.detect { |page| page['id'] == at_id}
+    # if the link has a body, use it -- otherwise dereference the annotation page
+    page = AnnotationPage.from_external(@external_annotation_page, @item.canvases.first) #, @canvas)
+    page.create
+    @item.save(session[:github_token])
+
+
+    render action: 'show'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_item
