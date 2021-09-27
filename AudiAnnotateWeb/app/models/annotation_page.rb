@@ -103,6 +103,13 @@ EOF
       seconds += md[3].to_i #add seconds
       seconds += md[4].to_f/100 #add hundreths of seconds
       seconds.to_s
+    elsif md=raw.match(/(\d+:)?(\d+):(\d+)(\.\d+)?/)
+      seconds = 0.0
+      seconds += md[1].gsub(/\D/,'').to_i*60*60 if md[1] #take hours convert to seconds
+      seconds += md[2].to_i*60 #take minutes convert to seconds
+      seconds += md[3].to_i #add seconds
+      seconds += md[4].to_f if md[4]
+      seconds.to_s
     else
       raw
     end
@@ -159,7 +166,7 @@ EOF
   # Manifest helpers
   #######################
   def slug
-    if @page['id'].match(@canvas.canvas_id)
+    if @page.nil? || @page['id'].match(@canvas.canvas_id)
       label.gsub(/\W/, '-').downcase
     else
       @page['id'].gsub(/\W/, '_')
