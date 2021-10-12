@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'project/:user_name/:repo_name/items/:slug/files/:file/delete', to: 'items#delete_annotation_file', as:  'delete_annotation_file', constraints: { file: /[^\/]+/ }
   get 'project/:user_name/:repo_name/items/import/new', to: 'items#new_import', as: 'new_import_item'
   post 'project/:user_name/:repo_name/items/import', to: 'items#import_manifest', as: 'import_manifest'
+  get 'project/:user_name/:repo_name/items/:slug/external/review/:at_id', to: 'items#review_external_annotations', as:  'review_external_annotations', :constraints => { :at_id => /.*/ }
+  post 'project/:user_name/:repo_name/items/:slug/external/import/:at_id', to: 'items#import_external_annotations', as:  'import_external_annotations', :constraints => { :at_id => /.*/ }
 
 
   post 'project/:user_name/:repo_name/pages', to: 'pages#create', as: 'create_page'

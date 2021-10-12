@@ -1,7 +1,7 @@
 class Item
   require 'open-uri'
   include ActiveModel::Model
-  attr_accessor :label, :slug, :user_name, :repo_name, :audio_url, :duration, :provider_uri, :provider_label, :homepage, :external_manifest_url
+  attr_accessor :label, :slug, :user_name, :repo_name, :audio_url, :duration, :provider_uri, :provider_label, :homepage, :external_manifest_url, :manifest_json
 
   def initialize(user_name, repo_name, label=nil, audio_url=nil, duration=nil, provider_uri=nil, provider_label=nil, homepage=nil)
     @project = Project.new(user_name, repo_name)
@@ -28,6 +28,11 @@ class Item
     item = Item.new(user_name, repo_name)
     item.slug=slug
     manifest = JSON.parse(File.read(item.manifest_path))
+    item.manifest_json = manifest
+    at_id = manifest['id']
+    if at_id != item.manifest_uri
+      item.external_manifest_url=at_id
+    end            
 
     item.label = manifest['label']['en'][0]
     item.homepage = manifest['homepage'][0]['id'] if manifest['homepage']
@@ -124,12 +129,11 @@ class Item
 
     # remove everything in the item path under _data
     FileUtils.rm_rf(item_path)
-    FileUtils.rm(jekyll_collection_page_path)
     FileUtils.rm(jekyll_collection_item_manifest_path)
 
     # remove the same from the repository
     git.remove(item_path, recursive: true)
-    git.remove(jekyll_collection_item_path, recursive: true)
+    git.remove(jekyll_page_item_path, recursive: true)
     git.remove(jekyll_collection_item_manifest_path, recursive: true)
     self.project.remove_item(self)
     git.add(self.project.navigation_path)

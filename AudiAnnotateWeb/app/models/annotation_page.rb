@@ -26,11 +26,23 @@ EOF
   end
 
   def label
-    @label || @page['label']
+    if @label
+      @label
+    else
+      if @page['label'].is_a? String
+        @page['label']
+      else
+        @page['label'].values.first.join("\n")
+      end
+    end
   end
 
   def label=(label)
     @label = label
+  end
+
+  def page=(page)
+    @page = page
   end
 
   def annotations
@@ -64,6 +76,13 @@ EOF
   end
 
 
+  def self.from_external(json, canvas)
+    page = AnnotationPage.new(canvas)
+    page.page = json
+
+    page
+  end
+
   def create
     Dir.mkdir(@canvas.canvas_path) unless Dir.exists?(@canvas.canvas_path)
 
@@ -84,46 +103,57 @@ EOF
       seconds += md[3].to_i #add seconds
       seconds += md[4].to_f/100 #add hundreths of seconds
       seconds.to_s
+    elsif md=raw.match(/(\d+:)?(\d+):(\d+)(\.\d+)?/)
+      seconds = 0.0
+      seconds += md[1].gsub(/\D/,'').to_i*60*60 if md[1] #take hours convert to seconds
+      seconds += md[2].to_i*60 #take minutes convert to seconds
+      seconds += md[3].to_i #add seconds
+      seconds += md[4].to_f if md[4]
+      seconds.to_s
     else
       raw
     end
   end
 
-  def page_contents(csv, config)
-    page = {
-      "@context": "http://iiif.io/api/presentation/3/context.json",
-      "id": "#{annotation_page_uri}",
-      "type": "AnnotationPage",
-      "label": @label
-    }
+  def page_contents(csv=nil, config=nil)
+    if csv # only generate from a csv if we have one
+      page = {
+        "@context": "http://iiif.io/api/presentation/3/context.json",
+        "id": "#{annotation_page_uri}",
+        "type": "AnnotationPage",
+        "label": @label
+      }
 
-    items = []
-    csv.each_with_index do |row, i|
-      next if row == []
-      wa = JSON.parse(PROTOTYPE)
-      # set the constants
-      wa["@context"] = "http://www.w3.org/ns/anno.jsonld"
-      wa["motivation"]=["supplementing", "commenting"]
-      body = { "type" => "TextualBody", "value" => row[config[:text_col]], "format" => "text/plain" }
-      wa["body"] = body
-      start_seconds=seconds_from_raw(row[config[:start_col]])
-      end_seconds=seconds_from_raw(row[config[:end_col]])
-      # parse them into seconds
-      if start_seconds==end_seconds
-        # point selection
-        selector = { "type" => "PointSelector", "t" => start_seconds }
-      else
-        # range selection
-        selector = {"type" => "RangeSelector", "t" => "#{start_seconds},#{end_seconds}" }
+      items = []
+      csv.each_with_index do |row, i|
+        next if row == []
+        wa = JSON.parse(PROTOTYPE)
+        # set the constants
+        wa["@context"] = "http://www.w3.org/ns/anno.jsonld"
+        wa["motivation"]=["supplementing", "commenting"]
+        body = { "type" => "TextualBody", "value" => row[config[:text_col]], "format" => "text/plain" }
+        wa["body"] = body
+        start_seconds=seconds_from_raw(row[config[:start_col]])
+        end_seconds=seconds_from_raw(row[config[:end_col]])
+        # parse them into seconds
+        if start_seconds==end_seconds
+          # point selection
+          selector = { "type" => "PointSelector", "t" => start_seconds }
+        else
+          # range selection
+          selector = {"type" => "RangeSelector", "t" => "#{start_seconds},#{end_seconds}" }
+        end
+        wa["id"] = annotation_uri(i)
+        wa["target"] = { "source" => @canvas.canvas_id, "selector" => selector }
+        items << wa
       end
-      wa["id"] = annotation_uri(i)
-      wa["target"] = { "source" => @canvas.canvas_id, "selector" => selector }
-      items << wa
+
+      page['items'] = items
+
+      JSON.pretty_generate(page)
+    else
+      JSON.pretty_generate(@page)
     end
-
-    page['items'] = items
-
-    JSON.pretty_generate(page)
   end
 
   def destroy(access_token)
@@ -136,7 +166,11 @@ EOF
   # Manifest helpers
   #######################
   def slug
-    label.gsub(/\W/, '-').downcase
+    if @page.nil? || @page['id'].match(@canvas.canvas_id)
+      label.gsub(/\W/, '-').downcase
+    else
+      @page['id'].gsub(/\W/, '_')
+    end
   end
 
   def annotation_page_file_path

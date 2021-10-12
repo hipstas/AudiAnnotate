@@ -5,12 +5,27 @@ class Annotation
   end
 
   def text
-    @json['body']['value']
+    body = @json['body']
+    if body.is_a? Hash
+      body = [body]
+    end
+    body.map {|e| e['value']}.join("\n")
   end
 
 
   def start_time
-    @json['target']['selector']['t']
+    if @json['target'].is_a? String
+      fragment = @json['target'].split('#')[1]
+      # md = fragment.match /t=([0-9.]+),?([0-9.]+)?/
+      md = fragment.match /t=([0-9.,]+)?/
+      if md
+        md[1]
+      else
+        'BAD FRAGMENT'
+      end
+    else
+      @json['target']['selector']['t']
+    end
   end
 
   def end_time
