@@ -17,8 +17,9 @@ class AnnotationFile
   end
 
   def park(access_token)
-    Dir.mkdir(@canvas.canvas_path) unless Dir.exists?(@canvas.canvas_path)
-    Dir.mkdir(parked_filepath) unless Dir.exists?(parked_filepath)
+    #Dir.mkdir(@canvas.canvas_path) unless Dir.exists?(@canvas.canvas_path)
+    #Dir.mkdir(parked_filepath) unless Dir.exists?(parked_filepath)
+    FileUtils.mkdir_p(parked_filepath)
     @filename = parked_filename
     File.write(@filename,File.read(@uploaded_file))
   end
@@ -102,7 +103,16 @@ class AnnotationFile
     File.join(parked_filepath,Time.now.gmtime.iso8601.gsub(/\D/,"") + "_" + @uploaded_file.original_filename)
   end
 
+  def old_parked_filename
+    File.join(old_parked_filepath,Time.now.gmtime.iso8601.gsub(/\D/,"") + "_" + @uploaded_file.original_filename)
+  end
+
   def parked_filepath
+    canvas_path = @canvas.canvas_path
+    canvas_path.sub('_data', '_originals')
+  end
+
+  def old_parked_filepath
     File.join(@canvas.canvas_path, "originals")
   end
 

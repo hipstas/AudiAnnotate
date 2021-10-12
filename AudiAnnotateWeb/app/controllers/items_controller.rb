@@ -112,13 +112,21 @@ class ItemsController < ApplicationController
   def download_annotation_file
     canvas = @item.canvases.first
     file = params[:file]
-    send_file(File.join(canvas.canvas_path, "originals", file), filename: file)
+    if File.exist?(File.join(canvas.canvas_path, "originals", file))
+      send_file(File.join(canvas.canvas_path, "originals", file), filename: file)
+    else
+      send_file(File.join(canvas.canvas_path.sub("_data","_originals"), file), filename: file)
+    end
   end
 
   def delete_annotation_file
     canvas = @item.canvases.first
     file = params[:file]
-    File.unlink(File.join(canvas.canvas_path, "originals", file))
+    if File.exist?(File.join(canvas.canvas_path, "originals", file))
+      File.unlink(File.join(canvas.canvas_path, "originals", file))
+    else
+      File.unlink(File.join(canvas.canvas_path.sub("_data","_originals"), file))
+    end
     redirect_to item_path(@item.user_name, @item.repo_name, @item.slug)    
   end
 
