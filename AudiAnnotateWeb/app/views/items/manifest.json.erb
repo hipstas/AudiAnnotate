@@ -54,6 +54,9 @@
                   <% if canvas.audio_url.include?("mp3") %>
                   "type": "Sound",
                   "format": "audio/mp3",
+                  <% elsif canvas.audio_url.include?("wav") %>
+                  "type": "Sound",
+                  "format": "audio/wav",
                   <% elsif canvas.audio_url.include?("mp4") %>
                     "type": "Video",
                     "format": "video/mp4",

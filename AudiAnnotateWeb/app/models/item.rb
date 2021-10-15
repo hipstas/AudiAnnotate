@@ -112,7 +112,7 @@ class Item
     git.add(manifest_path)
     git.add(jekyll_page_item_path)
     git.add(jekyll_collection_item_manifest_path)
-    git.add(originals_path)
+    git.add(originals_path) if Dir.exist? originals_path
     if new_item
       git.commit("Added #{label}")
     else

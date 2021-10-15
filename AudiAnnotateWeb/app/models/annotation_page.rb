@@ -110,6 +110,10 @@ EOF
       seconds += md[3].to_i #add seconds
       seconds += md[4].to_f if md[4]
       seconds.to_s
+    elsif md=raw.match(/^\d+$/)
+      # BWF MetaEdit
+      seconds = raw.to_f / 44100
+      seconds.to_s
     else
       raw
     end

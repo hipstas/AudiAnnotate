@@ -45,6 +45,10 @@ class AnnotationFile
     File.extname(filename) == '.xlsx'
   end
 
+  def is_cuepoint_xml?
+    File.extname(filename) == '.xml'
+  end
+
   def read_csv
     parked_file = File.join(parked_filepath, filename)
     if is_xls?
@@ -58,6 +62,31 @@ class AnnotationFile
 
     csv_array
   end
+
+  def save_cuepoints(access_token)
+    doc = Nokogiri::XML(File.read(filename))
+
+    layers = {}
+    ['Label','Note'].each do |layer|
+      doc.search(layer).each do |element|
+        layers[layer] ||= []
+        parent = element.parent
+        position = parent.search('Position').first.text
+        sample_length = parent.search('SampleLength').first.text
+        text = element.text
+        layers[layer] << [position, sample_length, text]
+      end
+    end
+
+    config = { start_col: 0, end_col: 1, text_col: 2}
+    layers.each_pair do |layer_label, rows|
+      page = AnnotationPage.from_csv(rows, config, layer_label, @canvas)
+      page.create
+    end
+
+    @canvas.item.save(access_token)
+  end
+
 
 
   def save(access_token, config)

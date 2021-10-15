@@ -74,7 +74,12 @@ class ItemsController < ApplicationController
   def add_annotation_file
     annotation_file = AnnotationFile.new(@item.canvases.first, item_params[:layer], item_params[:annotation_file])
     annotation_file.park(session[:github_token])
-    redirect_to configure_annotation_file_path(@item.user_name, @item.repo_name, @item.slug, annotation_file.basename)
+    if annotation_file.is_cuepoint_xml?
+      annotation_file.save_cuepoints(session[:github_token])
+      redirect_to item_path(@item.user_name, @item.repo_name, @item.slug)      
+    else
+      redirect_to configure_annotation_file_path(@item.user_name, @item.repo_name, @item.slug, annotation_file.basename)
+    end
   end    
 
   def process_annotation_file
