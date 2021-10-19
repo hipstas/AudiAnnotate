@@ -1,9 +1,9 @@
 
 ### [AudiAnnotate](https://hipstas.github.io/AudiAnnotate/) Scholarship
 ## Articles
-* Clement, T., Brumfield, B. and Brumfield, S. The AudiAnnotate Project. Digital Humanities Quarterly (Expected 2021). 
-* Clement, T. and Fischer, E. [“From the Middle Ages to the Open Web, Theorizing Audiation with Audio Annotation.”](http://www.digitalhumanities.org/dhq/vol/15/1/000512/000512.html) Digital Humanities Quarterly. 15.1. March 2021. 
-* Clement, T. [“Listen Slow: Researching Anne Sexton putting poetry her way”](https://sites.utexas.edu/ransomcentermagazine/2020/10/08/listen-slow-researching-anne-sexton-putting-poetry-her-way/). Ransom Center Magazine. 8 Oct 2020.
+* Clement, T., Brumfield, B. and Brumfield, S. The AudiAnnotate Project. *Digital Humanities Quarterly* (Expected 2021). 
+* Clement, T. and Fischer, E. [“From the Middle Ages to the Open Web, Theorizing Audiation with Audio Annotation.”](http://www.digitalhumanities.org/dhq/vol/15/1/000512/000512.html) *Digital Humanities Quarterly*. 15.1. March 2021. 
+* Clement, T. [“Listen Slow: Researching Anne Sexton putting poetry her way”](https://sites.utexas.edu/ransomcentermagazine/2020/10/08/listen-slow-researching-anne-sexton-putting-poetry-her-way/). *Ransom Center Magazine*. 8 Oct 2020.
 ## Presentations
 * Brumfield, B., Brumfield, S., Clement, T., Dunn, J. "IIIF in the Wild: Real World Examples of Scholarly AV Annotation Interoperability". International Association of Sound and Audiovisual Archives 2021 Online Conference, September 2021 
 * Clement, Tanya. “The AudiAnnotate Extensible Workflow”, Houghton Library, Harvard University, July 2021. 
