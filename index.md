@@ -5,7 +5,7 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
 * [Getting Started: Workflow Documentation and Demonstration Videos](documentation.md) 
 * [Classroom QuickStart Guide](https://bethanycayeradcliff.github.io/spokenweb-pedagogy-workshop/classroom-quick-start-guide) for teaching with AudiAnnotate
 
-#### AudiAnnotate Audio Examples: 
+#### Examples Projects: 
   * [Anne Sexton, Sweetbriar College, 1966](https://tanyaclement.github.io/sexton_sweetbriar_1966/), annotations and transcription by Tanya Clement
   * [Improving Gentle Transcription Using SENT Metadata Structure](https://kywark.github.io/gentle-improvement/), from [SpokenWeb](https://spokenweb.ca/), annotations by Kylie Warkentin
   * [Zora Neale Hurston's WPA field recordings in Jacksonville, FL (1939)](https://tanyaclement.github.io/znh_jacksonville_1939/), annotations and transcription by Tanya Clement
