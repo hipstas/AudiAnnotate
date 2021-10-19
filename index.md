@@ -16,12 +16,11 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
 #### Video
   * [*Camille*](https://jreinschmidt.github.io/camille-1921/), annotations by Janet Reinschmidt
   * [*The Kindergarten Teacher*](https://zillingworth.github.io/the-kindergarten-teacher-poetry/), annotations by Zoe Bursztajn-Illingworth
- 
 #### In the Classroom
  * [Lesson Plans and Introductory Resources](lesson-plan.md)
  * Example Project: [Example Sensitive Audio Lesson: John Beecher, McComb “Criminal Syndicalism” Case](https://kywark.github.io/example-sensitive-audio-lesson-syndicalism/), from the Harry Ransom Center’s [John Beecher Sound Recordings Collection](https://hrc.contentdm.oclc.org/digital/collection/p15878coll1/id/37/rec/1), annotations and transcription by Kylie Warkentin and Bethany Radcliff
 
-#### Other Resources
+### Other Resources
 * [AudiAnnotate Guide to Annotating Film and Video Using Terminology Standard to Film Criticism and Production](videonnotationguide.md) by Zoe Bursztajn-Illingworth and Janet Reinschmidt
 * [List of Audio Annotation Standards and Frameworks](audio-annotation-resources.md) compiled by Bethany Radcliff and Kylie Warkentin
 * [IIIF Resources and Examples](resources.md)
