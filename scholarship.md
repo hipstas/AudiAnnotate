@@ -1,5 +1,5 @@
 
-### [AudiAnnotate](https://hipstas.github.io/AudiAnnotate/) Scholarship
+# [AudiAnnotate](https://hipstas.github.io/AudiAnnotate/) Scholarship
 ## Articles
 * Clement, T., Brumfield, B. and Brumfield, S. The AudiAnnotate Project. *Digital Humanities Quarterly* (Expected 2021). 
 * Clement, T. and Fischer, E. [“From the Middle Ages to the Open Web, Theorizing Audiation with Audio Annotation.”](http://www.digitalhumanities.org/dhq/vol/15/1/000512/000512.html) *Digital Humanities Quarterly*. 15.1. March 2021. 
