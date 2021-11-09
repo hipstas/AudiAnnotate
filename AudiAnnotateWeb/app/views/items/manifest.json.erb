@@ -3,7 +3,7 @@
     "id": "<%= item.manifest_uri %>",
     "type": "Manifest",
     "label": { "en": [ <%= item.label.to_json.html_safe %> ] },
-    <% if item.homepage %>  
+    <% if !item.homepage.blank? %>  
     "homepage": [
       {
         "id": "<%= item.homepage %>",
@@ -13,7 +13,7 @@
       }
     ],
     <% end %>
-    <% if item.provider_label && item.provider_uri %>
+    <% if !item.provider_label.blank? && !item.provider_uri.blank? %>
     "provider": [
       {
         "id": "<%= item.provider_uri.html_safe %>",

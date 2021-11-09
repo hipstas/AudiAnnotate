@@ -114,9 +114,9 @@ class Item
     git.add(jekyll_collection_item_manifest_path)
     git.add(originals_path) if Dir.exist? originals_path
     if new_item
-      git.commit("Added #{label}")
+      git.commit("Added #{slug}")
     else
-      git.commit("Updated #{label}")
+      git.commit("Updated #{slug}")
     end      
     response = git.push("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')    
     true
@@ -183,7 +183,7 @@ class Item
   end
 
   def jekyll_page_item_contents
-    ApplicationController::render template: 'items/jekyll_collection_item.md', layout: false, locals: {item: self}
+    ApplicationController::render template: 'items/jekyll_collection_item.md', layout: false, locals: {frontmatter: frontmatter}
   end
 
   def jekyll_collection_item_manifest_path
@@ -191,7 +191,21 @@ class Item
   end
 
   def jekyll_collection_item_manifest_contents
-    ApplicationController::render template: 'items/jekyll_collection_manifest.md', layout: false, locals: {item: self}
+    manifest_frontmatter = frontmatter
+    manifest_frontmatter['layout'] = 'manifest'
+    manifest_frontmatter.delete('permalink')
+    manifest_frontmatter.delete('external_manifest_url')
+    ApplicationController::render template: 'items/jekyll_collection_manifest.md', layout: false, locals: {frontmatter: manifest_frontmatter}
+  end
+
+  def frontmatter
+    {
+      'layout' => 'item',
+      'title' => label,
+      'manifest_name' => slug,
+      'permalink' => slug,
+      'external_manifest_url' => external_manifest_url
+    }
   end
 
   def slug=(slug)
