@@ -14,7 +14,7 @@
 * Tanya Clement, Zoe M Bursztajn-Illing, Jason Camlot, Michelle Levy, Kate Moffatt, Bethany C Radcliff, Janet Reinschmidt, Kylie Warkentin. “AudiAnnotate for Increasing Access to Historical Audiovisual Collections”, ACH2021 Conference, July 2020. 
 
 ### In the News
-* Figueroa-Nieves, Amanda. “UT-Austin Researchers Receive Grant to Further Audiovisual Annotation Technology.” The Daily Texan, https://thedailytexan.com/2020/10/15/ut-austin-researchers-receive-grant-to-further-audiovisual-annotation-technology/. Accessed 20 Dec. 2021.
+* Figueroa-Nieves, Amanda. “UT-Austin Researchers Receive Grant to Further Audiovisual Annotation Technology.” The Daily Texan, 15 Oct. 2020 https://thedailytexan.com/2020/10/15/ut-austin-researchers-receive-grant-to-further-audiovisual-annotation-technology/. Accessed 20 Dec. 2021.
 * “Mellon Grant Helps UT Austin Scholars Preserve and Promote Audiovisual Heritage.” UT News, 7 Oct. 2020, https://news.utexas.edu/2020/10/07/mellon-grant-helps-ut-austin-scholars-preserve-and-promote-audiovisual-heritage/.
 
 
