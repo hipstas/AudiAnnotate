@@ -19,6 +19,7 @@ class Project
       homepage: uri_root
     }
     response = github_client.create_repository(@repo_name, options)
+    sleep 5
     github_client.replace_all_topics(response.full_name, ['audiannotate'])
 
     github_client.create_contents(
