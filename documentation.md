@@ -414,18 +414,27 @@ If you own an audio or video file that does not exist on the internet, you can u
 
 
 1\. Create an account on Wasabi following the instruction and log in.
+
 2\. Select "Buckets" on the left hand column.
+
 3\. Select "Create Bucket." This is a unique name across the Wasabi system. 
+
 4\. Select a storage region, then select "Create Bucket."
+
 5\. On the dashboard, select the bucket you just created. 
+
 6\. Select "upload file" or drag and drop the .mp3 file to upload.
+
 7\. Click "start upload."
 
 ***Retrieving a file link from Wasabi***
 
 1\. Once the file has uploaded, exit out of the upload screen, then click the file name. 
+
 2\. A menu will appear to the right. 
+
 3\. To create a working link, click the "Make file public." 
+
 4\. You can now copy the link under "Link to file" to use on AudiAnnotate. 
 
 #### Adding Introductory Text to an AudiAnnotate Project 
