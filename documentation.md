@@ -387,7 +387,7 @@ These annotations can be either point or range annotations.
 
 <img src="Pages-Images/New documentation Images/premier3.png" width="350">
 
-#### Getting a Publicly Available Link
+#### Creating a Publicly Available Link to an Audiovisual Item
 
 AudiAnnotate supports direct links to: 
 
@@ -412,7 +412,7 @@ If you own an audio or video file that does not exist on the internet, you can u
 
 (Wasabi is a paid cloud storage service. Public files can only be created through a paid subscription to Wasabi and are not supported through their free trial.)
 
-*Uploading a file to Wasabi*
+
 1\. Create an account on Wasabi following the instruction and log in.
 2\. Select "Buckets" on the left hand column.
 3\. Select "Create Bucket." This is a unique name across the Wasabi system. 
@@ -422,6 +422,7 @@ If you own an audio or video file that does not exist on the internet, you can u
 7\. Click "start upload."
 
 ***Retrieving a file link from Wasabi***
+
 1\. Once the file has uploaded, exit out of the upload screen, then click the file name. 
 2\. A menu will appear to the right. 
 3\. To create a working link, click the "Make file public." 
