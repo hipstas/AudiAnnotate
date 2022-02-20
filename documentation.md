@@ -460,15 +460,15 @@ OLD DOCUMENTATION
 <a name="audiolink"></a>
 ### Part 4: Getting an Audio Link for Your Project
 
-AudiAnnotate needs a direct link to either a .mp3 or .wav audio file to add audio to your project. Below are instructions on how to get a direct link for your audio file from three common file-hosting sites: Internet Archive, Dropbox, and Box.
+AudiAnnotate needs a direct link to either a .mp3 or .wav audio file to add audio to your project. Below are instructions on how to get a direct link for your audio file from three common file-hosting sites: Internet Archive, Dropbox, Box, and Wasabi.
 
 ##### [Internet Archive](https://archive.org/)
 
 *Uploading a file to Internet Archive*
 
-1. Click the upload button at the top right corner of your screen.
+1. Select the upload button at the top right corner of your screen.
 
-2. Click the “Upload Files” button. 
+2. Select the “Upload Files” button. 
 
 3. Select your desired file and click the “Open” button.
 
@@ -484,21 +484,21 @@ AudiAnnotate needs a direct link to either a .mp3 or .wav audio file to add audi
 
 *Uploading a file to Dropbox:*
 
-1\. Click “Upload Files” near the top right corner of your screen under “Create New files.”
+1\. Select “Upload Files” near the top right corner of your screen under “Create New files.”
 
 2\. Select your desired file and click the “Open” button.
 
 3\. Select your desired file location in Dropbox and click the “Upload” button.
 
-4\. Click the “Open” button.
+4\. Select the “Open” button.
 
 *Retrieving a file link from Dropbox:*
 
 1\. Hover over the desired file. 
 
-2\. Click on the “Share” button. The sharing box will appear.
+2\. Select on the “Share” button. The sharing box will appear.
 
-3\. Click “Copy Link” under “Share a link instead.” 
+3\. Select “Copy Link” under “Share a link instead.” 
 
 4\. The sharing box will close and a message reading “Link copied” will appear with the sharing link highlighted at the bottom of your screen.
 
@@ -514,14 +514,27 @@ AudiAnnotate needs a direct link to either a .mp3 or .wav audio file to add audi
 
 ##### [Box](https://account.box.com/login) (Please use either Internet Archive or Dropbox. Box is not currently cooperating for audio on AudiAnnotate.)
 *Uploading a file to Box:*
-1\. Click the “Upload” button in the top right corner of your screen. 
-2\. Click “File.”
+1\. Select the “Upload” button in the top right corner of your screen. 
+2\. Select “File.”
 3\. Select your desired file and click the “Open” button. 
 *Retrieving a file link from Box:*
 1\. Hover over your desired file.
-2\. Click the link button.
+2\. Select the link button.
 3\. Make sure the shared link button is enabled and copy the link from the highlighted.
 4\. This link can now be used in AudiAnnotate. 
+
+##### [Wasabi](https://wasabi.com/)
+(Wasabi is a paid cloud storage service.)
+*Uploading a file to Wasabi*
+1\. Create an account on Wasabi following the instruction and log in.
+2\. Select "Buckets" on the left hand column.
+3\. Select "Create Bucket." This is a unique name across the Wasabi system. 
+4\. Select a storage region, then select "Create Bucket."
+5\. On the dashboard, select the bucket you just created. 
+6\. Select "upload file" or drag and drop the .mp3 file to upload.
+7\. Click "start upload."
+8\. Once the file has uploaded, exit out of the upload screen, then click the file name. 
+9\. A menu will appear to the right. To create a working link, click the "Make file public." You can now copy the link under "Link to file" to use on AudiAnnotate. 
 
 
 <a name="aa"></a>
