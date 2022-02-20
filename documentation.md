@@ -394,7 +394,7 @@ AudiAnnotate supports direct links to:
 - Audio:  HTML: MP3, WAV, and OGG.
 - Video: MP4, WebM, and Ogg
 
-If you own an audio or video file that does not exist on the internet, you can upload your materials to the Internet Archive and retrieve a link:
+If you own an audio or video file that does not exist on the internet, you can upload your materials to the Internet Archive or Wasabi and retrieve a link:
 
 ***Uploading a File to the Internet Archive***
 
@@ -407,6 +407,23 @@ If you own an audio or video file that does not exist on the internet, you can u
 
 1. On the details page of your desired file, navigate to the “VBR MP3” download option and select the link.
 2. The link in your browser’s search bar can be used in AudiAnnotate.
+
+***Uploading a file to [Wasabi](https://wasabi.com/)***
+(Wasabi is a paid cloud storage service. Public files can only be created through a paid subscription to Wasabi and are not supported through their free trial.)
+*Uploading a file to Wasabi*
+1\. Create an account on Wasabi following the instruction and log in.
+2\. Select "Buckets" on the left hand column.
+3\. Select "Create Bucket." This is a unique name across the Wasabi system. 
+4\. Select a storage region, then select "Create Bucket."
+5\. On the dashboard, select the bucket you just created. 
+6\. Select "upload file" or drag and drop the .mp3 file to upload.
+7\. Click "start upload."
+
+***Retrieving a file from Wasabi***
+1\. Once the file has uploaded, exit out of the upload screen, then click the file name. 
+2\. A menu will appear to the right. 
+3\. To create a working link, click the "Make file public." 
+4\. You can now copy the link under "Link to file" to use on AudiAnnotate. 
 
 #### Adding Introductory Text to an AudiAnnotate Project 
 
@@ -523,18 +540,7 @@ AudiAnnotate needs a direct link to either a .mp3 or .wav audio file to add audi
 3\. Make sure the shared link button is enabled and copy the link from the highlighted.
 4\. This link can now be used in AudiAnnotate. 
 
-##### [Wasabi](https://wasabi.com/)
-(Wasabi is a paid cloud storage service.)
-*Uploading a file to Wasabi*
-1\. Create an account on Wasabi following the instruction and log in.
-2\. Select "Buckets" on the left hand column.
-3\. Select "Create Bucket." This is a unique name across the Wasabi system. 
-4\. Select a storage region, then select "Create Bucket."
-5\. On the dashboard, select the bucket you just created. 
-6\. Select "upload file" or drag and drop the .mp3 file to upload.
-7\. Click "start upload."
-8\. Once the file has uploaded, exit out of the upload screen, then click the file name. 
-9\. A menu will appear to the right. To create a working link, click the "Make file public." You can now copy the link under "Link to file" to use on AudiAnnotate. 
+
 
 
 <a name="aa"></a>
