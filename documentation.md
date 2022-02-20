@@ -387,7 +387,7 @@ These annotations can be either point or range annotations.
 
 <img src="Pages-Images/New documentation Images/premier3.png" width="350">
 
-#### Uploading to the Internet Archive
+#### Getting a Publicly Available Link
 
 AudiAnnotate supports direct links to: 
 
@@ -409,7 +409,9 @@ If you own an audio or video file that does not exist on the internet, you can u
 2. The link in your browser’s search bar can be used in AudiAnnotate.
 
 ***Uploading a file to [Wasabi](https://wasabi.com/)***
+
 (Wasabi is a paid cloud storage service. Public files can only be created through a paid subscription to Wasabi and are not supported through their free trial.)
+
 *Uploading a file to Wasabi*
 1\. Create an account on Wasabi following the instruction and log in.
 2\. Select "Buckets" on the left hand column.
@@ -419,7 +421,7 @@ If you own an audio or video file that does not exist on the internet, you can u
 6\. Select "upload file" or drag and drop the .mp3 file to upload.
 7\. Click "start upload."
 
-***Retrieving a file from Wasabi***
+***Retrieving a file link from Wasabi***
 1\. Once the file has uploaded, exit out of the upload screen, then click the file name. 
 2\. A menu will appear to the right. 
 3\. To create a working link, click the "Make file public." 
