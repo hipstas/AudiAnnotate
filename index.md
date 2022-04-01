@@ -11,6 +11,7 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
 
 #### Audio
   * [Anne Sexton, Sweetbriar College, 1966](https://tanyaclement.github.io/sexton_sweetbriar_1966/), annotations and transcription by Tanya Clement
+  * [Furious Flower Poetry Center Transcriptions](https://jmu-audiannotate.github.io/FFPC-Video-Transcriptions/), annotations and transcriptions by Evan Sizemore
   * [Improving Gentle Transcription Using SENT Metadata Structure](https://kywark.github.io/gentle-improvement/), from [SpokenWeb](https://spokenweb.ca/), annotations by Kylie Warkentin
   * [Zora Neale Hurston's WPA field recordings in Jacksonville, FL (1939)](https://tanyaclement.github.io/znh_jacksonville_1939/), annotations and transcription by Tanya Clement
   * [Example audio manifest](https://github.com/bethanycayeradcliff/margaret-atwood-spokenweb/blob/gh-pages/_data/margaret-atwood-at-sgwu-1974/manifest.json) created by Bethany Radcliff
