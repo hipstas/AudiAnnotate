@@ -130,7 +130,7 @@ EOF
 
       items = []
       csv.each_with_index do |row, i|
-        next if row == []
+        next if row == [] || (i==0 && config[:headers])
         wa = JSON.parse(PROTOTYPE)
         # set the constants
         wa["@context"] = "http://www.w3.org/ns/anno.jsonld"
@@ -138,7 +138,11 @@ EOF
         body = { "type" => "TextualBody", "value" => row[config[:text_col]], "format" => "text/plain" }
         wa["body"] = body
         start_seconds=seconds_from_raw(row[config[:start_col]])
-        end_seconds=seconds_from_raw(row[config[:end_col]])
+        if row[config[:end_col]].blank?
+          end_seconds=start_seconds
+        else
+          end_seconds=seconds_from_raw(row[config[:end_col]])
+        end
         # parse them into seconds
         if start_seconds==end_seconds
           # point selection
