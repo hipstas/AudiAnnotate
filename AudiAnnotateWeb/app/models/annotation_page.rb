@@ -135,7 +135,13 @@ EOF
         # set the constants
         wa["@context"] = "http://www.w3.org/ns/anno.jsonld"
         wa["motivation"]=["supplementing", "commenting"]
-        body = { "type" => "TextualBody", "value" => row[config[:text_col]], "format" => "text/plain" }
+        body = { "type" => "TextualBody", "value" => row[config[:text_col]], "format" => "text/plain", "purpose" => "commenting" }
+        if config[:index_col] && !row[config[:index_col]].blank?
+          body = [body]
+          row[config[:index_col]].split(/[[:punct:]]/).each do |tag|
+            body << { "type" => "TextualBody", "value" => tag.strip, "format" => "text/plain", "purpose" => "tagging" }
+          end
+        end
         wa["body"] = body
         start_seconds=seconds_from_raw(row[config[:start_col]])
         end_seconds=seconds_from_raw(row[config[:end_col]])
