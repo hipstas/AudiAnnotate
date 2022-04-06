@@ -78,7 +78,7 @@ class AnnotationFile
       end
     end
 
-    config = { start_col: 0, end_col: 1, text_col: 2}
+    config = { start_col: 0, end_col: 1, text_col: 2, is_cuepoint: true}
     layers.each_pair do |layer_label, rows|
       page = AnnotationPage.from_csv(rows, config, layer_label, @canvas)
       page.create

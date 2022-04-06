@@ -94,7 +94,7 @@ EOF
   end
 
 
-  def seconds_from_raw(raw)
+  def seconds_from_raw(raw, config)
     if md=raw.match(/(\d\d);(\d\d);(\d\d);(\d\d)/)
       #this is adobe premiere export format
       seconds=0.0
@@ -110,8 +110,8 @@ EOF
       seconds += md[3].to_i #add seconds
       seconds += md[4].to_f if md[4]
       seconds.to_s
-    elsif md=raw.match(/^\d+$/)
-      # BWF MetaEdit
+    elsif md=raw.match(/^\d+$/) && config[:is_cuepoint]
+      # BWF MetaEdit frame
       seconds = raw.to_f / 44100
       seconds.to_s
     else
@@ -137,11 +137,11 @@ EOF
         wa["motivation"]=["supplementing", "commenting"]
         body = { "type" => "TextualBody", "value" => row[config[:text_col]], "format" => "text/plain" }
         wa["body"] = body
-        start_seconds=seconds_from_raw(row[config[:start_col]])
+        start_seconds=seconds_from_raw(row[config[:start_col]], config)
         if row[config[:end_col]].blank?
           end_seconds=start_seconds
         else
-          end_seconds=seconds_from_raw(row[config[:end_col]])
+          end_seconds=seconds_from_raw(row[config[:end_col]], config)
         end
         # parse them into seconds
         if start_seconds==end_seconds
