@@ -25,8 +25,8 @@ class AnnotationFile
   end
 
   def detect_delimiter()
-    tab_csv = CSV.read(File.join(parked_filepath, filename), col_sep: "\t", quote_char: "𒊬")
-    comma_csv = CSV.read(File.join(parked_filepath, filename), col_sep: ",", quote_char: "𒊬")
+    tab_csv = CSV.new(File.read(File.join(parked_filepath, filename)).gsub(/[\r\n]+/, "\n"), col_sep: "\t", quote_char: "𒊬").read
+    comma_csv = CSV.new(File.read(File.join(parked_filepath, filename)).gsub(/[\r\n]+/, "\n"), col_sep: ",", quote_char: "𒊬").read
     if tab_csv[0].size > 1
       "\t"
     elsif comma_csv[0].size > 1 
@@ -57,7 +57,7 @@ class AnnotationFile
       csv = CSV.new(raw_csv)
       csv_array = csv.read
     else
-      csv_array = CSV.read(parked_file, col_sep: detect_delimiter, quote_char: "𒊬")
+      csv_array = CSV.new(File.read(parked_file).gsub(/[\r\n]+/, "\n"), col_sep: detect_delimiter, quote_char: "𒊬").read
     end
 
     csv_array
