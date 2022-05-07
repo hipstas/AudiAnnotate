@@ -34,7 +34,12 @@ class Item
       item.external_manifest_url=at_id
     end            
 
-    item.label = manifest['label']['en'][0]
+    label_element = manifest['label']['en']
+    if label_element.blank?
+      label_element = manifest['label'].first.second
+    end
+
+    item.label = label_element[0]
     item.homepage = manifest['homepage'][0]['id'] if manifest['homepage']
     if manifest['provider']
       item.provider_uri = manifest['provider'][0]['id']
