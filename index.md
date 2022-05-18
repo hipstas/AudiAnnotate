@@ -4,7 +4,7 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
 
 ### Using AudiAnnotate 
 * [AudiAnnotate Application](http://audiannotate.brumfieldlabs.com/)
-* [Getting Started: Workflow Documentation and Demonstration Videos](documentation.md) 
+* [Getting Started: Workflow Documentation and Demonstration Videos](https://hipstas.github.io/documentation/) 
 * [Classroom QuickStart Guide](https://bethanycayeradcliff.github.io/spokenweb-pedagogy-workshop/classroom-quick-start-guide) for teaching with AudiAnnotate
 
 ### Example Projects 
