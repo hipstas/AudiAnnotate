@@ -15,7 +15,7 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
   * [Improving Gentle Transcription Using SENT Metadata Structure](https://kywark.github.io/gentle-improvement/), from [SpokenWeb](https://spokenweb.ca/), annotations by Kylie Warkentin
   * [Zora Neale Hurston's WPA field recordings in Jacksonville, FL (1939)](https://tanyaclement.github.io/znh_jacksonville_1939/), annotations and transcription by Tanya Clement
   * [Example audio manifest](https://github.com/bethanycayeradcliff/margaret-atwood-spokenweb/blob/gh-pages/_data/margaret-atwood-at-sgwu-1974/manifest.json) created by Bethany Radcliff
-  * [BWFMetaEdit example](https://benwbrum.github.io/loc-bwf-demo/my-dear-mother-don-t-you-cry-soldier-s-lament-bandit-song) from ["My dear mother, don't you cry; Soldier's lament; Bandit song](https://www.loc.gov/item/afc1939007_afs02253b/) at Library of Congress.
+  * [BWFMetaEdit example](https://benwbrum.github.io/loc-bwf-demo/my-dear-mother-don-t-you-cry-soldier-s-lament-bandit-song) from ["My dear mother, don't you cry; Soldier's lament; Bandit song](https://www.loc.gov/item/afc1939007_afs02253b/) at the Library of Congress.
   
 #### Video
   * [*Camille*](https://jreinschmidt.github.io/camille-1921/), annotations by Janet Reinschmidt
