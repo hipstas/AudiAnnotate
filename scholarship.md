@@ -2,7 +2,7 @@
 ## [AudiAnnotate](https://hipstas.github.io/AudiAnnotate/) Scholarship
 
 ### Articles
-* Clement, T., Brumfield, B. and Brumfield, S. ["The AudiAnnotate Project: Four Case Studies in Publishing Annotations for Audio and Video,"](href="http://www.digitalhumanities.org/dhq/vol/16/2/000586/000586.html). Digital Humanities Quarterly 16 no. 2 (2022).  
+* Clement, T., Brumfield, B. and Brumfield, S. ["The AudiAnnotate Project: Four Case Studies in Publishing Annotations for Audio and Video,"](href="http://www.digitalhumanities.org/dhq/vol/16/2/000586/000586.html). Digital Humanities Quarterly 16 no. 2 (2022).
 * Clement, T. and Fischer, E. [“From the Middle Ages to the Open Web, Theorizing Audiation with Audio Annotation.”](http://www.digitalhumanities.org/dhq/vol/15/1/000512/000512.html) *Digital Humanities Quarterly*. 15.1. March 2021. 
 * Clement, T. [“Listen Slow: Researching Anne Sexton putting poetry her way”](https://sites.utexas.edu/ransomcentermagazine/2020/10/08/listen-slow-researching-anne-sexton-putting-poetry-her-way/). *Ransom Center Magazine*. 8 Oct 2020.
 
