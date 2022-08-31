@@ -85,7 +85,6 @@ EOF
     Dir.mkdir(@canvas.canvas_path) unless Dir.exists?(@canvas.canvas_path)
     Dir.mkdir(annotation_store_path) unless Dir.exists?(annotation_store_path)
     Dir.mkdir(@canvas.item.project.annotation_page_path) unless Dir.exists?(@canvas.item.project.annotation_page_path)
-    binding.pry
 
     File.write(annotation_page_file_path, page_contents(@rows, @config))
     File.write(jekyll_collection_file_path, jekyll_collection_contents)
