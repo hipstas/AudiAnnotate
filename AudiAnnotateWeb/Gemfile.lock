@@ -92,7 +92,8 @@ GEM
     faraday-net_http (2.0.3)
     ffi (1.15.5)
     fileutils (1.6.0)
-    git (1.5.0)
+    git (1.11.0)
+      rchardet (~> 1.8)
     globalid (1.0.0)
       activesupport (>= 5.0)
     hashie (5.0.0)
@@ -196,6 +197,7 @@ GEM
     rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    rchardet (1.8.0)
     regexp_parser (2.5.0)
     rexml (3.2.5)
     roo (2.8.3)
@@ -275,7 +277,7 @@ DEPENDENCIES
   charlock_holmes
   csv
   fileutils
-  git (~> 1.5.0)
+  git (~> 1.11.0)
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
   octokit
