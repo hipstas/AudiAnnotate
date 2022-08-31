@@ -216,7 +216,7 @@ EOF
     { 
       'annotation_page_uri' => annotation_page_uri,
       'annotation_page_slug' => slug,
-      'layout' => 'manifest'
+      'layout' => 'annotation_page'
     }.to_yaml + "\n---\n"
   end
 
