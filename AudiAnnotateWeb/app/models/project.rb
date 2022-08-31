@@ -172,6 +172,14 @@ class Project
     File.join(user_path, repo_name)
   end
 
+  def annotation_store_path
+    File.join(repo_path, '_data', 'annotation_store')
+  end
+
+  def annotation_page_path
+    File.join(repo_path, '_annotation_pages')
+  end
+
   def uri_root
     "https://#{user_name}.github.io/#{repo_name}"
   end

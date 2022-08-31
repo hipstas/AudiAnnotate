@@ -65,8 +65,6 @@ EOF
   # Methods to WRITE an annotation page
   #############################################
   def self.from_csv(rows, config, label, canvas)
-    Dir.mkdir(canvas.canvas_path) unless Dir.exists?(canvas.canvas_path)
-
     page = AnnotationPage.new(canvas)
     page.label=label
     page.rows=rows
@@ -85,8 +83,11 @@ EOF
 
   def create
     Dir.mkdir(@canvas.canvas_path) unless Dir.exists?(@canvas.canvas_path)
+    Dir.mkdir(annotation_store_path) unless Dir.exists?(annotation_store_path)
+    Dir.mkdir(@canvas.item.project.annotation_page_path) unless Dir.exists?(@canvas.item.project.annotation_page_path)
 
     File.write(annotation_page_file_path, page_contents(@rows, @config))
+    File.write(jekyll_collection_file_path, jekyll_collection_contents)
   end
 
   def self.label_to_slug(label)
@@ -94,7 +95,7 @@ EOF
   end
 
 
-  def seconds_from_raw(raw)
+  def seconds_from_raw(raw, config)
     if md=raw.match(/(\d\d);(\d\d);(\d\d);(\d\d)/)
       #this is adobe premiere export format
       seconds=0.0
@@ -110,8 +111,8 @@ EOF
       seconds += md[3].to_i #add seconds
       seconds += md[4].to_f if md[4]
       seconds.to_s
-    elsif md=raw.match(/^\d+$/)
-      # BWF MetaEdit
+    elsif md=raw.match(/^\d+$/) && config[:is_cuepoint]
+      # BWF MetaEdit frame
       seconds = raw.to_f / 44100
       seconds.to_s
     else
@@ -130,7 +131,7 @@ EOF
 
       items = []
       csv.each_with_index do |row, i|
-        next if row == []
+        next if row == [] || (i==0 && config[:headers])
         wa = JSON.parse(PROTOTYPE)
         # set the constants
         wa["@context"] = "http://www.w3.org/ns/anno.jsonld"
@@ -143,8 +144,12 @@ EOF
           end
         end
         wa["body"] = body
-        start_seconds=seconds_from_raw(row[config[:start_col]])
-        end_seconds=seconds_from_raw(row[config[:end_col]])
+        start_seconds=seconds_from_raw(row[config[:start_col]], config)
+        if row[config[:end_col]].blank?
+          end_seconds=start_seconds
+        else
+          end_seconds=seconds_from_raw(row[config[:end_col]], config)
+        end
         # parse them into seconds
         if start_seconds==end_seconds
           # point selection
@@ -167,6 +172,7 @@ EOF
   end
 
   def destroy(access_token)
+    File.unlink(jekyll_collection_file_path) if File.exists?(jekyll_collection_file_path)
     File.unlink(annotation_page_file_path)
     @canvas.item.save(access_token)
   end
@@ -177,32 +183,52 @@ EOF
   #######################
   def slug
     if @page.nil? || @page['id'].match(@canvas.canvas_id)
-      label.gsub(/\W/, '-').downcase
+      raw_slug = label.gsub(/\W/, '-').downcase
+      @canvas.item.slug + '-' + @canvas.slug + '-' + raw_slug
     else
-      @page['id'].gsub(/\W/, '_')
+      @page['id'].gsub(/.*\//,'').gsub('.json','').gsub(/\W/, '-')
     end
   end
 
+  def annotation_store_path
+    @canvas.item.project.annotation_store_path
+  end
+
   def annotation_page_file_path
-    File.join(@canvas.canvas_path, annotation_page_file)
+    File.join(annotation_store_path, annotation_page_file)
   end
 
   def annotation_page_file
     "#{slug}.json"
   end
 
-  # def uri_root
-  #   "#{@item.uri_root}/#{slug}"
-  # end
-
   def annotation_page_uri
-    "#{@canvas.canvas_id}/#{slug}.json"
+    @canvas.item.project.uri_root + '/annotations/' + slug + ".json"
   end
 
   def annotation_uri(index)
-    "#{@canvas.canvas_id}/#{slug}-annotation-#{index}.json"
+    "#{slug}-annotation-#{index}.json"
   end
 
+  def jekyll_collection_file_path
+    File.join(@canvas.item.project.annotation_page_path, jekyll_collection_file)
+  end
+
+  def jekyll_collection_file
+    "#{slug}.md"
+  end
+
+  def jekyll_collection_contents
+    { 
+      'annotation_page_uri' => annotation_page_uri,
+      'annotation_page_slug' => slug,
+      'layout' => 'annotation_page'
+    }.to_yaml + "\n---\n"
+  end
+
+  def jekyll_page_item_contents
+    ApplicationController::render template: 'items/jekyll_collection_item.md', layout: false, locals: {frontmatter: frontmatter}
+  end
 
 
 end
