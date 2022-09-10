@@ -32,5 +32,7 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
 * [Virtual Workshop](workshop.md)
 * [ACH 2021 Resource Page](ach-2021.md)
 
-
+### Funding
+* American Council of Learned Societies
+* Mellon Foundation
 
