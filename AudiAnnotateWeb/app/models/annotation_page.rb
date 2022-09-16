@@ -88,6 +88,7 @@ EOF
 
     File.write(annotation_page_file_path, page_contents(@rows, @config))
     File.write(jekyll_collection_file_path, jekyll_collection_contents)
+    create_term_pages(@rows, @config)
   end
 
   def self.label_to_slug(label)
@@ -178,6 +179,25 @@ EOF
   end
 
 
+  def create_term_pages(csv=nil, config=nil)
+    terms = []
+    # reread the CSV
+    if csv # only generate from a csv if we have one
+      csv.each_with_index do |row, i|
+        if config[:index_col] && !row[config[:index_col]].blank?
+          terms += row[config[:index_col]].split(/[[:punct:]]/)
+        end
+      end
+    end
+    Dir.mkdir(@canvas.item.project.term_path) unless Dir.exists?(@canvas.item.project.term_path)
+    terms.uniq.each do |term|
+      unless File.exists?(@canvas.item.project.term_path(term))
+        File.write(@canvas.item.project.term_path(term), jekyll_term_contents(term))
+      end
+    end
+
+  end
+
   #######################
   # Manifest helpers
   #######################
@@ -217,6 +237,15 @@ EOF
   def jekyll_collection_file
     "#{slug}.md"
   end
+
+  def jekyll_term_contents(term)
+    { 
+      'index_term' => term,
+      'title' => term,
+      'layout' => 'term'
+    }.to_yaml + "\n---\n"
+  end
+
 
   def jekyll_collection_contents
     { 
