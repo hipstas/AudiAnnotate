@@ -139,6 +139,14 @@ class Project
     YAML.load(File.read(navigation_path)) || []
   end
 
+  def term_path(term=nil)
+    if term
+      File.join(repo_path, '_terms', "#{term.gsub(/\W/, '-')}.md")
+    else
+      File.join(repo_path, '_terms')
+    end
+  end
+
   def navigation_path
     File.join(repo_path, '_data', 'navigation.yml')
   end

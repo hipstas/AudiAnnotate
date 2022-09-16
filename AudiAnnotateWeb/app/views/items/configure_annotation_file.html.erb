@@ -57,7 +57,7 @@
         <%= label(:end_time, "Which column contains the end time?") %>
         <%= select_tag(:end_time, options_for_select(@annotation_file.sample_snippet.first.map.with_index{ |cell,i| i }.map{|i| [(65+i).chr, i]}), class: 'form-control') %>
       </div>
-        <div class="field">
+      <div class="field">
         <%= label(:annotation, "Which column contains the annotation?") %>
         <%= select_tag(:annotation, options_for_select(@annotation_file.sample_snippet.first.map.with_index{ |cell,i| i }.map{|i| [(65+i).chr, i]}), class: 'form-control') %>
       </div>
@@ -82,6 +82,20 @@
         </div>
       </div>
 
+
+      <h3>Index Configuration</h3>
+      <div class="form-group">
+        <%= label(:has_index_column, "Does this file contain an index term/tag column?") %>
+        <%= select_tag(:has_index_column, 
+                        options_for_select(['Yes', 'No']), 
+                        class: "form-control", id:"file-has-index-column") %>
+      </div>
+
+
+      <div class="field" id="index-column-div">
+        <%= label(:index_column, "Which column contains the index term(s)?") %>
+        <%= select_tag(:index_column, options_for_select(@annotation_file.sample_snippet.first.map.with_index{ |cell,i| i }.map{|i| [(65+i).chr, i]}), class: 'form-control') %>
+      </div>
 
       <%= hidden_field_tag(:annotation_file_basename, @file) %>
       <%= form.hidden_field(:label) %>
@@ -114,4 +128,11 @@
     }
   });
 
+  $("#file-has-index-column").change(function() {
+    if ($(this).val() == "Yes") {
+      $('#index-column-div').show();
+    } else {
+      $('#index-column-div').hide();
+    }
+  });
 </script>

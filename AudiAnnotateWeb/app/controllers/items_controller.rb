@@ -94,8 +94,15 @@ class ItemsController < ApplicationController
       layer_column = params[:layer_column].to_i
     end
 
+    if params[:has_index_column] == "No"
+      index_column = nil
+    else
+      index_column = params[:index_column].to_i
+    end
+
     config = {
       layer_col: layer_column,
+      index_col: index_column,
       text_col: params[:annotation].to_i,
       start_col: params[:start_time].to_i,
       end_col: params[:end_time].to_i,
