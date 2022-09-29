@@ -8,7 +8,7 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
 * [Classroom QuickStart Guide](https://bethanycayeradcliff.github.io/spokenweb-pedagogy-workshop/classroom-quick-start-guide) for teaching with AudiAnnotate
 
 ### Call for Projects
-
+* [SpokenWeb Anthology Project](cfp.md)
 
 ### Example Projects 
 
