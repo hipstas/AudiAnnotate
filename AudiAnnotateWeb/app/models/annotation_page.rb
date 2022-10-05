@@ -86,7 +86,11 @@ EOF
     Dir.mkdir(annotation_store_path) unless Dir.exists?(annotation_store_path)
     Dir.mkdir(@canvas.item.project.annotation_page_path) unless Dir.exists?(@canvas.item.project.annotation_page_path)
 
-    File.write(annotation_page_file_path, page_contents(@rows, @config))
+    if @rows
+      File.write(annotation_page_file_path, page_contents(@rows, @config))
+    else
+      File.write(annotation_page_file_path, @page.to_json)
+    end
     File.write(jekyll_collection_file_path, jekyll_collection_contents)
     create_term_pages(@rows, @config)
   end
@@ -206,7 +210,8 @@ EOF
       raw_slug = label.gsub(/\W/, '-').downcase
       @canvas.item.slug + '-' + @canvas.slug + '-' + raw_slug
     else
-      @page['id'].gsub(/.*\//,'').gsub('.json','').gsub(/\W/, '-')
+      raw_slug = @page['id'].gsub(/.*\//,'').gsub('.json','').gsub(/\W/, '-')
+      @canvas.item.slug + '-' + @canvas.slug + '-' + raw_slug
     end
   end
 

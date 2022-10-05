@@ -186,7 +186,7 @@ class ItemsController < ApplicationController
 
   def review_external_annotations
     # find the link to the annotations within the manifest
-    at_id = params[:at_id]    
+    at_id = Base64.decode64 params[:at_id]
     external_annotation_pages = @item.manifest_json['items'].first['annotations']
     @external_annotation_page = external_annotation_pages.detect { |page| page['id'] == at_id}
     # if the link has a body, use it -- otherwise dereference the annotation page
@@ -194,7 +194,7 @@ class ItemsController < ApplicationController
 
   def import_external_annotations
     # find the link to the annotations within the manifest
-    at_id = params[:at_id]    
+    at_id = Base64.decode64 params[:at_id]    
     external_annotation_pages = @item.manifest_json['items'].first['annotations']
     @external_annotation_page = external_annotation_pages.detect { |page| page['id'] == at_id}
     # if the link has a body, use it -- otherwise dereference the annotation page
