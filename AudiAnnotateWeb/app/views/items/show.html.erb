@@ -70,7 +70,14 @@
                 <!-- the structures in thsi manifest look suspicious: why not have an array of label hashes?  Why have the value of the 'en' key be an array?  this might have been a mis-reading of the spec -->
                 <div class="col-sm-12">
                   <% encoded_url = Base64.encode64(external_page['id']).gsub("\n",'') %>
-                  <%= link_to(external_page['label']['en'].first, 
+                  <% if external_page['label'].is_a? String 
+                       page_label = external_page['label'] 
+                     else
+                       page_label = external_page['label'].values.first
+                     end %> 
+
+
+                  <%= link_to(page_label, 
                               review_external_annotations_path( @item.user_name, 
                                                                 @item.repo_name, 
                                                                 @item.slug, 

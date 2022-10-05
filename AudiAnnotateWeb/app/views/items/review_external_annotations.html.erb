@@ -13,7 +13,12 @@
     <%= render 'shared/build_status' %>
   </div>
 <div id='annotation-list' class="container">
-  <h2>Annotations in <i><%= @external_annotation_page['label'].values.join(' ') %></i></h2>
+  <% if @external_annotation_page['label'].is_a? String
+       page_label = @external_annotation_page['label']
+     else
+       page_label = @external_annotation_page['label'].values.join(' ')
+     end %>
+  <h2>Annotations in <i><%= page_label %></i></h2>
   <table id="annotation-table" class="table table-bordered table-dark">
     <thead>
       <tr>

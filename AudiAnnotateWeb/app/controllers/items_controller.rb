@@ -188,15 +188,14 @@ class ItemsController < ApplicationController
     # find the link to the annotations within the manifest
     at_id = Base64.decode64 params[:at_id]
     external_annotation_pages = @item.manifest_json['items'].first['annotations']
-    @external_annotation_page = external_annotation_pages.detect { |page| page['id'] == at_id}
-    # if the link has a body, use it -- otherwise dereference the annotation page
+    @external_annotation_page = dereference_page(external_annotation_pages.detect { |page| page['id'] == at_id})
   end
 
   def import_external_annotations
     # find the link to the annotations within the manifest
     at_id = Base64.decode64 params[:at_id]    
     external_annotation_pages = @item.manifest_json['items'].first['annotations']
-    @external_annotation_page = external_annotation_pages.detect { |page| page['id'] == at_id}
+    @external_annotation_page = dereference_page(external_annotation_pages.detect { |page| page['id'] == at_id})
     # if the link has a body, use it -- otherwise dereference the annotation page
     page = AnnotationPage.from_external(@external_annotation_page, @item.canvases.first) #, @canvas)
     page.create
@@ -207,6 +206,18 @@ class ItemsController < ApplicationController
   end
 
   private
+    def dereference_page(external_annotation_page)
+      # if the link has a body, use it -- otherwise dereference the annotation page
+      if external_annotation_page['items'].nil?
+        # import the file from the net
+        raw_page = URI.open(external_annotation_page['id']).read
+        # parse the file
+        JSON.parse(raw_page)
+      else
+        external_annotation_page
+      end
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_item
       @item = Item.from_file(params[:user_name], params[:repo_name], params[:slug])
