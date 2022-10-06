@@ -256,7 +256,8 @@ EOF
     { 
       'annotation_page_uri' => annotation_page_uri,
       'annotation_page_slug' => slug,
-      'layout' => 'annotation_page'
+      'layout' => 'annotation_page',
+      'manifest_label' => @canvas.item.label
     }.to_yaml + "\n---\n"
   end
 
