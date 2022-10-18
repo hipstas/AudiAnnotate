@@ -92,15 +92,16 @@ class AnnotationFile
   def save(access_token, config)
     csv = read_csv
 
+    if config[:headers]
+      start_row = 1
+    else
+      start_row = 0
+    end
+
     layers = {}
     if config[:layer_col].nil?
-      layers[layer] = csv
+      layers[layer] = csv[start_row..]
     else
-      if config[:headers]
-        start_row = 1
-      else
-        start_row = 0
-      end
       labels = csv[start_row..].map{|row| row[config[:layer_col]]}.sort.uniq
       labels.each do |label|
         # find each subset of rows
