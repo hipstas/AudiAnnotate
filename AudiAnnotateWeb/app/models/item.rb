@@ -87,7 +87,13 @@ class Item
         return false
       end
       raw_label = manifest['label']
-      compound_label = raw_label.first[1].join(' ')
+      if raw_label.is_a? String
+        compound_label = raw_label
+      elsif raw_label.is_a? Hash
+        compound_label = raw_label.values.join(' ')
+      else
+        compound_label = raw_label.first[1].join(' ')
+      end
 
       self.label = compound_label
 
