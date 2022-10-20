@@ -144,7 +144,7 @@ EOF
         body = { "type" => "TextualBody", "value" => row[config[:text_col]], "format" => "text/plain", "purpose" => "commenting" }
         if config[:index_col] && !row[config[:index_col]].blank?
           body = [body]
-          row[config[:index_col]].split(/[[:punct:]]/).each do |tag|
+          row[config[:index_col]].split(/[[:punct:]]\s*/).each do |tag|
             body << { "type" => "TextualBody", "value" => tag.strip, "format" => "text/plain", "purpose" => "tagging" }
           end
         end
