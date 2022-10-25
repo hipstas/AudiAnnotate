@@ -35,7 +35,9 @@
           {
             "type": "AnnotationPage",
             "id": "<%= page.annotation_page_uri.html_safe %>",
-            "label": <%= page.label.to_json.html_safe %>
+            "label": {
+              "none": [<%= page.label.to_json.html_safe %>]
+            }
           }
           <% end %>
         ],

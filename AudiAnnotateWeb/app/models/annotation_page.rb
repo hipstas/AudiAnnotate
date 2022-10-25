@@ -211,6 +211,7 @@ EOF
       @canvas.item.slug + '-' + @canvas.slug + '-' + raw_slug
     else
       raw_slug = @page['id'].gsub(/.*\//,'').gsub('.json','').gsub(/\W/, '-')
+      raw_slug = raw_slug.gsub(@canvas.item.slug + '-' + @canvas.slug + '-', '') #avoid duplication
       @canvas.item.slug + '-' + @canvas.slug + '-' + raw_slug
     end
   end
