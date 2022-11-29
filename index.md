@@ -21,7 +21,7 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
   
 #### Video
   * [*Camille*](https://jreinschmidt.github.io/camille-1921/), annotations by Janet Reinschmidt
-  * [*Furious Flower Poetry Center Transcriptions](https://jmu-audiannotate.github.io/FFPC-Video-Transcriptions/), annotations and transcriptions by Evan Sizemore
+  * [*Furious Flower Poetry Center Transcriptions*](https://jmu-audiannotate.github.io/FFPC-Video-Transcriptions/), annotations and transcriptions by Evan Sizemore
   * [*The Kindergarten Teacher*](https://zillingworth.github.io/the-kindergarten-teacher-poetry/), annotations by Zoe Bursztajn-Illingworth
 
 #### In the Classroom
