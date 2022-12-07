@@ -203,8 +203,7 @@ class Project
     { 
       'index_term' => term,
       'title' => term,
-      'layout' => 'term',
-      'permalink' => 'term_index'
+      'layout' => 'term'
     }.to_yaml + "\n---\n"
   end
 
@@ -215,7 +214,8 @@ class Project
   def jekyll_index_contents
     { 
       'title' => 'Index',
-      'layout' => 'listing'
+      'layout' => 'listing',
+      'permalink' => 'term_index'
     }.to_yaml + "\n---\n"
   end
 
