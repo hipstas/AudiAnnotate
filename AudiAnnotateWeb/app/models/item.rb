@@ -126,7 +126,7 @@ class Item
     git.add(originals_path) if Dir.exist? originals_path
     git.add(project.annotation_store_path) if Dir.exist? project.annotation_store_path
     git.add(project.annotation_page_path) if Dir.exist? project.annotation_page_path
-    git.add(project.term_path) if Dir.exist? project.term_path
+    project.recalculate_terms(access_token)    
     if new_item
       git.commit("Added #{slug}")
     else

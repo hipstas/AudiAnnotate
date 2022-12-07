@@ -125,6 +125,49 @@ class Project
     response = git.push("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')    
   end
 
+  def recalculate_terms(access_token)
+    git = Git.open(repo_path) 
+
+    # now do a git rm on all those files
+    git.remove(term_path, recursive: true) if Dir.exists?(term_path)
+    # first delete everything in the terms directory
+    FileUtils.rm_rf(term_path)
+
+    # create an empty list of terms
+    terms = []
+
+    # read all annotation page json files
+    annotation_page_files = Dir.glob(File.join(annotation_store_path, "*.json"))
+    annotation_page_files.each do |filename|
+      page = JSON.parse(File.read(filename))
+      # look for terms within a file
+      page['items'].each do |item|
+        # add terms to list
+        body = item['body']
+        if body.is_a? Array
+          body.each do |annotation|
+            if annotation['purpose'] == 'tagging'
+              terms << annotation['value']
+            end
+          end
+        end
+      end
+    end
+    # uniqueify list
+    terms.uniq!
+
+    Dir.mkdir(term_path) unless Dir.exists?(term_path)
+
+    # create term file for each term in list
+    terms.each do |term|
+      File.write(term_path(term), jekyll_term_contents(term))
+    end
+
+    # check everything into github
+    git.add(term_path) if Dir.exist? term_path
+  end
+
+
   def move_up(access_token, item)
     swap_nav_position(access_token, item, -1)
   end
@@ -145,6 +188,14 @@ class Project
     else
       File.join(repo_path, '_terms')
     end
+  end
+
+  def jekyll_term_contents(term)
+    { 
+      'index_term' => term,
+      'title' => term,
+      'layout' => 'term'
+    }.to_yaml + "\n---\n"
   end
 
   def navigation_path
