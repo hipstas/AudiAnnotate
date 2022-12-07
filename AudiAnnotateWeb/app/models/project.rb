@@ -129,7 +129,11 @@ class Project
     git = Git.open(repo_path) 
 
     # now do a git rm on all those files
-    git.remove(term_path, recursive: true) if Dir.exists?(term_path)
+    begin
+      git.remove(term_path, recursive: true) if Dir.exists?(term_path)
+    rescue
+      # ignore errors here
+    end
     # first delete everything in the terms directory
     FileUtils.rm_rf(term_path)
 
@@ -163,8 +167,13 @@ class Project
       File.write(term_path(term), jekyll_term_contents(term))
     end
 
+    unless File.exists? index_path    
+      File.write(index_path, jekyll_index_contents)
+    end
+
     # check everything into github
     git.add(term_path) if Dir.exist? term_path
+    git.add(index_path) if File.exist? index_path
   end
 
 
@@ -194,7 +203,19 @@ class Project
     { 
       'index_term' => term,
       'title' => term,
-      'layout' => 'term'
+      'layout' => 'term',
+      'permalink' => 'term_index'
+    }.to_yaml + "\n---\n"
+  end
+
+  def index_path
+    File.join(repo_path, 'pages', "term_index.md")
+  end
+
+  def jekyll_index_contents
+    { 
+      'title' => 'Index',
+      'layout' => 'listing'
     }.to_yaml + "\n---\n"
   end
 
