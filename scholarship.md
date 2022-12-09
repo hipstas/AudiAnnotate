@@ -7,12 +7,12 @@
 * Clement, T. [“Listen Slow: Researching Anne Sexton putting poetry her way”](https://sites.utexas.edu/ransomcentermagazine/2020/10/08/listen-slow-researching-anne-sexton-putting-poetry-her-way/). *Ransom Center Magazine*. 8 Oct 2020.
 
 ### Presentations
+* Pickard, Rachel. "Tech Talk 5: The Significance of Oral Histories and Audio Archives," AMP Lab at UBC Okanagan, November 2022. https://www.eventbrite.com/e/tech-talk-5-the-significance-of-oral-histories-and-audio-archives-tickets-474281267037?aff=erelexpmlt
 * Brumfield, B., Brumfield, S., Clement, T., Dunn, J. "IIIF in the Wild: Real World Examples of Scholarly AV Annotation Interoperability". International Association of Sound and Audiovisual Archives 2021 Online Conference, September 2021 
 * Clement, Tanya. “The AudiAnnotate Extensible Workflow”, Houghton Library, Harvard University, July 2021. 
 * Clement, Tanya, Ben Brumfield, Sara Brumfield, Bertram Lyons, Shawn Averkamp. “AudiAnnotate Extensive Workflow Project”, 2021 International Image Interoperability Framework (IIIF) Annual Conference, June 2021.
 * Brumfield, B., Brumfield, S., Clement, T. “AudiAnnotate”, International Image Interoperability Framework (IIIF) Community Call, September 2020.
 * Tanya Clement, Zoe M Bursztajn-Illing, Jason Camlot, Michelle Levy, Kate Moffatt, Bethany C Radcliff, Janet Reinschmidt, Kylie Warkentin. “AudiAnnotate for Increasing Access to Historical Audiovisual Collections”, ACH2021 Conference, July 2020. 
-* Pickard, Rachel. "Tech Talk 5: The Significance of Oral Histories and Audio Archives," AMP Lab at UBC Okanagan, November 2022. [https://www.eventbrite.com/e/tech-talk-5-the-significance-of-oral-histories-and-audio-archives-tickets-474281267037?aff=erelexpmlt]
 
 ### In the News
 * Figueroa-Nieves, Amanda. “UT-Austin Researchers Receive Grant to Further Audiovisual Annotation Technology.” The Daily Texan, 15 Oct. 2020 https://thedailytexan.com/2020/10/15/ut-austin-researchers-receive-grant-to-further-audiovisual-annotation-technology/. Accessed 20 Dec. 2021.
