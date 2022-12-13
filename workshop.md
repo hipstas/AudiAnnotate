@@ -31,13 +31,19 @@ Before the workshop, we request that you:
 
 #### Previous Workshops
 
-* AudiAnnotate Extensible Workflow for Sharing Annotated AV Using IIIF
-IIIF Workshops, June 2022.
+* Clement, Brumfield S., Brumfield B. “Collaborations with Embedded Audio Metadata: Reusing Cue Chunk Data for IIIF Web Annotations,” Webinar to Library of Congress staff, Virtual Presentation. 29 August 2022.
 
-* Creating New Projects with AudiAnnotate
-The SpokenWeb Sound Institute (SSI); Concordia University, Montréal, Canada. May 2022.
+* Voss. "AudiAnnotate Extensible Workflow for Sharing Annotated AV Using IIIF
+IIIF Workshops," Virtual Presentation, June 2022.
 
-* Annotating Audio and Video with AudiAnnotate
-Digital Humanities Workshops @PCL; The University of Texas at Austin. April 2022.
+* Voss. "Creating New Projects with AudiAnnotate,"
+The SpokenWeb Sound Institute (SSI), Concordia University, Montréal, Canada. May 2022.
+
+* Sizemore and Clement. “Introduction to AudiAnnotate: A Tool for Transcribing and Annotating Audiovisual Content,” James Madison University, Harrisonburg, Virginia, United States. 4 April 2022.
+
+* Voss. "Annotating Audio and Video with AudiAnnotate"
+Digital Humanities Workshops @PCL, The University of Texas at Austin, Austin, United States. April 2022.
+
+* Sizemore and Holloway. “AudiAnnotate Project,” Furious Flower, Virtual Presentation. 9 March 2022.
 
 * [Thursday, May 28, 2020 12-2pm CST](agenda.md)
