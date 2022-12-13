@@ -30,7 +30,14 @@ Before the workshop, we request that you:
 
 
 #### Previous Workshops
+
+* AudiAnnotate Extensible Workflow for Sharing Annotated AV Using IIIF
+IIIF Workshops, June 2022.
+
+* Creating New Projects with AudiAnnotate
+The SpokenWeb Sound Institute (SSI); Concordia University, Montréal, Canada. May 2022.
+
+* Annotating Audio and Video with AudiAnnotate
+Digital Humanities Workshops @PCL; The University of Texas at Austin. April 2022.
+
 * [Thursday, May 28, 2020 12-2pm CST](agenda.md)
-
-
-
