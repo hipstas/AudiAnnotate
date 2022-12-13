@@ -8,6 +8,7 @@
 
 ### Presentations
 * Pickard, Rachel. ["Tech Talk 5: The Significance of Oral Histories and Audio Archives,"](https://www.eventbrite.com/e/tech-talk-5-the-significance-of-oral-histories-and-audio-archives-tickets-474281267037?aff=erelexpmlt) AMP Lab at UBC Okanagan, November 2022.
+* Ferriter, Meghan. ["Collaborations with Embedded Audio Metadata: Reusing Cue Chunk Data for IIIF Web Annotations,"](https://blogs.loc.gov/thesignal/2022/08/collaborations-with-embedded-audio-metadata-reusing-cue-chunk-data-for-iiif-web-annotations/) The Signal, The Library of Congress, 24 August 2022.  
 * Brumfield, B., Brumfield, S., Clement, T., Dunn, J. "IIIF in the Wild: Real World Examples of Scholarly AV Annotation Interoperability". International Association of Sound and Audiovisual Archives 2021 Online Conference, September 2021 
 * Clement, Tanya. “The AudiAnnotate Extensible Workflow”, Houghton Library, Harvard University, July 2021. 
 * Clement, Tanya, Ben Brumfield, Sara Brumfield, Bertram Lyons, Shawn Averkamp. “AudiAnnotate Extensive Workflow Project”, 2021 International Image Interoperability Framework (IIIF) Annual Conference, June 2021.
