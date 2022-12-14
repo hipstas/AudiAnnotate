@@ -46,4 +46,12 @@ Digital Humanities Workshops @PCL, The University of Texas at Austin, Austin, Un
 
 * Sizemore and Holloway. “AudiAnnotate Project,” Furious Flower, Virtual Presentation. 9 March 2022.
 
+* Clement, T., Brumfield, B., Brumfield, S., Radcliff, B., Warkentin, K., [AudiAnnotate Workshop,](https://avindhsig.wordpress.com/announcements/) Digital Humanities Conference, Ottowa, CA, July 2020.
+
 * [Thursday, May 28, 2020 12-2pm CST](agenda.md)
+
+* AudiAnnotate Workshop, Texas Conference on Digital Libraries, May 2020.
+
+* AudiAnnotate Text Annotation Workshop, Harry Ransom Center, November 2019. 
+
+* “Digital Audio Archives Workshop,” Historical Poetics Now Conference. University of Texas, Austin. November 2019.
