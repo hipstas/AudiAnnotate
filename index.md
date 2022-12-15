@@ -39,5 +39,6 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
 * Mellon Foundation
 
 ### Workshops
+* [Previous Workshops](workshop.md)
 * [ACH 2021 Resource Page](ach-2021.md)
 * [Virtual Workshop](workshop.md)
