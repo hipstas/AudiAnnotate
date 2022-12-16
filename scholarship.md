@@ -11,10 +11,10 @@
 * Clement, T., Brumfield, B., Brumfield, S., Ferriter, M., Hosale, C., Walker, D., Murray, K., ["Collaborations with Embedded Audio Metadata: Reusing Cue Chunk Data for IIIF Web Annotations,"](https://blogs.loc.gov/thesignal/2022/08/collaborations-with-embedded-audio-metadata-reusing-cue-chunk-data-for-iiif-web-annotations/) The Signal, The Library of Congress, 24 August 2022.  
 * Tanya E. Clement, "IIIF A/V use cases: The AudiAnnotate Project," 2022 IIIF Showcase in Cambridge, MA, 06 June 2022
 * Brumfield, B., Brumfield, S., Clement, T., Dunn, J. "IIIF in the Wild: Real World Examples of Scholarly AV Annotation Interoperability". International Association of Sound and Audiovisual Archives 2021 Online Conference, September 2021 
+* Tanya Clement, Zoe M Bursztajn-Illing, Jason Camlot, Michelle Levy, Kate Moffatt, Bethany C Radcliff, Janet Reinschmidt, Kylie Warkentin. “[AudiAnnotate for Increasing Access to Historical Audiovisual Collections](https://hipstas.github.io/AudiAnnotate/ach-2021.html)”, ACH2021 Conference, July 2021. 
 * Clement, Tanya. “The AudiAnnotate Extensible Workflow”, Houghton Library, Harvard University, July 2021. 
 * Clement, Tanya, Ben Brumfield, Sara Brumfield, Bertram Lyons, Shawn Averkamp. “AudiAnnotate Extensive Workflow Project”, 2021 International Image Interoperability Framework (IIIF) Annual Conference, June 2021.
 * Brumfield, B., Brumfield, S., Clement, T. “AudiAnnotate”, International Image Interoperability Framework (IIIF) Community Call, September 2020.
-* Tanya Clement, Zoe M Bursztajn-Illing, Jason Camlot, Michelle Levy, Kate Moffatt, Bethany C Radcliff, Janet Reinschmidt, Kylie Warkentin. “AudiAnnotate for Increasing Access to Historical Audiovisual Collections”, ACH2021 Conference, July 2020. 
 
 ### In the News
 * Figueroa-Nieves, Amanda. “UT-Austin Researchers Receive Grant to Further Audiovisual Annotation Technology.” The Daily Texan, 15 Oct. 2020 https://thedailytexan.com/2020/10/15/ut-austin-researchers-receive-grant-to-further-audiovisual-annotation-technology/. Accessed 20 Dec. 2021.
