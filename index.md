@@ -33,6 +33,7 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
 * [List of Audio Annotation Standards and Frameworks](audio-annotation-resources.md) compiled by Bethany Radcliff and Kylie Warkentin
 * [IIIF Resources and Examples](resources.md)
 * [Transcription Guidelines](transcription_resources.md)
+* [Virtual Workshop](https://hipstas.github.io/AudiAnnotate/workshop.html)
 
 ### Funding
 * American Council of Learned Societies
