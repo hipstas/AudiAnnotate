@@ -49,9 +49,8 @@ The SpokenWeb Sound Institute (SSI), Concordia University, Montréal, Canada. Ma
 * Voss. "Annotating Audio and Video with AudiAnnotate"
 Digital Humanities Workshops @PCL, The University of Texas at Austin, Austin, United States. April 2022.
 * Sizemore and Holloway. “AudiAnnotate Project,” Furious Flower, Virtual Presentation. 9 March 2022.
-* [ACH 2021 Resource Page](ach-2021.md)
 * Clement, T., Brumfield, B., Brumfield, S., Radcliff, B., Warkentin, K., [AudiAnnotate Workshop](https://avindhsig.wordpress.com/announcements/), [virtual version](https://hipstas.github.io/AudiAnnotate/workshop.html), Digital Humanities Conference, Ottowa, CA, July 2020.
-* [Thursday, May 28, 2020 12-2pm CST](agenda.md)
+* Radcliff, B and Warkentin, K. AudiAnnotate Workshop. SpokenWeb Consortium Virtual Workshops [Thursday, May 28, 2020 12-2pm CST](agenda.md)
 * AudiAnnotate Workshop, Texas Conference on Digital Libraries, May 2020.
 * AudiAnnotate Text Annotation Workshop, Harry Ransom Center, November 2019. 
 * “Digital Audio Archives Workshop,” Historical Poetics Now Conference. University of Texas, Austin. November 2019.
