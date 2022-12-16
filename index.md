@@ -41,7 +41,6 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
 ### Workshops
 * [Previous Workshops](workshop.md)
 * [Virtual Workshop](workshop.md)
-
 * Clement, Brumfield S., Brumfield B. “Collaborations with Embedded Audio Metadata: Reusing Cue Chunk Data for IIIF Web Annotations,” Webinar to Library of Congress staff, Virtual Presentation. 29 August 2022.
 * Voss. "AudiAnnotate Extensible Workflow for Sharing Annotated AV Using IIIF
 IIIF Workshops," Virtual Presentation, June 2022.
