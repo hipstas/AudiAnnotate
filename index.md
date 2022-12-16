@@ -40,5 +40,20 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
 
 ### Workshops
 * [Previous Workshops](workshop.md)
-* [ACH 2021 Resource Page](ach-2021.md)
 * [Virtual Workshop](workshop.md)
+
+* Clement, Brumfield S., Brumfield B. “Collaborations with Embedded Audio Metadata: Reusing Cue Chunk Data for IIIF Web Annotations,” Webinar to Library of Congress staff, Virtual Presentation. 29 August 2022.
+* Voss. "AudiAnnotate Extensible Workflow for Sharing Annotated AV Using IIIF
+IIIF Workshops," Virtual Presentation, June 2022.
+* Voss. "Creating New Projects with AudiAnnotate,"
+The SpokenWeb Sound Institute (SSI), Concordia University, Montréal, Canada. May 2022.
+* Sizemore and Clement. “Introduction to AudiAnnotate: A Tool for Transcribing and Annotating Audiovisual Content,” James Madison University, Harrisonburg, Virginia, United States. 4 April 2022.
+* Voss. "Annotating Audio and Video with AudiAnnotate"
+Digital Humanities Workshops @PCL, The University of Texas at Austin, Austin, United States. April 2022.
+* Sizemore and Holloway. “AudiAnnotate Project,” Furious Flower, Virtual Presentation. 9 March 2022.
+* [ACH 2021 Resource Page](ach-2021.md)
+* Clement, T., Brumfield, B., Brumfield, S., Radcliff, B., Warkentin, K., [AudiAnnotate Workshop,](https://avindhsig.wordpress.com/announcements/) Digital Humanities Conference, Ottowa, CA, July 2020.
+* [Thursday, May 28, 2020 12-2pm CST](agenda.md)
+* AudiAnnotate Workshop, Texas Conference on Digital Libraries, May 2020.
+* AudiAnnotate Text Annotation Workshop, Harry Ransom Center, November 2019. 
+* “Digital Audio Archives Workshop,” Historical Poetics Now Conference. University of Texas, Austin. November 2019.
