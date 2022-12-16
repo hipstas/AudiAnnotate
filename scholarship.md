@@ -1,5 +1,5 @@
 
-## [AudiAnnotate](https://hipstas.github.io/AudiAnnotate/) Scholarship
+## AudiAnnotate Scholarship
 
 ### Articles
 * Clement, T., Brumfield, B. and Brumfield, S. ["The AudiAnnotate Project: Four Case Studies in Publishing Annotations for Audio and Video,"](http://www.digitalhumanities.org/dhq/vol/16/2/000586/000586.html). *Digital Humanities Quarterly* 16 no. 2 (2022).
