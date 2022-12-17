@@ -11,21 +11,20 @@
 * Pickard, Rachel. ["Tech Talk 5: The Significance of Oral Histories and Audio Archives,"](https://www.eventbrite.com/e/tech-talk-5-the-significance-of-oral-histories-and-audio-archives-tickets-474281267037?aff=erelexpmlt) AMP Lab at UBC Okanagan, November 2022.
 * Clement, Brumfield S., Brumfield B. “Collaborations with Embedded Audio Metadata: Reusing Cue Chunk Data for IIIF Web Annotations,” Webinar to Library of Congress staff, Virtual Presentation. 29 August 2022. 
 * Bursztajn-Illingworth, Z. "AudiAnnotate Extensible Workflow Project," AudioXD (Audio Across Domains) Lightning Talks, University of Pittsburgh August 2022. 
-* Tanya E. Clement, "IIIF A/V use cases: The AudiAnnotate Project," 2022 IIIF Showcase in Cambridge, MA, 06 June 2022
-* Brumfield, B., Brumfield, S., Clement, T., Dunn, J. "IIIF in the Wild: Real World Examples of Scholarly AV Annotation Interoperability". International Association of Sound and Audiovisual Archives 2021 Online Conference, September 2021 
+* Tanya E. Clement, "IIIF A/V use cases: The AudiAnnotate Project," 2022 IIIF Showcase in Cambridge, MA, 06 June 2022.
+* Sizemore, E. and Holloway, S. “AudiAnnotate Project,” Furious Flower, Virtual Presentation. 9 March 2022.
+* Brumfield, B., Brumfield, S., Clement, T., Dunn, J. "IIIF in the Wild: Real World Examples of Scholarly AV Annotation Interoperability". International Association of Sound and Audiovisual Archives 2021 Online Conference, September 2021. 
 * Tanya Clement, Zoe M Bursztajn-Illing, Jason Camlot, Michelle Levy, Kate Moffatt, Bethany C Radcliff, Janet Reinschmidt, Kylie Warkentin. “[AudiAnnotate for Increasing Access to Historical Audiovisual Collections](https://hipstas.github.io/AudiAnnotate/ach-2021.html)”, ACH2021 Conference, July 2021. 
 * Clement, Tanya. “The AudiAnnotate Extensible Workflow”, Houghton Library, Harvard University, July 2021. 
 * Clement, Tanya, Ben Brumfield, Sara Brumfield, Bertram Lyons, Shawn Averkamp. “AudiAnnotate Extensive Workflow Project”, 2021 International Image Interoperability Framework (IIIF) Annual Conference, June 2021.
 * Brumfield, B., Brumfield, S., Clement, T. “AudiAnnotate”, International Image Interoperability Framework (IIIF) Community Call, September 2020.
 
-### In the News
+### In the News and Reviews
+* Breaden, Craig. ["Review: AudiAnnotate. A review of AudiAnnotate, a tool for annotating audio files, directed by Tanya Clement, Ben Brumfield, and Sara Brumfield,"](https://reviewsindh.pubpub.org/pub/audiannotate/release/3) Reviews in Digital Humanities, Vol. 2, No. 10, 11 October 2021.
 * Figueroa-Nieves, Amanda. “UT-Austin Researchers Receive Grant to Further Audiovisual Annotation Technology.” The Daily Texan, 15 Oct. 2020 https://thedailytexan.com/2020/10/15/ut-austin-researchers-receive-grant-to-further-audiovisual-annotation-technology/. Accessed 20 Dec. 2021.
 * “Mellon Grant Helps UT Austin Scholars Preserve and Promote Audiovisual Heritage.” UT News, 7 Oct. 2020, https://news.utexas.edu/2020/10/07/mellon-grant-helps-ut-austin-scholars-preserve-and-promote-audiovisual-heritage/.
 
 
 ### Other
-* Breaden, Craig. ["Review: AudiAnnotate. A review of AudiAnnotate, a tool for annotating audio files, directed by Tanya Clement, Ben Brumfield, and Sara Brumfield,"](https://reviewsindh.pubpub.org/pub/audiannotate/release/3) Reviews in Digital Humanities, Vol. 2, No. 10, 11 October 2021.
 * [IIIF Cookbook Recipe for Audio Annotations](https://preview.iiif.io/cookbook/Recipe_103_brumfieldlabs/recipe/0103-poetry-reading-annotations/), created by Brumfield Labs
-
-
 
