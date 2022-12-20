@@ -1,6 +1,6 @@
 [AudiAnnotate Home](index.md)
 
-# [AudiAnnotate](https://hipstas.github.io/AudiAnnotate/) Workshop 
+# AudiAnnotate Workshop 
 ## Wednesday, July 22, 2020 11am-1pm ET; 10am-12pm CST
 ### AVinDH SIG, DH2020 online
 
