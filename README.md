@@ -15,3 +15,6 @@ Documentation on using AudiAnnotate is available here: https://hipstas.github.io
 
 * You will need to setup a GitHub OAuth App in your GitHub account, and add the key and secret to the `config\initializer\01audiannotate.rb` file.
 
+AudiAnnotate was developed with funding by the Mellon Foundation and the American Council of Learned Societies.
+
+Copyright © 2022 The University of Texas at Austin.
