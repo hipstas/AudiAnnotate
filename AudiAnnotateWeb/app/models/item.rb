@@ -213,8 +213,14 @@ class Item
   end
 
   def frontmatter
+    if @project.aviary_layout
+      layout = 'aviary'
+    else
+      layout = 'item'
+    end
+
     {
-      'layout' => 'item',
+      'layout' => layout,
       'title' => label,
       'manifest_name' => slug,
       'permalink' => slug,

@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   delete 'project/:user_name/:repo_name/pages/:slug', to: 'pages#destroy', as: 'destroy_page'
   get 'project/:user_name/:repo_name/pages/:slug/move_up', to: 'pages#move_up', as: 'move_up_page'
   get 'project/:user_name/:repo_name/pages/:slug/move_down', to: 'pages#move_down', as: 'move_down_page'
+  post 'project/:user_name/:repo_name/toggle_layout', to: 'project#toggle_layout', as: 'toggle_layout'
 
 
   root to: 'project#all'
