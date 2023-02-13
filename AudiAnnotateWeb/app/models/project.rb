@@ -186,6 +186,33 @@ class Project
     swap_nav_position(access_token, item, 1)
   end
 
+  def aviary_layout
+    system("grep 'layout: aviary' #{File.join(repo_path, 'pages', '*.md')} ")
+  end
+
+  def toggle_layout(access_token, aviary)
+    git = Git.open(repo_path)  # TODO consider using the logger here
+    git.branch('gh-pages').checkout
+    git.pull("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')
+
+
+    if aviary
+      files = `grep -l 'layout: item' #{File.join(repo_path, 'pages', '*.md')} `.split("\n")
+      files.each do |file|
+        system("sed -i -e 's/layout: item/layout: aviary/' #{file}")
+        git.add(file)
+      end
+    else
+      files = `grep -l 'layout: aviary' #{File.join(repo_path, 'pages', '*.md')} `.split("\n")
+      files.each do |file|
+        system("sed -i -e 's/layout: aviary/layout: item/' #{file}")
+        git.add(file)
+      end
+    end
+    git.commit("Changed layout to #{aviary ? 'Aviary Player' : 'Universal Viewer'}")
+    response = git.push("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')    
+  end
+
 
   def navigation
     YAML.load(File.read(navigation_path)) || []

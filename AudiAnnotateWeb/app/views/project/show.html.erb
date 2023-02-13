@@ -18,6 +18,23 @@
     You can add introductory material by modifying <%= link_to 'index.markdown', "https://github.com/#{@project.user_name}/#{@project.repo_name}/edit/gh-pages/index.markdown" %>
 
   </p>
+  <% if @item_count > 0 %>
+    <div class="row">
+      <div class="col-sm">
+        <h3>Publication Layout</h3>
+        <p>Your project can be presented using either the Universal Viewer or the Aviary Player to present media.  Annotation-centered projects like digital editions generally work better with Universal Viewer, while media-centered project like exhibitions may benefit from the Aviary Player.  You can change viewers at any time.</p>
+        <% if @project.aviary_layout %>
+          <p>Your project is currently using the <b>Aviary Player</b></p>
+          <%= button_to 'Use Universal Viewer', toggle_layout_path(@project.user_name, @project.repo_name, uv: true), class: "btn btn-primary" %>
+        <% else %>
+          <p>Your project is currently using the <b>Universal Viewer</b></p>
+          <%= button_to 'Use Aviary', toggle_layout_path(@project.user_name, @project.repo_name, aviary: true), class: "btn btn-primary" %>
+        <% end %>
+
+      </div>
+    </div>
+  <% end %>
+
   <div class="row">
     <div class="col-sm">
       <h3>Audiovisual Items and Pages</h3>

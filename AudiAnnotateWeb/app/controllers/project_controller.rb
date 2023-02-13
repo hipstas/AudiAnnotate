@@ -45,6 +45,7 @@ class ProjectController < ApplicationController
     end
     @repo = @github_client.repository("#{@project.user_name}/#{@project.repo_name}")
     @folders = Dir.glob(File.join(@project.repo_path,'_data','*')).select {|f| File.directory? f}
+    @item_count = Dir.glob(File.join(@project.repo_path,'_manifests','*')).reject {|fn| fn.match?('anne-sexton--woodberry--1974.md')}.count
   end
 
 
@@ -55,6 +56,13 @@ class ProjectController < ApplicationController
       pages_site_status = "Missing"
     end
     render json: pages_site_status
+  end
+
+  def toggle_layout
+    aviary=params[:aviary]
+    @project = Project.new(params[:user_name], params[:repo_name])
+    @project.toggle_layout(session[:github_token], aviary)
+    redirect_to project_path(@project.user_name, @project.repo_name)
   end
 
   private
