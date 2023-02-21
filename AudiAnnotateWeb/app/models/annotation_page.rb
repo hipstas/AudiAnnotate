@@ -179,6 +179,10 @@ EOF
     File.unlink(jekyll_collection_file_path) if File.exists?(jekyll_collection_file_path)
     File.unlink(annotation_page_file_path)
     @canvas.item.save(access_token)
+
+    # this should also recalculate the index terms from the remaining annotation pages
+    @canvas.item.project.recalculate_terms(access_token)
+
   end
 
 
