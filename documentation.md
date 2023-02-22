@@ -356,7 +356,7 @@ These annotations can be either point or range annotations.
 |---|---|---|
 | 0  | 2  |  bpNichol talking sensically |
 
- 3\. Enter your annotation(s) into the sheet(s) as necessary. You may find a template spreadsheet with explanations for creating properly formatted annotations using Google Sheets [here](https://docs.google.com/spreadsheets/d/1ImjhjLD1g-lQulJX3UJe4Y91z04EOriYCqiN1rz9gnw/copy#gid=0). It will prompt you to make a copy of the template for your own use.
+ 3\. Enter your annotation(s) into the sheet(s) as necessary. You may find a template spreadsheet with explanations for creating properly formatted annotations using Google Sheets [here](https://docs.google.com/spreadsheets/d/1ImjhjLD1g-lQulJX3UJe4Y91z04EOriYCqiN1rz9gnw/copy#gid=0), or for a spreadsheet with a different format, [here](https://docs.google.com/spreadsheets/d/1KdGD0iGzwT4PL8k93ysexStsM-vM_BKTWhvDXJxQ8Pk/copy). It will prompt you to make a copy of the template for your own use.
  
  4\. Once you have completed your annotations, download each annotation layer as one .tsv file to upload into AudiAnnotate. 
 
