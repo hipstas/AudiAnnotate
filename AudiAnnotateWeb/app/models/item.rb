@@ -130,20 +130,38 @@ class Item
     if new_item
       git.commit("Added #{slug}")
     else
-      git.commit("Updated #{slug}")
+      unless git.status.changed.empty?
+        git.commit("Updated #{slug}")
+      end
     end      
     response = git.push("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')    
     true
   end
 
   def destroy(access_token)
+    # remove the corresponding annotation pages
+    # (this calls item.save, so it should flush the files from the repo in separate commits
+    self.canvases.each do |canvas|
+      canvas.annotation_pages.each do |annotation_page|
+        annotation_page.destroy(access_token)
+      end
+    end
+
+
+
     git = Git.open(@project.repo_path)  # TODO consider using the logger here
     git.branch('gh-pages').checkout
     git.pull("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')
 
+    # TODO remove the corresponding annotation files from the originals directory
+    # NOTE: this should actually delete the original files if they are stored in the originals directory
+    # we need to test this before we duplicate/move the code in item_controller#delete_annotation_file
+
+
     # remove everything in the item path under _data
     FileUtils.rm_rf(item_path)
     FileUtils.rm(jekyll_collection_item_manifest_path)
+
 
     # remove the same from the repository
     git.remove(item_path, recursive: true)
@@ -152,8 +170,13 @@ class Item
     self.project.remove_item(self)
     git.add(self.project.navigation_path)
 
+
     git.commit("Removed #{label}")
     response = git.push("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')    
+
+    # now that the item and its pages have been deleted, recalculate the index terms for the project
+    project.recalculate_terms(access_token)
+
     true
 
   end

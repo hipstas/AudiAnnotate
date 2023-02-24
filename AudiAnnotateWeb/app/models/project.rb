@@ -127,7 +127,6 @@ class Project
 
   def recalculate_terms(access_token)
     git = Git.open(repo_path) 
-
     # now do a git rm on all those files
     begin
       git.remove(term_path, recursive: true) if Dir.exists?(term_path)
@@ -136,7 +135,7 @@ class Project
     end
     # first delete everything in the terms directory
     FileUtils.rm_rf(term_path)
-
+    
     # create an empty list of terms
     terms = []
 
@@ -161,7 +160,7 @@ class Project
     terms.uniq!
 
     Dir.mkdir(term_path) unless Dir.exists?(term_path)
-
+    
     # create term file for each term in list
     terms.each do |term|
       File.write(term_path(term), jekyll_term_contents(term))
@@ -174,6 +173,10 @@ class Project
     # check everything into github
     git.add(term_path) if Dir.exist? term_path
     git.add(index_path) if File.exist? index_path
+    unless git.status.changed.empty?
+      git.commit("Recalculated index terms")
+      git.push("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')
+    end
   end
 
 
