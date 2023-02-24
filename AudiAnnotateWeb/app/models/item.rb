@@ -130,7 +130,9 @@ class Item
     if new_item
       git.commit("Added #{slug}")
     else
-      git.commit("Updated #{slug}")
+      unless git.status.changed.empty?
+        git.commit("Updated #{slug}")
+      end
     end      
     response = git.push("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')    
     true

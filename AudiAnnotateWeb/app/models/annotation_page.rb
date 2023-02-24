@@ -178,6 +178,14 @@ EOF
   def destroy(access_token)
     File.unlink(jekyll_collection_file_path) if File.exists?(jekyll_collection_file_path)
     File.unlink(annotation_page_file_path)
+    git = Git.open(@canvas.item.project.repo_path) 
+    # now do a git rm on all those files
+    begin
+      git.remove(jekyll_collection_file_path)
+      git.remove(annotation_page_file_path)
+    rescue
+      # ignore errors here
+    end
     @canvas.item.save(access_token)
 
     # this should also recalculate the index terms from the remaining annotation pages
