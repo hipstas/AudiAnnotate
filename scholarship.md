@@ -9,6 +9,8 @@
 * Clement, T. [“Listen Slow: Researching Anne Sexton putting poetry her way”](https://sites.utexas.edu/ransomcentermagazine/2020/10/08/listen-slow-researching-anne-sexton-putting-poetry-her-way/). *Ransom Center Magazine*. 8 Oct 2020.
 
 ### Presentations
+* Clement, Tanya. “Recording the 1953 Harvard Summer School Conference on the Contemporary Novel,” The Woodberry Poetry Room at Harvard University, Cambridge, MA. 27 February 2023. 
+* Clement, Tanya, Ben Brumfield, Sara Brumfield, “AVDG Meeting on AudiAnnotate,” Harvard Staff AV Discussion Group, Harvard University, Cambridge, MA.
 * Pickard, Rachel. ["Tech Talk 5: The Significance of Oral Histories and Audio Archives,"](https://www.eventbrite.com/e/tech-talk-5-the-significance-of-oral-histories-and-audio-archives-tickets-474281267037?aff=erelexpmlt) AMP Lab at UBC Okanagan, November 2022.
 * Clement, Brumfield S., Brumfield B. “Collaborations with Embedded Audio Metadata: Reusing Cue Chunk Data for IIIF Web Annotations,” Webinar to Library of Congress staff, Virtual Presentation. 29 August 2022. 
 * Bursztajn-Illingworth, Z. "AudiAnnotate Extensible Workflow Project," AudioXD (Audio Across Domains) Lightning Talks, University of Pittsburgh August 2022. 
