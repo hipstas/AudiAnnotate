@@ -41,6 +41,7 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
 * Mellon Foundation
 
 ### Workshops
+* Bursztajn-Illingworh, Zoe and Clement, Tanya. “AudiAnnotate Collaborative Listening Workshop,” Sponsored by the Woodberry Poetry Room and the Sound Studies Lab, Harvard University, 27 February 2023. 
 * Voss, Kayleigh. "AudiAnnotate Extensible Workflow for Sharing Annotated AV Using IIIF
 IIIF Workshops," Virtual Presentation, June 2022.
 * Voss, Kayleigh. "Creating New Projects with AudiAnnotate,"
