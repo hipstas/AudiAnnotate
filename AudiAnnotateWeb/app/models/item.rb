@@ -126,7 +126,6 @@ class Item
     git.add(originals_path) if Dir.exist? originals_path
     git.add(project.annotation_store_path) if Dir.exist? project.annotation_store_path
     git.add(project.annotation_page_path) if Dir.exist? project.annotation_page_path
-    project.recalculate_terms(access_token)    
     if new_item
       git.commit("Added #{slug}")
     else
@@ -135,6 +134,10 @@ class Item
       end
     end      
     response = git.push("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')    
+
+    project.recalculate_terms(access_token)    
+
+
     true
   end
 
