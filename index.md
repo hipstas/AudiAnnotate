@@ -18,6 +18,9 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
   * [Zora Neale Hurston's WPA field recordings in Jacksonville, FL (1939)](https://tanyaclement.github.io/znh_jacksonville_1939/), annotations and transcription by Tanya Clement
   * [Example audio manifest](https://github.com/bethanycayeradcliff/margaret-atwood-spokenweb/blob/gh-pages/_data/margaret-atwood-at-sgwu-1974/manifest.json) created by Bethany Radcliff
   * [BWFMetaEdit example](https://benwbrum.github.io/loc-bwf-demo/my-dear-mother-don-t-you-cry-soldier-s-lament-bandit-song) from ["My dear mother, don't you cry; Soldier's lament; Bandit song](https://www.loc.gov/item/afc1939007_afs02253b/) at the Library of Congress.
+  * [Oral history example](https://rpickard01.github.io/oral-histories-pocket-desert/) "Oral Histories and the Pocket Desert" by 
+  * [Podcast example](https://agunnells.github.io/the-last-archive-s1/) "The Last Archive Annotations" by Ali Gunnells.
+ 
   
 #### Video
   * Aviary Edition: [*The Virtual Poem Embodied on Screen*](https://zillingworth.github.io/virtual-poem-on-screen/), annotations by Zoe Bursztajn-Illingworth
