@@ -1,5 +1,5 @@
 AudiAnnotate is a project to publish and share annotations on audio files using IIIF and GitHub Pages. 
-* [Background, project goals and team](http://hipstas.org/audiannotate/)
+* [Background, project goals and team](http://hipstas.org/awe/)
 * [Scholarship](scholarship.md)
 
 ### Using AudiAnnotate 
