@@ -20,7 +20,7 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
   * [BWFMetaEdit example](https://benwbrum.github.io/loc-bwf-demo/my-dear-mother-don-t-you-cry-soldier-s-lament-bandit-song) from ["My dear mother, don't you cry; Soldier's lament; Bandit song](https://www.loc.gov/item/afc1939007_afs02253b/) at the Library of Congress
   * [Oral history example](https://rpickard01.github.io/oral-histories-pocket-desert/) "Oral Histories and the Pocket Desert" by Rachel Pickard
   * [Podcast example](https://agunnells.github.io/the-last-archive-s1/) "The Last Archive Annotations" by Ali Gunnells
-  * The Sounds of War: The Violence Reported in *Radio Venceremos* Broadcasts, 1981-1990, A bilingual AudiAnnotate project by Vera Burrows with the assistance of Luke Sumpter
+  * "The Sounds of War: The Violence Reported in *Radio Venceremos* Broadcasts, 1981-1990," A bilingual AudiAnnotate project by Vera Burrows with the assistance of Luke Sumpter
  
   
 #### Video
