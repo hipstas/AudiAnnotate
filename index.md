@@ -13,6 +13,7 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
 ### Example Projects 
 
 #### Audio
+  * [SpokenWeb Anthology](https://hipstas.github.io/spokenweb-anthology/), edited by Zoe Bursztajn-Illingworth and Tanya Clement
   * [Anne Sexton, Sweetbriar College, 1966](https://tanyaclement.github.io/sexton_sweetbriar_1966/), annotations and transcription by Tanya Clement
   * [Improving Gentle Transcription Using SENT Metadata Structure](https://kywark.github.io/gentle-improvement/), from [SpokenWeb](https://spokenweb.ca/), annotations by Kylie Warkentin
   * [Zora Neale Hurston's WPA field recordings in Jacksonville, FL (1939)](https://tanyaclement.github.io/znh_jacksonville_1939/), annotations and transcription by Tanya Clement
