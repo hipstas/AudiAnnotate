@@ -69,6 +69,9 @@
       <%= link_to "Create Item Manifest", new_item_path(@project.user_name, @project.repo_name), class: "btn btn-primary" %>
       <%= link_to "Import Existing Manifest", new_import_item_path(@project.user_name, @project.repo_name), class: "btn btn-primary" %>
       <%= link_to "Create Page", new_page_path(@project.user_name, @project.repo_name), class: "btn btn-primary" %>
+      <% if @item_count > 1 %>
+        <%= link_to "Create Comparison", new_comparison_path(@project.user_name, @project.repo_name), class: "btn btn-primary" %>
+      <% end %>
     </div>
   </div>
 </div>

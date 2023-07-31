@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  # resources :annotation_files
   post 'project/:user_name/:repo_name/items', to: 'items#create', as: 'create_item'
   get 'project/:user_name/:repo_name/items/new', to: 'items#new', as: 'new_item'
   get 'project/:user_name/:repo_name/items/:slug/edit', to: 'items#edit', as: 'edit_item'
@@ -28,6 +27,12 @@ Rails.application.routes.draw do
   get 'project/:user_name/:repo_name/pages/:slug/move_down', to: 'pages#move_down', as: 'move_down_page'
   post 'project/:user_name/:repo_name/toggle_layout', to: 'project#toggle_layout', as: 'toggle_layout'
 
+  post 'project/:user_name/:repo_name/comparisons', to: 'comparisons#create', as: 'create_comparison'
+  get 'project/:user_name/:repo_name/comparisons/new', to: 'comparisons#new', as: 'new_comparison'
+  get 'project/:user_name/:repo_name/comparisons/:slug/edit', to: 'comparisons#edit', as: 'edit_comparison'
+  get 'project/:user_name/:repo_name/comparisons/:slug', to: 'comparisons#show', as: 'comparison'
+  patch 'project/:user_name/:repo_name/comparisons/:slug', to: 'comparisons#update', as: 'update_comparison'
+  delete 'project/:user_name/:repo_name/comparisons/:slug', to: 'comparisons#destroy', as: 'destroy_comparison'
 
   root to: 'project#all'
 

@@ -98,10 +98,28 @@ class Project
     end
   end
 
-
   def remove_item(item)
     navigation = self.navigation
     navigation.delete("pages/#{item.slug}.md")
+    File.write(navigation_path, navigation.to_yaml)
+  end
+
+
+  def add_comparison(comparison)
+    navigation = self.navigation
+    nav_path = "pages/#{comparison.slug}.md"
+    unless navigation.include? nav_path
+      navigation << nav_path
+      File.write(navigation_path, navigation.to_yaml)
+    end
+    if navigation.size > navigation.uniq.size
+      File.write(navigation_path, navigation.uniq.to_yaml)
+    end
+  end
+
+  def remove_comparison(comparison)
+    navigation = self.navigation
+    navigation.delete("pages/#{comparison.slug}.md")
     File.write(navigation_path, navigation.to_yaml)
   end
 
@@ -216,6 +234,12 @@ class Project
     response = git.push("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')    
   end
 
+  def items
+    # find all manifests in the project
+    item_slugs = Dir.glob(File.join(self.repo_path, "_data", "*", 'manifest.json')).map{|path| File.basename(path.sub('/manifest.json', ''))}
+    item_slugs.map{|slug| Item.from_file(self.user_name, self.repo_name, slug)}
+  end
+
 
   def navigation
     YAML.load(File.read(navigation_path)) || []
@@ -284,6 +308,10 @@ class Project
 
   def annotation_store_path
     File.join(repo_path, '_data', 'annotation_store')
+  end
+
+  def page_path
+    File.join(repo_path, 'pages')
   end
 
   def annotation_page_path

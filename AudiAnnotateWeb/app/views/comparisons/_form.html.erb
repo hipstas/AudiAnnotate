@@ -1,0 +1,60 @@
+<%  
+  if action_name == 'edit'
+    method_name = :patch
+  else
+    method_name = :post
+  end 
+%>
+
+
+<div class="row">
+  <div class="col-sm-4">
+
+    <%= form_with(model: comparison, url: form_path, local: true, method: method_name) do |form| %>
+      <% if comparison.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(comparison.errors.count, "error") %> prohibited this comparison from being saved:</h2>
+
+          <ul>
+            <% comparison.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= form.label :label %>
+        <div class="col-sm-12">
+          <%= form.text_field :label %>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= form.label :item_a, "Item A (left side)" %>
+        <div class="col-sm-12">
+          <%= form.select(:item_a, options_for_select(@items.map{|item| [item.label, item.slug]}), class: 'form-control') %>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= form.label :item_b, "Item B (right side)"%>
+        <div class="col-sm-12">
+          <%= form.select(:item_b, options_for_select(@items.map{|item| [item.label, item.slug]}), class: 'form-control') %>
+        </div>
+      </div>
+      <%= form.hidden_field(:repo_name) %>
+      <%= form.hidden_field(:user_name) %>
+
+      <div class="actions col-sm-4">
+        <%= form.submit("Save", class: "btn btn-light") %>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-sm-8 inline-explanation">
+    <p>Comparisons allow you to display two items and their annotations side by side.</p>
+
+    <p>Click “Save” once you’re done, and this comparison screen will be published to your project’s  GitHib repository.</p>
+
+  </div>
+</div>
