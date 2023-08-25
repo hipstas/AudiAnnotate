@@ -163,7 +163,19 @@ EOF
           selector = {"type" => "RangeSelector", "t" => "#{start_seconds},#{end_seconds}" }
         end
         wa["id"] = annotation_uri(i)
-        wa["target"] = { "source" => @canvas.canvas_id, "selector" => selector }
+        wa["target"] = { 
+          "source" => {
+            "id" => @canvas.canvas_id,
+            "type" => "Canvas",
+            "partOf" => [
+              {
+                "id" => @canvas.item.external_manifest_url || @canvas.item.manifest_uri,
+                "type" => 'Manifest'
+              }
+            ]
+          }, 
+          "selector" => selector 
+        }
         items << wa
       end
 
