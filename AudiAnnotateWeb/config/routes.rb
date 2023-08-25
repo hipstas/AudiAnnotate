@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'api/search/:manifest_id', to: 'api#search', :constraints => { :manifest_id => /.*/ }
   post 'project/:user_name/:repo_name/items', to: 'items#create', as: 'create_item'
   get 'project/:user_name/:repo_name/items/new', to: 'items#new', as: 'new_item'
   get 'project/:user_name/:repo_name/items/:slug/edit', to: 'items#edit', as: 'edit_item'
