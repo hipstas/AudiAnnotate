@@ -41,6 +41,7 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
 * [IIIF Resources and Examples](resources.md)
 * [Transcription Guidelines](transcription_resources.md)
 * [Virtual Workshop](https://hipstas.github.io/AudiAnnotate/workshop.html)
+* [How to search Github for Annotations on Specific Manifests](SearchAnnotationsOnIIIFManifests.md)
 
 ### Funding
 * American Council of Learned Societies
