@@ -163,7 +163,19 @@ EOF
           selector = {"type" => "RangeSelector", "t" => "#{start_seconds},#{end_seconds}" }
         end
         wa["id"] = annotation_uri(i)
-        wa["target"] = { "source" => @canvas.canvas_id, "selector" => selector }
+        wa["target"] = { 
+          "source" => {
+            "id" => @canvas.canvas_id,
+            "type" => "Canvas",
+            "partOf" => [
+              {
+                "id" => @canvas.item.external_manifest_url || @canvas.item.manifest_uri,
+                "type" => 'Manifest'
+              }
+            ]
+          }, 
+          "selector" => selector 
+        }
         items << wa
       end
 
@@ -178,7 +190,19 @@ EOF
   def destroy(access_token)
     File.unlink(jekyll_collection_file_path) if File.exists?(jekyll_collection_file_path)
     File.unlink(annotation_page_file_path)
+    git = Git.open(@canvas.item.project.repo_path) 
+    # now do a git rm on all those files
+    begin
+      git.remove(jekyll_collection_file_path)
+      git.remove(annotation_page_file_path)
+    rescue
+      # ignore errors here
+    end
     @canvas.item.save(access_token)
+
+    # this should also recalculate the index terms from the remaining annotation pages
+    @canvas.item.project.recalculate_terms(access_token)
+
   end
 
 

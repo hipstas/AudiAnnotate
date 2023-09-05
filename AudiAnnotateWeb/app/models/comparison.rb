@@ -1,76 +1,74 @@
-class Page
-  require 'open-uri'
+class Comparison
   include ActiveModel::Model
-  attr_accessor :title, :slug, :user_name, :repo_name, :layout
+  attr_accessor :label, :slug, :user_name, :repo_name, :item_a, :item_b
 
-  def initialize(user_name, repo_name, title=nil)
+  def initialize(user_name, repo_name, label=nil)
     @project = Project.new(user_name, repo_name)
-    @title=title
+    @label=label
   end    
+
+  def self.from_file(user_name, repo_name, slug)
+    comparison = Comparison.new(user_name, repo_name)
+    comparison.slug=slug
+    yaml = YAML.load(File.read(comparison.jekyll_page_path))
+    comparison.label=yaml['title']
+    comparison.item_a=yaml['item_a']
+    comparison.item_b=yaml['item_b']
+
+    comparison
+  end
 
   def write_file(path, contents)
     FileUtils.mkdir_p(File.dirname(path))
     File.write(path,contents)
   end
 
-
-  def self.from_file(user_name, repo_name, slug)
-    page = Page.new(user_name, repo_name)
-    page.slug=slug
-    yaml = YAML.load(File.read(page.jekyll_page_path))
-    page.title=yaml['title']
-    page.layout=yaml['layout']
-
-    page
-  end
-
+  # TODO for comparison
   def save(access_token)
     # sync with github
-    git = Git.open(@project.repo_path)  # TODO consider using the logger here
+    git = Git.open(@project.repo_path)
     git.branch('gh-pages').checkout
     git.pull("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')
 
-    new_page=false
+    new_item = !File.exists?(jekyll_page_path)
 
     # create the directory and manifest file
-    unless File.exists?(jekyll_page_path)
-      new_item=true
-      write_file(jekyll_page_path, jekyll_page_contents)
-    end
+    write_file(jekyll_page_path, jekyll_page_contents)
 
-    git.add(jekyll_page_path)
-
-    self.project.add_item(self)
+    self.project.add_comparison(self)
     git.add(self.project.navigation_path)
 
-
+    # add, commit, and push
+    git.add(jekyll_page_path)
     if new_item
-      git.commit("Added #{@title}")
+      git.commit("Added comparison #{slug}")
     else
-      git.commit("Updated #{@title}")
+      unless git.status.changed.empty?
+        git.commit("Updated comparison #{slug}")
+      end
     end      
     response = git.push("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')    
+
     true
   end
+
 
   def destroy(access_token)
     git = Git.open(@project.repo_path)  # TODO consider using the logger here
     git.branch('gh-pages').checkout
     git.pull("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')
 
-    # remove everything in the item path under _data
     FileUtils.rm(jekyll_page_path)
+    git.remove(jekyll_page_path, recursive: true)
+
     self.project.remove_item(self)
     git.add(self.project.navigation_path)
 
-    # remove the same from the repository
-    git.remove(jekyll_page_path, recursive: true)
-
-    git.commit("Removed #{slug}")
+    git.commit("Removed #{label}")
     response = git.push("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')    
+
     true
   end
-
 
 
   def user_name
@@ -96,7 +94,17 @@ class Page
   end
 
   def jekyll_page_contents
-    ApplicationController::render template: 'pages/jekyll_page.md', layout: false, locals: {page: self}
+    ApplicationController::render template: 'comparisons/jekyll_comparison.md', layout: false, locals: {frontmatter: frontmatter}
+  end
+
+  def frontmatter
+    {
+      'layout' => 'comparison',
+      'title' => label,
+      'permalink' => slug,
+      'item_a' => item_a,
+      'item_b' => item_b
+    }
   end
 
   def slug=(slug)
@@ -104,15 +112,15 @@ class Page
   end
 
   def slug
-    @slug || @title.gsub(/\W+/, '-').downcase
-  end
-
-  def project
-    @project
+    @slug || label.gsub(/\W+/, '-').downcase
   end
 
   def uri_root
     "#{@project.uri_root}/#{slug}"
   end
 
+
+  def project
+    @project
+  end
 end

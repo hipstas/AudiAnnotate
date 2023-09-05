@@ -4,7 +4,9 @@ class PagesController < ApplicationController
 
 
   def show
-
+    if @page.layout == 'comparison'
+      redirect_to comparison_path(@page.user_name, @page.repo_name, @page.slug)
+    end
   end
 
   def new

@@ -1,0 +1,29 @@
+<div id='notice-container' class="container">
+  <div class="row">
+    <div class="col-sm-11" >
+      <h2>
+        <%= link_to 'My Projects', my_projects_path %> 
+        | 
+        <%= link_to @comparison.repo_name, project_path(@comparison.user_name, @comparison.repo_name) %>
+        |
+        <%= link_to(@comparison.label, 
+                    comparison_path(@comparison.user_name,
+                                    @comparison.repo_name,
+                                    @comparison.label)) %>      
+      </h2>
+    </div>
+    <%= render 'shared/build_status' %>
+  </div>
+  <div id="notice"><%= notice %></div>
+  The GitHub Pages site for <%= @comparison.label %> is <%= link_to @comparison.uri_root, @comparison.uri_root %>
+</div>
+
+<div id='actions' class="container">
+  <%= link_to 'Delete', destroy_comparison_path(@comparison.user_name, @comparison.repo_name, @comparison.slug) %>
+</div>
+
+
+<div id='actions' class="container">
+  <%= render 'form', comparison: @comparison, form_path: update_comparison_path %>
+</div>
+

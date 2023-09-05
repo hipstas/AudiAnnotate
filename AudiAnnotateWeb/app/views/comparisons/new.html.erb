@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-11" >
+      <h2>
+        <%= link_to 'My Projects', my_projects_path %> 
+        | 
+        <%= link_to @comparison.repo_name, project_path(@comparison.user_name, @comparison.repo_name) %> 
+      </h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-5">
+      <h1 class="col-sm-12">New Comparison Page</h1>
+    </div>
+  </div>
+  <%= render 'form', comparison: @comparison, form_path: create_comparison_path %>
+</div>
+
