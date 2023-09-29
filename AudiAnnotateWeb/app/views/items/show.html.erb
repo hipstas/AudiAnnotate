@@ -100,7 +100,7 @@
 
 <div id='add-annotation-form' class="container">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-8">
         <h3>Add annotation file</h3>
       <%= form_with(model: @item, url: add_annotation_file_path, local: true) do |form| %>
 
@@ -120,24 +120,37 @@
       </div>
       <% end %>
     </div>
+    <div class="col-sm-4 inline-explanation">
+      <p>You’ll add the annotations that correspond with your project’s audiovisual item. This should be uploaded in an Excel file, or a tab separated (.tsv) or comma separated (.csv) file. If you have multiple annotation layers, you can upload them individually.  Your annotations will be generated on the next screen.</p>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-sm-8">
-      <h3> Annotation Layers </h3>
-        <% @item.canvases.each do |canvas| %>
-        <% canvas.annotation_pages.each do |page| %>
-          <%= page.label %> <%= link_to("Delete", delete_annotation_layer_path(@item.user_name, @item.repo_name, @item.slug, page.label)) %><br/>
-        <% end %>
+    <h3> Annotation Layers </h3>
+      <% @item.canvases.each do |canvas| %>
+      <% canvas.annotation_pages.each do |page| %>
+        <%= page.label %> <%= link_to("Delete", delete_annotation_layer_path(@item.user_name, @item.repo_name, @item.slug, page.label)) %><br/>
       <% end %>
-      <h3> Annotation Files </h3>
-        <% @item.canvases.each do |canvas| %>
+    <% end %>
+  </div>
+    <div class="col-sm-4 inline-explanation">
+    <p>To delete annotations you need to delete their layers.  Annotations cannot be edited, only deleted and recreated through a new upload.</p>
+  </div>
+</div>
+  <div class="row">
+    <div class="col-sm-8">
+    <h3> Annotation Files </h3>
+      <% @item.canvases.each do |canvas| %>
         <% canvas.annotation_files.each do |file| %>
           <%= file %> <%= link_to("Download", download_annotation_file_path(@item.user_name, @item.repo_name, @item.slug, file)) %> <%= link_to("Delete", delete_annotation_file_path(@item.user_name, @item.repo_name, @item.slug, file), :data => {:confirm => "Are you sure you want to delete #{file}?"}) %><br/>
         <% end %>
       <% end %>
     </div>
-    <div class="col-sm-8 inline-explanation">
-      <p>You’ll add the annotations that correspond with your project’s audio. This should be uploaded in a .tsv file. If you have multiple annotation layers, you can upload them individually, and your annotations will generate on the next screen.</p>
+    <div class="col-sm-4 inline-explanation">
+      <p>Annotation files are saved for archival purposes.  You can download and work with a file, but deleting these files doesn't change your project.</p>
     </div>
   </div>
+
 </div>
 
 <script>
