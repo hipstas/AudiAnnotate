@@ -44,6 +44,10 @@
                 </td>
                 <td>
                   <%= annotation.text %>
+                  <% unless annotation.terms.empty? %>
+                    <br/>
+                    <b>Terms: </b> <i><%= annotation.terms.join(", ") %></i>
+                  <% end %>
                 </td>
                 <td>
                   <%= page.label %>

@@ -9,9 +9,16 @@ class Annotation
     if body.is_a? Hash
       body = [body]
     end
-    body.map {|e| e['value']}.join("\n")
+    body.select{|e| e['purpose'] == 'commenting'}.map {|e| e['value']}.join("\n")
   end
 
+  def terms
+    body = @json['body']
+    if body.is_a? Hash
+      body = [body]
+    end
+    body.select{|e| e['purpose'] == 'tagging'}.map {|e| e['value']}
+  end
 
   def start_time
     if @json['target'].is_a? String
