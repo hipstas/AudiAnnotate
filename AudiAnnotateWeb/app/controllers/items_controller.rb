@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :connect, only: [:add_annotation_file, :create, :destroy, :edit, :show, :update, :delete_annotation_layer, :configure_annotation_file, :process_annotation_file, :delete_annotation_file, :import_external_annotations, :review_external_annotations]
-  before_action :set_item, only: [:add_annotation_file, :destroy, :edit, :update, :delete_annotation_layer, :download_annotation_file, :configure_annotation_file, :process_annotation_file, :delete_annotation_file, :review_external_annotations, :import_external_annotations]
+  before_action :set_item, only: [:add_annotation_file, :destroy, :edit, :update, :delete_annotation_layer, :download_annotation_file, :configure_annotation_file, :process_annotation_file, :delete_annotation_file, :review_external_annotations, :import_external_annotations, :delete_all_layers]
 
   # GET /items
   # GET /items.json
@@ -114,10 +114,17 @@ class ItemsController < ApplicationController
   end    
 
   def delete_annotation_layer
-    #binding.pry
     canvas = @item.canvases.first
     layer = canvas.annotation_pages.detect{|page| page.label == params[:layer] }
     layer.destroy(session[:github_token])
+    redirect_to item_path(@item.user_name, @item.repo_name, @item.slug)
+  end
+
+  def delete_all_layers
+    canvas = @item.canvases.first
+    canvas.annotation_pages.each do |layer|
+      layer.destroy(session[:github_token])
+    end
     redirect_to item_path(@item.user_name, @item.repo_name, @item.slug)
   end
 

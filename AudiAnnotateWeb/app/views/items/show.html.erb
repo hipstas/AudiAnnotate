@@ -18,8 +18,8 @@
   You can add introductory material by modifying <%= link_to "#{@item.slug}.md", "https://github.com/#{@project.user_name}/#{@project.repo_name}/edit/gh-pages/pages/#{@item.slug}.md" %>
   <div id='actions' class="container">
     <div class="row">
-      <%= button_to 'Edit Item', edit_item_path(@item.user_name, @item.repo_name, @item.slug), method: 'get', class: "btn btn-light" %>
-      <%= button_to 'Delete Item', destroy_item_path(@item.user_name, @item.repo_name, @item.slug), method: 'delete', class: "btn btn-light" %>
+      <%= button_to 'Edit Item', edit_item_path(@item.user_name, @item.repo_name, @item.slug), method: 'get', class: "btn btn-primary" %>
+      <%= button_to 'Delete Item', destroy_item_path(@item.user_name, @item.repo_name, @item.slug), method: 'delete', class: "btn btn-primary" %>
     </div>
   </div>
 </div>
@@ -116,7 +116,7 @@
       <%= form.hidden_field(:user_name) %>
 
       <div class="actions">
-        <%= form.submit('Add', class: "btn btn-light") %>
+        <%= form.submit('Add', class: "btn btn-primary") %>
       </div>
       <% end %>
     </div>
@@ -132,6 +132,8 @@
         <%= page.label %> <%= link_to("Delete", delete_annotation_layer_path(@item.user_name, @item.repo_name, @item.slug, page.label)) %><br/>
       <% end %>
     <% end %>
+    <br/>
+    <%= link_to("Delete All Layers", delete_all_layers_path(@item.user_name, @item.repo_name, @item.slug), class: "btn btn-primary") %>
   </div>
     <div class="col-sm-4 inline-explanation">
     <p>To delete annotations you need to delete their layers.  Annotations cannot be edited, only deleted and recreated through a new upload.</p>
