@@ -53,7 +53,6 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
 * Bursztajn-Illingworth, Zoe and Clement, Tanya. “AudiAnnotate Collaborative Listening Workshop,” Sponsored by the Woodberry Poetry Room and the Sound Studies Lab, Harvard University, 27 February 2023.
 *Clement, Tanya. AudiAnnotate Workshop, Association for Computers in the Humanities (ACH) Virtual Conference, June 2023.
 *	Clement, T., Ben Brumfield, and Sara Brumfield. “AudiAnnotate AWE Project with IIIF.” Association for Computers in the Humanities (ACH) Virtual Conference, June 2021.
-![image](https://github.com/hipstas/AudiAnnotate/assets/1213771/3b2c3094-6c35-4ea2-a2ed-cf4075184467)
 * Voss, Kayleigh. "AudiAnnotate Extensible Workflow for Sharing Annotated AV Using IIIF
 IIIF Workshops," Virtual Presentation, June 2022.
 * Voss, Kayleigh. "Creating New Projects with AudiAnnotate,"
