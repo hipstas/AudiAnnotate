@@ -48,8 +48,12 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
 * Mellon Foundation
 
 ### Workshops
+* Tanya Clement, Zoe Bursztajn-Illingworth, Trent Wintermeier, Vera Burrows. “AudiAnnotate Workshop with Radio Venceremos, Rebel Radio Station and SpokenWeb: Using IIIF with AV to Build Editions and Exhibits.” Alliance of Digital Humanities Organizations (ADHO) Conference, University of Graz, Graz, Austria, July 2023.
 * Wintermeier, Trent. ["Introduction to Annotating Audio and Video with AudiAnnotate,"](https://www.lib.utexas.edu/events/552) University of Texas Libraries Digital Humanities Workshop Series, University of Texas, Austin, 10 March 2023. 
-* Bursztajn-Illingworth, Zoe and Clement, Tanya. “AudiAnnotate Collaborative Listening Workshop,” Sponsored by the Woodberry Poetry Room and the Sound Studies Lab, Harvard University, 27 February 2023. 
+* Bursztajn-Illingworth, Zoe and Clement, Tanya. “AudiAnnotate Collaborative Listening Workshop,” Sponsored by the Woodberry Poetry Room and the Sound Studies Lab, Harvard University, 27 February 2023.
+*Clement, Tanya. AudiAnnotate Workshop, Association for Computers in the Humanities (ACH) Virtual Conference, June 2023.
+*	Clement, T., Ben Brumfield, and Sara Brumfield. “AudiAnnotate AWE Project with IIIF.” Association for Computers in the Humanities (ACH) Virtual Conference, June 2021.
+![image](https://github.com/hipstas/AudiAnnotate/assets/1213771/3b2c3094-6c35-4ea2-a2ed-cf4075184467)
 * Voss, Kayleigh. "AudiAnnotate Extensible Workflow for Sharing Annotated AV Using IIIF
 IIIF Workshops," Virtual Presentation, June 2022.
 * Voss, Kayleigh. "Creating New Projects with AudiAnnotate,"
