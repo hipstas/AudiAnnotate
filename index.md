@@ -48,7 +48,7 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
 * Mellon Foundation
 
 ### Workshops
-*Zoe Bursztajn-Illingworth and Trent Wintermeier, “Creating and Sharing Digital Exhibits and Editions with AVAnnotate,” Learn@DLF (Digital Library Federation annual conference), St. Louis, Missouri, November 2023. 
+* Zoe Bursztajn-Illingworth and Trent Wintermeier, “Creating and Sharing Digital Exhibits and Editions with AVAnnotate,” Learn@DLF (Digital Library Federation annual conference), St. Louis, Missouri, November 2023. 
 * Zoe Bursztajn-Illingworth and Trent Wintermeier, “Creating Digital Exhibits with the Voces Oral History Archive,” for J381 Qualitative Interviewing taught by Professor Maggie Rivas Rodriguez, Department of Journalism and Media, University of Texas, Austin, September 2023. 
 * Zoe Bursztajn-Illlingworth, “Annotating Film Form in Meshes of the Afternoon,” for E381 Literature and Film taught by Professor Zoe Bursztajn-Illingworth, Department of English, University of Texas, Austin, September 2023. 
 * Tanya Clement, Zoe Bursztajn-Illingworth, Trent Wintermeier, Vera Burrows. “AudiAnnotate Workshop with Radio Venceremos, Rebel Radio Station and SpokenWeb: Using IIIF with AV to Build Editions and Exhibits.” Alliance of Digital Humanities Organizations (ADHO) Conference, University of Graz, Graz, Austria, July 2023.
@@ -67,3 +67,8 @@ The SpokenWeb Sound Institute (SSI), Concordia University, Montréal, Canada. Ma
 * AudiAnnotate Workshop, Texas Conference on Digital Libraries, May 2020.
 * AudiAnnotate Text Annotation Workshop, Harry Ransom Center, November 2019. 
 * “Digital Audio Archives Workshop,” Historical Poetics Now Conference. University of Texas, Austin. November 2019.
+
+### Reports
+Audio Visual Annotation -- Technical Environment Scan.pdf
+AWE Deep Dive Report and May 2021 Plan.pdf
+Collaborative Use Case_ SpokenWeb Anthology.pdf
