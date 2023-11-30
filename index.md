@@ -69,8 +69,21 @@ The SpokenWeb Sound Institute (SSI), Concordia University, Montréal, Canada. Ma
 * “Digital Audio Archives Workshop,” Historical Poetics Now Conference. University of Texas, Austin. November 2019.
 
 ### Reports
+
 * [AudiAnnotate Audiovisual Extensible Workflow (AWE) Survey Results](https://hdl.handle.net/2152/122767)
-* [Audio Visual Annotation -- Technical Environment Scan](https://github.com/hipstas/AudiAnnotate/blob/a6396f9e0d6c04fb66e88c7c8a9619786729cf21/Audio%20Visual%20Annotation%20--%20Technical%20Environment%20Scan.pdf)
+
+This survey was produced as part of the Andrew W. Mellon-funded AudiAnnotate Audiovisual Extensible Workflow (AWE)  project in order to better understand how and why students, teachers, information professionals, and others annotate audiovisual content. It is clear from the participant responses that there is an active community annotating audiovisual content for a variety of reasons, using a variety of tools. The survey confirms and further informs the project team’s understanding of the current audiovisual annotation landscape and supports the grant’s premise that there is a broad need for a workflow that supports collaborative editing, flexible modes of presentation, and permissions control. To support these needs, the AudiAnnotate project is developing AWE, a documented workflow using the recently adopted IIIF standard for audiovisual materials that will help libraries, archives, and museums (LAMs), scholars, and the public find, access and use audiovisual cultural heritage items.
+
 * [AWE Deep Dive Report and May 2021 Plan](https://github.com/hipstas/AudiAnnotate/blob/a6396f9e0d6c04fb66e88c7c8a9619786729cf21/(Report%20Version)%20AWE%20Deep%20Dive%20Report%20and%20May%202021%20Plan.pdf)
+
+In the first year of the AudiAnnotate AWE project we tested our hypothesis on how AudiAnnotate should work, worked with four scholars to publish AudiAnnotate-driven digital companions to thesis chapters and classroom lessons around sensitive audio material, shored up the software functionality supporting a single, basic audio or video digital edition, held workshops to try the software with a variety of users and materials, and conducted “deep dive” interviews to assess needs with our partner holding institutions. This report is a summary of what we learned from these interviews and a discussion of priorities for the coming year based on that input.
+
+* [Audio Visual Annotation -- Technical Environment Scan](https://github.com/hipstas/AudiAnnotate/blob/a6396f9e0d6c04fb66e88c7c8a9619786729cf21/Audio%20Visual%20Annotation%20--%20Technical%20Environment%20Scan.pdf)
+
+This report was written by Sara and Ben Brumfield. It investigates four digital humanities projects, a journalism project, a learning platform, two podcast note-taking apps, and two lyric annotation platforms. The report reviews lessons the project team considered applying to AudiAnnotate development with a detailed analysis of each project.
+
 * [Collaborative Use Case_ SpokenWeb Anthology](https://github.com/hipstas/AudiAnnotate/blob/a6396f9e0d6c04fb66e88c7c8a9619786729cf21/Collaborative%20Use%20Case_%20SpokenWeb%20Anthology.pdf)
+
+The SpokenWeb Digital Anthology was edited by Zoe Bursztajn-Illingworth and Tanya Clement. It is a collaboration between AudiAnnotate and SpokenWeb, a consortium of archives in Canada committed to the preservation and accessibility of literary audio recordings through digitization and critical engagement. The Anthology includes AudiAnnotate projects created by Trent Wintemeier (PhD Student, UT Austin), Matthew Kilbane (Assistant Professor, Notre Dame), Miranda Eastwood (PhD Student, Concordia University), Nadège Paquette (PhD Student, Concordia University), Rachel Pickard (Undergraduate Student UBCO), Karis Shearer (Professor, UBCO), Emily Murphy (Assistant Professor, UBCO), Teddie Brock (MA Student, Simon Frasier), and Zach Morrison (PhD Student, UAlberta). The report details how an AudiAnnotate collaborative project was designed and implemented through GitHub.
+
 * [OHMS to AA Experiment](https://benwbrum.github.io/ohms-to-aa-experiment/)
