@@ -26,6 +26,7 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
   
 #### Video
   * Aviary Edition: [*The Virtual Poem Embodied on Screen*](https://zillingworth.github.io/virtual-poem-on-screen/), annotations by Zoe Bursztajn-Illingworth
+  * ​​[Comparison Screen for Shoes](https://lgsump.github.io/shoes-comparison/comparison) annotations by Zoe Bursztajn-Illingworth and Luke Sumpter
   * [*A Digital Florilegium*](https://lgsump.github.io/digital-florilegium/), annotations and digital edition by Luke Sumpter
   * [*Camille*](https://jreinschmidt.github.io/camille-1921/), annotations by Janet Reinschmidt
   * [*Furious Flower Poetry Center Transcriptions*](https://jmu-audiannotate.github.io/FFPC-Video-Transcriptions/), annotations and transcriptions by Evan Sizemore
