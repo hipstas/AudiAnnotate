@@ -130,7 +130,11 @@ class AnnotationFile
   end
 
   def parked_filename
-    File.join(parked_filepath,Time.now.gmtime.iso8601.gsub(/\D/,"") + "_" + @uploaded_file.original_filename)
+    if @uploaded_file.respond_to? :original_filename
+      File.join(parked_filepath,Time.now.gmtime.iso8601.gsub(/\D/,"") + "_" + @uploaded_file.original_filename)
+    else
+      File.join(parked_filepath,@uploaded_file.path)
+    end
   end
 
   def old_parked_filename
