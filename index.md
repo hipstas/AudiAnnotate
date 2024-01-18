@@ -49,6 +49,7 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
 * Mellon Foundation
 
 ### Workshops
+* Clement, T., Bursztajn-Illingworth, Z., and Wintermeier, T. "Just In Time: AudiAnnotate: A Timely Method For Annotating Literary Recordings," 2024 Modern Language Association Conference, Zoom, January 2024. 
 * Zoe Bursztajn-Illingworth and Trent Wintermeier, “Creating and Sharing Digital Exhibits and Editions with AVAnnotate,” Learn@DLF (Digital Library Federation annual conference), St. Louis, Missouri, November 2023. 
 * Zoe Bursztajn-Illingworth and Trent Wintermeier, “Creating Digital Exhibits with the Voces Oral History Archive,” for J381 Qualitative Interviewing taught by Professor Maggie Rivas Rodriguez, Department of Journalism and Media, University of Texas, Austin, September 2023. 
 * Zoe Bursztajn-Illlingworth, “Annotating Film Form in Meshes of the Afternoon,” for E381 Literature and Film taught by Professor Zoe Bursztajn-Illingworth, Department of English, University of Texas, Austin, September 2023. 
