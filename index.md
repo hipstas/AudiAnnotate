@@ -22,7 +22,7 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
   * [Oral history example](https://rpickard01.github.io/oral-histories-pocket-desert/) "Oral Histories and the Pocket Desert" by Rachel Pickard
   * [Podcast example](https://agunnells.github.io/the-last-archive-s1/) "The Last Archive Annotations" by Ali Gunnells
   * Bilingual example in Spanish ["Los Sonidos de una Guerra Civil: Los reportajes de violencia en las transmisiones de Radio Venceremos:
-El Salvador, 1981-1990"](https://lgsump.github.io/espanol-radio-venceremos/) and English ["The Sounds of War: The Violence Reported in *Radio Venceremos* Broadcasts, 1981-1990"](https://lgsump.github.io/english-radio-venceremos/), by Vera Burrows with the assistance of Luke Sumpter
+El Salvador, 1981-1990"](https://hipstas.github.io/radio-venceremos-espanol/) and English ["The Sounds of War: The Violence Reported in *Radio Venceremos* Broadcasts, 1981-1990"](https://hipstas.github.io/radio-venceremos-english/), by Vera Burrows and edited by Luke Sumpter
  
   
 #### Video
