@@ -67,6 +67,7 @@ class Item
     new_item=false
 
     # pull down any external manifest
+    # TODO -- are we over-writing every time?
     unless external_manifest_url.blank?
       begin
         # import the file from the net
@@ -129,7 +130,7 @@ class Item
     if new_item
       git.commit("Added #{slug}")
     else
-      unless git.status.changed.empty?
+      unless git.status.changed.empty? && git.status.added.empty? && git.status.deleted.empty?
         git.commit("Updated #{slug}")
       end
     end      
