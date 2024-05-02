@@ -42,7 +42,7 @@ class AnnotationFile
   end
 
   def is_xls?
-    File.extname(filename) == '.xlsx'
+    File.extname(filename) == '.xlsx' || File.extname(filename) == '.xls'
   end
 
   def is_cuepoint_xml?
@@ -52,7 +52,7 @@ class AnnotationFile
   def read_csv
     parked_file = File.join(parked_filepath, filename)
     if is_xls?
-      roo_object = Roo::Spreadsheet.open(parked_file)
+      roo_object = Roo::Spreadsheet.open(parked_file, extension: File.extname(filename).sub(".",""))
       raw_csv = roo_object.to_csv
       csv = CSV.new(raw_csv)
       csv_array = csv.read

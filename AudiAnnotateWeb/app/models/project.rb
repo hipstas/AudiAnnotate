@@ -187,11 +187,11 @@ class Project
     unless File.exists? index_path    
       File.write(index_path, jekyll_index_contents)
     end
-
     # check everything into github
     git.add(term_path) if Dir.exist? term_path
     git.add(index_path) if File.exist? index_path
-    unless git.status.changed.empty?
+    git_count = git.status.changed.count + git.status.deleted.count + git.status.added.count
+    unless git_count == 0
       git.commit("Recalculated index terms")
       git.push("https://#{access_token}@github.com/#{user_name}/#{repo_name}.git", 'gh-pages')
     end
