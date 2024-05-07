@@ -50,6 +50,8 @@ El Salvador, 1981-1990"](https://hipstas.github.io/radio-venceremos-espanol/) an
 * Mellon Foundation
 
 ### Workshops
+* Wintermeier, Trent and Turner, Sam. "AVAnnotate." Music Encoding Conference. Zoom. May 2024.
+* Clement, T., Wintermeier, T., Turner, S. "AVAnnotate: Curating AV Digital Exhibits with IIIF and the Gloria Anzaldúa and Stella Adler Archives." Texas Conference on Digital Libraries. Austin, Texas. May 2024.
 * Clement, T., Bursztajn-Illingworth, Z., and Wintermeier, T. "Just In Time: AudiAnnotate: A Timely Method For Annotating Literary Recordings," 2024 Modern Language Association Conference, Zoom, January 2024. 
 * Zoe Bursztajn-Illingworth and Trent Wintermeier, “Creating and Sharing Digital Exhibits and Editions with AVAnnotate,” Learn@DLF (Digital Library Federation annual conference), St. Louis, Missouri, November 2023. 
 * Zoe Bursztajn-Illingworth and Trent Wintermeier, “Creating Digital Exhibits with the Voces Oral History Archive,” for J381 Qualitative Interviewing taught by Professor Maggie Rivas Rodriguez, Department of Journalism and Media, University of Texas, Austin, September 2023. 
