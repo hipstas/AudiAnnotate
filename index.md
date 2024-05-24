@@ -1,3 +1,5 @@
+**Preferred citation:** Brumfield, Ben, Brumfield, Sara, Clement, Tanya. AudiAnnotate. 1.0 Brumfield Labs and High Performance Sound Technologies for Access and Scholarship. 17 September 2019.
+
 AudiAnnotate is a project to publish and share annotations on audio files using IIIF and GitHub Pages. 
 * [Background, project goals and team](http://hipstas.org/awe/)
 * [Scholarship](scholarship.md)
