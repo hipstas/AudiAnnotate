@@ -1,4 +1,4 @@
-As of December 2024, AudiAnnotate project is retired and will not be updated. If you are interested in creating digital exhibits and editions with AV materials using IIIF, GitHub and Jekyll pages, please visit the [AV-Annotate](https://av-annotate.org/) project.  
+As of December 2024, AudiAnnotate project is retired and will not be updated. This page is an archive of previous project work. If you are interested in creating digital exhibits and editions with AV materials using IIIF, GitHub and Jekyll pages, please visit the [AV-Annotate](https://av-annotate.org/) project.  
 
 AudiAnnotate is a project to publish and share annotations on audio files using IIIF and GitHub Pages. 
 
