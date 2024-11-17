@@ -1,3 +1,5 @@
+As of December 2024, AudiAnnotate project is retired and will not be updated. If you are interested in creating digital exhibits and editions with AV materials using IIIF, GitHub and Jekyll pages, please visit the [AV-Annotate](https://av-annotate.org/) project.  
+
 AudiAnnotate is a project to publish and share annotations on audio files using IIIF and GitHub Pages. 
 
 **Preferred citation:** Brumfield, Ben, Brumfield, Sara, Clement, Tanya. AudiAnnotate. 1.0 Brumfield Labs and High Performance Sound Technologies for Access and Scholarship. 17 September 2019.
@@ -6,7 +8,6 @@ AudiAnnotate is a project to publish and share annotations on audio files using 
 * [Scholarship](scholarship.md)
 
 ### Using AudiAnnotate 
-* [AudiAnnotate Application](http://audiannotate.brumfieldlabs.com/)
 * [Getting Started: Workflow Documentation and Demonstration Videos](https://hipstas.github.io/documentation/) 
 * [Classroom QuickStart Guide](https://bethanycayeradcliff.github.io/spokenweb-pedagogy-workshop/classroom-quick-start-guide) for teaching with AudiAnnotate
 
